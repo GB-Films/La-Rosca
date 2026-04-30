@@ -1,4 +1,5 @@
 import { Copy, Play, Trash2, ArrowLeft } from 'lucide-react';
+import { useState } from 'react';
 import { navigate } from '../app/router';
 import { findThemeName } from '../data/themes';
 import { useGameStore } from '../store/gameStore';
@@ -8,6 +9,7 @@ interface LobbyPageProps {
 }
 
 export const LobbyPage = ({ gameId }: LobbyPageProps) => {
+  const [copyMessage, setCopyMessage] = useState('');
   const session = useGameStore((state) => state.session);
   const startGame = useGameStore((state) => state.startGame);
   const addSimulatedPlayer = useGameStore((state) => state.addSimulatedPlayer);
@@ -31,20 +33,43 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
     navigate('/');
   };
 
+  const copyJoinLink = async () => {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(joinLink);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = joinLink;
+        textarea.setAttribute('readonly', 'true');
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        const copied = document.execCommand('copy');
+        document.body.removeChild(textarea);
+        if (!copied) throw new Error('copy command failed');
+      }
+      setCopyMessage('Link copiado');
+    } catch {
+      setCopyMessage('No se pudo copiar automatico. Mantené apretado el link y copialo manualmente.');
+    }
+    window.setTimeout(() => setCopyMessage(''), 3500);
+  };
+
   return (
     <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
       <section className="rounded-lg border border-line bg-panel p-5">
         <div className="mb-4 flex flex-wrap gap-2">
           <button
             type="button"
-            className="inline-flex items-center gap-2 rounded-md bg-slate-700 px-3 py-2 text-sm font-bold"
+            className="inline-flex items-center gap-2 rounded-xl bg-slate-700 px-3 py-2 text-sm font-bold"
             onClick={() => navigate('/')}
           >
             <ArrowLeft size={16} /> Volver
           </button>
           <button
             type="button"
-            className="inline-flex items-center gap-2 rounded-md bg-red-600 px-3 py-2 text-sm font-bold text-white"
+            className="inline-flex items-center gap-2 rounded-xl bg-red-600 px-3 py-2 text-sm font-bold text-white"
             onClick={closeGame}
           >
             <Trash2 size={16} /> Cerrar partida
@@ -53,25 +78,32 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
         <p className="text-xs uppercase tracking-wide text-slate-400">Lobby del host</p>
         <h2 className="text-3xl font-black">{session.game.title}</h2>
         <p className="mt-2 text-slate-300">{findThemeName(session.game.theme)}</p>
-        <div className="mt-5 rounded-lg border border-blue-300/40 bg-blue-500/10 p-4">
+        <div className="mt-5 rounded-2xl border border-blue-300/40 bg-white p-4">
           <p className="text-sm text-blue-100">Codigo de partida</p>
           <p className="mt-1 text-5xl font-black tracking-widest text-blue-200">{session.game.code}</p>
         </div>
         <div className="mt-4 grid gap-2">
           <p className="text-sm font-bold text-slate-300">Link para compartir con jugadores</p>
-          <p className="break-all rounded-md bg-black/15 p-3 text-sm text-slate-300">{joinLink}</p>
+          <input
+            readOnly
+            value={joinLink}
+            onFocus={(event) => event.currentTarget.select()}
+            className="w-full rounded-xl border border-line bg-white px-3 py-3 text-sm"
+            aria-label="Link para jugadores"
+          />
           <button
             type="button"
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-slate-700 px-4 py-3 font-bold"
-            onClick={() => navigator.clipboard?.writeText(joinLink)}
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-700 px-4 py-3 font-bold"
+            onClick={copyJoinLink}
           >
             <Copy size={18} /> Copiar link para jugadores
           </button>
+          {copyMessage && <p className="text-sm font-bold text-blue-300">{copyMessage}</p>}
         </div>
         <div className="mt-4 grid gap-2 sm:grid-cols-2">
           <button
             type="button"
-            className="rounded-md bg-slate-700 px-4 py-3 font-bold"
+            className="rounded-xl bg-slate-700 px-4 py-3 font-bold"
             onClick={() => addSimulatedPlayer('Jugador 1')}
             disabled={session.players.length >= 2}
           >
@@ -79,7 +111,7 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
           </button>
           <button
             type="button"
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-amber-400 px-4 py-3 font-black text-amber-950"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-400 px-4 py-3 font-black text-amber-950"
             onClick={start}
             disabled={!canStart}
           >
@@ -94,7 +126,7 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
           {[1, 2].map((slot) => {
             const player = session.players.find((item) => item.slot === slot);
             return (
-              <div key={slot} className="flex items-center justify-between rounded-md border border-line bg-black/10 p-4">
+              <div key={slot} className="flex items-center justify-between rounded-2xl border border-line bg-white p-4">
                 <div>
                   <p className="text-sm text-slate-400">Jugador {slot}</p>
                   <p className="text-xl font-bold">{player?.name ?? 'Pendiente'}</p>
