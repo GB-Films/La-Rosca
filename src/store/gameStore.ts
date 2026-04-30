@@ -10,23 +10,23 @@ interface GameStore {
   currentRole?: 'host' | 'player';
   currentPlayerId?: string;
   error?: string;
-  loadSession: (gameId?: string) => void;
-  createGame: (input: CreateGameInput) => GameSession;
-  joinGame: (code: string, name: string) => GameSession;
-  addSimulatedPlayer: (name?: string) => void;
-  startGame: () => void;
-  pauseGame: () => void;
-  resumeGame: () => void;
-  finishGame: () => void;
-  deleteGame: () => void;
-  resetGame: () => void;
-  backToLobby: () => void;
-  switchTurn: () => void;
-  applyAnswer: (action: 'correct' | 'wrong' | 'pass') => void;
-  undoLastAction: () => void;
-  setLetterStatus: (playerId: string, letter: string, status: LetterStatus) => void;
-  updateQuestions: (questions: Question[]) => void;
-  tick: () => void;
+  loadSession: (gameId?: string) => Promise<void>;
+  createGame: (input: CreateGameInput) => Promise<GameSession>;
+  joinGame: (code: string, name: string) => Promise<GameSession>;
+  addSimulatedPlayer: (name?: string) => Promise<void>;
+  startGame: () => Promise<void>;
+  pauseGame: () => Promise<void>;
+  resumeGame: () => Promise<void>;
+  finishGame: () => Promise<void>;
+  deleteGame: () => Promise<void>;
+  resetGame: () => Promise<void>;
+  backToLobby: () => Promise<void>;
+  switchTurn: () => Promise<void>;
+  applyAnswer: (action: 'correct' | 'wrong' | 'pass') => Promise<void>;
+  undoLastAction: () => Promise<void>;
+  setLetterStatus: (playerId: string, letter: string, status: LetterStatus) => Promise<void>;
+  updateQuestions: (questions: Question[]) => Promise<void>;
+  tick: () => Promise<void>;
   setError: (message?: string) => void;
 }
 
@@ -49,9 +49,9 @@ const rememberSession = (role: 'host' | 'player', gameId: string, playerId?: str
 export const useGameStore = create<GameStore>((set, get) => ({
   clientId: getClientId(),
 
-  loadSession(gameId) {
+  async loadSession(gameId) {
     const id = gameId ?? sessionStorage.getItem('el-rosco:gameId') ?? localStorage.getItem('el-rosco:lastGameId');
-    const session = id ? gameService.getGame(id) : undefined;
+    const session = id ? await gameService.getGame(id) : undefined;
     set({
       session,
       currentRole: (sessionStorage.getItem('el-rosco:role') as 'host' | 'player' | null) ?? undefined,
@@ -59,51 +59,51 @@ export const useGameStore = create<GameStore>((set, get) => ({
     });
   },
 
-  createGame(input) {
-    const session = gameService.createGame(input, get().clientId);
+  async createGame(input) {
+    const session = await gameService.createGame(input, get().clientId);
     rememberSession('host', session.game.id);
     set({ session, currentRole: 'host', currentPlayerId: undefined, error: undefined });
     return session;
   },
 
-  joinGame(code, name) {
-    const session = gameService.joinGame(code, name, get().clientId);
+  async joinGame(code, name) {
+    const session = await gameService.joinGame(code, name, get().clientId);
     const player = session.players[session.players.length - 1];
     rememberSession('player', session.game.id, player.id);
     set({ session, currentRole: 'player', currentPlayerId: player.id, error: undefined });
     return session;
   },
 
-  addSimulatedPlayer(name) {
+  async addSimulatedPlayer(name) {
     const id = get().session?.game.id;
     if (!id) return;
-    set({ session: gameService.addSimulatedPlayer(id, name), error: undefined });
+    set({ session: await gameService.addSimulatedPlayer(id, name), error: undefined });
   },
 
-  startGame() {
+  async startGame() {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.startGame(id), error: undefined });
+    if (id) set({ session: await gameService.startGame(id), error: undefined });
   },
 
-  pauseGame() {
+  async pauseGame() {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.pauseGame(id), error: undefined });
+    if (id) set({ session: await gameService.pauseGame(id), error: undefined });
   },
 
-  resumeGame() {
+  async resumeGame() {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.resumeGame(id), error: undefined });
+    if (id) set({ session: await gameService.resumeGame(id), error: undefined });
   },
 
-  finishGame() {
+  async finishGame() {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.finishGame(id), error: undefined });
+    if (id) set({ session: await gameService.finishGame(id), error: undefined });
   },
 
-  deleteGame() {
+  async deleteGame() {
     const id = get().session?.game.id;
     if (!id) return;
-    gameService.deleteGame(id);
+    await gameService.deleteGame(id);
     sessionStorage.removeItem('el-rosco:gameId');
     sessionStorage.removeItem('el-rosco:role');
     sessionStorage.removeItem('el-rosco:playerId');
@@ -111,45 +111,45 @@ export const useGameStore = create<GameStore>((set, get) => ({
     set({ session: undefined, currentRole: undefined, currentPlayerId: undefined, error: undefined });
   },
 
-  resetGame() {
+  async resetGame() {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.resetGame(id), error: undefined });
+    if (id) set({ session: await gameService.resetGame(id), error: undefined });
   },
 
-  backToLobby() {
+  async backToLobby() {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.backToLobby(id), error: undefined });
+    if (id) set({ session: await gameService.backToLobby(id), error: undefined });
   },
 
-  switchTurn() {
+  async switchTurn() {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.switchTurn(id), error: undefined });
+    if (id) set({ session: await gameService.switchTurn(id), error: undefined });
   },
 
-  applyAnswer(action) {
+  async applyAnswer(action) {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.applyAnswer(id, action), error: undefined });
+    if (id) set({ session: await gameService.applyAnswer(id, action), error: undefined });
   },
 
-  undoLastAction() {
+  async undoLastAction() {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.undoLastAction(id), error: undefined });
+    if (id) set({ session: await gameService.undoLastAction(id), error: undefined });
   },
 
-  setLetterStatus(playerId, letter, status) {
+  async setLetterStatus(playerId, letter, status) {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.setLetterStatus(id, playerId, letter, status), error: undefined });
+    if (id) set({ session: await gameService.setLetterStatus(id, playerId, letter, status), error: undefined });
   },
 
-  updateQuestions(questions) {
+  async updateQuestions(questions) {
     const id = get().session?.game.id;
-    if (id) set({ session: gameService.updateQuestions(id, questions), error: undefined });
+    if (id) set({ session: await gameService.updateQuestions(id, questions), error: undefined });
   },
 
-  tick() {
+  async tick() {
     const id = get().session?.game.id;
     if (!id) return;
-    const session = gameService.tick(id);
+    const session = await gameService.tick(id);
     if (session) set({ session });
   },
 

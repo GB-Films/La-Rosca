@@ -6,6 +6,7 @@ import { JoinGamePage } from '../pages/JoinGamePage';
 import { LobbyPage } from '../pages/LobbyPage';
 import { PlayerGamePage } from '../pages/PlayerGamePage';
 import { BrandLogo } from '../components/BrandLogo';
+import { localRealtimeAdapter } from '../services/realtime';
 import { useGameStore } from '../store/gameStore';
 import { navigate, parseRoute, type Route } from './router';
 
@@ -23,13 +24,13 @@ export const App = () => {
 
   useEffect(() => {
     const gameId = 'gameId' in route ? route.gameId : undefined;
-    loadSession(gameId);
+    void loadSession(gameId);
   }, [loadSession, route]);
 
   useEffect(() => {
     const refresh = () => {
       const gameId = 'gameId' in route ? route.gameId : undefined;
-      loadSession(gameId);
+      void loadSession(gameId);
     };
     window.addEventListener('storage', refresh);
     window.addEventListener('el-rosco:games-changed', refresh);
@@ -41,13 +42,24 @@ export const App = () => {
 
   useEffect(() => {
     if (!('gameId' in route)) return undefined;
-    const id = window.setInterval(() => loadSession(route.gameId), 1200);
+    const id = window.setInterval(() => void loadSession(route.gameId), 1200);
     return () => window.clearInterval(id);
   }, [loadSession, route]);
 
   useEffect(() => {
+    if (!('gameId' in route)) return undefined;
+    return localRealtimeAdapter.subscribeToGame(route.gameId, (updatedSession) => {
+      if (updatedSession) {
+        useGameStore.setState({ session: updatedSession });
+      } else {
+        void loadSession(route.gameId);
+      }
+    });
+  }, [loadSession, route]);
+
+  useEffect(() => {
     if (session?.game.status !== 'playing' || route.name !== 'host') return undefined;
-    const id = window.setInterval(() => tick(), 1000);
+    const id = window.setInterval(() => void tick(), 1000);
     return () => window.clearInterval(id);
   }, [route.name, session?.game.status, tick]);
 

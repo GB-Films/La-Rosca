@@ -20,14 +20,14 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
   const joinLink = `${window.location.origin}${window.location.pathname}#/join/${session.game.code}`;
   const canStart = session.players.length === 2;
 
-  const start = () => {
-    startGame();
+  const start = async () => {
+    await startGame();
     navigate(`/host/${session.game.id}`);
   };
 
-  const closeGame = () => {
+  const closeGame = async () => {
     if (!window.confirm('Cerrar esta partida? Se va a borrar del modo local.')) return;
-    deleteGame();
+    await deleteGame();
     navigate('/');
   };
 

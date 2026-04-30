@@ -12,9 +12,9 @@ export const JoinGamePage = ({ initialCode }: JoinGamePageProps) => {
   const [name, setName] = useState(localStorage.getItem('el-rosco:lastPlayerName') ?? '');
   const [error, setError] = useState('');
 
-  const join = () => {
+  const join = async () => {
     try {
-      const session = joinGame(code.trim(), name.trim());
+      const session = await joinGame(code.trim(), name.trim());
       const player = session.players[session.players.length - 1];
       navigate(`/player/${session.game.id}/${player.id}`);
     } catch (err) {

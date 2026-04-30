@@ -47,7 +47,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
   };
 
   const lobby = () => {
-    backToLobby();
+    void backToLobby();
     navigate(`/lobby/${session.game.id}`);
   };
 

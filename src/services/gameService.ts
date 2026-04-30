@@ -10,55 +10,7 @@ import type {
 } from '../types/game';
 import type { Question } from '../types/question';
 import { generateCode, createId } from '../utils/codeGenerator';
-
-const STORAGE_KEY = 'el-rosco:games';
-const API_URL = '/api/games';
-
-const requestSharedGames = (method: 'GET' | 'PUT', body?: string) => {
-  if (typeof XMLHttpRequest === 'undefined') return undefined;
-  try {
-    const request = new XMLHttpRequest();
-    request.open(method, API_URL, false);
-    request.setRequestHeader('Content-Type', 'application/json');
-    request.send(body);
-    if (request.status >= 200 && request.status < 300) return request.responseText;
-  } catch {
-    return undefined;
-  }
-  return undefined;
-};
-
-const readAll = (): GameSession[] => {
-  try {
-    const shared = requestSharedGames('GET');
-    if (shared) {
-      localStorage.setItem(STORAGE_KEY, shared);
-      return JSON.parse(shared) as GameSession[];
-    }
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '[]') as GameSession[];
-  } catch {
-    return [];
-  }
-};
-
-const writeAll = (games: GameSession[]) => {
-  const serialized = JSON.stringify(games);
-  localStorage.setItem(STORAGE_KEY, serialized);
-  requestSharedGames('PUT', serialized);
-  window.dispatchEvent(new CustomEvent('el-rosco:games-changed'));
-};
-
-const saveSession = (session: GameSession) => {
-  const games = readAll();
-  const index = games.findIndex((game) => game.game.id === session.game.id);
-  if (index >= 0) {
-    games[index] = session;
-  } else {
-    games.push(session);
-  }
-  writeAll(games);
-  return session;
-};
+import { sessionRepository } from './sessionRepository';
 
 const availableSlot = (players: Player[]): PlayerSlot | null => {
   if (!players.some((player) => player.slot === 1)) return 1;
@@ -137,18 +89,18 @@ const assignNextTurn = (
 };
 
 export const gameService = {
-  listGames: readAll,
+  listGames: () => sessionRepository.list(),
 
   getGame(id: string) {
-    return readAll().find((session) => session.game.id === id);
+    return sessionRepository.get(id);
   },
 
   getGameByCode(code: string) {
-    return readAll().find((session) => session.game.code.toUpperCase() === code.toUpperCase());
+    return sessionRepository.getByCode(code);
   },
 
-  createGame(input: CreateGameInput, hostId: string) {
-    const existingCodes = new Set(readAll().map((session) => session.game.code));
+  async createGame(input: CreateGameInput, hostId: string) {
+    const existingCodes = new Set((await sessionRepository.list()).map((session) => session.game.code));
     let code = generateCode();
     while (existingCodes.has(code)) code = generateCode();
 
@@ -171,11 +123,11 @@ export const gameService = {
       actionLog: [],
     };
 
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  joinGame(code: string, name: string, clientId: string) {
-    const session = this.getGameByCode(code);
+  async joinGame(code: string, name: string, clientId: string) {
+    const session = await this.getGameByCode(code);
     if (!session) throw new Error('No encontramos una partida con ese codigo.');
     if (session.players.length >= 2) throw new Error('La partida ya tiene 2 jugadores.');
 
@@ -202,11 +154,11 @@ export const gameService = {
     session.letters.push(...createLetterStates(player, session));
     localStorage.setItem(browserJoinKey, player.id);
     localStorage.setItem('el-rosco:lastPlayerName', player.name);
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  addSimulatedPlayer(gameId: string, name?: string) {
-    const session = this.getGame(gameId);
+  async addSimulatedPlayer(gameId: string, name?: string) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     if (session.players.length >= 2) throw new Error('La partida ya tiene 2 jugadores.');
     const slot = availableSlot(session.players);
@@ -224,54 +176,53 @@ export const gameService = {
     };
     session.players.push(player);
     session.letters.push(...createLetterStates(player, session));
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  startGame(gameId: string) {
-    const session = this.getGame(gameId);
+  async startGame(gameId: string) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     if (session.players.length < 2) throw new Error('Necesitas 2 jugadores para iniciar.');
     session.game.status = 'playing';
     const firstPlayer = [...session.players].sort((a, b) => a.slot - b.slot)[0];
     assignNextTurn(session, firstPlayer.id);
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  pauseGame(gameId: string) {
-    const session = this.getGame(gameId);
+  async pauseGame(gameId: string) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     if (session.game.status === 'playing') session.game.status = 'paused';
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  resumeGame(gameId: string) {
-    const session = this.getGame(gameId);
+  async resumeGame(gameId: string) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     if (session.game.status === 'paused') session.game.status = 'playing';
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  backToLobby(gameId: string) {
-    const session = this.getGame(gameId);
+  async backToLobby(gameId: string) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     session.game.status = 'lobby';
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  finishGame(gameId: string) {
-    const session = this.getGame(gameId);
+  async finishGame(gameId: string) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     session.game.status = 'finished';
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
   deleteGame(gameId: string) {
-    const games = readAll().filter((session) => session.game.id !== gameId);
-    writeAll(games);
+    return sessionRepository.delete(gameId);
   },
 
-  resetGame(gameId: string) {
-    const session = this.getGame(gameId);
+  async resetGame(gameId: string) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     session.game.status = 'lobby';
     session.game.activePlayerId = undefined;
@@ -283,18 +234,18 @@ export const gameService = {
     }));
     session.letters = session.players.flatMap((player) => createLetterStates(player, session));
     session.actionLog = [];
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  switchTurn(gameId: string) {
-    const session = this.getGame(gameId);
+  async switchTurn(gameId: string) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     assignNextTurn(session, session.game.activePlayerId, session.game.activeLetter, false);
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  applyAnswer(gameId: string, action: 'correct' | 'wrong' | 'pass') {
-    const session = this.getGame(gameId);
+  async applyAnswer(gameId: string, action: 'correct' | 'wrong' | 'pass') {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     const playerId = session.game.activePlayerId;
     const letter = session.game.activeLetter;
@@ -335,11 +286,11 @@ export const gameService = {
       timestamp: new Date().toISOString(),
     };
     session.actionLog.push(log);
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  undoLastAction(gameId: string) {
-    const session = this.getGame(gameId);
+  async undoLastAction(gameId: string) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     const last = [...session.actionLog].reverse().find((log) => log.action !== 'undo');
     if (!last || !last.previousState) throw new Error('No hay acciones para deshacer.');
@@ -367,11 +318,11 @@ export const gameService = {
       nextState: { ...state },
       timestamp: new Date().toISOString(),
     });
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  setLetterStatus(gameId: string, playerId: string, letter: string, status: LetterStatus) {
-    const session = this.getGame(gameId);
+  async setLetterStatus(gameId: string, playerId: string, letter: string, status: LetterStatus) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     const state = session.letters.find((item) => item.playerId === playerId && item.letter === letter);
     const player = session.players.find((item) => item.id === playerId);
@@ -394,18 +345,18 @@ export const gameService = {
       nextState: { ...state },
       timestamp: new Date().toISOString(),
     });
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  updateQuestions(gameId: string, questions: Question[]) {
-    const session = this.getGame(gameId);
+  async updateQuestions(gameId: string, questions: Question[]) {
+    const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     session.questions = questions;
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 
-  tick(gameId: string) {
-    const session = this.getGame(gameId);
+  async tick(gameId: string) {
+    const session = await this.getGame(gameId);
     if (!session || session.game.status !== 'playing' || !session.game.activePlayerId) return session;
     const player = session.players.find((item) => item.id === session.game.activePlayerId);
     if (!player) return session;
@@ -413,6 +364,6 @@ export const gameService = {
     if (player.remainingSeconds <= 0) {
       assignNextTurn(session, player.id, session.game.activeLetter);
     }
-    return saveSession(session);
+    return sessionRepository.save(session);
   },
 };

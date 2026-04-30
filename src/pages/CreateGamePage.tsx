@@ -19,7 +19,7 @@ export const CreateGamePage = () => {
   const [questions, setQuestions] = useState<Question[]>(() => questionService.createEditablePack(sampleQuestions));
   const warnings = useMemo(() => validateQuestions(questions), [questions]);
 
-  const create = () => {
+  const create = async () => {
     const selectedQuestions =
       questionMode === 'manual'
         ? questions
@@ -27,7 +27,7 @@ export const CreateGamePage = () => {
             questionMode === 'pack' ? questionService.getPack(theme) : sampleQuestions,
             'game',
           );
-    const session = createGame({
+    const session = await createGame({
       title,
       theme,
       timerSeconds,
