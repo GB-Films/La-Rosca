@@ -11,6 +11,7 @@ import type {
 import type { Question } from '../types/question';
 import { generateCode, createId } from '../utils/codeGenerator';
 import { sessionRepository } from './sessionRepository';
+import { isHostedWithoutSupabase } from './supabaseClient';
 
 const availableSlot = (players: Player[]): PlayerSlot | null => {
   if (!players.some((player) => player.slot === 1)) return 1;
@@ -128,7 +129,14 @@ export const gameService = {
 
   async joinGame(code: string, name: string, clientId: string) {
     const session = await this.getGameByCode(code);
-    if (!session) throw new Error('No encontramos una partida con ese codigo.');
+    if (!session) {
+      if (isHostedWithoutSupabase) {
+        throw new Error(
+          'Este link publico todavia no tiene Supabase configurado, entonces las partidas no se comparten entre celulares. Configura Supabase o usa el link local de la misma red WiFi.',
+        );
+      }
+      throw new Error('No encontramos una partida con ese codigo.');
+    }
     if (session.players.length >= 2) throw new Error('La partida ya tiene 2 jugadores.');
 
     const browserJoinKey = `el-rosco:joined:${session.game.id}`;

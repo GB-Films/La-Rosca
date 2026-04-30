@@ -5,6 +5,11 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undef
 
 export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 
+export const isHostedWithoutSupabase =
+  typeof window !== 'undefined' &&
+  window.location.hostname.endsWith('github.io') &&
+  !isSupabaseConfigured;
+
 export const supabase = isSupabaseConfigured
   ? createClient(supabaseUrl!, supabaseAnonKey!, {
       realtime: {

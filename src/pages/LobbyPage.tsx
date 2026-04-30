@@ -2,6 +2,7 @@ import { Copy, Play, Trash2, ArrowLeft } from 'lucide-react';
 import { useState } from 'react';
 import { navigate } from '../app/router';
 import { findThemeName } from '../data/themes';
+import { isHostedWithoutSupabase } from '../services/supabaseClient';
 import { useGameStore } from '../store/gameStore';
 
 interface LobbyPageProps {
@@ -84,6 +85,12 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
         </div>
         <div className="mt-4 grid gap-2">
           <p className="text-sm font-bold text-slate-300">Link para compartir con jugadores</p>
+          {isHostedWithoutSupabase && (
+            <p className="rounded-xl border border-amber-300/40 bg-amber-400/10 p-3 text-sm font-semibold text-amber-100">
+              Este link de GitHub necesita Supabase para que otros celulares vean la partida. Ahora esta funcionando
+              solo en este navegador.
+            </p>
+          )}
           <input
             readOnly
             value={joinLink}
