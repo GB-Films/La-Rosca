@@ -1,10 +1,45 @@
-import { sampleQuestions } from '../data/sampleQuestions';
+import { argentinaGeneralLibrary } from '../data/argentinaGeneralLibrary';
+import { getLetters, sampleQuestions } from '../data/sampleQuestions';
 import type { Question } from '../types/question';
 import { createId } from '../utils/codeGenerator';
 
+const ARGENTINA_GENERAL_THEME = 'cultura-general-argentina';
+
+const pickRandom = <T>(items: T[]) => items[Math.floor(Math.random() * items.length)];
+
 export const questionService = {
   getPack(theme: string) {
+    if (theme === ARGENTINA_GENERAL_THEME) return argentinaGeneralLibrary;
     return sampleQuestions.filter((question) => question.theme === theme);
+  },
+
+  createGamePack(theme: string, includeÑ: boolean, prefix = 'game') {
+    const pack = this.getPack(theme);
+    const selected: Question[] = [];
+
+    getLetters(includeÑ).forEach((letter) => {
+      const usedAnswers = new Set<string>();
+
+      ([1, 2] as const).forEach((playerSlot) => {
+        const candidates = pack.filter(
+          (question) => question.letter === letter && (!question.playerSlot || question.playerSlot === playerSlot),
+        );
+        const freshCandidates = candidates.filter((question) => !usedAnswers.has(question.answer.toLowerCase()));
+        const picked = pickRandom(freshCandidates.length > 0 ? freshCandidates : candidates);
+
+        if (!picked) return;
+        usedAnswers.add(picked.answer.toLowerCase());
+        selected.push({
+          ...picked,
+          id: `${prefix}-${picked.id}-j${playerSlot}`,
+          playerSlot,
+          theme,
+          difficulty: 'medium',
+        });
+      });
+    });
+
+    return selected;
   },
 
   createEmpty(theme: string, letter = 'A', playerSlot?: 1 | 2): Question {

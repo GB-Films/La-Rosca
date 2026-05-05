@@ -23,10 +23,9 @@ export const CreateGamePage = () => {
     const selectedQuestions =
       questionMode === 'manual'
         ? questions
-        : questionService.createEditablePack(
-            questionMode === 'pack' ? questionService.getPack(theme) : sampleQuestions,
-            'game',
-          );
+        : questionMode === 'pack'
+          ? questionService.createGamePack(theme, includeÑ, 'game')
+          : questionService.createEditablePack(sampleQuestions, 'game');
     const session = await createGame({
       title,
       theme,
