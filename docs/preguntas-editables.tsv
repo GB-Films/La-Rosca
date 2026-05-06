@@ -1,0 +1,541 @@
+source	theme	playerSlot	letter	mode	answer	clue	acceptedAnswers
+argentinaGeneralLibrary	cultura-general-argentina		A	startsWith	Alfonsin	Presidente argentino que asumio en 1983 con el regreso de la democracia.	
+argentinaGeneralLibrary	cultura-general-argentina		A	startsWith	Asado	Comida argentina muy asociada a la parrilla y a las reuniones familiares.	
+argentinaGeneralLibrary	cultura-general-argentina		A	startsWith	Aconcagua	Cerro mendocino que es el mas alto de America.	
+argentinaGeneralLibrary	cultura-general-argentina		A	startsWith	Atahualpa Yupanqui	Cantautor y guitarrista central del folklore argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		A	startsWith	Austral	Moneda argentina que circulo antes del peso actual.	
+argentinaGeneralLibrary	cultura-general-argentina		A	startsWith	Avenida Corrientes	Avenida porteña famosa por teatros, librerias y pizzerias.	
+argentinaGeneralLibrary	cultura-general-argentina		A	startsWith	Aerolineas Argentinas	Linea aerea de bandera de la Argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		A	startsWith	Alfajor	Golosina tradicional rellena, muchas veces con dulce de leche.	
+argentinaGeneralLibrary	cultura-general-argentina		A	startsWith	AFA	Sigla de la entidad que organiza el futbol argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		A	startsWith	Anibal Troilo	Bandoneonista y director de orquesta conocido como Pichuco.	
+argentinaGeneralLibrary	cultura-general-argentina		B	startsWith	Boca Juniors	Club de futbol del barrio porteño de La Boca.	
+argentinaGeneralLibrary	cultura-general-argentina		B	startsWith	Bariloche	Ciudad rionegrina famosa por lagos, montañas y chocolate.	
+argentinaGeneralLibrary	cultura-general-argentina		B	startsWith	Belgrano	Apellido del creador de la bandera argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		B	startsWith	Bandoneon	Instrumento muy asociado al sonido del tango.	
+argentinaGeneralLibrary	cultura-general-argentina		B	startsWith	Buenos Aires	Capital de la Argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		B	startsWith	Bife de chorizo	Corte clasico de carne servido en parrillas argentinas.	
+argentinaGeneralLibrary	cultura-general-argentina		B	startsWith	Bicentenario	Celebracion de los 200 años de la Revolucion de Mayo.	
+argentinaGeneralLibrary	cultura-general-argentina		B	startsWith	Borges	Apellido de Jorge Luis, autor de Ficciones y El Aleph.	
+argentinaGeneralLibrary	cultura-general-argentina		B	startsWith	Bombonera	Estadio de Boca Juniors.	
+argentinaGeneralLibrary	cultura-general-argentina		B	startsWith	Balseiro	Instituto de Bariloche reconocido por fisica e ingenieria.	
+argentinaGeneralLibrary	cultura-general-argentina		C	startsWith	Cordoba	Provincia argentina conocida por sus sierras y por el cuarteto.	
+argentinaGeneralLibrary	cultura-general-argentina		C	startsWith	Congreso	Edificio donde sesiona el Poder Legislativo nacional.	
+argentinaGeneralLibrary	cultura-general-argentina		C	startsWith	Cabildo	Edificio historico vinculado a la Revolucion de Mayo.	
+argentinaGeneralLibrary	cultura-general-argentina		C	startsWith	Chocotorta	Postre popular hecho con galletitas de chocolate y dulce de leche.	
+argentinaGeneralLibrary	cultura-general-argentina		C	startsWith	Cataratas del Iguazu	Gran atractivo natural compartido por Argentina y Brasil.	
+argentinaGeneralLibrary	cultura-general-argentina		C	startsWith	Charly Garcia	Musico argentino de Sui Generis, Seru Giran y carrera solista.	
+argentinaGeneralLibrary	cultura-general-argentina		C	startsWith	Colon	Teatro porteño considerado uno de los grandes teatros liricos del mundo.	
+argentinaGeneralLibrary	cultura-general-argentina		C	startsWith	Cosquin	Ciudad cordobesa famosa por su festival de folklore.	
+argentinaGeneralLibrary	cultura-general-argentina		C	startsWith	Cuyo	Region argentina asociada a Mendoza, San Juan y San Luis.	
+argentinaGeneralLibrary	cultura-general-argentina		C	startsWith	Caminito	Calle-museo colorida del barrio de La Boca.	
+argentinaGeneralLibrary	cultura-general-argentina		D	startsWith	Dulce de leche	Producto dulce usado en alfajores, tortas y panqueques.	
+argentinaGeneralLibrary	cultura-general-argentina		D	startsWith	Diego Maradona	Futbolista argentino campeon del mundo en 1986.	
+argentinaGeneralLibrary	cultura-general-argentina		D	startsWith	Dique San Roque	Embalse cordobes cercano a Villa Carlos Paz.	
+argentinaGeneralLibrary	cultura-general-argentina		D	startsWith	De la Rua	Presidente argentino que renuncio en diciembre de 2001.	
+argentinaGeneralLibrary	cultura-general-argentina		D	startsWith	Di Tella	Apellido de un instituto clave de la vanguardia cultural argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		D	startsWith	Don Segundo Sombra	Novela gauchesca escrita por Ricardo Guiraldes.	
+argentinaGeneralLibrary	cultura-general-argentina		D	startsWith	Diamante	Ciudad entrerriana cercana al Parque Nacional Pre-Delta.	
+argentinaGeneralLibrary	cultura-general-argentina		D	startsWith	Damas Gratis	Grupo argentino muy popular de cumbia villera.	
+argentinaGeneralLibrary	cultura-general-argentina		D	startsWith	Delta del Parana	Zona de islas y rios cercana a Tigre.	
+argentinaGeneralLibrary	cultura-general-argentina		D	startsWith	Dibu Martinez	Arquero argentino campeon del mundo en Qatar 2022.	
+argentinaGeneralLibrary	cultura-general-argentina		E	startsWith	Empanada	Comida rellena muy comun en todas las provincias argentinas.	
+argentinaGeneralLibrary	cultura-general-argentina		E	startsWith	Evita	Nombre popular de Eva Duarte de Peron.	
+argentinaGeneralLibrary	cultura-general-argentina		E	startsWith	Estudiantes	Club de La Plata multiple campeon de la Copa Libertadores.	
+argentinaGeneralLibrary	cultura-general-argentina		E	startsWith	Ezeiza	Localidad bonaerense donde esta el principal aeropuerto internacional.	
+argentinaGeneralLibrary	cultura-general-argentina		E	startsWith	Entre Rios	Provincia de la Mesopotamia argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		E	startsWith	Escarapela	Simbolo patrio celeste y blanco usado en fechas nacionales.	
+argentinaGeneralLibrary	cultura-general-argentina		E	startsWith	El Ateneo	Libreria porteña instalada en un antiguo teatro.	
+argentinaGeneralLibrary	cultura-general-argentina		E	startsWith	Estancia	Campo tradicional argentino dedicado a actividades rurales.	
+argentinaGeneralLibrary	cultura-general-argentina		E	startsWith	El Calafate	Ciudad santacruceña cercana al glaciar Perito Moreno.	
+argentinaGeneralLibrary	cultura-general-argentina		E	startsWith	Esteros del Ibera	Gran humedal de la provincia de Corrientes.	
+argentinaGeneralLibrary	cultura-general-argentina		F	startsWith	Folklore	Genero musical asociado a zambas, chacareras y gatos.	
+argentinaGeneralLibrary	cultura-general-argentina		F	startsWith	Favaloro	Cardiologo argentino reconocido por el bypass coronario.	
+argentinaGeneralLibrary	cultura-general-argentina		F	startsWith	Ferro	Club porteño del barrio de Caballito.	
+argentinaGeneralLibrary	cultura-general-argentina		F	startsWith	Fito Paez	Musico rosarino autor de El amor despues del amor.	
+argentinaGeneralLibrary	cultura-general-argentina		F	startsWith	Feria de Mataderos	Feria porteña vinculada a tradiciones criollas.	
+argentinaGeneralLibrary	cultura-general-argentina		F	startsWith	Fernet	Bebida muy popular en Cordoba, mezclada con gaseosa cola.	
+argentinaGeneralLibrary	cultura-general-argentina		F	startsWith	Fileteado	Estilo decorativo porteño de colores vivos y letras ornamentadas.	
+argentinaGeneralLibrary	cultura-general-argentina		F	startsWith	Fragata Sarmiento	Buque museo ubicado en Puerto Madero.	
+argentinaGeneralLibrary	cultura-general-argentina		F	startsWith	Formosa	Provincia argentina del noreste.	
+argentinaGeneralLibrary	cultura-general-argentina		F	startsWith	Francisco	Nombre papal elegido por Jorge Bergoglio.	
+argentinaGeneralLibrary	cultura-general-argentina		G	startsWith	Gardel	Apellido de Carlos, figura maxima del tango cancion.	
+argentinaGeneralLibrary	cultura-general-argentina		G	startsWith	Gaucho	Personaje rural emblematico de la cultura argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		G	startsWith	Guarani	Lengua y pueblo originario con fuerte presencia en el litoral.	
+argentinaGeneralLibrary	cultura-general-argentina		G	startsWith	Gualeguaychu	Ciudad entrerriana famosa por su carnaval.	
+argentinaGeneralLibrary	cultura-general-argentina		G	startsWith	Gilda	Cantante argentina muy querida de la cumbia.	
+argentinaGeneralLibrary	cultura-general-argentina		G	startsWith	Guiso de lentejas	Plato caliente comun en los inviernos argentinos.	
+argentinaGeneralLibrary	cultura-general-argentina		G	startsWith	Goyeneche	Apellido de Roberto, cantor de tango conocido como el Polaco.	
+argentinaGeneralLibrary	cultura-general-argentina		G	startsWith	General Paz	Avenida que marca gran parte del limite de la Ciudad de Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		G	startsWith	Gran Rex	Teatro porteño sobre la avenida Corrientes.	
+argentinaGeneralLibrary	cultura-general-argentina		G	startsWith	Glaciar Perito Moreno	Glaciar santacruceño famoso por sus rupturas.	
+argentinaGeneralLibrary	cultura-general-argentina		H	startsWith	Humahuaca	Ciudad jujeña que da nombre a una quebrada Patrimonio de la Humanidad.	
+argentinaGeneralLibrary	cultura-general-argentina		H	startsWith	Hurlingham	Partido del oeste del Gran Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		H	startsWith	Hipolito Yrigoyen	Primer presidente elegido bajo la Ley Saenz Peña.	
+argentinaGeneralLibrary	cultura-general-argentina		H	startsWith	Himno Nacional	Cancion patria argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		H	startsWith	Hornero	Ave nacional argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		H	startsWith	Hospital Posadas	Hospital nacional ubicado en el oeste bonaerense.	
+argentinaGeneralLibrary	cultura-general-argentina		H	startsWith	Havanna	Marca marplatense famosa por sus alfajores.	
+argentinaGeneralLibrary	cultura-general-argentina		H	startsWith	Historieta	Formato donde brillaron personajes como Mafalda y Patoruzu.	
+argentinaGeneralLibrary	cultura-general-argentina		H	startsWith	Huracan	Club de Parque Patricios apodado el Globo.	
+argentinaGeneralLibrary	cultura-general-argentina		H	startsWith	Hector Larrea	Locutor y conductor historico de la radio argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		I	startsWith	Iguazu	Rio y cataratas ubicadas en Misiones.	
+argentinaGeneralLibrary	cultura-general-argentina		I	startsWith	Independiente	Club de Avellaneda conocido como Rey de Copas.	
+argentinaGeneralLibrary	cultura-general-argentina		I	startsWith	INCAA	Instituto nacional vinculado al cine argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		I	startsWith	Ischigualasto	Parque sanjuanino conocido como Valle de la Luna.	
+argentinaGeneralLibrary	cultura-general-argentina		I	startsWith	Instituto	Club cordobes donde se formaron varios futbolistas conocidos.	
+argentinaGeneralLibrary	cultura-general-argentina		I	startsWith	Ibera	Esteros correntinos de gran biodiversidad.	
+argentinaGeneralLibrary	cultura-general-argentina		I	startsWith	Illia	Presidente argentino medico de profesion.	
+argentinaGeneralLibrary	cultura-general-argentina		I	startsWith	Inmigracion	Proceso clave en la formacion social argentina de fines del siglo XIX.	
+argentinaGeneralLibrary	cultura-general-argentina		I	startsWith	INVAP	Empresa argentina reconocida por tecnologia nuclear y satelital.	
+argentinaGeneralLibrary	cultura-general-argentina		I	startsWith	Iruya	Pueblo salteño de montaña.	
+argentinaGeneralLibrary	cultura-general-argentina		J	startsWith	Jujuy	Provincia del noroeste argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		J	startsWith	Jose de San Martin	Libertador nacido en Yapeyu.	
+argentinaGeneralLibrary	cultura-general-argentina		J	startsWith	Juan Manuel Fangio	Quintuple campeon mundial de Formula 1.	
+argentinaGeneralLibrary	cultura-general-argentina		J	startsWith	Juana Azurduy	Heroina de las guerras de independencia.	
+argentinaGeneralLibrary	cultura-general-argentina		J	startsWith	Jorge Newbery	Pionero de la aviacion argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		J	startsWith	Julio Cortazar	Autor argentino de Rayuela.	
+argentinaGeneralLibrary	cultura-general-argentina		J	startsWith	Jose Hernandez	Autor del Martin Fierro.	
+argentinaGeneralLibrary	cultura-general-argentina		J	startsWith	Juan B Justo	Medico y politico fundador del Partido Socialista argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		J	startsWith	Javier Milei	Presidente argentino electo en 2023.	
+argentinaGeneralLibrary	cultura-general-argentina		J	startsWith	Jorge Lanata	Periodista argentino de television, radio y grafica.	
+argentinaGeneralLibrary	cultura-general-argentina		K	startsWith	Kirchner	Apellido de Nestor, presidente argentino entre 2003 y 2007.	
+argentinaGeneralLibrary	cultura-general-argentina		K	startsWith	Kempes	Goleador argentino del Mundial 1978.	
+argentinaGeneralLibrary	cultura-general-argentina		K	startsWith	Kavanagh	Edificio historico de Retiro, en Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		K	startsWith	Kilometro cero	Punto desde donde se miden rutas nacionales en Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		K	startsWith	Kiosco	Comercio de cercania muy comun en ciudades argentinas.	
+argentinaGeneralLibrary	cultura-general-argentina		K	startsWith	Kermesse	Fiesta popular de juegos y puestos, comun en clubes y escuelas.	
+argentinaGeneralLibrary	cultura-general-argentina		K	startsWith	Kily Gonzalez	Apodo de Cristian Gonzalez, futbolista rosarino.	
+argentinaGeneralLibrary	cultura-general-argentina		K	startsWith	Kolla	Pueblo originario del noroeste argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		K	startsWith	Kicillof	Apellido de Axel, gobernador bonaerense desde 2019.	
+argentinaGeneralLibrary	cultura-general-argentina		K	startsWith	Kevin Johansen	Musico nacido en Alaska y criado en Argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		L	startsWith	Lionel Messi	Capitan argentino campeon del mundo en 2022.	
+argentinaGeneralLibrary	cultura-general-argentina		L	startsWith	La Plata	Capital de la provincia de Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		L	startsWith	Litoral	Region argentina vinculada a rios, chamame y yerba mate.	
+argentinaGeneralLibrary	cultura-general-argentina		L	startsWith	Locro	Guiso tradicional asociado a fechas patrias.	
+argentinaGeneralLibrary	cultura-general-argentina		L	startsWith	Luna Park	Estadio cubierto historico de Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		L	startsWith	Les Luthiers	Grupo argentino de humor musical.	
+argentinaGeneralLibrary	cultura-general-argentina		L	startsWith	Lanus	Partido y club del sur del Gran Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		L	startsWith	Lujan	Ciudad bonaerense famosa por su basilica.	
+argentinaGeneralLibrary	cultura-general-argentina		L	startsWith	Libertador	Titulo historico asociado a San Martin.	
+argentinaGeneralLibrary	cultura-general-argentina		L	startsWith	Lavalle	Calle porteña y apellido de un militar argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		M	startsWith	Mate	Infusion rioplatense preparada con yerba.	
+argentinaGeneralLibrary	cultura-general-argentina		M	startsWith	Mafalda	Personaje de Quino.	
+argentinaGeneralLibrary	cultura-general-argentina		M	startsWith	Malvinas	Islas del Atlantico Sur reclamadas por Argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		M	startsWith	Mendoza	Provincia argentina famosa por sus vinos.	
+argentinaGeneralLibrary	cultura-general-argentina		M	startsWith	Mercedes Sosa	Cantante tucumana conocida como La Negra.	
+argentinaGeneralLibrary	cultura-general-argentina		M	startsWith	Mar del Plata	Ciudad balnearia bonaerense.	
+argentinaGeneralLibrary	cultura-general-argentina		M	startsWith	Milanesa	Plato popular de carne empanada.	
+argentinaGeneralLibrary	cultura-general-argentina		M	startsWith	Moria Casan	Figura del teatro de revistas, vedette, actriz y conductora argentina conocida como La One.	
+argentinaGeneralLibrary	cultura-general-argentina		M	startsWith	Martin Fierro	Poema gauchesco de Jose Hernandez.	
+argentinaGeneralLibrary	cultura-general-argentina		M	startsWith	Monumental	Estadio de River Plate y de la seleccion argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		N	startsWith	Neuquen	Provincia patagonica argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		N	startsWith	Nahuel Huapi	Lago y parque nacional de la Patagonia.	
+argentinaGeneralLibrary	cultura-general-argentina		N	startsWith	Nestor Kirchner	Presidente argentino nacido en Santa Cruz.	
+argentinaGeneralLibrary	cultura-general-argentina		N	startsWith	Nueve de Julio	Avenida porteña donde se encuentra el Obelisco.	
+argentinaGeneralLibrary	cultura-general-argentina		N	startsWith	Nito Mestre	Musico de Sui Generis.	
+argentinaGeneralLibrary	cultura-general-argentina		N	startsWith	Noquis	Pasta que en Argentina suele comerse los dias 29.	Noquis, Ñoquis
+argentinaGeneralLibrary	cultura-general-argentina		N	startsWith	Norte Grande	Region integrada por provincias del norte argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		N	startsWith	Nacion	Diario argentino fundado por Bartolome Mitre.	La Nacion, Nacion
+argentinaGeneralLibrary	cultura-general-argentina		N	startsWith	Newells	Club rosarino donde se formo Lionel Messi.	Newell's, Newells
+argentinaGeneralLibrary	cultura-general-argentina		N	startsWith	Necochea	Ciudad balnearia del sudeste bonaerense.	
+argentinaGeneralLibrary	cultura-general-argentina		Ñ	startsWith	Ñoquis	Pasta que en Argentina suele comerse el dia 29.	Noquis, Ñoquis
+argentinaGeneralLibrary	cultura-general-argentina		Ñ	startsWith	Ñandu	Ave corredora parecida al avestruz que habita zonas de Argentina.	Ñandu, Nandu
+argentinaGeneralLibrary	cultura-general-argentina		Ñ	startsWith	Ñandubay	Arbol nativo presente en zonas del litoral argentino.	Ñandubay, Nandubay
+argentinaGeneralLibrary	cultura-general-argentina		Ñ	startsWith	Ñorquinco	Localidad rionegrina de la Linea Sur.	Ñorquinco, Norquinco
+argentinaGeneralLibrary	cultura-general-argentina		Ñ	startsWith	Ñata	Apodo popular para una persona de nariz chata.	Ñata, Nata
+argentinaGeneralLibrary	cultura-general-argentina		Ñ	startsWith	Ñacurutú	Buho grande presente en varias regiones de Sudamerica.	Ñacurutu, Ñacurutú, Nacurutu
+argentinaGeneralLibrary	cultura-general-argentina		Ñ	startsWith	Ña Serapia	Personaje popular de relatos y humor criollo.	Ña Serapia, Na Serapia
+argentinaGeneralLibrary	cultura-general-argentina		Ñ	startsWith	Ñanduti	Encaje tradicional guarani conocido en el litoral.	Ñanduti, Nanduti
+argentinaGeneralLibrary	cultura-general-argentina		Ñ	startsWith	Ñoquiada	Comida o reunion popular alrededor de ñoquis.	Ñoquiada, Noquiada
+argentinaGeneralLibrary	cultura-general-argentina		Ñ	startsWith	Ñu Pora	Expresion guarani usada en nombres de lugares del litoral.	Ñu Pora, Nu Pora
+argentinaGeneralLibrary	cultura-general-argentina		O	startsWith	Obelisco	Monumento ubicado sobre la avenida 9 de Julio.	
+argentinaGeneralLibrary	cultura-general-argentina		O	startsWith	Olivos	Localidad donde esta la residencia presidencial argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		O	startsWith	Ombu	Arbol asociado a la llanura pampeana.	
+argentinaGeneralLibrary	cultura-general-argentina		O	startsWith	Osvaldo Pugliese	Pianista y director de orquesta de tango.	
+argentinaGeneralLibrary	cultura-general-argentina		O	startsWith	Oscar Ruggeri	Defensor campeon mundial con Argentina en 1986.	
+argentinaGeneralLibrary	cultura-general-argentina		O	startsWith	Obera	Ciudad misionera.	
+argentinaGeneralLibrary	cultura-general-argentina		O	startsWith	Oran	Ciudad del norte salteño.	Oran, Orán
+argentinaGeneralLibrary	cultura-general-argentina		O	startsWith	Once	Barrio y estacion ferroviaria de Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		O	startsWith	Orquesta Tipica	Formacion musical clasica del tango.	
+argentinaGeneralLibrary	cultura-general-argentina		O	startsWith	Oeste	Zona del Gran Buenos Aires donde estan Moron, Merlo e Ituzaingo.	
+argentinaGeneralLibrary	cultura-general-argentina		P	startsWith	Patagonia	Region austral compartida por Argentina y Chile.	
+argentinaGeneralLibrary	cultura-general-argentina		P	startsWith	Pampa	Llanura central clave para la produccion agropecuaria.	
+argentinaGeneralLibrary	cultura-general-argentina		P	startsWith	Peron	Apellido de Juan Domingo, tres veces presidente argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		P	startsWith	Palermo	Barrio porteño grande, conocido por parques y vida nocturna.	
+argentinaGeneralLibrary	cultura-general-argentina		P	startsWith	Parana	Rio y ciudad capital de Entre Rios.	
+argentinaGeneralLibrary	cultura-general-argentina		P	startsWith	Pato	Deporte nacional argentino practicado a caballo.	
+argentinaGeneralLibrary	cultura-general-argentina		P	startsWith	Patoruzu	Personaje clasico de la historieta argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		P	startsWith	Pescado Rabioso	Banda de Spinetta que edito Artaud.	
+argentinaGeneralLibrary	cultura-general-argentina		P	startsWith	Puerto Madero	Barrio moderno de Buenos Aires junto al rio.	
+argentinaGeneralLibrary	cultura-general-argentina		P	startsWith	Provoleta	Queso asado muy comun en parrillas argentinas.	
+argentinaGeneralLibrary	cultura-general-argentina		Q	startsWith	Quilmes	Ciudad bonaerense y marca historica de cerveza argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		Q	startsWith	Quebrada de Humahuaca	Valle jujeño declarado Patrimonio de la Humanidad.	
+argentinaGeneralLibrary	cultura-general-argentina		Q	startsWith	Quino	Dibujante mendocino creador de Mafalda.	
+argentinaGeneralLibrary	cultura-general-argentina		Q	startsWith	Queso y dulce	Postre argentino tambien llamado vigilante.	
+argentinaGeneralLibrary	cultura-general-argentina		Q	startsWith	Quinquela Martin	Pintor argentino ligado al barrio de La Boca.	
+argentinaGeneralLibrary	cultura-general-argentina		Q	startsWith	Quemita	Predio historico de entrenamiento de Huracan.	
+argentinaGeneralLibrary	cultura-general-argentina		Q	startsWith	Quinta de Olivos	Residencia presidencial argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		Q	startsWith	Qatar 2022	Mundial ganado por la seleccion argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		Q	startsWith	Quilmes Rock	Festival argentino de musica masiva.	
+argentinaGeneralLibrary	cultura-general-argentina		Q	startsWith	Quiroga	Apellido del caudillo riojano Facundo.	
+argentinaGeneralLibrary	cultura-general-argentina		R	startsWith	River Plate	Club de futbol del barrio de Nuñez.	
+argentinaGeneralLibrary	cultura-general-argentina		R	startsWith	Rosario	Ciudad santafesina donde nacieron Messi y el Monumento a la Bandera.	
+argentinaGeneralLibrary	cultura-general-argentina		R	startsWith	Rosas	Apellido de Juan Manuel, gobernador bonaerense del siglo XIX.	
+argentinaGeneralLibrary	cultura-general-argentina		R	startsWith	Recoleta	Barrio porteño famoso por su cementerio historico.	
+argentinaGeneralLibrary	cultura-general-argentina		R	startsWith	Riachuelo	Nombre popular del tramo inferior del rio Matanza.	
+argentinaGeneralLibrary	cultura-general-argentina		R	startsWith	Rivadavia	Apellido del primer presidente argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		R	startsWith	Riquelme	Enganche historico de Boca Juniors.	
+argentinaGeneralLibrary	cultura-general-argentina		R	startsWith	Raly Barrionuevo	Cantautor argentino de folklore.	
+argentinaGeneralLibrary	cultura-general-argentina		R	startsWith	Ruta 40	Ruta nacional que recorre el oeste argentino de norte a sur.	
+argentinaGeneralLibrary	cultura-general-argentina		R	startsWith	Resistencia	Capital de la provincia del Chaco.	
+argentinaGeneralLibrary	cultura-general-argentina		S	startsWith	San Martin	Libertador argentino nacido en Yapeyu.	
+argentinaGeneralLibrary	cultura-general-argentina		S	startsWith	Sarmiento	Presidente argentino asociado a la educacion publica.	
+argentinaGeneralLibrary	cultura-general-argentina		S	startsWith	Salta	Provincia norteña conocida como La Linda.	
+argentinaGeneralLibrary	cultura-general-argentina		S	startsWith	Soda Stereo	Trio de rock liderado por Gustavo Cerati.	
+argentinaGeneralLibrary	cultura-general-argentina		S	startsWith	Subte	Nombre popular del metro de Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		S	startsWith	San Telmo	Barrio porteño famoso por ferias y tango.	
+argentinaGeneralLibrary	cultura-general-argentina		S	startsWith	Sorrentinos	Pasta rellena muy comun en bodegones argentinos.	
+argentinaGeneralLibrary	cultura-general-argentina		S	startsWith	Sancor	Cooperativa lactea argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		S	startsWith	Sierras de Cordoba	Zona turistica clasica del centro del pais.	
+argentinaGeneralLibrary	cultura-general-argentina		S	startsWith	Siete Lagos	Ruta escenica entre San Martin de los Andes y Villa La Angostura.	
+argentinaGeneralLibrary	cultura-general-argentina		T	startsWith	Tango	Genero musical y baile rioplatense.	
+argentinaGeneralLibrary	cultura-general-argentina		T	startsWith	Tucuman	Provincia donde se declaro la independencia argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		T	startsWith	Teatro Colon	Teatro lirico emblematico de Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		T	startsWith	Truco	Juego de cartas muy popular en Argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		T	startsWith	Tita Merello	Actriz y cantante de tango argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		T	startsWith	Tren a las Nubes	Atractivo turistico ferroviario de Salta.	
+argentinaGeneralLibrary	cultura-general-argentina		T	startsWith	Tierra del Fuego	Provincia mas austral de Argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		T	startsWith	Tigre	Ciudad bonaerense de acceso al Delta.	
+argentinaGeneralLibrary	cultura-general-argentina		T	startsWith	Talampaya	Parque nacional riojano de paredones rojizos.	
+argentinaGeneralLibrary	cultura-general-argentina		T	startsWith	Tostado	Sandwich caliente frecuente en bares argentinos.	
+argentinaGeneralLibrary	cultura-general-argentina		U	startsWith	Ushuaia	Ciudad fueguina promocionada como la mas austral del mundo.	
+argentinaGeneralLibrary	cultura-general-argentina		U	startsWith	UBA	Sigla de la Universidad de Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		U	startsWith	Uritorco	Cerro cordobes asociado al turismo serrano.	
+argentinaGeneralLibrary	cultura-general-argentina		U	startsWith	Union Civica Radical	Partido politico fundado tras la Revolucion del Parque.	
+argentinaGeneralLibrary	cultura-general-argentina		U	startsWith	Unicenter	Centro comercial grande ubicado en Martinez.	
+argentinaGeneralLibrary	cultura-general-argentina		U	startsWith	UADE	Universidad privada argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		U	startsWith	Universidad de Cordoba	Universidad argentina fundada en el periodo colonial.	
+argentinaGeneralLibrary	cultura-general-argentina		U	startsWith	Ulises Bueno	Cantante cordobes de cuarteto.	
+argentinaGeneralLibrary	cultura-general-argentina		U	startsWith	Ullum	Dique y zona turistica de San Juan.	
+argentinaGeneralLibrary	cultura-general-argentina		U	startsWith	Unidad Basica	Local partidario asociado al peronismo.	
+argentinaGeneralLibrary	cultura-general-argentina		V	startsWith	Vino	Producto emblema de Mendoza y otras provincias argentinas.	
+argentinaGeneralLibrary	cultura-general-argentina		V	startsWith	Velez	Club porteño del barrio de Liniers.	
+argentinaGeneralLibrary	cultura-general-argentina		V	startsWith	Villa Gesell	Ciudad balnearia de la costa bonaerense.	
+argentinaGeneralLibrary	cultura-general-argentina		V	startsWith	Viedma	Capital de Rio Negro.	
+argentinaGeneralLibrary	cultura-general-argentina		V	startsWith	Virreinato del Rio de la Plata	Entidad colonial creada en 1776.	
+argentinaGeneralLibrary	cultura-general-argentina		V	startsWith	Victor Heredia	Cantautor argentino de musica popular.	
+argentinaGeneralLibrary	cultura-general-argentina		V	startsWith	Villa Carlos Paz	Ciudad turistica cordobesa.	
+argentinaGeneralLibrary	cultura-general-argentina		V	startsWith	Vaca Muerta	Formacion de hidrocarburos no convencionales en Neuquen.	
+argentinaGeneralLibrary	cultura-general-argentina		V	startsWith	Vendimia	Fiesta mendocina vinculada a la cosecha de la uva.	
+argentinaGeneralLibrary	cultura-general-argentina		V	startsWith	Vicente Lopez	Partido del norte del Gran Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		W	startsWith	Wos	Rapero argentino surgido de competencias de freestyle.	
+argentinaGeneralLibrary	cultura-general-argentina		W	startsWith	Wanda	Localidad misionera conocida por sus minas de piedras semipreciosas.	
+argentinaGeneralLibrary	cultura-general-argentina		W	startsWith	Walichu	Sitio arqueologico cercano a El Calafate.	
+argentinaGeneralLibrary	cultura-general-argentina		W	startsWith	Whisky Romeo Zulu	Pelicula argentina dirigida por Enrique Piñeyro.	
+argentinaGeneralLibrary	cultura-general-argentina		W	startsWith	Walter Samuel	Defensor argentino apodado el Muro.	
+argentinaGeneralLibrary	cultura-general-argentina		W	startsWith	Wichi	Pueblo originario del Gran Chaco argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		W	startsWith	Willy Crook	Saxofonista y cantante argentino de funk y soul.	
+argentinaGeneralLibrary	cultura-general-argentina		W	startsWith	William Brown	Marino irlandes considerado padre de la Armada Argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		W	startsWith	Wado de Pedro	Dirigente politico argentino de nombre Eduardo.	
+argentinaGeneralLibrary	cultura-general-argentina		W	startsWith	Wenceslao Paunero	Militar argentino del siglo XIX.	
+argentinaGeneralLibrary	cultura-general-argentina		X	contains	Maxima Zorreguieta	Argentina que se convirtio en reina consorte de los Paises Bajos.	
+argentinaGeneralLibrary	cultura-general-argentina		X	contains	Exodo Jujeño	Retirada ordenada por Belgrano en 1812.	Exodo Jujeño, Exodo Jujeno
+argentinaGeneralLibrary	cultura-general-argentina		X	contains	Exequiel Palacios	Futbolista argentino campeon del mundo en 2022.	
+argentinaGeneralLibrary	cultura-general-argentina		X	contains	Boxeo	Deporte con figuras argentinas como Monzon, Locche y Narvaez.	
+argentinaGeneralLibrary	cultura-general-argentina		X	contains	Excursionistas	Club de futbol del barrio porteño de Belgrano.	
+argentinaGeneralLibrary	cultura-general-argentina		X	contains	Taxi	Servicio de autos de alquiler muy visible en Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		X	contains	Ex ESMA	Espacio de memoria ubicado en la Ciudad de Buenos Aires.	
+argentinaGeneralLibrary	cultura-general-argentina		X	contains	Exilio	Situacion vivida por muchos argentinos durante la ultima dictadura.	
+argentinaGeneralLibrary	cultura-general-argentina		X	contains	Exportacion	Actividad clave para productos como soja, carne y vino.	
+argentinaGeneralLibrary	cultura-general-argentina		X	contains	Expreso Sarmiento	Nombre asociado al ferrocarril que une Once con el oeste bonaerense.	
+argentinaGeneralLibrary	cultura-general-argentina		Y	startsWith	YPF	Empresa argentina de energia fundada en 1922.	
+argentinaGeneralLibrary	cultura-general-argentina		Y	startsWith	Yerba mate	Producto usado para preparar mate.	
+argentinaGeneralLibrary	cultura-general-argentina		Y	startsWith	Yrigoyen	Apellido de Hipolito, presidente radical argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		Y	startsWith	Yaguarete	Felino nativo protegido en Argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		Y	startsWith	Yupanqui	Apellido artistico de Atahualpa, referente del folklore.	
+argentinaGeneralLibrary	cultura-general-argentina		Y	startsWith	Yapeyu	Localidad correntina donde nacio San Martin.	
+argentinaGeneralLibrary	cultura-general-argentina		Y	startsWith	Yacyreta	Represa hidrolectrica sobre el rio Parana.	
+argentinaGeneralLibrary	cultura-general-argentina		Y	startsWith	Yavi	Localidad historica del norte jujeño.	
+argentinaGeneralLibrary	cultura-general-argentina		Y	startsWith	Yuyo	Nombre popular para hierbas silvestres o medicinales.	
+argentinaGeneralLibrary	cultura-general-argentina		Y	startsWith	Yacare	Reptil presente en humedales del noreste argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		Z	startsWith	Zamba	Danza y genero musical del folklore argentino.	
+argentinaGeneralLibrary	cultura-general-argentina		Z	startsWith	Zanetti	Futbolista argentino historico del Inter.	
+argentinaGeneralLibrary	cultura-general-argentina		Z	startsWith	Zapala	Ciudad neuquina.	
+argentinaGeneralLibrary	cultura-general-argentina		Z	startsWith	Zonda	Viento seco y calido caracteristico de Cuyo.	
+argentinaGeneralLibrary	cultura-general-argentina		Z	startsWith	Zitarrosa	Cantautor uruguayo muy escuchado en el Rio de la Plata.	
+argentinaGeneralLibrary	cultura-general-argentina		Z	startsWith	Zapiola	Apellido de Jose Matias, militar de la independencia.	
+argentinaGeneralLibrary	cultura-general-argentina		Z	startsWith	Zorzal Criollo	Apodo de Carlos Gardel.	
+argentinaGeneralLibrary	cultura-general-argentina		Z	startsWith	Zarate	Ciudad bonaerense junto al Parana.	
+argentinaGeneralLibrary	cultura-general-argentina		Z	startsWith	Zamba de mi esperanza	Cancion folklorica muy difundida en Argentina.	
+argentinaGeneralLibrary	cultura-general-argentina		Z	startsWith	Zas	Banda de Miguel Mateos en los años ochenta.	
+sampleQuestions	cultura-general-argentina	1	A	startsWith	Atuel	Rio cuyano cuyo uso de aguas genero un conflicto historico entre Mendoza y La Pampa.	
+sampleQuestions	cultura-general-argentina	1	B	startsWith	Bialet Masse	Medico e ingeniero que escribio un influyente informe sobre la clase obrera argentina en 1904.	
+sampleQuestions	cultura-general-argentina	1	C	startsWith	Comechingones	Pueblo originario asociado a las sierras de Cordoba y San Luis.	
+sampleQuestions	cultura-general-argentina	1	D	startsWith	Difunta Correa	Figura de devocion popular cuyo santuario principal esta en San Juan.	
+sampleQuestions	cultura-general-argentina	1	E	startsWith	Esteros del Ibera	Gran humedal correntino, uno de los ecosistemas mas importantes del pais.	
+sampleQuestions	cultura-general-argentina	1	F	startsWith	Fitz Roy	Cerro patagonico emblematico ubicado cerca de El Chalten.	
+sampleQuestions	cultura-general-argentina	1	G	startsWith	Gualeguaychu	Ciudad entrerriana famosa por su carnaval y por el puente hacia Fray Bentos.	
+sampleQuestions	cultura-general-argentina	1	H	startsWith	Huemul	Ciervo andino que aparece en el escudo nacional de Chile y habita la Patagonia argentina.	
+sampleQuestions	cultura-general-argentina	1	I	startsWith	Ischigualasto	Parque sanjuanino conocido como Valle de la Luna.	
+sampleQuestions	cultura-general-argentina	1	J	startsWith	Juana Azurduy	Lider revolucionaria altoperuana homenajeada en Argentina por su rol independentista.	
+sampleQuestions	cultura-general-argentina	1	K	startsWith	Kolla	Pueblo originario del noroeste argentino, tambien escrito colla.	
+sampleQuestions	cultura-general-argentina	1	L	startsWith	Lihuel Calel	Parque nacional pampeano de sierras bajas y pinturas rupestres.	
+sampleQuestions	cultura-general-argentina	1	M	startsWith	Maimara	Localidad jujeña cercana a la Paleta del Pintor.	
+sampleQuestions	cultura-general-argentina	1	N	startsWith	Nahuel Huapi	Lago patagonico que da nombre a un parque nacional compartido por Rio Negro y Neuquen.	
+sampleQuestions	cultura-general-argentina	1	Ñ	startsWith	Ñacuñan	Reserva de biosfera mendocina del monte, famosa por sus algarrobales.	Ñacuñan, Ñacuñán
+sampleQuestions	cultura-general-argentina	1	O	startsWith	Ombu	Arbol herbaceo de gran porte asociado a la llanura pampeana.	Ombu, Ombú
+sampleQuestions	cultura-general-argentina	1	P	startsWith	Payunia	Region volcanica mendocina con cientos de conos basalticos.	
+sampleQuestions	cultura-general-argentina	1	Q	startsWith	Quinquela Martin	Pintor argentino ligado al barrio de La Boca.	Quinquela Martin, Quinquela Martín
+sampleQuestions	cultura-general-argentina	1	R	startsWith	Ruca Malen	Expresion mapuche usada en nombres de bodegas y sitios, significa casa de la joven.	
+sampleQuestions	cultura-general-argentina	1	S	startsWith	Socompa	Volcan salteño cercano al limite con Chile.	
+sampleQuestions	cultura-general-argentina	1	T	startsWith	Talampaya	Parque nacional riojano famoso por paredones rojizos y fosiles triásicos.	
+sampleQuestions	cultura-general-argentina	1	U	startsWith	Uritorco	Cerro cordobes rodeado de relatos misticos y turismo serrano.	
+sampleQuestions	cultura-general-argentina	1	V	startsWith	Valcheta	Localidad rionegrina conocida por el arroyo homonimo y su oasis patagonico.	
+sampleQuestions	cultura-general-argentina	1	W	startsWith	Wanda	Localidad misionera conocida por sus minas de piedras semipreciosas.	
+sampleQuestions	cultura-general-argentina	1	X	contains	Maxima Zorreguieta	Argentina que se convirtio en reina consorte de los Paises Bajos.	
+sampleQuestions	cultura-general-argentina	1	Y	startsWith	Yavi	Localidad historica jujeña cercana a La Quiaca.	
+sampleQuestions	cultura-general-argentina	1	Z	startsWith	Zapala	Ciudad neuquina ubicada en un importante cruce de rutas patagonicas.	
+sampleQuestions	cultura-general-argentina	2	A	startsWith	Aconquija	Sistema montañoso del noroeste que separa zonas de Tucuman y Catamarca.	
+sampleQuestions	cultura-general-argentina	2	B	startsWith	Bavio	Localidad bonaerense llamada General Mansilla, vinculada al nombre de una estacion ferroviaria.	
+sampleQuestions	cultura-general-argentina	2	C	startsWith	Calchaquies	Valles del noroeste argentino de gran valor arqueologico y paisajistico.	
+sampleQuestions	cultura-general-argentina	2	D	startsWith	Diamante	Ciudad entrerriana sobre el rio Parana, cercana al parque nacional Pre-Delta.	
+sampleQuestions	cultura-general-argentina	2	E	startsWith	Epuyen	Localidad y lago chubutense de la Comarca Andina.	Epuyen, Epuyén
+sampleQuestions	cultura-general-argentina	2	F	startsWith	Famatina	Nevado riojano asociado a mineria, historia regional y reclamos ambientales.	
+sampleQuestions	cultura-general-argentina	2	G	startsWith	Guarani	Pueblo y lengua originaria de fuerte presencia en el litoral argentino.	Guarani, Guaraní
+sampleQuestions	cultura-general-argentina	2	H	startsWith	Hualfin	Localidad catamarqueña asociada a cultura arqueologica del noroeste.	Hualfin, Hualfín
+sampleQuestions	cultura-general-argentina	2	I	startsWith	Iruya	Pueblo salteño de montaña al que se accede desde Jujuy.	
+sampleQuestions	cultura-general-argentina	2	J	startsWith	Jose Hernandez	Autor del Martin Fierro.	Jose Hernandez, José Hernández
+sampleQuestions	cultura-general-argentina	2	K	startsWith	Kilme	Variante de escritura del pueblo diaguita que da origen al nombre Quilmes.	
+sampleQuestions	cultura-general-argentina	2	L	startsWith	Lanín	Volcan neuquino que da nombre a un parque nacional.	Lanin, Lanín
+sampleQuestions	cultura-general-argentina	2	M	startsWith	Moconá	Saltos misioneros longitudinales sobre el rio Uruguay.	Mocona, Moconá
+sampleQuestions	cultura-general-argentina	2	N	startsWith	Nono	Localidad cordobesa del valle de Traslasierra.	
+sampleQuestions	cultura-general-argentina	2	Ñ	startsWith	Ñorquinco	Localidad rionegrina de la Linea Sur.	
+sampleQuestions	cultura-general-argentina	2	O	startsWith	Oran	Ciudad salteña del norte provincial.	Oran, Orán
+sampleQuestions	cultura-general-argentina	2	P	startsWith	Purmamarca	Pueblo jujeño ubicado al pie del Cerro de los Siete Colores.	
+sampleQuestions	cultura-general-argentina	2	Q	startsWith	Quebrada de Humahuaca	Valle jujeño declarado Patrimonio de la Humanidad.	
+sampleQuestions	cultura-general-argentina	2	R	startsWith	Riachuelo	Nombre popular del tramo inferior del rio Matanza.	
+sampleQuestions	cultura-general-argentina	2	S	startsWith	Sierra de la Ventana	Sistema serrano bonaerense y destino turistico del sudoeste provincial.	
+sampleQuestions	cultura-general-argentina	2	T	startsWith	Tilcara	Localidad jujeña famosa por su pucara.	
+sampleQuestions	cultura-general-argentina	2	U	startsWith	Ullum	Dique y zona sanjuanina cercana a la capital provincial.	
+sampleQuestions	cultura-general-argentina	2	V	startsWith	Villa Traful	Localidad neuquina sobre un lago de la ruta de los Siete Lagos.	
+sampleQuestions	cultura-general-argentina	2	W	startsWith	Wichi	Pueblo originario del Gran Chaco argentino.	
+sampleQuestions	cultura-general-argentina	2	X	contains	Uxmal	Sitio maya que suele aparecer en comparaciones arqueologicas con culturas prehispanicas americanas.	
+sampleQuestions	cultura-general-argentina	2	Y	startsWith	Yapeyu	Localidad correntina donde nacio Jose de San Martin.	Yapeyu, Yapeyú
+sampleQuestions	cultura-general-argentina	2	Z	startsWith	Zonda	Viento seco y calido caracteristico de Cuyo.	
+sampleQuestions	cine-argentino	1	A	startsWith	Argentina 1985	Pelicula sobre el Juicio a las Juntas protagonizada por Ricardo Darin.	
+sampleQuestions	cine-argentino	1	B	startsWith	Bolivia	Film de Adrian Caetano ambientado en un bar porteño.	
+sampleQuestions	cine-argentino	1	C	startsWith	Camila	Pelicula de Maria Luisa Bemberg nominada al Oscar.	
+sampleQuestions	cine-argentino	1	D	startsWith	Derecho de familia	Pelicula de Daniel Burman protagonizada por Daniel Hendler.	
+sampleQuestions	cine-argentino	1	E	startsWith	Esperando la carroza	Clasico de humor negro dirigido por Alejandro Doria.	
+sampleQuestions	cine-argentino	1	F	startsWith	Familia rodante	Road movie argentina dirigida por Pablo Trapero.	
+sampleQuestions	cine-argentino	1	G	startsWith	Garage Olimpo	Pelicula de Marco Bechis sobre un centro clandestino de detencion.	
+sampleQuestions	cine-argentino	1	H	startsWith	Hombre mirando al sudeste	Film de Eliseo Subiela ambientado en un hospital neuropsiquiatrico.	
+sampleQuestions	cine-argentino	1	I	startsWith	Iluminados por el fuego	Pelicula argentina sobre veteranos de Malvinas.	
+sampleQuestions	cine-argentino	1	J	startsWith	Juan Moreira	Pelicula de Leonardo Favio basada en el personaje gauchesco.	
+sampleQuestions	cine-argentino	1	K	startsWith	Kryptonita	Pelicula argentina basada en una novela de Leonardo Oyola.	
+sampleQuestions	cine-argentino	1	L	startsWith	La ciénaga	Opera prima de Lucrecia Martel.	La cienaga, La ciénaga
+sampleQuestions	cine-argentino	1	M	startsWith	Mundo grua	Debut de Pablo Trapero protagonizado por Luis Margani.	Mundo grua, Mundo grúa
+sampleQuestions	cine-argentino	1	N	startsWith	Nueve reinas	Thriller de Fabian Bielinsky sobre dos estafadores.	
+sampleQuestions	cine-argentino	1	Ñ	startsWith	Ñusta	Termino que aparece en relatos andinos llevados al documental argentino.	
+sampleQuestions	cine-argentino	1	O	startsWith	Oso rojo	Pelicula de Adrian Caetano protagonizada por Julio Chavez.	
+sampleQuestions	cine-argentino	1	P	startsWith	Pizza, birra, faso	Film clave del Nuevo Cine Argentino.	
+sampleQuestions	cine-argentino	1	Q	startsWith	Quebracho	Pelicula argentina de 1974 sobre la explotacion forestal.	
+sampleQuestions	cine-argentino	1	R	startsWith	Relatos salvajes	Pelicula de Damian Szifron compuesta por historias independientes.	
+sampleQuestions	cine-argentino	1	S	startsWith	Sur	Pelicula de Fernando Solanas ganadora en Cannes.	
+sampleQuestions	cine-argentino	1	T	startsWith	Tiempo de revancha	Thriller politico de Adolfo Aristarain.	
+sampleQuestions	cine-argentino	1	U	startsWith	Un oso rojo	Titulo alternativo completo del film de Caetano sobre un exconvicto.	
+sampleQuestions	cine-argentino	1	V	startsWith	Valentin	Pelicula de Alejandro Agresti narrada desde la mirada de un niño.	Valentin, Valentín
+sampleQuestions	cine-argentino	1	W	startsWith	Wakolda	Pelicula de Lucia Puenzo tambien conocida como El medico aleman.	
+sampleQuestions	cine-argentino	1	X	contains	El exilio de Gardel	Pelicula de Fernando Solanas sobre argentinos exiliados en Paris.	
+sampleQuestions	cine-argentino	1	Y	startsWith	Yo, la peor de todas	Pelicula de Maria Luisa Bemberg sobre Sor Juana Ines de la Cruz.	
+sampleQuestions	cine-argentino	1	Z	startsWith	Zama	Film de Lucrecia Martel basado en la novela de Antonio Di Benedetto.	
+sampleQuestions	cine-argentino	2	A	startsWith	Aniceto	Pelicula musical de Leonardo Favio inspirada en su propio film anterior.	
+sampleQuestions	cine-argentino	2	B	startsWith	Betibú	Thriller argentino basado en la novela de Claudia Piñeiro.	Betibu, Betibú
+sampleQuestions	cine-argentino	2	C	startsWith	Carancho	Film de Pablo Trapero con Ricardo Darin y Martina Gusman.	
+sampleQuestions	cine-argentino	2	D	startsWith	Diarios de motocicleta	Coproduccion filmada en Argentina y Latinoamerica sobre el viaje del Che.	
+sampleQuestions	cine-argentino	2	E	startsWith	El secreto de sus ojos	Pelicula argentina ganadora del Oscar a mejor film extranjero.	
+sampleQuestions	cine-argentino	2	F	startsWith	Felicidades	Pelicula coral argentina ambientada en fin de año.	
+sampleQuestions	cine-argentino	2	G	startsWith	Gatica	Film de Leonardo Favio sobre el boxeador Jose Maria Gatica.	
+sampleQuestions	cine-argentino	2	H	startsWith	Historias minimas	Pelicula de Carlos Sorin ambientada en la Patagonia.	
+sampleQuestions	cine-argentino	2	I	startsWith	Infancia clandestina	Film de Benjamin Avila sobre militancia y dictadura desde la mirada de un niño.	
+sampleQuestions	cine-argentino	2	J	startsWith	Jauja	Pelicula de Lisandro Alonso protagonizada por Viggo Mortensen.	
+sampleQuestions	cine-argentino	2	K	startsWith	Kapanga Todoterreno	Documental musical argentino sobre una banda de rock popular.	
+sampleQuestions	cine-argentino	2	L	startsWith	Las herederas	Film rioplatense con participacion argentina premiado en Berlin.	
+sampleQuestions	cine-argentino	2	M	startsWith	Martin Hache	Pelicula de Adolfo Aristarain con Federico Luppi y Juan Diego Botto.	
+sampleQuestions	cine-argentino	2	N	startsWith	No habra mas penas ni olvido	Film de Hector Olivera basado en Osvaldo Soriano.	
+sampleQuestions	cine-argentino	2	Ñ	startsWith	Ña Catita	Obra criolla llevada a adaptaciones escenicas y audiovisuales rioplatenses.	
+sampleQuestions	cine-argentino	2	O	startsWith	Operación Masacre	Pelicula de Jorge Cedron basada en el libro de Rodolfo Walsh.	Operacion Masacre, Operación Masacre
+sampleQuestions	cine-argentino	2	P	startsWith	Plata dulce	Satira argentina de 1982 sobre especulacion financiera.	
+sampleQuestions	cine-argentino	2	Q	startsWith	Querida voy a comprar cigarrillos y vuelvo	Pelicula argentina codirigida por Mariano Cohn y Gaston Duprat.	
+sampleQuestions	cine-argentino	2	R	startsWith	Roma	Pelicula autobiografica de Adolfo Aristarain.	
+sampleQuestions	cine-argentino	2	S	startsWith	Silvia Prieto	Pelicula de Martin Rejtman, figura del Nuevo Cine Argentino.	
+sampleQuestions	cine-argentino	2	T	startsWith	Tesis sobre un homicidio	Thriller argentino protagonizado por Ricardo Darin.	
+sampleQuestions	cine-argentino	2	U	startsWith	Un cuento chino	Comedia dramatica con Ricardo Darin y un inmigrante chino.	
+sampleQuestions	cine-argentino	2	V	startsWith	Viudas	Pelicula argentina de Marcos Carnevale.	
+sampleQuestions	cine-argentino	2	W	startsWith	Whisky Romeo Zulu	Film de Enrique Piñeyro sobre seguridad aeronautica.	
+sampleQuestions	cine-argentino	2	X	contains	Extraño	Pelicula argentina de Santiago Loza.	Extraño, Extrano
+sampleQuestions	cine-argentino	2	Y	startsWith	Yanka y el espiritu del volcan	Pelicula infantil argentina ambientada en el sur.	
+sampleQuestions	cine-argentino	2	Z	startsWith	Zenitram	Pelicula argentina de ciencia ficcion y satira politica.	
+sampleQuestions	futbol-argentino	1	A	startsWith	Ardiles	Mediocampista campeon mundial en 1978 que luego jugo en Tottenham.	
+sampleQuestions	futbol-argentino	1	B	startsWith	Bochini	Idolo historico de Independiente apodado el Bocha.	
+sampleQuestions	futbol-argentino	1	C	startsWith	Cambiasso	Mediocampista surgido en Argentinos Juniors y campeon en Europa.	
+sampleQuestions	futbol-argentino	1	D	startsWith	Di Stefano	Crack argentino que brillo en River, Millonarios y Real Madrid.	
+sampleQuestions	futbol-argentino	1	E	startsWith	Erico	Delantero paraguayo, maximo goleador historico de la liga argentina.	
+sampleQuestions	futbol-argentino	1	F	startsWith	Fillol	Arquero campeon mundial en 1978.	
+sampleQuestions	futbol-argentino	1	G	startsWith	Gallego	Mediocampista argentino campeon mundial en 1978.	
+sampleQuestions	futbol-argentino	1	H	startsWith	Houseman	Wing argentino campeon mundial en 1978.	
+sampleQuestions	futbol-argentino	1	I	startsWith	Independiente	Club argentino conocido como Rey de Copas.	
+sampleQuestions	futbol-argentino	1	J	startsWith	Juventud Antoniana	Club salteño tradicional del ascenso argentino.	
+sampleQuestions	futbol-argentino	1	K	startsWith	Kempes	Goleador y figura argentina del Mundial 1978.	
+sampleQuestions	futbol-argentino	1	L	startsWith	Labruna	Maximo idolo historico de River y goleador del futbol argentino.	
+sampleQuestions	futbol-argentino	1	M	startsWith	Mascherano	Mediocampista argentino con record de presencias olimpicas.	
+sampleQuestions	futbol-argentino	1	N	startsWith	Newell	Club rosarino donde se formo Lionel Messi.	Newell's, Newell
+sampleQuestions	futbol-argentino	1	Ñ	startsWith	Ñuls	Apodo informal de Newells usado por hinchas en redes.	Ñuls
+sampleQuestions	futbol-argentino	1	O	startsWith	Ortega	Enganche jujeño apodado el Burrito.	
+sampleQuestions	futbol-argentino	1	P	startsWith	Pedernera	Integrante de La Maquina de River.	
+sampleQuestions	futbol-argentino	1	Q	startsWith	Quilmes	Club del sur bonaerense apodado el Cervecero.	
+sampleQuestions	futbol-argentino	1	R	startsWith	Riquelme	Enganche emblematico de Boca Juniors.	
+sampleQuestions	futbol-argentino	1	S	startsWith	Sívori	Delantero argentino ganador del Balon de Oro en Europa.	Sivori, Sívori
+sampleQuestions	futbol-argentino	1	T	startsWith	Tarantini	Lateral campeon mundial con Argentina en 1978.	
+sampleQuestions	futbol-argentino	1	U	startsWith	Ubaldo Fillol	Nombre completo del arquero argentino conocido como el Pato.	
+sampleQuestions	futbol-argentino	1	V	startsWith	Veron	Apellido de la Brujita, idolo de Estudiantes.	Veron, Verón
+sampleQuestions	futbol-argentino	1	W	startsWith	Walter Samuel	Defensor argentino apodado el Muro.	
+sampleQuestions	futbol-argentino	1	X	contains	Maximiliano Rodriguez	Volante argentino autor de un gol memorable a Mexico en 2006.	
+sampleQuestions	futbol-argentino	1	Y	startsWith	Yudica	Tecnico campeon de la Libertadores con Argentinos Juniors.	
+sampleQuestions	futbol-argentino	1	Z	startsWith	Zanetti	Lateral argentino historico del Inter.	
+sampleQuestions	futbol-argentino	2	A	startsWith	Aimar	Enganche cordobes apodado el Payaso.	
+sampleQuestions	futbol-argentino	2	B	startsWith	Batistuta	Goleador argentino apodado Batigol.	
+sampleQuestions	futbol-argentino	2	C	startsWith	Crespo	Delantero argentino surgido en River.	
+sampleQuestions	futbol-argentino	2	D	startsWith	De Paul	Mediocampista campeon del mundo en Qatar 2022.	
+sampleQuestions	futbol-argentino	2	E	startsWith	Estudiantes	Club platense multiple campeon de Libertadores.	
+sampleQuestions	futbol-argentino	2	F	startsWith	Francescoli	Idolo uruguayo de River apodado el Principe.	
+sampleQuestions	futbol-argentino	2	G	startsWith	Goycochea	Arquero argentino famoso por atajar penales en Italia 90.	
+sampleQuestions	futbol-argentino	2	H	startsWith	Huracan	Club de Parque Patricios apodado el Globo.	Huracan, Huracán
+sampleQuestions	futbol-argentino	2	I	startsWith	Insua	Apellido de tecnicos y futbolistas asociados a San Lorenzo e Independiente.	
+sampleQuestions	futbol-argentino	2	J	startsWith	José Sanfilippo	Goleador historico de San Lorenzo.	Jose Sanfilippo, José Sanfilippo
+sampleQuestions	futbol-argentino	2	K	startsWith	Kily Gonzalez	Apodo de Cristian Gonzalez, ex Rosario Central y seleccion.	Kily Gonzalez, Kily González
+sampleQuestions	futbol-argentino	2	L	startsWith	Loustau	Apellido de Felix, wing izquierdo de La Maquina.	
+sampleQuestions	futbol-argentino	2	M	startsWith	Moreno	Apellido de Jose Manuel, figura de La Maquina de River.	
+sampleQuestions	futbol-argentino	2	N	startsWith	Norberto Alonso	Nombre completo del Beto, idolo riverplatense.	
+sampleQuestions	futbol-argentino	2	Ñ	startsWith	Ñato	Apodo futbolero popular usado para jugadores de nariz chata.	
+sampleQuestions	futbol-argentino	2	O	startsWith	Onega	Apellido de Ermindo, delantero historico de River.	
+sampleQuestions	futbol-argentino	2	P	startsWith	Passarella	Capitan argentino campeon mundial en 1978.	
+sampleQuestions	futbol-argentino	2	Q	startsWith	Quique Wolff	Ex futbolista argentino y periodista deportivo.	
+sampleQuestions	futbol-argentino	2	R	startsWith	Redondo	Mediocampista argentino que brillo en Real Madrid.	
+sampleQuestions	futbol-argentino	2	S	startsWith	Saviola	Delantero surgido en River apodado el Conejito.	
+sampleQuestions	futbol-argentino	2	T	startsWith	Tevez	Delantero argentino surgido en Boca.	Tevez, Tévez
+sampleQuestions	futbol-argentino	2	U	startsWith	Ubaldo Rattin	Nombre del historico mediocampista de Boca y la seleccion.	Ubaldo Rattin, Ubaldo Rattín
+sampleQuestions	futbol-argentino	2	V	startsWith	Valdano	Delantero argentino campeon mundial en 1986.	
+sampleQuestions	futbol-argentino	2	W	startsWith	Wolff	Apellido de Quique, defensor argentino mundialista en 1974.	
+sampleQuestions	futbol-argentino	2	X	contains	Exequiel Palacios	Mediocampista argentino formado en River y campeon del mundo.	
+sampleQuestions	futbol-argentino	2	Y	startsWith	Yacob	Mediocampista argentino surgido en Racing.	
+sampleQuestions	futbol-argentino	2	Z	startsWith	Zubeldia	Tecnico historico de Estudiantes de La Plata.	Zubeldia, Zubeldía
+sampleQuestions	historia-argentina	1	A	startsWith	Acuerdo de San Nicolas	Pacto de 1852 que convoco al Congreso Constituyente.	
+sampleQuestions	historia-argentina	1	B	startsWith	Beresford	Militar britanico que participo en la primera invasion inglesa.	
+sampleQuestions	historia-argentina	1	C	startsWith	Cepeda	Batalla de 1859 entre Buenos Aires y la Confederacion Argentina.	
+sampleQuestions	historia-argentina	1	D	startsWith	Directorio	Forma de gobierno central establecida en las Provincias Unidas desde 1814.	
+sampleQuestions	historia-argentina	1	E	startsWith	Encarnacion Ezcurra	Figura politica federal y esposa de Juan Manuel de Rosas.	
+sampleQuestions	historia-argentina	1	F	startsWith	Facundo Quiroga	Caudillo riojano asesinado en Barranca Yaco.	
+sampleQuestions	historia-argentina	1	G	startsWith	Grito de Alcorta	Rebelion agraria santafesina de 1912.	
+sampleQuestions	historia-argentina	1	H	startsWith	Hipolito Yrigoyen	Primer presidente argentino elegido por sufragio secreto y obligatorio.	Hipolito Yrigoyen, Hipólito Yrigoyen
+sampleQuestions	historia-argentina	1	I	startsWith	Invasiones Inglesas	Ataques britanicos al Rio de la Plata en 1806 y 1807.	
+sampleQuestions	historia-argentina	1	J	startsWith	Junta Grande	Gobierno revolucionario ampliado con diputados del interior en 1810.	
+sampleQuestions	historia-argentina	1	K	startsWith	Kirchner	Apellido de un presidente argentino electo en 2003.	
+sampleQuestions	historia-argentina	1	L	startsWith	Liga Federal	Alianza de provincias vinculada al proyecto artiguista.	
+sampleQuestions	historia-argentina	1	M	startsWith	Mazorca	Organizacion parapolicial asociada al rosismo.	
+sampleQuestions	historia-argentina	1	N	startsWith	Nicolas Avellaneda	Presidente argentino que impulso la ley de inmigracion de 1876.	
+sampleQuestions	historia-argentina	1	Ñ	startsWith	Ñancucheo	Linaje mapuche mencionado en procesos historicos de frontera.	
+sampleQuestions	historia-argentina	1	O	startsWith	Organizacion Nacional	Periodo posterior a Caseros centrado en constituir el Estado argentino.	
+sampleQuestions	historia-argentina	1	P	startsWith	Pacto de San Jose de Flores	Acuerdo de 1859 que reincorporo Buenos Aires a la Confederacion.	
+sampleQuestions	historia-argentina	1	Q	startsWith	Quaranta	Apellido de un jefe policial vinculado a la represion politica de los años treinta.	
+sampleQuestions	historia-argentina	1	R	startsWith	Revolucion del Parque	Levantamiento de 1890 que antecedio a la UCR.	
+sampleQuestions	historia-argentina	1	S	startsWith	Semana Trágica	Conflicto obrero y represion ocurridos en Buenos Aires en 1919.	Semana Tragica, Semana Trágica
+sampleQuestions	historia-argentina	1	T	startsWith	Tratado del Pilar	Acuerdo de 1820 entre Buenos Aires, Santa Fe y Entre Rios.	
+sampleQuestions	historia-argentina	1	U	startsWith	Unicato	Termino usado para criticar la concentracion de poder durante el roquismo.	
+sampleQuestions	historia-argentina	1	V	startsWith	Vuelta de Obligado	Combate de 1845 contra fuerzas anglo-francesas.	
+sampleQuestions	historia-argentina	1	W	startsWith	William Brown	Marino irlandes considerado padre de la Armada Argentina.	
+sampleQuestions	historia-argentina	1	X	contains	Exodo Jujeño	Retirada ordenada por Belgrano en 1812.	Exodo Jujeño, Éxodo Jujeño
+sampleQuestions	historia-argentina	1	Y	startsWith	Yapeyu	Pueblo natal de Jose de San Martin.	Yapeyu, Yapeyú
+sampleQuestions	historia-argentina	1	Z	startsWith	Zarate	Ciudad bonaerense vinculada al complejo ferrovial con Brazo Largo.	
+sampleQuestions	historia-argentina	2	A	startsWith	Asamblea del Año XIII	Cuerpo que abolio titulos de nobleza y aprobo simbolos patrios.	
+sampleQuestions	historia-argentina	2	B	startsWith	Batalla de Pavon	Enfrentamiento de 1861 que consolido la hegemonia de Buenos Aires.	Batalla de Pavon, Batalla de Pavón
+sampleQuestions	historia-argentina	2	C	startsWith	Caseros	Batalla de 1852 que derroto a Juan Manuel de Rosas.	
+sampleQuestions	historia-argentina	2	D	startsWith	Desert Campaign	Nombre ingles de la Campaña del Desierto en textos historiograficos.	
+sampleQuestions	historia-argentina	2	E	startsWith	Estatuto de 1815	Reglamento provisional sancionado tras la caida de Alvear.	
+sampleQuestions	historia-argentina	2	F	startsWith	Federacion	Principio politico defendido por caudillos provinciales del siglo XIX.	
+sampleQuestions	historia-argentina	2	G	startsWith	Generacion del 80	Elite politica que domino el Estado argentino hacia fines del siglo XIX.	
+sampleQuestions	historia-argentina	2	H	startsWith	Hernandarias	Primer gobernador criollo del Rio de la Plata.	
+sampleQuestions	historia-argentina	2	I	startsWith	Infame Decada	Periodo iniciado tras el golpe de 1930, marcado por fraude electoral.	Infame Decada, Década Infame, Decada Infame
+sampleQuestions	historia-argentina	2	J	startsWith	Juicio a las Juntas	Proceso judicial de 1985 contra comandantes de la dictadura.	
+sampleQuestions	historia-argentina	2	K	startsWith	Korn	Apellido de Alejandro, intelectual argentino asociado a la Reforma Universitaria.	
+sampleQuestions	historia-argentina	2	L	startsWith	Ley Saenz Peña	Norma de 1912 que establecio voto secreto, obligatorio y masculino.	Ley Saenz Peña, Ley Sáenz Peña
+sampleQuestions	historia-argentina	2	M	startsWith	Malvinas	Guerra de 1982 entre Argentina y el Reino Unido.	
+sampleQuestions	historia-argentina	2	N	startsWith	Noche de los Bastones Largos	Represion universitaria ocurrida en 1966.	
+sampleQuestions	historia-argentina	2	Ñ	startsWith	Ñorquin	Voz mapuche presente en topónimos vinculados a la historia neuquina.	
+sampleQuestions	historia-argentina	2	O	startsWith	Operativo Independencia	Operacion militar iniciada en Tucuman en 1975.	
+sampleQuestions	historia-argentina	2	P	startsWith	Plan CONINTES	Regimen de excepcion aplicado durante el gobierno de Frondizi.	
+sampleQuestions	historia-argentina	2	Q	startsWith	Quiroga	Apellido del caudillo riojano Facundo.	
+sampleQuestions	historia-argentina	2	R	startsWith	Reforma Universitaria	Movimiento iniciado en Cordoba en 1918.	
+sampleQuestions	historia-argentina	2	S	startsWith	San Lorenzo	Combate de 1813 liderado por San Martin.	
+sampleQuestions	historia-argentina	2	T	startsWith	Tucumanazo	Protesta social tucumana ocurrida durante la dictadura de Ongania.	
+sampleQuestions	historia-argentina	2	U	startsWith	Union Civica Radical	Partido politico fundado tras la Revolucion del Parque.	
+sampleQuestions	historia-argentina	2	V	startsWith	Virreinato del Rio de la Plata	Entidad colonial creada en 1776 con capital en Buenos Aires.	
+sampleQuestions	historia-argentina	2	W	startsWith	Wenceslao Paunero	Militar argentino que participo en guerras civiles y en la Guerra del Paraguay.	
+sampleQuestions	historia-argentina	2	X	contains	Auxiliares del Peru	Nombre de expediciones patriotas enviadas al Alto Peru.	
+sampleQuestions	historia-argentina	2	Y	startsWith	Yrigoyenismo	Corriente politica asociada a Hipolito Yrigoyen.	
+sampleQuestions	historia-argentina	2	Z	startsWith	Zapiola	Apellido de Jose Matias, militar de las guerras de independencia.	
+sampleQuestions	musica-nacional	1	A	startsWith	Almendra	Banda fundacional del rock argentino liderada por Luis Alberto Spinetta.	
+sampleQuestions	musica-nacional	1	B	startsWith	Baglietto	Apellido de Juan Carlos, voz clave de la trova rosarina.	
+sampleQuestions	musica-nacional	1	C	startsWith	Charly Garcia	Musico de Sui Generis, Seru Giran y una extensa carrera solista.	Charly Garcia, Charly García
+sampleQuestions	musica-nacional	1	D	startsWith	Divididos	Banda de rock formada tras la separacion de Sumo.	
+sampleQuestions	musica-nacional	1	E	startsWith	Estelares	Banda platense liderada por Manuel Moretti.	
+sampleQuestions	musica-nacional	1	F	startsWith	Fito Paez	Musico rosarino autor de El amor despues del amor.	Fito Paez, Fito Páez
+sampleQuestions	musica-nacional	1	G	startsWith	Gieco	Apellido de Leon, autor de Solo le pido a Dios.	
+sampleQuestions	musica-nacional	1	H	startsWith	Hermetica	Banda argentina de heavy metal liderada por Ricardo Iorio.	Hermetica, Hermética
+sampleQuestions	musica-nacional	1	I	startsWith	Illya Kuryaki	Duo argentino formado por Dante Spinetta y Emmanuel Horvilleur.	
+sampleQuestions	musica-nacional	1	J	startsWith	Juana Molina	Cantautora argentina reconocida por su musica experimental.	
+sampleQuestions	musica-nacional	1	K	startsWith	Kapanga	Banda argentina de rock y cuarteto formada en Quilmes.	
+sampleQuestions	musica-nacional	1	L	startsWith	Los Abuelos de la Nada	Banda liderada por Miguel Abuelo.	
+sampleQuestions	musica-nacional	1	M	startsWith	Mercedes Sosa	Cantante tucumana conocida como La Negra.	
+sampleQuestions	musica-nacional	1	N	startsWith	Nito Mestre	Integrante de Sui Generis junto a Charly Garcia.	
+sampleQuestions	musica-nacional	1	Ñ	startsWith	Ñu	Grupo español de rock usado como referencia en escenas metaleras argentinas.	
+sampleQuestions	musica-nacional	1	O	startsWith	Oconnor	Banda de metal argentino fundada por Claudio O Connor.	O'Connor, Oconnor
+sampleQuestions	musica-nacional	1	P	startsWith	Pescado Rabioso	Banda de Spinetta que edito Artaud.	
+sampleQuestions	musica-nacional	1	Q	startsWith	Quilapayun	Grupo chileno muy escuchado en circuitos folkloricos argentinos.	Quilapayun, Quilapayún
+sampleQuestions	musica-nacional	1	R	startsWith	Rata Blanca	Banda argentina de hard rock y heavy metal.	
+sampleQuestions	musica-nacional	1	S	startsWith	Soda Stereo	Trio liderado por Gustavo Cerati.	
+sampleQuestions	musica-nacional	1	T	startsWith	Tan Bionica	Banda pop rock liderada por Chano.	Tan Bionica, Tan Biónica
+sampleQuestions	musica-nacional	1	U	startsWith	Usted Señalemelo	Banda mendocina de indie rock.	Usted Señalemelo, Usted Senalemelo
+sampleQuestions	musica-nacional	1	V	startsWith	Virus	Banda platense liderada por Federico Moura.	
+sampleQuestions	musica-nacional	1	W	startsWith	Wos	Rapero argentino surgido de competencias de freestyle.	
+sampleQuestions	musica-nacional	1	X	contains	Los Ex	Banda de rock alternativo cuyo nombre incluye la letra dificil.	
+sampleQuestions	musica-nacional	1	Y	startsWith	Yupanqui	Apellido artistico de Atahualpa, referente del folklore argentino.	
+sampleQuestions	musica-nacional	1	Z	startsWith	Zitarrosa	Cantautor uruguayo de enorme influencia en el folklore rioplatense.	
+sampleQuestions	musica-nacional	2	A	startsWith	Attaque 77	Banda punk rock argentina formada en los años ochenta.	
+sampleQuestions	musica-nacional	2	B	startsWith	Babasónicos	Banda argentina de rock alternativo formada en Lanus.	Babasonicos, Babasónicos
+sampleQuestions	musica-nacional	2	C	startsWith	Cerati	Apellido de Gustavo, lider de Soda Stereo.	
+sampleQuestions	musica-nacional	2	D	startsWith	Duki	Artista argentino asociado al trap y la musica urbana.	
+sampleQuestions	musica-nacional	2	E	startsWith	El mato a un policia motorizado	Banda platense de indie rock.	El mato a un policia motorizado, Él mató a un policía motorizado
+sampleQuestions	musica-nacional	2	F	startsWith	Fabiana Cantilo	Cantante argentina vinculada al rock nacional.	
+sampleQuestions	musica-nacional	2	G	startsWith	Gilda	Cantante popular de cumbia argentina.	
+sampleQuestions	musica-nacional	2	H	startsWith	Horcas	Banda argentina de thrash metal.	
+sampleQuestions	musica-nacional	2	I	startsWith	Intoxicados	Banda liderada por Pity Alvarez tras Viejas Locas.	
+sampleQuestions	musica-nacional	2	J	startsWith	Javier Martinez	Baterista y cantante de Manal.	Javier Martinez, Javier Martínez
+sampleQuestions	musica-nacional	2	K	startsWith	Karamelo Santo	Banda mendocina de rock, ska y ritmos latinos.	
+sampleQuestions	musica-nacional	2	L	startsWith	Litto Nebbia	Fundador de Los Gatos y pionero del rock argentino.	
+sampleQuestions	musica-nacional	2	M	startsWith	Manal	Trio considerado fundacional del blues rock argentino.	
+sampleQuestions	musica-nacional	2	N	startsWith	Nathy Peluso	Artista argentina de proyeccion internacional.	
+sampleQuestions	musica-nacional	2	Ñ	startsWith	Ñande Reko	Expresion guarani usada en repertorios litoraleños y folkloricos.	
+sampleQuestions	musica-nacional	2	O	startsWith	Orquesta Tipica Fernandez Fierro	Agrupacion contemporanea de tango.	Orquesta Tipica Fernandez Fierro, Orquesta Típica Fernández Fierro
+sampleQuestions	musica-nacional	2	P	startsWith	Patricio Rey	Nombre inicial de la banda conocida como Los Redondos.	
+sampleQuestions	musica-nacional	2	Q	startsWith	Quilmes Rock	Festival argentino de musica masiva nacido en los años 2000.	
+sampleQuestions	musica-nacional	2	R	startsWith	Redonditos de Ricota	Banda de rock argentina liderada por el Indio Solari y Skay.	
+sampleQuestions	musica-nacional	2	S	startsWith	Seru Giran	Supergrupo argentino integrado por Garcia, Aznar, Lebon y Moro.	Seru Giran, Serú Girán
+sampleQuestions	musica-nacional	2	T	startsWith	Trueno	Rapero argentino del barrio de La Boca.	
+sampleQuestions	musica-nacional	2	U	startsWith	Ulises Bueno	Cantante cordobes de cuarteto.	
+sampleQuestions	musica-nacional	2	V	startsWith	Vicentico	Cantante de Los Fabulosos Cadillacs.	
+sampleQuestions	musica-nacional	2	W	startsWith	Willy Crook	Saxofonista y cantante argentino de funk y soul.	
+sampleQuestions	musica-nacional	2	X	contains	Exequiel Borra	Cantautor argentino de la escena independiente.	
+sampleQuestions	musica-nacional	2	Y	startsWith	Ysy A	Rapero argentino pionero de la escena trap local.	
+sampleQuestions	musica-nacional	2	Z	startsWith	Zas	Banda de Miguel Mateos en los años ochenta.	

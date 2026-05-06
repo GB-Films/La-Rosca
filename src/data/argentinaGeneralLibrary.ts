@@ -138,7 +138,7 @@ const rawSeeds: Array<[string, string, string, QuestionMode?, string[]?]> = [
   ['M', 'Mercedes Sosa', 'Cantante tucumana conocida como La Negra.'],
   ['M', 'Mar del Plata', 'Ciudad balnearia bonaerense.'],
   ['M', 'Milanesa', 'Plato popular de carne empanada.'],
-  ['M', 'Moria Casan', 'Actriz y conductora argentina.'],
+  ['M', 'Moria Casan', 'Figura del teatro de revistas, vedette, actriz y conductora argentina conocida como La One.'],
   ['M', 'Martin Fierro', 'Poema gauchesco de Jose Hernandez.'],
   ['M', 'Monumental', 'Estadio de River Plate y de la seleccion argentina.'],
   ['N', 'Neuquen', 'Provincia patagonica argentina.'],
