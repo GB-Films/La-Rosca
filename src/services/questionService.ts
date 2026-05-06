@@ -6,7 +6,7 @@ import { createId } from '../utils/codeGenerator';
 
 const ARGENTINA_GENERAL_THEME = 'cultura-general-argentina';
 const CUSTOM_PRESETS_KEY = 'la-rosca:custom-question-presets';
-const EXPANDED_THEMES = new Set(['cine-argentino', 'historia-argentina', 'musica-nacional']);
+const EXPANDED_THEMES = new Set(['cine-argentino', 'futbol-argentino', 'historia-argentina', 'musica-nacional']);
 
 const pickRandom = <T>(items: T[]) => items[Math.floor(Math.random() * items.length)];
 

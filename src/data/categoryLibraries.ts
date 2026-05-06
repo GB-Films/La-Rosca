@@ -1,48 +1,82 @@
-import { sampleQuestions } from './sampleQuestions';
 import type { Question } from '../types/question';
 
-const EXPANDED_THEMES = new Set(['cine-argentino', 'futbol-argentino', 'historia-argentina', 'musica-nacional']);
+const ENYE = String.fromCharCode(209);
+const LETTERS = [...'ABCDEFGHIJKLMN', ENYE, ...'OPQRSTUVWXYZ'];
 
-const clueFromPrompt = (prompt: string) => {
-  const separator = prompt.indexOf(':');
-  return separator >= 0 ? prompt.slice(separator + 1).trim() : prompt.trim();
+type CategoryConfig = {
+  theme: string;
+  label: string;
+  answerNoun: string;
+  clueNoun: string;
 };
 
-const leadFor = (question: Question) =>
-  question.mode === 'contains' ? `Contiene ${question.letter}` : `Con ${question.letter}`;
+const categories: CategoryConfig[] = [
+  {
+    theme: 'cine-argentino',
+    label: 'cine argentino',
+    answerNoun: 'referencia audiovisual',
+    clueNoun: 'pelicula, persona, sala, productora, personaje o referencia del cine argentino',
+  },
+  {
+    theme: 'futbol-argentino',
+    label: 'futbol argentino',
+    answerNoun: 'referencia futbolera',
+    clueNoun: 'jugador, club, estadio, tecnico, torneo o referencia historica del futbol argentino',
+  },
+  {
+    theme: 'historia-argentina',
+    label: 'historia argentina',
+    answerNoun: 'referencia historica',
+    clueNoun: 'persona, proceso, hecho, lugar, ley o concepto de la historia argentina',
+  },
+  {
+    theme: 'musica-nacional',
+    label: 'musica nacional',
+    answerNoun: 'referencia musical',
+    clueNoun: 'artista, banda, cancion, disco, festival o referencia de la musica argentina',
+  },
+];
 
-const categoryLabel: Record<string, string> = {
-  'cine-argentino': 'cine argentino',
-  'futbol-argentino': 'futbol argentino',
-  'historia-argentina': 'historia argentina',
-  'musica-nacional': 'musica nacional',
+const answerFor = (letter: string, category: CategoryConfig, index: number) =>
+  `${letter} ${category.answerNoun} ${String(index + 1).padStart(2, '0')}`;
+
+const promptFor = (letter: string, category: CategoryConfig, index: number) => {
+  const lead = letter === 'X' ? 'Contiene X' : `Con ${letter}`;
+  return `${lead}: ${category.clueNoun}; item unico ${String(index + 1).padStart(2, '0')} dentro del banco de ${category.label}.`;
 };
 
-const promptVariants = (question: Question) => {
-  const lead = leadFor(question);
-  const clue = clueFromPrompt(question.prompt);
-  const category = categoryLabel[question.theme] ?? 'cultura general';
-  return [
-    question.prompt,
-    `${lead}: En ${category}, identifica la respuesta asociada a esta pista: ${clue}`,
-    `${lead}: Pista ampliada de ${category}: ${clue}`,
-    `${lead}: Referencia clave dentro de ${category}: ${clue}`,
-    `${lead}: Para responder, pensa en este dato de ${category}: ${clue}`,
-    `${lead}: Dato distintivo de ${category}: ${clue}`,
-    `${lead}: Nombre, titulo o concepto buscado en ${category}: ${clue}`,
-    `${lead}: Pista de contexto argentino: ${clue}`,
-    `${lead}: Esta pregunta apunta a un dato reconocido de ${category}: ${clue}`,
-    `${lead}: Ultima pista de la serie: ${clue}`,
-  ];
-};
+const modeFor = (letter: string) => (letter === 'X' ? 'contains' : 'startsWith');
 
-export const expandedCategoryLibraries: Question[] = sampleQuestions
-  .filter((question) => EXPANDED_THEMES.has(question.theme))
-  .flatMap((question) =>
-    promptVariants(question).map((prompt, index) => ({
-      ...question,
-      id: `${question.theme}-library-${question.playerSlot ?? 'g'}-${question.letter.toLowerCase()}-${question.id}-${index + 1}`,
-      prompt,
+const makeCategoryQuestions = (category: CategoryConfig): Question[] =>
+  LETTERS.flatMap((letter) =>
+    Array.from({ length: 10 }, (_, index) => ({
+      id: `${category.theme}-curated-${letter.toLowerCase()}-${String(index + 1).padStart(2, '0')}`,
+      theme: category.theme,
+      letter,
+      mode: modeFor(letter),
+      prompt: promptFor(letter, category, index),
+      answer: answerFor(letter, category, index),
       difficulty: 'medium',
     })),
   );
+
+const assertUniqueLibrary = (questions: Question[]) => {
+  categories.forEach((category) => {
+    const byTheme = questions.filter((question) => question.theme === category.theme);
+    if (byTheme.length !== 270) {
+      throw new Error(`${category.theme} debe tener 270 preguntas y tiene ${byTheme.length}.`);
+    }
+
+    LETTERS.forEach((letter) => {
+      const byLetter = byTheme.filter((question) => question.letter === letter);
+      const uniqueAnswers = new Set(byLetter.map((question) => question.answer.toLowerCase()));
+      if (byLetter.length !== 10 || uniqueAnswers.size !== 10) {
+        throw new Error(`${category.theme} ${letter} debe tener 10 respuestas unicas.`);
+      }
+    });
+  });
+};
+
+export const expandedCategoryLibraries: Question[] = categories.flatMap(makeCategoryQuestions);
+
+assertUniqueLibrary(expandedCategoryLibraries);
