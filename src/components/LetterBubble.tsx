@@ -21,7 +21,7 @@ export const LetterBubble = ({ letter, status, active, compact, onClick }: Lette
     <button
       type="button"
       onClick={onClick}
-      className={`${size} rounded-full border-2 font-black shadow-sm transition hover:scale-105 ${
+      className={`${size} font-letter rounded-full border-2 font-black shadow-sm transition hover:scale-105 ${
         statusClass[status]
       } ${active ? 'ring-4 ring-blue-300 ring-offset-2 ring-offset-ink' : ''}`}
       title={`${letter}: ${status}`}
