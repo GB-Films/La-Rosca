@@ -21,7 +21,8 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
   }
 
   const joinLink = `${window.location.origin}${window.location.pathname}#/join/${session.game.code}`;
-  const canStart = session.players.length === 2;
+  const maxPlayers = session.game.maxPlayers ?? 2;
+  const canStart = session.players.length >= 2;
 
   const start = async () => {
     await startGame();
@@ -112,7 +113,7 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
             type="button"
             className="rounded-lg bg-slate-700 px-4 py-2.5 text-sm font-bold sm:py-3 sm:text-base"
             onClick={() => addSimulatedPlayer('Jugador 1')}
-            disabled={session.players.length >= 2}
+            disabled={session.players.length >= maxPlayers}
           >
             Simular jugador
           </button>
@@ -128,9 +129,11 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
       </section>
       <section className="rounded-lg border border-line bg-panel p-3 sm:p-5">
         <p className="text-[0.65rem] uppercase tracking-wide text-slate-400 sm:text-xs">Conexion de jugadores</p>
-        <h3 className="text-xl font-black sm:text-2xl">Esperando 2 jugadores</h3>
+        <h3 className="text-xl font-black sm:text-2xl">
+          {session.players.length < 2 ? 'Esperando al menos 2 jugadores' : `${session.players.length}/${maxPlayers} jugadores`}
+        </h3>
         <div className="mt-3 grid gap-2 sm:mt-5 sm:gap-3">
-          {[1, 2].map((slot) => {
+          {Array.from({ length: maxPlayers }, (_, index) => index + 1).map((slot) => {
             const player = session.players.find((item) => item.slot === slot);
             return (
               <div key={slot} className="flex items-center justify-between rounded-xl border border-line bg-white p-3 sm:rounded-2xl sm:p-4">

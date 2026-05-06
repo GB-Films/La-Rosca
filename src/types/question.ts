@@ -5,7 +5,7 @@ export interface Question {
   id: string;
   theme: string;
   letter: string;
-  playerSlot?: 1 | 2;
+  playerSlot?: number;
   mode: QuestionMode;
   prompt: string;
   answer: string;

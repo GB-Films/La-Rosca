@@ -1,7 +1,7 @@
 import type { Question } from './question';
 
 export type GameStatus = 'lobby' | 'playing' | 'paused' | 'finished';
-export type PlayerSlot = 1 | 2;
+export type PlayerSlot = number;
 export type LetterStatus = 'pending' | 'correct' | 'wrong' | 'passed';
 export type GameAction = 'correct' | 'wrong' | 'pass' | 'undo' | 'manual_edit';
 export type Role = 'host' | 'player';
@@ -16,6 +16,7 @@ export interface Game {
   activePlayerId?: string;
   activeLetter?: string;
   timerSeconds: number;
+  maxPlayers: number;
   includeÑ: boolean;
   showQuestionToPlayers: boolean;
   createdAt: string;
@@ -68,6 +69,7 @@ export interface CreateGameInput {
   title: string;
   theme: string;
   timerSeconds: number;
+  maxPlayers: number;
   includeÑ: boolean;
   questionMode: 'pack' | 'manual';
   questions: Question[];

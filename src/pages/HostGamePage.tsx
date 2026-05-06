@@ -39,8 +39,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
   }
 
   const activePlayer = session.players.find((player) => player.id === session.game.activePlayerId);
-  const playerOne = session.players.find((player) => player.slot === 1);
-  const playerTwo = session.players.find((player) => player.slot === 2);
+  const players = [...session.players].sort((a, b) => a.slot - b.slot);
 
   const finish = () => {
     if (window.confirm('Terminar la partida ahora?')) finishGame();
@@ -65,23 +64,25 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
         </div>
       </section>
 
-      <div className="grid gap-3 sm:gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(22rem,26rem)_minmax(0,1fr)] xl:items-start">
-        {playerOne && (
-          <section className="rounded-lg border border-line bg-panel p-2 sm:p-4">
-            <ScoreBoard
-              player={playerOne}
-              letters={session.letters.filter((letter) => letter.playerId === playerOne.id)}
-              active={playerOne.id === session.game.activePlayerId}
-            />
-            <Rosco
-              letters={session.letters.filter((letter) => letter.playerId === playerOne.id)}
-              activeLetter={playerOne.id === session.game.activePlayerId ? session.game.activeLetter : undefined}
-              onLetterStatusChange={(letter, status) => setLetterStatus(playerOne.id, letter, status)}
-            />
-          </section>
-        )}
+      <div className="grid gap-3 sm:gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(22rem,26rem)] xl:items-start">
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-2">
+          {players.map((player) => (
+            <section key={player.id} className="rounded-lg border border-line bg-panel p-2 sm:p-4">
+              <ScoreBoard
+                player={player}
+                letters={session.letters.filter((letter) => letter.playerId === player.id)}
+                active={player.id === session.game.activePlayerId}
+              />
+              <Rosco
+                letters={session.letters.filter((letter) => letter.playerId === player.id)}
+                activeLetter={player.id === session.game.activePlayerId ? session.game.activeLetter : undefined}
+                onLetterStatusChange={(letter, status) => setLetterStatus(player.id, letter, status)}
+              />
+            </section>
+          ))}
+        </div>
 
-        <div className="sticky top-1 z-30 order-first grid content-start gap-2 rounded-lg border border-line bg-ink/95 p-2 shadow-2xl sm:gap-3 xl:order-none xl:top-4 xl:border-0 xl:bg-transparent xl:p-0 xl:shadow-none">
+        <div className="sticky top-1 z-30 order-first grid content-start gap-2 rounded-lg border border-line bg-ink/95 p-2 shadow-2xl sm:gap-3 xl:order-none xl:top-4 xl:p-0">
           <QuestionCard question={activeQuestion} showAnswer letter={session.game.activeLetter} />
           <HostControls
             paused={session.game.status === 'paused'}
@@ -103,21 +104,6 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
             </button>
           </div>
         </div>
-
-        {playerTwo && (
-          <section className="rounded-lg border border-line bg-panel p-2 sm:p-4">
-            <ScoreBoard
-              player={playerTwo}
-              letters={session.letters.filter((letter) => letter.playerId === playerTwo.id)}
-              active={playerTwo.id === session.game.activePlayerId}
-            />
-            <Rosco
-              letters={session.letters.filter((letter) => letter.playerId === playerTwo.id)}
-              activeLetter={playerTwo.id === session.game.activePlayerId ? session.game.activeLetter : undefined}
-              onLetterStatusChange={(letter, status) => setLetterStatus(playerTwo.id, letter, status)}
-            />
-          </section>
-        )}
       </div>
 
       <QuestionEditor

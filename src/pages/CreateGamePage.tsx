@@ -13,6 +13,7 @@ export const CreateGamePage = () => {
   const [title, setTitle] = useState('Partida de La Rosca');
   const [theme, setTheme] = useState('cultura-general-argentina');
   const [timerSeconds, setTimerSeconds] = useState(300);
+  const [maxPlayers, setMaxPlayers] = useState(2);
   const [includeÑ, setIncludeÑ] = useState(false);
   const [questionMode, setQuestionMode] = useState<'pack' | 'manual'>('pack');
   const [showQuestionToPlayers, setShowQuestionToPlayers] = useState(true);
@@ -20,7 +21,7 @@ export const CreateGamePage = () => {
     questionService.createBlankEditablePack('personalizada', false),
   );
   const [packQuestions, setPackQuestions] = useState<Question[]>(() =>
-    questionService.createGamePack('cultura-general-argentina', false, 'preview'),
+    questionService.createGamePack('cultura-general-argentina', false, 'preview', 2),
   );
   const [presetName, setPresetName] = useState('Mi categoria');
   const [customPresets, setCustomPresets] = useState(() => questionService.getCustomPresets());
@@ -29,19 +30,19 @@ export const CreateGamePage = () => {
   const packWarnings = useMemo(() => validateQuestions(packQuestions), [packQuestions]);
 
   const randomizePack = () => {
-    setPackQuestions(questionService.createGamePack(theme, includeÑ, `preview-${Date.now()}`));
+    setPackQuestions(questionService.createGamePack(theme, includeÑ, `preview-${Date.now()}`, maxPlayers));
   };
 
   useEffect(() => {
     if (questionMode === 'pack') randomizePack();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [theme, includeÑ, questionMode]);
+  }, [theme, includeÑ, questionMode, maxPlayers]);
 
   const changeQuestionMode = (mode: typeof questionMode) => {
     setQuestionMode(mode);
     if (mode === 'manual') {
       setTheme('personalizada');
-      setQuestions(questionService.createBlankEditablePack('personalizada', includeÑ));
+      setQuestions(questionService.createBlankEditablePack('personalizada', includeÑ, maxPlayers));
     }
   };
 
@@ -68,6 +69,7 @@ export const CreateGamePage = () => {
       title,
       theme,
       timerSeconds,
+      maxPlayers,
       includeÑ,
       questionMode,
       questions: selectedQuestions,
@@ -99,6 +101,17 @@ export const CreateGamePage = () => {
               max={900}
               value={timerSeconds}
               onChange={(event) => setTimerSeconds(Number(event.target.value))}
+              className="rounded-md border border-line bg-ink px-3 py-2.5 sm:py-3"
+            />
+          </label>
+          <label className="grid gap-2">
+            <span className="text-sm font-semibold text-slate-200">Cantidad maxima de jugadores</span>
+            <input
+              type="number"
+              min={2}
+              max={10}
+              value={maxPlayers}
+              onChange={(event) => setMaxPlayers(Math.min(10, Math.max(2, Number(event.target.value))))}
               className="rounded-md border border-line bg-ink px-3 py-2.5 sm:py-3"
             />
           </label>
@@ -146,7 +159,7 @@ export const CreateGamePage = () => {
               <p className="text-[0.65rem] uppercase tracking-wide text-slate-400 sm:text-xs">Pack existente</p>
               <h2 className="text-xl font-black leading-tight sm:text-2xl">Preguntas seleccionadas</h2>
               <p className="mt-1 text-xs text-slate-300 sm:text-sm">
-                Seleccion aleatoria para 2 jugadores. Toca randomizar para elegir otra combinacion.
+                Seleccion aleatoria para hasta {maxPlayers} jugadores. Toca randomizar para elegir otra combinacion.
               </p>
             </div>
             <button

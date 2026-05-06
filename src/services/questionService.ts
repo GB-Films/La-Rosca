@@ -32,14 +32,14 @@ export const questionService = {
     return sampleQuestions.filter((question) => question.theme === theme);
   },
 
-  createGamePack(theme: string, includeÑ: boolean, prefix = 'game') {
+  createGamePack(theme: string, includeÑ: boolean, prefix = 'game', playerCount = 2) {
     const pack = this.getPack(theme);
     const selected: Question[] = [];
 
     getLetters(includeÑ).forEach((letter) => {
       const usedAnswers = new Set<string>();
 
-      ([1, 2] as const).forEach((playerSlot) => {
+      Array.from({ length: playerCount }, (_, index) => index + 1).forEach((playerSlot) => {
         const candidates = pack.filter(
           (question) => question.letter === letter && (!question.playerSlot || question.playerSlot === playerSlot),
         );
@@ -61,7 +61,7 @@ export const questionService = {
     return selected;
   },
 
-  createEmpty(theme: string, letter = 'A', playerSlot?: 1 | 2): Question {
+  createEmpty(theme: string, letter = 'A', playerSlot?: number): Question {
     return {
       id: createId('question'),
       theme,
@@ -107,11 +107,10 @@ export const questionService = {
     }));
   },
 
-  createBlankEditablePack(theme: string, includeÑ: boolean) {
-    return getLetters(includeÑ).flatMap((letter) => [
-      this.createEmpty(theme, letter, 1),
-      this.createEmpty(theme, letter, 2),
-    ]);
+  createBlankEditablePack(theme: string, includeÑ: boolean, playerCount = 2) {
+    return getLetters(includeÑ).flatMap((letter) =>
+      Array.from({ length: playerCount }, (_, index) => this.createEmpty(theme, letter, index + 1)),
+    );
   },
 
   getCustomPresets() {

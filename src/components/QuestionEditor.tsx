@@ -20,6 +20,10 @@ export const QuestionEditor = ({ questions, theme, includeÑ, onChange }: Questi
   const [message, setMessage] = useState('');
 
   const warnings = useMemo(() => validateQuestions(questions), [questions]);
+  const playerSlots = useMemo(
+    () => Array.from(new Set([1, 2, ...questions.map((question) => question.playerSlot).filter(Boolean) as number[]])).sort((a, b) => a - b),
+    [questions],
+  );
   const visibleQuestions = questions.filter(
     (question) =>
       (filterTheme === 'all' || question.theme === filterTheme) &&
@@ -125,8 +129,11 @@ export const QuestionEditor = ({ questions, theme, includeÑ, onChange }: Questi
             className="rounded-md border border-line bg-ink px-3 py-2 text-sm sm:text-base"
           >
             <option value="all">Todas</option>
-            <option value="1">Jugador 1</option>
-            <option value="2">Jugador 2</option>
+            {playerSlots.map((slot) => (
+              <option key={slot} value={slot}>
+                Jugador {slot}
+              </option>
+            ))}
             <option value="general">Generales</option>
           </select>
         </label>
@@ -144,14 +151,16 @@ export const QuestionEditor = ({ questions, theme, includeÑ, onChange }: Questi
                   value={question.playerSlot ?? 'general'}
                   onChange={(event) =>
                     updateQuestion(question.id, {
-                      playerSlot:
-                        event.target.value === 'general' ? undefined : (Number(event.target.value) as 1 | 2),
+                      playerSlot: event.target.value === 'general' ? undefined : Number(event.target.value),
                     })
                   }
                   className="rounded-md border border-line bg-ink px-2 py-2 text-sm sm:text-base"
                 >
-                  <option value="1">J1</option>
-                  <option value="2">J2</option>
+                  {playerSlots.map((slot) => (
+                    <option key={slot} value={slot}>
+                      J{slot}
+                    </option>
+                  ))}
                   <option value="general">General</option>
                 </select>
                 <select

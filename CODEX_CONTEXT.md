@@ -21,7 +21,7 @@
 
 ## Producto
 
-- Juego para 1 host y 2 jugadores.
+- Juego para 1 host y entre 2 y 10 jugadores.
 - El host crea partida, comparte link, controla respuestas y tiempos.
 - Los jugadores entran desde su celular con el link/codigo y no ven respuestas correctas.
 - Para jugar desde dispositivos distintos usando el link de GitHub Pages, Supabase debe estar configurado.
@@ -36,8 +36,8 @@
 ## Preguntas
 
 - `src/data/sampleQuestions.ts` contiene packs base por categoria y jugador.
-- `src/data/argentinaGeneralLibrary.ts` genera 540 preguntas de cultura general argentina.
-- `src/data/categoryLibraries.ts` expande cine argentino, historia argentina y musica nacional a 540 preguntas cada una.
+- `src/data/argentinaGeneralLibrary.ts` contiene 270 respuestas base de cultura general argentina y la app las puede asignar a hasta 10 jugadores sin repetir respuesta por letra.
+- `src/data/categoryLibraries.ts` contiene 270 preguntas por subcategoria para cine argentino, futbol argentino y musica nacional.
 - Para agregar, borrar o corregir preguntas fuente, editar principalmente:
   - `src/data/argentinaGeneralLibrary.ts` para cultura general argentina.
   - `src/data/sampleQuestions.ts` para cine, musica, historia, futbol y las semillas que usa `categoryLibraries.ts`.
@@ -46,7 +46,8 @@
 - El TSV editable debe tener una categoria principal unica: `Preguntas de cultura general`, con subcategorias como `Cultura general argentina`, `Cine Argentino`, `Futbol Argentino` y `Musica Nacional`.
 - La guia de edicion esta en `docs/EDITAR_PREGUNTAS.md`.
 - No usar la frase "Respuesta de cultura general argentina" dentro de los prompts.
-- Mantener preguntas distintas por jugador cuando corresponda.
+- Mantener preguntas distintas por jugador: dos jugadores no deben recibir la misma respuesta para la misma letra.
+- Para las letras dificiles `Ñ`, `K`, `Q`, `W`, `X`, `Y`, `Z`, usar `contains`; en cultura general argentina las respuestas no deben empezar con esa letra, solo contenerla.
 - Validar que `startsWith` empiece con la letra y `contains` contenga la letra.
 - En crear partida, "Usar pack existente" muestra una seleccion aleatoria y un boton para randomizar otra seleccion.
 - "Personalizado editable" permite editar, borrar, agregar y guardar presets en localStorage del navegador.

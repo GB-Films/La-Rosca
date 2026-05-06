@@ -13,9 +13,16 @@ import { generateCode, createId } from '../utils/codeGenerator';
 import { sessionRepository } from './sessionRepository';
 import { isHostedWithoutSupabase } from './supabaseClient';
 
-const availableSlot = (players: Player[]): PlayerSlot | null => {
-  if (!players.some((player) => player.slot === 1)) return 1;
-  if (!players.some((player) => player.slot === 2)) return 2;
+const DEFAULT_MAX_PLAYERS = 2;
+const ABSOLUTE_MAX_PLAYERS = 10;
+
+const getMaxPlayers = (session: GameSession) =>
+  Math.min(Math.max(session.game.maxPlayers ?? DEFAULT_MAX_PLAYERS, 2), ABSOLUTE_MAX_PLAYERS);
+
+const availableSlot = (players: Player[], maxPlayers: number): PlayerSlot | null => {
+  for (let slot = 1; slot <= maxPlayers; slot += 1) {
+    if (!players.some((player) => player.slot === slot)) return slot;
+  }
   return null;
 };
 
@@ -63,7 +70,7 @@ const isPlayerDone = (session: GameSession, playerId: string) =>
   );
 
 const shouldFinish = (session: GameSession) =>
-  session.players.length === 2 &&
+  session.players.length >= 2 &&
   session.players.every((player) => player.remainingSeconds <= 0 || isPlayerDone(session, player.id));
 
 const assignNextTurn = (
@@ -114,6 +121,7 @@ export const gameService = {
         status: 'lobby',
         hostId,
         timerSeconds: input.timerSeconds,
+        maxPlayers: input.maxPlayers,
         includeÑ: input.includeÑ,
         showQuestionToPlayers: input.showQuestionToPlayers,
         createdAt: new Date().toISOString(),
@@ -137,7 +145,8 @@ export const gameService = {
       }
       throw new Error('No encontramos una partida con ese codigo.');
     }
-    if (session.players.length >= 2) throw new Error('La partida ya tiene 2 jugadores.');
+    const maxPlayers = getMaxPlayers(session);
+    if (session.players.length >= maxPlayers) throw new Error(`La partida ya tiene ${maxPlayers} jugadores.`);
 
     const browserJoinKey = `el-rosco:joined:${session.game.id}`;
     const existingPlayerId = localStorage.getItem(browserJoinKey);
@@ -145,8 +154,8 @@ export const gameService = {
       throw new Error('Este navegador ya esta unido a esta partida como jugador.');
     }
 
-    const slot = availableSlot(session.players);
-    if (!slot) throw new Error('La partida ya tiene 2 jugadores.');
+    const slot = availableSlot(session.players, maxPlayers);
+    if (!slot) throw new Error(`La partida ya tiene ${maxPlayers} jugadores.`);
 
     const player: Player = {
       id: createId(`player-${slot}-${clientId.slice(0, 4)}`),
@@ -168,9 +177,10 @@ export const gameService = {
   async addSimulatedPlayer(gameId: string, name?: string) {
     const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
-    if (session.players.length >= 2) throw new Error('La partida ya tiene 2 jugadores.');
-    const slot = availableSlot(session.players);
-    if (!slot) throw new Error('La partida ya tiene 2 jugadores.');
+    const maxPlayers = getMaxPlayers(session);
+    if (session.players.length >= maxPlayers) throw new Error(`La partida ya tiene ${maxPlayers} jugadores.`);
+    const slot = availableSlot(session.players, maxPlayers);
+    if (!slot) throw new Error(`La partida ya tiene ${maxPlayers} jugadores.`);
 
     const player: Player = {
       id: createId(`sim-${slot}`),
@@ -190,7 +200,7 @@ export const gameService = {
   async startGame(gameId: string) {
     const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
-    if (session.players.length < 2) throw new Error('Necesitas 2 jugadores para iniciar.');
+    if (session.players.length < 2) throw new Error('Necesitas al menos 2 jugadores para iniciar.');
     session.game.status = 'playing';
     const firstPlayer = [...session.players].sort((a, b) => a.slot - b.slot)[0];
     assignNextTurn(session, firstPlayer.id);

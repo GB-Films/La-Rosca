@@ -1,4 +1,4 @@
-﻿categoria;subcategoria;letter;mode;answer;difficulty;description;acceptedAnswers
+categoria;subcategoria;letter;mode;answer;difficulty;description;acceptedAnswers
 Preguntas de cultura general;Cultura general argentina;A;startsWith;Alfonsin;normal;Presidente argentino que asumio en 1983 con el regreso de la democracia.;
 Preguntas de cultura general;Cultura general argentina;A;startsWith;Asado;normal;Comida argentina muy asociada a la parrilla y a las reuniones familiares.;
 Preguntas de cultura general;Cultura general argentina;A;startsWith;Aconcagua;normal;Cerro mendocino que es el mas alto de America.;
@@ -99,16 +99,16 @@ Preguntas de cultura general;Cultura general argentina;J;startsWith;Jose Hernand
 Preguntas de cultura general;Cultura general argentina;J;startsWith;Juan B Justo;normal;Medico y politico fundador del Partido Socialista argentino.;
 Preguntas de cultura general;Cultura general argentina;J;startsWith;Javier Milei;normal;Presidente argentino electo en 2023.;
 Preguntas de cultura general;Cultura general argentina;J;startsWith;Jorge Lanata;normal;Periodista argentino de television, radio y grafica.;
-Preguntas de cultura general;Cultura general argentina;K;contains;Kirchner;normal;Apellido de Nestor, presidente argentino entre 2003 y 2007.;
-Preguntas de cultura general;Cultura general argentina;K;contains;Kempes;normal;Goleador argentino del Mundial 1978.;
-Preguntas de cultura general;Cultura general argentina;K;contains;Kavanagh;normal;Edificio historico de Retiro, en Buenos Aires.;
-Preguntas de cultura general;Cultura general argentina;K;contains;Kilometro cero;normal;Punto desde donde se miden rutas nacionales en Buenos Aires.;
-Preguntas de cultura general;Cultura general argentina;K;contains;Kiosco;normal;Comercio de cercania muy comun en ciudades argentinas.;
-Preguntas de cultura general;Cultura general argentina;K;contains;Kermesse;normal;Fiesta popular de juegos y puestos, comun en clubes y escuelas.;
-Preguntas de cultura general;Cultura general argentina;K;contains;Kily Gonzalez;normal;Apodo de Cristian Gonzalez, futbolista rosarino.;
-Preguntas de cultura general;Cultura general argentina;K;contains;Kolla;normal;Pueblo originario del noroeste argentino.;
-Preguntas de cultura general;Cultura general argentina;K;contains;Kicillof;normal;Apellido de Axel, gobernador bonaerense desde 2019.;
-Preguntas de cultura general;Cultura general argentina;K;contains;Kevin Johansen;normal;Musico nacido en Alaska y criado en Argentina.;
+Preguntas de cultura general;Cultura general argentina;K;contains;Folklore;normal;Genero musical tradicional con fuerte presencia en peñas y festivales argentinos.;
+Preguntas de cultura general;Cultura general argentina;K;contains;Rock nacional;normal;Movimiento musical argentino asociado a Charly Garcia, Spinetta, Soda Stereo y otras figuras.;
+Preguntas de cultura general;Cultura general argentina;K;contains;Trekking;normal;Actividad turistica de caminatas de montaña frecuente en Patagonia, Cuyo y el noroeste argentino.;
+Preguntas de cultura general;Cultura general argentina;K;contains;Dock Sud;normal;Localidad de Avellaneda y club historico del ascenso bonaerense.;
+Preguntas de cultura general;Cultura general argentina;K;contains;Oktoberfest;normal;Fiesta Nacional de la Cerveza celebrada cada año en Villa General Belgrano, Cordoba.;
+Preguntas de cultura general;Cultura general argentina;K;contains;Punk rock;normal;Estilo musical con bandas argentinas como Attaque 77, Dos Minutos y Flema.;
+Preguntas de cultura general;Cultura general argentina;K;contains;Skate;normal;Practica urbana y deportiva presente en plazas, parques y espacios publicos argentinos.;
+Preguntas de cultura general;Cultura general argentina;K;contains;Aike;normal;Voz de origen tehuelche presente en nombres y referencias de la Patagonia argentina.;
+Preguntas de cultura general;Cultura general argentina;K;contains;Los Tekis;normal;Grupo jujeño de folklore y carnavalito asociado a celebraciones del norte argentino.;
+Preguntas de cultura general;Cultura general argentina;K;contains;El Kuelgue;normal;Banda argentina de musica popular y fusion formada en Buenos Aires.;
 Preguntas de cultura general;Cultura general argentina;L;startsWith;Lionel Messi;normal;Capitan argentino campeon del mundo en 2022.;
 Preguntas de cultura general;Cultura general argentina;L;startsWith;La Plata;normal;Capital de la provincia de Buenos Aires.;
 Preguntas de cultura general;Cultura general argentina;L;startsWith;Litoral;normal;Region argentina vinculada a rios, chamame y yerba mate.;
@@ -139,16 +139,16 @@ Preguntas de cultura general;Cultura general argentina;N;startsWith;Norte Grande
 Preguntas de cultura general;Cultura general argentina;N;startsWith;Nacion;normal;Diario argentino fundado por Bartolome Mitre.;La Nacion, Nacion
 Preguntas de cultura general;Cultura general argentina;N;startsWith;Newells;normal;Club rosarino donde se formo Lionel Messi.;Newell's, Newells
 Preguntas de cultura general;Cultura general argentina;N;startsWith;Necochea;normal;Ciudad balnearia del sudeste bonaerense.;
-Preguntas de cultura general;Cultura general argentina;Ñ;contains;Ñoquis;normal;Pasta que en Argentina suele comerse el dia 29.;Noquis, Ñoquis
-Preguntas de cultura general;Cultura general argentina;Ñ;contains;Ñandu;normal;Ave corredora parecida al avestruz que habita zonas de Argentina.;Ñandu, Nandu
-Preguntas de cultura general;Cultura general argentina;Ñ;contains;Ñandubay;normal;Arbol nativo presente en zonas del litoral argentino.;Ñandubay, Nandubay
-Preguntas de cultura general;Cultura general argentina;Ñ;contains;Ñorquinco;normal;Localidad rionegrina de la Linea Sur.;Ñorquinco, Norquinco
-Preguntas de cultura general;Cultura general argentina;Ñ;contains;Ñata;normal;Apodo popular para una persona de nariz chata.;Ñata, Nata
-Preguntas de cultura general;Cultura general argentina;Ñ;contains;Ñacurutú;normal;Buho grande presente en varias regiones de Sudamerica.;Ñacurutu, Ñacurutú, Nacurutu
-Preguntas de cultura general;Cultura general argentina;Ñ;contains;Ña Serapia;normal;Personaje popular de relatos y humor criollo.;Ña Serapia, Na Serapia
-Preguntas de cultura general;Cultura general argentina;Ñ;contains;Ñanduti;normal;Encaje tradicional guarani conocido en el litoral.;Ñanduti, Nanduti
-Preguntas de cultura general;Cultura general argentina;Ñ;contains;Ñoquiada;normal;Comida o reunion popular alrededor de ñoquis.;Ñoquiada, Noquiada
-Preguntas de cultura general;Cultura general argentina;Ñ;contains;Ñu Pora;normal;Expresion guarani usada en nombres de lugares del litoral.;Ñu Pora, Nu Pora
+Preguntas de cultura general;Cultura general argentina;Ñ;contains;Cañuelas;normal;Ciudad bonaerense asociada a la cuenca lechera y a la produccion de dulce de leche.;
+Preguntas de cultura general;Cultura general argentina;Ñ;contains;Añatuya;normal;Ciudad de Santiago del Estero conocida como la capital de la tradicion santiagueña.;
+Preguntas de cultura general;Cultura general argentina;Ñ;contains;Doña Petrona;normal;Cocinera y autora argentina que marco la cocina televisiva y domestica del siglo XX.;
+Preguntas de cultura general;Cultura general argentina;Ñ;contains;Chaqueño Palavecino;normal;Cantor salteño de folklore reconocido por zambas, chacareras y canciones populares.;
+Preguntas de cultura general;Cultura general argentina;Ñ;contains;Piñon Fijo;normal;Payaso y artista infantil nacido en Cordoba.;Piñon Fijo, Piñón Fijo
+Preguntas de cultura general;Cultura general argentina;Ñ;contains;Peña folklorica;normal;Reunion popular con musica, baile y comida tradicional argentina.;
+Preguntas de cultura general;Cultura general argentina;Ñ;contains;Señor Tango;normal;Espectaculo porteño de tango montado en el barrio de Barracas.;
+Preguntas de cultura general;Cultura general argentina;Ñ;contains;Muñiz;normal;Localidad bonaerense del partido de San Miguel.;
+Preguntas de cultura general;Cultura general argentina;Ñ;contains;Bañado La Estrella;normal;Gran humedal de Formosa, reconocido por su biodiversidad y paisajes inundables.;
+Preguntas de cultura general;Cultura general argentina;Ñ;contains;Compañia de Jesus;normal;Orden religiosa vinculada a misiones y estancias historicas en territorio argentino.;Compañia de Jesus, Compañía de Jesús
 Preguntas de cultura general;Cultura general argentina;O;startsWith;Obelisco;normal;Monumento ubicado sobre la avenida 9 de Julio.;
 Preguntas de cultura general;Cultura general argentina;O;startsWith;Olivos;normal;Localidad donde esta la residencia presidencial argentina.;
 Preguntas de cultura general;Cultura general argentina;O;startsWith;Ombu;normal;Arbol asociado a la llanura pampeana.;
@@ -169,16 +169,16 @@ Preguntas de cultura general;Cultura general argentina;P;startsWith;Patoruzu;nor
 Preguntas de cultura general;Cultura general argentina;P;startsWith;Pescado Rabioso;normal;Banda de Spinetta que edito Artaud.;
 Preguntas de cultura general;Cultura general argentina;P;startsWith;Puerto Madero;normal;Barrio moderno de Buenos Aires junto al rio.;
 Preguntas de cultura general;Cultura general argentina;P;startsWith;Provoleta;normal;Queso asado muy comun en parrillas argentinas.;
-Preguntas de cultura general;Cultura general argentina;Q;contains;Quilmes;normal;Ciudad bonaerense y marca historica de cerveza argentina.;
-Preguntas de cultura general;Cultura general argentina;Q;contains;Quebrada de Humahuaca;normal;Valle jujeño declarado Patrimonio de la Humanidad.;
-Preguntas de cultura general;Cultura general argentina;Q;contains;Quino;normal;Dibujante mendocino creador de Mafalda.;
-Preguntas de cultura general;Cultura general argentina;Q;contains;Queso y dulce;normal;Postre argentino tambien llamado vigilante.;
-Preguntas de cultura general;Cultura general argentina;Q;contains;Quinquela Martin;normal;Pintor argentino ligado al barrio de La Boca.;
-Preguntas de cultura general;Cultura general argentina;Q;contains;Quemita;normal;Predio historico de entrenamiento de Huracan.;
-Preguntas de cultura general;Cultura general argentina;Q;contains;Quinta de Olivos;normal;Residencia presidencial argentina.;
-Preguntas de cultura general;Cultura general argentina;Q;contains;Qatar 2022;normal;Mundial ganado por la seleccion argentina.;
-Preguntas de cultura general;Cultura general argentina;Q;contains;Quilmes Rock;normal;Festival argentino de musica masiva.;
-Preguntas de cultura general;Cultura general argentina;Q;contains;Quiroga;normal;Apellido del caudillo riojano Facundo.;
+Preguntas de cultura general;Cultura general argentina;Q;contains;Esquel;normal;Ciudad chubutense cercana a La Hoya y al Parque Nacional Los Alerces.;
+Preguntas de cultura general;Cultura general argentina;Q;contains;Neuquen;normal;Provincia patagonica vinculada a Vaca Muerta, rios cordilleranos y produccion energetica.;Neuquen, Neuquén
+Preguntas de cultura general;Cultura general argentina;Q;contains;Cosquin;normal;Ciudad cordobesa famosa por su festival nacional de folklore.;Cosquin, Cosquín
+Preguntas de cultura general;Cultura general argentina;Q;contains;Choique;normal;Nombre patagonico del ñandu petiso, ave corredora del sur argentino.;
+Preguntas de cultura general;Cultura general argentina;Q;contains;Atahualpa Yupanqui;normal;Cantautor y guitarrista central del folklore argentino, autor de Camino del indio.;
+Preguntas de cultura general;Cultura general argentina;Q;contains;La Quiaca;normal;Ciudad jujeña fronteriza con Bolivia, ubicada en el extremo norte argentino.;
+Preguntas de cultura general;Cultura general argentina;Q;contains;Parque Nacional Nahuel Huapi;normal;Area protegida patagonica compartida por Rio Negro y Neuquen.;
+Preguntas de cultura general;Cultura general argentina;Q;contains;Sequia;normal;Fenomeno climatico que afecta producciones agropecuarias en distintas regiones argentinas.;Sequia, Sequía
+Preguntas de cultura general;Cultura general argentina;Q;contains;Mosquito;normal;Insecto frecuente en veranos argentinos y asociado a campañas de prevencion del dengue.;
+Preguntas de cultura general;Cultura general argentina;Q;contains;Ranqueles;normal;Pueblo originario de la region pampeana y cuyana.;
 Preguntas de cultura general;Cultura general argentina;R;startsWith;River Plate;normal;Club de futbol del barrio de Nuñez.;
 Preguntas de cultura general;Cultura general argentina;R;startsWith;Rosario;normal;Ciudad santafesina donde nacieron Messi y el Monumento a la Bandera.;
 Preguntas de cultura general;Cultura general argentina;R;startsWith;Rosas;normal;Apellido de Juan Manuel, gobernador bonaerense del siglo XIX.;
@@ -229,16 +229,16 @@ Preguntas de cultura general;Cultura general argentina;V;startsWith;Villa Carlos
 Preguntas de cultura general;Cultura general argentina;V;startsWith;Vaca Muerta;normal;Formacion de hidrocarburos no convencionales en Neuquen.;
 Preguntas de cultura general;Cultura general argentina;V;startsWith;Vendimia;normal;Fiesta mendocina vinculada a la cosecha de la uva.;
 Preguntas de cultura general;Cultura general argentina;V;startsWith;Vicente Lopez;normal;Partido del norte del Gran Buenos Aires.;
-Preguntas de cultura general;Cultura general argentina;W;contains;Wos;normal;Rapero argentino surgido de competencias de freestyle.;
-Preguntas de cultura general;Cultura general argentina;W;contains;Wanda;normal;Localidad misionera conocida por sus minas de piedras semipreciosas.;
-Preguntas de cultura general;Cultura general argentina;W;contains;Walichu;normal;Sitio arqueologico cercano a El Calafate.;
-Preguntas de cultura general;Cultura general argentina;W;contains;Whisky Romeo Zulu;normal;Pelicula argentina dirigida por Enrique Piñeyro.;
-Preguntas de cultura general;Cultura general argentina;W;contains;Walter Samuel;normal;Defensor argentino apodado el Muro.;
-Preguntas de cultura general;Cultura general argentina;W;contains;Wichi;normal;Pueblo originario del Gran Chaco argentino.;
-Preguntas de cultura general;Cultura general argentina;W;contains;Willy Crook;normal;Saxofonista y cantante argentino de funk y soul.;
-Preguntas de cultura general;Cultura general argentina;W;contains;William Brown;normal;Marino irlandes considerado padre de la Armada Argentina.;
-Preguntas de cultura general;Cultura general argentina;W;contains;Wado de Pedro;normal;Dirigente politico argentino de nombre Eduardo.;
-Preguntas de cultura general;Cultura general argentina;W;contains;Wenceslao Paunero;normal;Militar argentino del siglo XIX.;
+Preguntas de cultura general;Cultura general argentina;W;contains;Rawson;normal;Capital de Chubut, ubicada cerca del valle inferior del rio Chubut.;
+Preguntas de cultura general;Cultura general argentina;W;contains;Trelew;normal;Ciudad chubutense de origen gales, cercana a Gaiman y Puerto Madryn.;
+Preguntas de cultura general;Cultura general argentina;W;contains;Darwin;normal;Localidad rionegrina del valle medio del rio Negro.;
+Preguntas de cultura general;Cultura general argentina;W;contains;Newell's;normal;Club rosarino donde se formo Lionel Messi antes de emigrar a Barcelona.;Newell's, Newells
+Preguntas de cultura general;Cultura general argentina;W;contains;Brown de Adrogue;normal;Club historico del ascenso argentino ubicado en el sur del Gran Buenos Aires.;
+Preguntas de cultura general;Cultura general argentina;W;contains;Guillermo Brown;normal;Club de Puerto Madryn que compite en el futbol argentino.;
+Preguntas de cultura general;Cultura general argentina;W;contains;Los Twist;normal;Banda argentina de rock y pop surgida en los años ochenta.;
+Preguntas de cultura general;Cultura general argentina;W;contains;Mapuche Williche;normal;Rama del pueblo mapuche con presencia historica en zonas cordilleranas del sur.;
+Preguntas de cultura general;Cultura general argentina;W;contains;Almirante Brown;normal;Partido bonaerense y club de Isidro Casanova que lleva el nombre del marino argentino.;
+Preguntas de cultura general;Cultura general argentina;W;contains;Club Atletico Brown;normal;Institucion deportiva de Adrogue fundada a fines del siglo XIX.;
 Preguntas de cultura general;Cultura general argentina;X;contains;Maxima Zorreguieta;normal;Argentina que se convirtio en reina consorte de los Paises Bajos.;
 Preguntas de cultura general;Cultura general argentina;X;contains;Exodo Jujeño;normal;Retirada ordenada por Belgrano en 1812.;Exodo Jujeño, Exodo Jujeno
 Preguntas de cultura general;Cultura general argentina;X;contains;Exequiel Palacios;normal;Futbolista argentino campeon del mundo en 2022.;
@@ -249,26 +249,26 @@ Preguntas de cultura general;Cultura general argentina;X;contains;Ex ESMA;normal
 Preguntas de cultura general;Cultura general argentina;X;contains;Exilio;normal;Situacion vivida por muchos argentinos durante la ultima dictadura.;
 Preguntas de cultura general;Cultura general argentina;X;contains;Exportacion;normal;Actividad clave para productos como soja, carne y vino.;
 Preguntas de cultura general;Cultura general argentina;X;contains;Expreso Sarmiento;normal;Nombre asociado al ferrocarril que une Once con el oeste bonaerense.;
-Preguntas de cultura general;Cultura general argentina;Y;contains;YPF;normal;Empresa argentina de energia fundada en 1922.;
-Preguntas de cultura general;Cultura general argentina;Y;contains;Yerba mate;normal;Producto usado para preparar mate.;
-Preguntas de cultura general;Cultura general argentina;Y;contains;Yrigoyen;normal;Apellido de Hipolito, presidente radical argentino.;
-Preguntas de cultura general;Cultura general argentina;Y;contains;Yaguarete;normal;Felino nativo protegido en Argentina.;
-Preguntas de cultura general;Cultura general argentina;Y;contains;Yupanqui;normal;Apellido artistico de Atahualpa, referente del folklore.;
-Preguntas de cultura general;Cultura general argentina;Y;contains;Yapeyu;normal;Localidad correntina donde nacio San Martin.;
-Preguntas de cultura general;Cultura general argentina;Y;contains;Yacyreta;normal;Represa hidrolectrica sobre el rio Parana.;
-Preguntas de cultura general;Cultura general argentina;Y;contains;Yavi;normal;Localidad historica del norte jujeño.;
-Preguntas de cultura general;Cultura general argentina;Y;contains;Yuyo;normal;Nombre popular para hierbas silvestres o medicinales.;
-Preguntas de cultura general;Cultura general argentina;Y;contains;Yacare;normal;Reptil presente en humedales del noreste argentino.;
-Preguntas de cultura general;Cultura general argentina;Z;contains;Zamba;normal;Danza y genero musical del folklore argentino.;
-Preguntas de cultura general;Cultura general argentina;Z;contains;Zanetti;normal;Futbolista argentino historico del Inter.;
-Preguntas de cultura general;Cultura general argentina;Z;contains;Zapala;normal;Ciudad neuquina.;
-Preguntas de cultura general;Cultura general argentina;Z;contains;Zonda;normal;Viento seco y calido caracteristico de Cuyo.;
-Preguntas de cultura general;Cultura general argentina;Z;contains;Zitarrosa;normal;Cantautor uruguayo muy escuchado en el Rio de la Plata.;
-Preguntas de cultura general;Cultura general argentina;Z;contains;Zapiola;normal;Apellido de Jose Matias, militar de la independencia.;
-Preguntas de cultura general;Cultura general argentina;Z;contains;Zorzal Criollo;normal;Apodo de Carlos Gardel.;
-Preguntas de cultura general;Cultura general argentina;Z;contains;Zarate;normal;Ciudad bonaerense junto al Parana.;
-Preguntas de cultura general;Cultura general argentina;Z;contains;Zamba de mi esperanza;normal;Cancion folklorica muy difundida en Argentina.;
-Preguntas de cultura general;Cultura general argentina;Z;contains;Zas;normal;Banda de Miguel Mateos en los años ochenta.;
+Preguntas de cultura general;Cultura general argentina;Y;contains;Gualeguaychu;normal;Ciudad entrerriana famosa por su carnaval y por su ubicacion junto al rio Uruguay.;
+Preguntas de cultura general;Cultura general argentina;Y;contains;Uruguay;normal;Rio que marca parte del limite oriental argentino y da nombre al pais vecino.;
+Preguntas de cultura general;Cultura general argentina;Y;contains;Paraguay;normal;Pais limitrofe con Argentina, vinculado por la hidroelectrica Yacyreta y la region guarani.;
+Preguntas de cultura general;Cultura general argentina;Y;contains;Pueyrredon;normal;Apellido historico presente en nombres de avenidas, localidades y figuras politicas argentinas.;
+Preguntas de cultura general;Cultura general argentina;Y;contains;Cuyo;normal;Region argentina integrada principalmente por Mendoza, San Juan y San Luis.;
+Preguntas de cultura general;Cultura general argentina;Y;contains;Ayacucho;normal;Ciudad bonaerense y nombre de una batalla decisiva de la independencia sudamericana.;
+Preguntas de cultura general;Cultura general argentina;Y;contains;Payada;normal;Improvisacion cantada tradicional de los payadores criollos.;
+Preguntas de cultura general;Cultura general argentina;Y;contains;Mayo;normal;Mes central para la historia argentina por la Revolucion de 1810.;
+Preguntas de cultura general;Cultura general argentina;Y;contains;Teyu Cuare;normal;Parque provincial de Misiones asociado a leyendas, selva y barrancas sobre el Parana.;
+Preguntas de cultura general;Cultura general argentina;Y;contains;Rey de Copas;normal;Apodo de Independiente por sus titulos internacionales de futbol.;
+Preguntas de cultura general;Cultura general argentina;Z;contains;Mendoza;normal;Provincia cuyana reconocida por el vino, la Cordillera y la Fiesta de la Vendimia.;
+Preguntas de cultura general;Cultura general argentina;Z;contains;Paz;normal;Apellido de Jose Maria, militar cordobes de las guerras civiles argentinas.;
+Preguntas de cultura general;Cultura general argentina;Z;contains;Cazuela;normal;Plato caliente presente en cocinas regionales argentinas.;
+Preguntas de cultura general;Cultura general argentina;Z;contains;Pozo de las Animas;normal;Formacion geologica cercana a Malargue, en el sur mendocino.;
+Preguntas de cultura general;Cultura general argentina;Z;contains;Gonzalez;normal;Apellido muy frecuente en Argentina y presente en figuras del deporte y la cultura.;
+Preguntas de cultura general;Cultura general argentina;Z;contains;Manzana;normal;Fruta producida en el Alto Valle de Rio Negro y Neuquen.;
+Preguntas de cultura general;Cultura general argentina;Z;contains;Luz y Fuerza;normal;Nombre de sindicatos y clubes vinculados al sector electrico argentino.;
+Preguntas de cultura general;Cultura general argentina;Z;contains;Cerveza;normal;Bebida popular con fiestas y produccion artesanal en varias provincias argentinas.;
+Preguntas de cultura general;Cultura general argentina;Z;contains;Pizzeria;normal;Comercio tipico de barrios argentinos, especialmente asociado a Buenos Aires.;Pizzeria, Pizzería
+Preguntas de cultura general;Cultura general argentina;Z;contains;Azul;normal;Ciudad bonaerense reconocida por su patrimonio cervantino y edificios historicos.;
 Preguntas de cultura general;Cine Argentino;A;startsWith;A dos aguas;normal;película de 1988 dirigida por Carlos Olguin-Trelawny.;
 Preguntas de cultura general;Cine Argentino;A;startsWith;A Fanatic by Choice;normal;2015 documentary film by Pablo Martinez Dutra and Andrés Medina Rana Fonk.;
 Preguntas de cultura general;Cine Argentino;A;startsWith;A Grain of Rice from a House Where No One Has Died;normal;Short Film.;
