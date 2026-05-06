@@ -11,7 +11,7 @@ export const ThemeSelector = ({ value, onChange }: ThemeSelectorProps) => (
     <select
       value={value}
       onChange={(event) => onChange(event.target.value)}
-      className="rounded-md border border-line bg-ink px-3 py-3 text-slate-100 outline-none focus:border-blue-400"
+      className="rounded-md border border-line bg-ink px-3 py-2.5 text-slate-100 outline-none focus:border-blue-400 sm:py-3"
     >
       {themes.map((theme) => (
         <option key={theme.id} value={theme.id}>

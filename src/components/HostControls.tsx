@@ -13,7 +13,7 @@ interface HostControlsProps {
 }
 
 const buttonBase =
-  'inline-flex min-h-12 items-center justify-center gap-1 rounded-md px-2 py-3 text-sm font-bold transition sm:gap-2 sm:px-3 sm:text-base';
+  'inline-flex min-h-10 items-center justify-center gap-1 rounded-md px-2 py-2 text-xs font-bold transition sm:min-h-12 sm:gap-2 sm:px-3 sm:py-3 sm:text-base';
 
 export const HostControls = ({
   paused,
@@ -26,36 +26,36 @@ export const HostControls = ({
   onUndo,
   onFinish,
 }: HostControlsProps) => (
-  <section className="rounded-lg border border-line bg-panel p-4">
-    <div className="grid grid-cols-3 gap-2">
+  <section className="rounded-lg border border-line bg-panel p-2.5 sm:p-4">
+    <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
       <button type="button" className={`${buttonBase} bg-emerald-500 text-emerald-950`} onClick={onCorrect}>
-        <Check size={20} /> Correcta
+        <Check className="h-4 w-4 sm:h-5 sm:w-5" /> Correcta
       </button>
       <button type="button" className={`${buttonBase} bg-red-500 text-red-950`} onClick={onWrong}>
-        <X size={20} /> Incorrecta
+        <X className="h-4 w-4 sm:h-5 sm:w-5" /> Incorrecta
       </button>
       <button type="button" className={`${buttonBase} bg-amber-400 text-amber-950`} onClick={onPass}>
-        <SkipForward size={20} /> Pasa
+        <SkipForward className="h-4 w-4 sm:h-5 sm:w-5" /> Pasa
       </button>
     </div>
-    <div className="mt-3 grid grid-cols-2 gap-2 lg:grid-cols-5">
+    <div className="mt-2 grid grid-cols-2 gap-1.5 sm:mt-3 sm:gap-2 lg:grid-cols-5">
       {paused ? (
         <button type="button" className={`${buttonBase} bg-blue-500 text-blue-950`} onClick={onResume}>
-          <TimerReset size={18} /> Reanudar
+          <TimerReset className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Reanudar
         </button>
       ) : (
         <button type="button" className={`${buttonBase} bg-slate-700 text-slate-100`} onClick={onPause}>
-          <TimerOff size={18} /> Pausar
+          <TimerOff className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Pausar
         </button>
       )}
       <button type="button" className={`${buttonBase} bg-slate-700 text-slate-100`} onClick={onSwitch}>
-        <Shuffle size={18} /> Cambiar turno
+        <Shuffle className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Cambiar
       </button>
       <button type="button" className={`${buttonBase} bg-slate-700 text-slate-100`} onClick={onUndo}>
-        <RotateCcw size={18} /> Deshacer
+        <RotateCcw className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Deshacer
       </button>
       <button type="button" className={`${buttonBase} bg-slate-800 text-slate-100 lg:col-span-2`} onClick={onFinish}>
-        <Square size={18} /> Terminar partida
+        <Square className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Terminar
       </button>
     </div>
   </section>

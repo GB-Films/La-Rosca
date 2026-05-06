@@ -58,35 +58,35 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
   };
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-      <section className="rounded-lg border border-line bg-panel p-5">
-        <div className="mb-4 flex flex-wrap gap-2">
+    <div className="grid gap-3 sm:gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+      <section className="rounded-lg border border-line bg-panel p-3 sm:p-5">
+        <div className="mb-3 flex flex-wrap gap-2 sm:mb-4">
           <button
             type="button"
-            className="inline-flex items-center gap-2 rounded-xl bg-slate-700 px-3 py-2 text-sm font-bold"
+            className="inline-flex items-center gap-2 rounded-lg bg-slate-700 px-3 py-2 text-sm font-bold"
             onClick={() => navigate('/')}
           >
             <ArrowLeft size={16} /> Volver
           </button>
           <button
             type="button"
-            className="inline-flex items-center gap-2 rounded-xl bg-red-600 px-3 py-2 text-sm font-bold text-white"
+            className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-3 py-2 text-sm font-bold text-white"
             onClick={closeGame}
           >
             <Trash2 size={16} /> Cerrar partida
           </button>
         </div>
-        <p className="text-xs uppercase tracking-wide text-slate-400">Lobby del host</p>
-        <h2 className="text-3xl font-black">{session.game.title}</h2>
-        <p className="mt-2 text-slate-300">{findThemeName(session.game.theme)}</p>
-        <div className="mt-5 rounded-2xl border border-blue-300/40 bg-white p-4">
-          <p className="text-sm text-blue-100">Codigo de partida</p>
-          <p className="mt-1 text-5xl font-black tracking-widest text-blue-200">{session.game.code}</p>
+        <p className="text-[0.65rem] uppercase tracking-wide text-slate-400 sm:text-xs">Lobby del host</p>
+        <h2 className="text-2xl font-black leading-tight sm:text-3xl">{session.game.title}</h2>
+        <p className="mt-1 text-sm text-slate-300 sm:mt-2 sm:text-base">{findThemeName(session.game.theme)}</p>
+        <div className="mt-3 rounded-xl border border-blue-300/40 bg-white p-3 sm:mt-5 sm:rounded-2xl sm:p-4">
+          <p className="text-xs text-blue-100 sm:text-sm">Codigo de partida</p>
+          <p className="mt-1 text-4xl font-black tracking-widest text-blue-200 sm:text-5xl">{session.game.code}</p>
         </div>
-        <div className="mt-4 grid gap-2">
+        <div className="mt-3 grid gap-2 sm:mt-4">
           <p className="text-sm font-bold text-slate-300">Link para compartir con jugadores</p>
           {isHostedWithoutSupabase && (
-            <p className="rounded-xl border border-amber-300/40 bg-amber-400/10 p-3 text-sm font-semibold text-amber-100">
+            <p className="rounded-lg border border-amber-300/40 bg-amber-400/10 p-2.5 text-sm font-semibold text-amber-100 sm:p-3">
               Este link de GitHub necesita Supabase para que otros celulares vean la partida. Ahora esta funcionando
               solo en este navegador.
             </p>
@@ -95,22 +95,22 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
             readOnly
             value={joinLink}
             onFocus={(event) => event.currentTarget.select()}
-            className="w-full rounded-xl border border-line bg-white px-3 py-3 text-sm"
+            className="w-full rounded-lg border border-line bg-white px-3 py-2 text-sm sm:py-3"
             aria-label="Link para jugadores"
           />
           <button
             type="button"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-700 px-4 py-3 font-bold"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-slate-700 px-4 py-2.5 text-sm font-bold sm:py-3 sm:text-base"
             onClick={copyJoinLink}
           >
             <Copy size={18} /> Copiar link para jugadores
           </button>
           {copyMessage && <p className="text-sm font-bold text-blue-300">{copyMessage}</p>}
         </div>
-        <div className="mt-4 grid gap-2 sm:grid-cols-2">
+        <div className="mt-3 grid gap-2 sm:mt-4 sm:grid-cols-2">
           <button
             type="button"
-            className="rounded-xl bg-slate-700 px-4 py-3 font-bold"
+            className="rounded-lg bg-slate-700 px-4 py-2.5 text-sm font-bold sm:py-3 sm:text-base"
             onClick={() => addSimulatedPlayer('Jugador 1')}
             disabled={session.players.length >= 2}
           >
@@ -118,7 +118,7 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
           </button>
           <button
             type="button"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-400 px-4 py-3 font-black text-amber-950"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-amber-400 px-4 py-2.5 text-sm font-black text-amber-950 sm:py-3 sm:text-base"
             onClick={start}
             disabled={!canStart}
           >
@@ -126,20 +126,20 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
           </button>
         </div>
       </section>
-      <section className="rounded-lg border border-line bg-panel p-5">
-        <p className="text-xs uppercase tracking-wide text-slate-400">Conexion de jugadores</p>
-        <h3 className="text-2xl font-black">Esperando 2 jugadores</h3>
-        <div className="mt-5 grid gap-3">
+      <section className="rounded-lg border border-line bg-panel p-3 sm:p-5">
+        <p className="text-[0.65rem] uppercase tracking-wide text-slate-400 sm:text-xs">Conexion de jugadores</p>
+        <h3 className="text-xl font-black sm:text-2xl">Esperando 2 jugadores</h3>
+        <div className="mt-3 grid gap-2 sm:mt-5 sm:gap-3">
           {[1, 2].map((slot) => {
             const player = session.players.find((item) => item.slot === slot);
             return (
-              <div key={slot} className="flex items-center justify-between rounded-2xl border border-line bg-white p-4">
+              <div key={slot} className="flex items-center justify-between rounded-xl border border-line bg-white p-3 sm:rounded-2xl sm:p-4">
                 <div>
-                  <p className="text-sm text-slate-400">Jugador {slot}</p>
-                  <p className="text-xl font-bold">{player?.name ?? 'Pendiente'}</p>
+                  <p className="text-xs text-slate-400 sm:text-sm">Jugador {slot}</p>
+                  <p className="text-lg font-bold sm:text-xl">{player?.name ?? 'Pendiente'}</p>
                 </div>
                 <span
-                  className={`rounded-full px-3 py-1 text-sm font-bold ${
+                  className={`rounded-full px-3 py-1 text-xs font-bold sm:text-sm ${
                     player ? 'bg-emerald-500 text-emerald-950' : 'bg-slate-700 text-slate-200'
                   }`}
                 >

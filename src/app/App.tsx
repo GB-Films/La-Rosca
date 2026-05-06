@@ -73,18 +73,20 @@ export const App = () => {
   return (
     <div className="min-h-screen">
       <header className="app-header border-b border-line">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-3 sm:px-4">
-          <button type="button" onClick={() => navigate('/')} className="flex items-center gap-3 text-left">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-2 sm:gap-3 sm:px-4 sm:py-3">
+          <button type="button" onClick={() => navigate('/')} className="flex items-center gap-2 text-left sm:gap-3">
             <BrandLogo size="sm" />
             <span>
-              <p className="stamp-label text-xs uppercase tracking-[0.2em]">Juego local</p>
-              <h1 className="brand-title text-2xl font-black">La Rosca</h1>
+              <p className="stamp-label text-[0.65rem] uppercase tracking-[0.18em] sm:text-xs sm:tracking-[0.2em]">
+                Juego local
+              </p>
+              <h1 className="brand-title text-xl font-black sm:text-2xl">La Rosca</h1>
             </span>
           </button>
-          <span className="route-badge rounded-md px-3 py-1 text-xs">Host</span>
+          <span className="route-badge rounded-md px-2 py-1 text-[0.7rem] sm:px-3 sm:text-xs">Host</span>
         </div>
       </header>
-      <main className="mx-auto max-w-7xl px-3 py-4 sm:px-4 sm:py-6">{page}</main>
+      <main className="mx-auto max-w-7xl px-2 py-2 sm:px-4 sm:py-6">{page}</main>
     </div>
   );
 };

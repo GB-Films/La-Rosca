@@ -33,20 +33,20 @@ export const PlayerGamePage = ({ gameId, playerId }: PlayerGamePageProps) => {
   const isTurn = session.game.activePlayerId === player.id && session.game.status === 'playing';
 
   return (
-    <div className="mx-auto grid max-w-3xl gap-4 sm:gap-5">
+    <div className="mx-auto grid max-w-3xl gap-2.5 sm:gap-5">
       <section
-        className={`rounded-lg border p-4 sm:p-5 ${
+        className={`rounded-lg border p-3 sm:p-5 ${
           isTurn ? 'border-blue-400 bg-blue-500/10' : 'border-line bg-panel'
         }`}
       >
-        <p className="text-xs uppercase tracking-wide text-slate-400">Vista del jugador</p>
-        <h2 className="text-2xl font-black sm:text-3xl">{player.name}</h2>
-        <p className={`mt-2 text-lg font-bold ${isTurn ? 'text-blue-200' : 'text-slate-300'}`}>
+        <p className="text-[0.65rem] uppercase tracking-wide text-slate-400 sm:text-xs">Vista del jugador</p>
+        <h2 className="text-xl font-black leading-tight sm:text-3xl">{player.name}</h2>
+        <p className={`mt-1 text-sm font-bold sm:text-lg ${isTurn ? 'text-blue-200' : 'text-slate-300'}`}>
           {isTurn ? 'Es tu turno' : session.game.status === 'finished' ? 'Partida terminada' : 'Esperando turno'}
         </p>
       </section>
       <ScoreBoard player={player} letters={letters} active={isTurn} />
-      <section className="rounded-lg border border-line bg-panel p-3 sm:p-4">
+      <section className="rounded-lg border border-line bg-panel p-2 sm:p-4">
         <Rosco letters={letters} activeLetter={isTurn ? session.game.activeLetter : undefined} />
       </section>
       <QuestionCard

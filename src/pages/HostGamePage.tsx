@@ -52,22 +52,22 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
   };
 
   return (
-    <div className="grid gap-6">
-      <section className="rounded-lg border border-line bg-panel p-4">
-        <div className="flex flex-wrap items-center justify-between gap-3">
+    <div className="grid gap-3 sm:gap-6">
+      <section className="rounded-lg border border-line bg-panel p-3 sm:p-4">
+        <div className="flex items-center justify-between gap-2">
           <div>
-            <p className="text-xs uppercase tracking-wide text-slate-400">Panel del host</p>
-            <h2 className="text-3xl font-black">{session.game.title}</h2>
+            <p className="text-[0.65rem] uppercase tracking-wide text-slate-400 sm:text-xs">Panel del host</p>
+            <h2 className="text-xl font-black leading-tight sm:text-3xl">{session.game.title}</h2>
           </div>
-          <div className="rounded-md border border-blue-400 bg-blue-500/10 px-4 py-2 text-blue-100">
+          <div className="rounded-md border border-blue-400 bg-blue-500/10 px-2 py-1 text-xs text-blue-100 sm:px-4 sm:py-2 sm:text-base">
             Turno: <strong>{activePlayer?.name ?? '-'}</strong>
           </div>
         </div>
       </section>
 
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(22rem,26rem)_minmax(0,1fr)] xl:items-start">
+      <div className="grid gap-3 sm:gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(22rem,26rem)_minmax(0,1fr)] xl:items-start">
         {playerOne && (
-          <section className="rounded-lg border border-line bg-panel p-3 sm:p-4">
+          <section className="rounded-lg border border-line bg-panel p-2 sm:p-4">
             <ScoreBoard
               player={playerOne}
               letters={session.letters.filter((letter) => letter.playerId === playerOne.id)}
@@ -81,7 +81,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
           </section>
         )}
 
-        <div className="sticky top-2 z-30 order-first grid content-start gap-3 rounded-lg border border-line bg-ink/95 p-2 shadow-2xl xl:order-none xl:top-4 xl:border-0 xl:bg-transparent xl:p-0 xl:shadow-none">
+        <div className="sticky top-1 z-30 order-first grid content-start gap-2 rounded-lg border border-line bg-ink/95 p-2 shadow-2xl sm:gap-3 xl:order-none xl:top-4 xl:border-0 xl:bg-transparent xl:p-0 xl:shadow-none">
           <QuestionCard question={activeQuestion} showAnswer letter={session.game.activeLetter} />
           <HostControls
             paused={session.game.status === 'paused'}
@@ -94,18 +94,18 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
             onUndo={undoLastAction}
             onFinish={finish}
           />
-          <div className="grid grid-cols-2 gap-2">
-            <button type="button" className="rounded-md bg-slate-700 px-4 py-3 font-bold" onClick={lobby}>
+          <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
+            <button type="button" className="rounded-md bg-slate-700 px-3 py-2 text-sm font-bold sm:px-4 sm:py-3 sm:text-base" onClick={lobby}>
               Volver al lobby
             </button>
-            <button type="button" className="rounded-md bg-slate-700 px-4 py-3 font-bold" onClick={resetGame}>
+            <button type="button" className="rounded-md bg-slate-700 px-3 py-2 text-sm font-bold sm:px-4 sm:py-3 sm:text-base" onClick={resetGame}>
               Resetear partida
             </button>
           </div>
         </div>
 
         {playerTwo && (
-          <section className="rounded-lg border border-line bg-panel p-3 sm:p-4">
+          <section className="rounded-lg border border-line bg-panel p-2 sm:p-4">
             <ScoreBoard
               player={playerTwo}
               letters={session.letters.filter((letter) => letter.playerId === playerTwo.id)}

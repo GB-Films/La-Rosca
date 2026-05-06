@@ -16,7 +16,7 @@ const statusClass: Record<LetterStatus, string> = {
 };
 
 export const LetterBubble = ({ letter, status, active, compact, onClick }: LetterBubbleProps) => {
-  const size = compact ? 'h-8 w-8 text-sm' : 'h-8 w-8 text-sm sm:h-11 sm:w-11 sm:text-base';
+  const size = compact ? 'h-7 w-7 text-xs' : 'h-7 w-7 text-xs sm:h-10 sm:w-10 sm:text-base';
   return (
     <button
       type="button"

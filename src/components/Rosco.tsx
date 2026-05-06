@@ -12,7 +12,7 @@ export const Rosco = ({ letters, activeLetter, onLetterStatusChange }: RoscoProp
   const menuStatuses: LetterStatus[] = ['pending', 'correct', 'wrong', 'passed'];
 
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[19rem] sm:max-w-[25rem]">
+    <div className="relative mx-auto aspect-square w-full max-w-[16.5rem] sm:max-w-[23rem] xl:max-w-[25rem]">
       <div className="absolute inset-[19%] rounded-full border border-line bg-black/10 shadow-glow" />
       {letters.map((state, index) => {
         const angle = (index / letters.length) * Math.PI * 2 - Math.PI / 2;
@@ -27,7 +27,7 @@ export const Rosco = ({ letters, activeLetter, onLetterStatusChange }: RoscoProp
             {onLetterStatusChange ? (
               <div className="group relative">
                 <LetterBubble letter={state.letter} status={state.status} active={activeLetter === state.letter} />
-                <div className="invisible absolute left-1/2 top-11 z-20 grid -translate-x-1/2 grid-cols-2 gap-1 rounded-md border border-line bg-panel p-1 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100">
+                <div className="invisible absolute left-1/2 top-9 z-20 grid -translate-x-1/2 grid-cols-2 gap-1 rounded-md border border-line bg-panel p-1 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100 sm:top-11">
                   {menuStatuses.map((status) => (
                     <button
                       key={status}
