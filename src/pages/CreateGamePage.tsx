@@ -26,6 +26,7 @@ export const CreateGamePage = () => {
   const [presetName, setPresetName] = useState('Mi categoria');
   const [customPresets, setCustomPresets] = useState(() => questionService.getCustomPresets());
   const [presetMessage, setPresetMessage] = useState('');
+  const [showValidation, setShowValidation] = useState(false);
   const warnings = useMemo(() => validateQuestions(questions), [questions]);
   const packWarnings = useMemo(() => validateQuestions(packQuestions), [packQuestions]);
 
@@ -61,6 +62,11 @@ export const CreateGamePage = () => {
   };
 
   const create = async () => {
+    const currentWarnings = questionMode === 'manual' ? warnings : packWarnings;
+    if (currentWarnings.length > 0) {
+      setShowValidation(true);
+      return;
+    }
     const selectedQuestions =
       questionMode === 'manual'
         ? questions
@@ -138,9 +144,9 @@ export const CreateGamePage = () => {
               <option value="manual">Personalizado editable</option>
             </select>
           </label>
-          {questionMode === 'manual' && warnings.length > 0 && (
+          {showValidation && questionMode === 'manual' && warnings.length > 0 && (
             <p className="rounded-md border border-amber-300/40 bg-amber-400/10 p-3 text-sm text-amber-100">
-              Hay {warnings.length} warning(s) en el banco editable. El host tambien los vera luego.
+              Hay {warnings.length} warning(s) en el banco editable. Corregilos para crear la partida.
             </p>
           )}
           <button
@@ -170,7 +176,7 @@ export const CreateGamePage = () => {
               <RefreshCw size={16} /> Randomizar
             </button>
           </div>
-          {packWarnings.length > 0 && (
+          {showValidation && packWarnings.length > 0 && (
             <p className="mt-3 rounded-md border border-amber-300/40 bg-amber-400/10 p-3 text-sm text-amber-100">
               Hay {packWarnings.length} warning(s) en esta seleccion.
             </p>
@@ -229,7 +235,13 @@ export const CreateGamePage = () => {
             )}
             {presetMessage && <p className="mt-2 text-sm font-bold text-blue-200">{presetMessage}</p>}
           </section>
-          <QuestionEditor questions={questions} theme="personalizada" includeÑ={includeÑ} onChange={setQuestions} />
+          <QuestionEditor
+            questions={questions}
+            theme="personalizada"
+            includeÑ={includeÑ}
+            onChange={setQuestions}
+            showWarnings={showValidation}
+          />
         </div>
       )}
     </div>

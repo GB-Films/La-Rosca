@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { LetterState, LetterStatus } from '../types/game';
 import { LetterBubble } from './LetterBubble';
 
@@ -6,6 +7,7 @@ interface RoscoProps {
   activeLetter?: string;
   onLetterStatusChange?: (letter: string, status: LetterStatus) => void;
   size?: 'small' | 'medium' | 'large';
+  centerContent?: ReactNode;
 }
 
 const sizeClass = {
@@ -14,14 +16,16 @@ const sizeClass = {
   large: 'max-w-[18rem] sm:max-w-[29rem] xl:max-w-[34rem]',
 };
 
-export const Rosco = ({ letters, activeLetter, onLetterStatusChange, size = 'medium' }: RoscoProps) => {
+export const Rosco = ({ letters, activeLetter, onLetterStatusChange, size = 'medium', centerContent }: RoscoProps) => {
   const radius = 42;
   const menuStatuses: LetterStatus[] = ['pending', 'correct', 'wrong', 'passed'];
   const compact = size === 'small';
 
   return (
     <div className={`relative mx-auto aspect-square w-full ${sizeClass[size]}`}>
-      <div className="absolute inset-[19%] rounded-full border border-line bg-black/10 shadow-glow" />
+      <div className="absolute inset-[19%] grid place-items-center rounded-full border border-line bg-black/10 shadow-glow">
+        {centerContent}
+      </div>
       {letters.map((state, index) => {
         const angle = (index / letters.length) * Math.PI * 2 - Math.PI / 2;
         const left = 50 + radius * Math.cos(angle);

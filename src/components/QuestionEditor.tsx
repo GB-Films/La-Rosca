@@ -10,9 +10,10 @@ interface QuestionEditorProps {
   theme: string;
   includeÑ: boolean;
   onChange: (questions: Question[]) => void;
+  showWarnings?: boolean;
 }
 
-export const QuestionEditor = ({ questions, theme, includeÑ, onChange }: QuestionEditorProps) => {
+export const QuestionEditor = ({ questions, theme, includeÑ, onChange, showWarnings = true }: QuestionEditorProps) => {
   const [filterTheme, setFilterTheme] = useState(theme);
   const [filterLetter, setFilterLetter] = useState('all');
   const [filterPlayer, setFilterPlayer] = useState('all');
@@ -79,7 +80,7 @@ export const QuestionEditor = ({ questions, theme, includeÑ, onChange }: Questi
         </button>
       </div>
 
-      {warnings.length > 0 && (
+      {showWarnings && warnings.length > 0 && (
         <div className="mt-3 rounded-md border border-amber-300/40 bg-amber-400/10 p-2.5 text-sm text-amber-100 sm:mt-4 sm:p-3">
           <strong>{warnings.length} warning(s) de validacion</strong>
           <ul className="mt-2 grid gap-1">

@@ -13,7 +13,7 @@ interface HostControlsProps {
 }
 
 const buttonBase =
-  'inline-flex min-h-10 items-center justify-center gap-1 rounded-md px-2 py-2 text-xs font-bold transition sm:min-h-12 sm:gap-2 sm:px-3 sm:py-3 sm:text-base';
+  'inline-flex min-h-10 min-w-0 items-center justify-center gap-1 rounded-md px-2 py-2 text-xs font-bold leading-tight transition sm:min-h-12 sm:gap-1.5 sm:px-2.5 sm:py-3 sm:text-sm';
 
 export const HostControls = ({
   paused,
@@ -27,14 +27,14 @@ export const HostControls = ({
   onFinish,
 }: HostControlsProps) => (
   <section className="rounded-lg border border-line bg-panel p-2.5 sm:p-4">
-    <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
+    <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 sm:gap-2">
       <button type="button" className={`${buttonBase} bg-emerald-600 text-white`} onClick={onCorrect}>
         <Check className="h-4 w-4 sm:h-5 sm:w-5" /> Correcta
       </button>
       <button type="button" className={`${buttonBase} bg-red-500 text-red-950`} onClick={onWrong}>
         <X className="h-4 w-4 sm:h-5 sm:w-5" /> Incorrecta
       </button>
-      <button type="button" className={`${buttonBase} bg-amber-400 text-amber-950`} onClick={onPass}>
+      <button type="button" className={`${buttonBase} col-span-2 bg-amber-400 text-amber-950 sm:col-span-1`} onClick={onPass}>
         <SkipForward className="h-4 w-4 sm:h-5 sm:w-5" /> Pasa
       </button>
     </div>

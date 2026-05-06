@@ -8,6 +8,7 @@ import { Rosco } from '../components/Rosco';
 import { ScoreBoard } from '../components/ScoreBoard';
 import { useGameStore } from '../store/gameStore';
 import type { Question } from '../types/question';
+import { formatSeconds } from '../utils/timer';
 
 interface HostGamePageProps {
   gameId: string;
@@ -67,7 +68,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
         </div>
       </section>
 
-      <div className="grid gap-3 sm:gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(20rem,25rem)_minmax(13rem,17rem)] xl:items-start">
+      <div className="grid gap-3 sm:gap-4 xl:grid-cols-[minmax(32rem,1fr)_minmax(19rem,24rem)_minmax(12rem,15rem)] xl:items-start">
         {focusPlayer && (
           <section className="order-2 rounded-lg border border-blue-400 bg-panel p-2 sm:p-4 xl:order-1">
             <ScoreBoard player={focusPlayer} letters={focusLetters} active />
@@ -75,6 +76,17 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
               letters={focusLetters}
               activeLetter={session.game.activeLetter}
               size="large"
+              centerContent={
+                <div className="grid place-items-center text-center">
+                  <p className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-blue-200">Letra</p>
+                  <p className="text-6xl font-black leading-none text-white sm:text-8xl">
+                    {session.game.activeLetter ?? '-'}
+                  </p>
+                  <p className="mt-1 rounded-md border border-blue-400 bg-blue-500/15 px-3 py-1 text-lg font-black text-blue-100 sm:text-2xl">
+                    {formatSeconds(focusPlayer.remainingSeconds)}
+                  </p>
+                </div>
+              }
               onLetterStatusChange={(letter, status) => setLetterStatus(focusPlayer.id, letter, status)}
             />
           </section>
@@ -94,34 +106,38 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
             onFinish={finish}
           />
           <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
-            <button type="button" className="rounded-md bg-slate-700 px-3 py-2 text-sm font-bold sm:px-4 sm:py-3 sm:text-base" onClick={lobby}>
+            <button type="button" className="rounded-md bg-slate-700 px-2 py-2 text-xs font-bold sm:px-3 sm:py-3 sm:text-sm" onClick={lobby}>
               Volver al lobby
             </button>
-            <button type="button" className="rounded-md bg-slate-700 px-3 py-2 text-sm font-bold sm:px-4 sm:py-3 sm:text-base" onClick={resetGame}>
+            <button type="button" className="rounded-md bg-slate-700 px-2 py-2 text-xs font-bold sm:px-3 sm:py-3 sm:text-sm" onClick={resetGame}>
               Resetear partida
             </button>
           </div>
         </div>
 
-        <section className="order-3 rounded-lg border border-line bg-panel p-2 sm:p-3">
-          <p className="text-[0.65rem] uppercase tracking-wide text-slate-400 sm:text-xs">Otros jugadores</p>
+        <section className="order-3 rounded-lg border border-amber-300/45 bg-amber-500/15 p-2 sm:p-3">
+          <p className="text-[0.65rem] font-bold uppercase tracking-wide text-amber-100 sm:text-xs">En espera</p>
           <div className="mt-2 flex gap-2 overflow-x-auto pb-1 xl:grid xl:max-h-[calc(100vh-11rem)] xl:overflow-y-auto xl:pb-0">
-            {sidePlayers.map((player) => (
-              <article key={player.id} className="min-w-[13rem] rounded-lg border border-line bg-black/10 p-2">
-                <ScoreBoard
-                  player={player}
-                  letters={session.letters.filter((letter) => letter.playerId === player.id)}
-                  active={player.id === session.game.activePlayerId}
-                  compact
-                />
-                <Rosco
-                  letters={session.letters.filter((letter) => letter.playerId === player.id)}
-                  activeLetter={player.id === session.game.activePlayerId ? session.game.activeLetter : undefined}
-                  size="small"
-                  onLetterStatusChange={(letter, status) => setLetterStatus(player.id, letter, status)}
-                />
-              </article>
-            ))}
+            {sidePlayers.map((player) => {
+              const letters = session.letters.filter((letter) => letter.playerId === player.id);
+              const pending = letters.filter((letter) => letter.status === 'pending' || letter.status === 'passed').length;
+              return (
+                <article key={player.id} className="min-w-[11rem] rounded-lg border border-amber-300/35 bg-amber-950/25 p-2">
+                  <p className="text-[0.62rem] uppercase tracking-wide text-amber-100/80">Jugador {player.slot}</p>
+                  <h3 className="truncate text-sm font-black text-white">{player.name}</h3>
+                  <div className="mt-2 grid grid-cols-2 gap-1 text-xs">
+                    <span className="rounded bg-black/15 px-2 py-1 font-bold text-emerald-200">{player.score} pts</span>
+                    <span className="rounded bg-black/15 px-2 py-1 font-bold text-amber-100">{pending} pend.</span>
+                    <span className="rounded bg-black/15 px-2 py-1 font-bold text-blue-100">
+                      {formatSeconds(player.remainingSeconds)}
+                    </span>
+                    <span className={`rounded bg-black/15 px-2 py-1 font-bold ${player.connected ? 'text-emerald-200' : 'text-red-200'}`}>
+                      {player.connected ? 'online' : 'offline'}
+                    </span>
+                  </div>
+                </article>
+              );
+            })}
             {sidePlayers.length === 0 && (
               <p className="rounded-md border border-line bg-black/10 p-3 text-sm text-slate-300">
                 Cuando entren mas jugadores van a aparecer aca.
