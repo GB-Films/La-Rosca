@@ -1,6 +1,7 @@
 import type { Question, QuestionMode } from '../types/question';
 
 const THEME = 'cultura-general-argentina';
+const HARD_LETTERS = new Set(['Ñ', 'K', 'Q', 'W', 'X', 'Y', 'Z']);
 
 type LibrarySeed = {
   letter: string;
@@ -292,7 +293,7 @@ const seeds: LibrarySeed[] = rawSeeds.map(([letter, answer, clue, mode, accepted
 }));
 
 const leadFor = (seed: LibrarySeed, variant: number) => {
-  const prefix = seed.mode === 'contains' ? `Contiene ${seed.letter}` : `Con ${seed.letter}`;
+  const prefix = seed.mode === 'contains' || HARD_LETTERS.has(seed.letter) ? `Contiene ${seed.letter}` : `Con ${seed.letter}`;
   return variant === 1 ? `${prefix}: ${seed.clue}` : `${prefix}: ${seed.clue}`;
 };
 
@@ -301,7 +302,7 @@ export const argentinaGeneralLibrary: Question[] = seeds.flatMap((seed, index) =
     id: `${THEME}-library-${seed.letter.toLowerCase()}-${String(index + 1).padStart(3, '0')}-${variant}`,
     theme: THEME,
     letter: seed.letter,
-    mode: seed.mode ?? 'startsWith',
+    mode: seed.mode ?? (HARD_LETTERS.has(seed.letter) ? 'contains' : 'startsWith'),
     prompt: leadFor(seed, variant),
     answer: seed.answer,
     acceptedAnswers: seed.acceptedAnswers,
