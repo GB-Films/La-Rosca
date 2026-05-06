@@ -10,7 +10,7 @@ interface LetterBubbleProps {
 
 const statusClass: Record<LetterStatus, string> = {
   pending: 'border-slate-500 bg-slate-700 text-slate-100',
-  correct: 'border-lime-100 bg-lime-300 text-lime-950 shadow-[0_0_18px_rgba(190,242,100,0.65)]',
+  correct: 'border-emerald-200 bg-emerald-600 text-white shadow-[0_0_18px_rgba(16,185,129,0.58)]',
   wrong: 'border-red-300 bg-red-500 text-red-950',
   passed: 'border-amber-300 bg-amber-400 text-amber-950',
 };

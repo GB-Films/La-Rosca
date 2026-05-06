@@ -28,7 +28,7 @@ export const HostControls = ({
 }: HostControlsProps) => (
   <section className="rounded-lg border border-line bg-panel p-2.5 sm:p-4">
     <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
-      <button type="button" className={`${buttonBase} bg-emerald-500 text-emerald-950`} onClick={onCorrect}>
+      <button type="button" className={`${buttonBase} bg-emerald-600 text-white`} onClick={onCorrect}>
         <Check className="h-4 w-4 sm:h-5 sm:w-5" /> Correcta
       </button>
       <button type="button" className={`${buttonBase} bg-red-500 text-red-950`} onClick={onWrong}>

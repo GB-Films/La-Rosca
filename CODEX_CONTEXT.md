@@ -62,6 +62,8 @@
 
 ## Notas recientes
 
+- En la vista del host durante la partida, el editor de preguntas queda oculto; el jugador activo se muestra grande y los demas jugadores quedan compactos en un rail lateral/en fila horizontal en mobile.
+- El color de letras/respuestas correctas debe diferenciarse claramente del amarillo de "Pasa": usar verde esmeralda oscuro con texto blanco.
 - Se agrego aviso para cuando GitHub Pages corre sin Supabase.
 - El boton copiar link tiene fallback para navegadores moviles.
 - Si una partida fue creada antes de Supabase, no aparece en otros celulares; hay que crear una partida nueva.

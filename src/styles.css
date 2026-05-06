@@ -155,10 +155,14 @@ textarea::placeholder {
   color: #ffffff;
 }
 
-.bg-emerald-500,
+.bg-emerald-500 {
+  background-color: #059669;
+  color: #ffffff;
+}
+
 .bg-emerald-500\/10 {
-  background-color: rgba(22, 163, 74, 0.22);
-  color: #bbf7d0;
+  background-color: rgba(4, 120, 87, 0.28);
+  color: #d1fae5;
 }
 
 .border-emerald-300,

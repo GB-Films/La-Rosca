@@ -40,6 +40,9 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
 
   const activePlayer = session.players.find((player) => player.id === session.game.activePlayerId);
   const players = [...session.players].sort((a, b) => a.slot - b.slot);
+  const focusPlayer = activePlayer ?? players[0];
+  const focusLetters = focusPlayer ? session.letters.filter((letter) => letter.playerId === focusPlayer.id) : [];
+  const sidePlayers = players.filter((player) => player.id !== focusPlayer?.id);
 
   const finish = () => {
     if (window.confirm('Terminar la partida ahora?')) finishGame();
@@ -64,25 +67,20 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
         </div>
       </section>
 
-      <div className="grid gap-3 sm:gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(22rem,26rem)] xl:items-start">
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-2">
-          {players.map((player) => (
-            <section key={player.id} className="rounded-lg border border-line bg-panel p-2 sm:p-4">
-              <ScoreBoard
-                player={player}
-                letters={session.letters.filter((letter) => letter.playerId === player.id)}
-                active={player.id === session.game.activePlayerId}
-              />
-              <Rosco
-                letters={session.letters.filter((letter) => letter.playerId === player.id)}
-                activeLetter={player.id === session.game.activePlayerId ? session.game.activeLetter : undefined}
-                onLetterStatusChange={(letter, status) => setLetterStatus(player.id, letter, status)}
-              />
-            </section>
-          ))}
-        </div>
+      <div className="grid gap-3 sm:gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(20rem,25rem)_minmax(13rem,17rem)] xl:items-start">
+        {focusPlayer && (
+          <section className="order-2 rounded-lg border border-blue-400 bg-panel p-2 sm:p-4 xl:order-1">
+            <ScoreBoard player={focusPlayer} letters={focusLetters} active />
+            <Rosco
+              letters={focusLetters}
+              activeLetter={session.game.activeLetter}
+              size="large"
+              onLetterStatusChange={(letter, status) => setLetterStatus(focusPlayer.id, letter, status)}
+            />
+          </section>
+        )}
 
-        <div className="sticky top-1 z-30 order-first grid content-start gap-2 rounded-lg border border-line bg-ink/95 p-2 shadow-2xl sm:gap-3 xl:order-none xl:top-4 xl:p-0">
+        <div className="sticky top-1 z-30 order-1 grid content-start gap-2 rounded-lg border border-line bg-ink/95 p-2 shadow-2xl sm:gap-3 xl:order-2 xl:top-4 xl:p-0">
           <QuestionCard question={activeQuestion} showAnswer letter={session.game.activeLetter} />
           <HostControls
             paused={session.game.status === 'paused'}
@@ -104,14 +102,43 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
             </button>
           </div>
         </div>
+
+        <section className="order-3 rounded-lg border border-line bg-panel p-2 sm:p-3">
+          <p className="text-[0.65rem] uppercase tracking-wide text-slate-400 sm:text-xs">Otros jugadores</p>
+          <div className="mt-2 flex gap-2 overflow-x-auto pb-1 xl:grid xl:max-h-[calc(100vh-11rem)] xl:overflow-y-auto xl:pb-0">
+            {sidePlayers.map((player) => (
+              <article key={player.id} className="min-w-[13rem] rounded-lg border border-line bg-black/10 p-2">
+                <ScoreBoard
+                  player={player}
+                  letters={session.letters.filter((letter) => letter.playerId === player.id)}
+                  active={player.id === session.game.activePlayerId}
+                  compact
+                />
+                <Rosco
+                  letters={session.letters.filter((letter) => letter.playerId === player.id)}
+                  activeLetter={player.id === session.game.activePlayerId ? session.game.activeLetter : undefined}
+                  size="small"
+                  onLetterStatusChange={(letter, status) => setLetterStatus(player.id, letter, status)}
+                />
+              </article>
+            ))}
+            {sidePlayers.length === 0 && (
+              <p className="rounded-md border border-line bg-black/10 p-3 text-sm text-slate-300">
+                Cuando entren mas jugadores van a aparecer aca.
+              </p>
+            )}
+          </div>
+        </section>
       </div>
 
-      <QuestionEditor
-        questions={session.questions as Question[]}
-        theme={session.game.theme}
-        includeÑ={session.game.includeÑ}
-        onChange={updateQuestions}
-      />
+      {session.game.status === 'lobby' && (
+        <QuestionEditor
+          questions={session.questions as Question[]}
+          theme={session.game.theme}
+          includeÑ={session.game.includeÑ}
+          onChange={updateQuestions}
+        />
+      )}
 
       <GameResultModal
         players={session.players}

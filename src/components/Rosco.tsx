@@ -5,14 +5,22 @@ interface RoscoProps {
   letters: LetterState[];
   activeLetter?: string;
   onLetterStatusChange?: (letter: string, status: LetterStatus) => void;
+  size?: 'small' | 'medium' | 'large';
 }
 
-export const Rosco = ({ letters, activeLetter, onLetterStatusChange }: RoscoProps) => {
+const sizeClass = {
+  small: 'max-w-[8.5rem] sm:max-w-[9.5rem]',
+  medium: 'max-w-[16.5rem] sm:max-w-[23rem] xl:max-w-[25rem]',
+  large: 'max-w-[18rem] sm:max-w-[29rem] xl:max-w-[34rem]',
+};
+
+export const Rosco = ({ letters, activeLetter, onLetterStatusChange, size = 'medium' }: RoscoProps) => {
   const radius = 42;
   const menuStatuses: LetterStatus[] = ['pending', 'correct', 'wrong', 'passed'];
+  const compact = size === 'small';
 
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[16.5rem] sm:max-w-[23rem] xl:max-w-[25rem]">
+    <div className={`relative mx-auto aspect-square w-full ${sizeClass[size]}`}>
       <div className="absolute inset-[19%] rounded-full border border-line bg-black/10 shadow-glow" />
       {letters.map((state, index) => {
         const angle = (index / letters.length) * Math.PI * 2 - Math.PI / 2;
@@ -26,7 +34,7 @@ export const Rosco = ({ letters, activeLetter, onLetterStatusChange }: RoscoProp
           >
             {onLetterStatusChange ? (
               <div className="group relative">
-                <LetterBubble letter={state.letter} status={state.status} active={activeLetter === state.letter} />
+                <LetterBubble letter={state.letter} status={state.status} active={activeLetter === state.letter} compact={compact} />
                 <div className="invisible absolute left-1/2 top-9 z-20 grid -translate-x-1/2 grid-cols-2 gap-1 rounded-md border border-line bg-panel p-1 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100 sm:top-11">
                   {menuStatuses.map((status) => (
                     <button
@@ -41,7 +49,7 @@ export const Rosco = ({ letters, activeLetter, onLetterStatusChange }: RoscoProp
                 </div>
               </div>
             ) : (
-              <LetterBubble letter={state.letter} status={state.status} active={activeLetter === state.letter} />
+              <LetterBubble letter={state.letter} status={state.status} active={activeLetter === state.letter} compact={compact} />
             )}
           </div>
         );

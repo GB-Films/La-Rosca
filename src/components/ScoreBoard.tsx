@@ -5,23 +5,33 @@ interface ScoreBoardProps {
   player: Player;
   letters: LetterState[];
   active?: boolean;
+  compact?: boolean;
 }
 
-export const ScoreBoard = ({ player, letters, active }: ScoreBoardProps) => {
+export const ScoreBoard = ({ player, letters, active, compact }: ScoreBoardProps) => {
   const pending = letters.filter((letter) => letter.status === 'pending' || letter.status === 'passed').length;
   return (
     <div
-      className={`rounded-lg border p-2.5 sm:p-4 ${
+      className={`rounded-lg border ${compact ? 'p-2' : 'p-2.5 sm:p-4'} ${
         active ? 'border-blue-400 bg-blue-500/10' : 'border-line bg-white/[0.04]'
       }`}
     >
       <div className="flex items-center justify-between gap-2">
         <div>
           <p className="text-[0.65rem] uppercase tracking-wide text-slate-400 sm:text-xs">Jugador {player.slot}</p>
-          <h3 className="text-base font-bold leading-tight sm:text-xl">{player.name}</h3>
+          <h3 className={`${compact ? 'text-sm' : 'text-base sm:text-xl'} font-bold leading-tight`}>{player.name}</h3>
         </div>
-        <Timer seconds={player.remainingSeconds} active={active} />
+        {!compact && <Timer seconds={player.remainingSeconds} active={active} />}
       </div>
+      {compact ? (
+        <div className="mt-2 flex items-center justify-between gap-2 text-xs">
+          <span className="font-black text-emerald-300">{player.score} pts</span>
+          <span className="font-bold text-slate-300">{pending} pend.</span>
+          <span className={player.connected ? 'text-emerald-300' : 'text-red-300'}>
+            {player.connected ? 'online' : 'offline'}
+          </span>
+        </div>
+      ) : (
       <div className="mt-2 grid grid-cols-3 gap-1.5 text-center sm:mt-4 sm:gap-2">
         <div className="rounded-md bg-black/15 p-1.5 sm:p-2">
           <p className="text-[0.65rem] text-slate-400 sm:text-xs">
@@ -44,6 +54,7 @@ export const ScoreBoard = ({ player, letters, active }: ScoreBoardProps) => {
           </p>
         </div>
       </div>
+      )}
     </div>
   );
 };
