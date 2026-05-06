@@ -4,10 +4,6 @@ El archivo mas comodo para revisar pistas es:
 
 `docs/preguntas-editables.tsv`
 
-Si Excel lo tiene abierto y Codex no puede reemplazarlo, Codex puede generar una version nueva como:
-
-`docs/preguntas-editables-nuevo.tsv`
-
 Es un archivo de texto con columnas separadas por tabulaciones. Tambien se puede abrir en Excel, Google Sheets o cualquier editor de texto.
 
 ## Columnas
