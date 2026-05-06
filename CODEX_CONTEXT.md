@@ -67,6 +67,8 @@
 - El centro del rosco activo muestra la letra actual grande y el tiempo restante. La seccion de jugadores en espera no muestra roscos, solo resumen compacto.
 - El store usa `mutationVersion` para que polling/timer/realtime no pisen con estado viejo una accion del host recien tocada.
 - En desktop, el scoreboard del jugador activo va en una sola fila: jugador, timer y metricas.
+- La vista del host no debe importar ni renderizar `QuestionEditor`; la edicion queda para crear partida/lobby, no para juego andando.
+- No hay boton "Terminar" en controles del host. "Volver al lobby" y "Resetear partida" usan `ConfirmDialog`; reset reinicia y vuelve a arrancar la partida.
 - El color de letras/respuestas correctas debe diferenciarse claramente del amarillo de "Pasa": usar verde esmeralda oscuro con texto blanco.
 - Se agrego aviso para cuando GitHub Pages corre sin Supabase.
 - El boton copiar link tiene fallback para navegadores moviles.

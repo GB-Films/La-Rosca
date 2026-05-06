@@ -1,4 +1,4 @@
-import { Check, RotateCcw, SkipForward, Square, TimerOff, TimerReset, X, Shuffle } from 'lucide-react';
+import { Check, RotateCcw, SkipForward, TimerOff, TimerReset, X, Shuffle } from 'lucide-react';
 
 interface HostControlsProps {
   paused: boolean;
@@ -9,7 +9,6 @@ interface HostControlsProps {
   onResume: () => void;
   onSwitch: () => void;
   onUndo: () => void;
-  onFinish: () => void;
 }
 
 const buttonBase =
@@ -24,7 +23,6 @@ export const HostControls = ({
   onResume,
   onSwitch,
   onUndo,
-  onFinish,
 }: HostControlsProps) => (
   <section className="rounded-lg border border-line bg-panel p-2.5 sm:p-4">
     <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 sm:gap-2">
@@ -40,7 +38,7 @@ export const HostControls = ({
         <span className="hidden sm:inline">Pasapalabra</span>
       </button>
     </div>
-    <div className="mt-2 grid grid-cols-4 gap-1.5 sm:mt-3 sm:gap-2">
+    <div className="mt-2 grid grid-cols-3 gap-1.5 sm:mt-3 sm:gap-2">
       {paused ? (
         <button type="button" className={`${buttonBase} bg-blue-500 text-blue-950`} onClick={onResume}>
           <TimerReset className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Reanudar
@@ -55,9 +53,6 @@ export const HostControls = ({
       </button>
       <button type="button" className={`${buttonBase} bg-slate-700 text-slate-100`} onClick={onUndo}>
         <RotateCcw className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Deshacer
-      </button>
-      <button type="button" className={`${buttonBase} bg-slate-800 text-slate-100`} onClick={onFinish}>
-        <Square className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Terminar
       </button>
     </div>
   </section>

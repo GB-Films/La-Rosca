@@ -1,13 +1,12 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { navigate } from '../app/router';
+import { ConfirmDialog } from '../components/ConfirmDialog';
 import { GameResultModal } from '../components/GameResultModal';
 import { HostControls } from '../components/HostControls';
 import { QuestionCard } from '../components/QuestionCard';
-import { QuestionEditor } from '../components/QuestionEditor';
 import { Rosco } from '../components/Rosco';
 import { ScoreBoard } from '../components/ScoreBoard';
 import { useGameStore } from '../store/gameStore';
-import type { Question } from '../types/question';
 import { formatSeconds } from '../utils/timer';
 
 interface HostGamePageProps {
@@ -21,11 +20,11 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
   const resumeGame = useGameStore((state) => state.resumeGame);
   const switchTurn = useGameStore((state) => state.switchTurn);
   const undoLastAction = useGameStore((state) => state.undoLastAction);
-  const finishGame = useGameStore((state) => state.finishGame);
   const resetGame = useGameStore((state) => state.resetGame);
+  const startGame = useGameStore((state) => state.startGame);
   const backToLobby = useGameStore((state) => state.backToLobby);
   const setLetterStatus = useGameStore((state) => state.setLetterStatus);
-  const updateQuestions = useGameStore((state) => state.updateQuestions);
+  const [confirmAction, setConfirmAction] = useState<'lobby' | 'reset' | undefined>();
 
   const activeQuestion = useMemo(() => {
     if (!session?.game.activePlayerId || !session.game.activeLetter) return undefined;
@@ -45,13 +44,21 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
   const focusLetters = focusPlayer ? session.letters.filter((letter) => letter.playerId === focusPlayer.id) : [];
   const sidePlayers = players.filter((player) => player.id !== focusPlayer?.id);
 
-  const finish = () => {
-    if (window.confirm('Terminar la partida ahora?')) finishGame();
+  const lobby = async () => {
+    await backToLobby();
+    navigate(`/lobby/${session.game.id}`);
   };
 
-  const lobby = () => {
-    void backToLobby();
-    navigate(`/lobby/${session.game.id}`);
+  const resetAndRestart = async () => {
+    await resetGame();
+    await startGame();
+  };
+
+  const confirm = async () => {
+    const action = confirmAction;
+    setConfirmAction(undefined);
+    if (action === 'lobby') await lobby();
+    if (action === 'reset') await resetAndRestart();
   };
 
   return (
@@ -103,13 +110,20 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
             onResume={resumeGame}
             onSwitch={switchTurn}
             onUndo={undoLastAction}
-            onFinish={finish}
           />
           <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
-            <button type="button" className="rounded-md bg-slate-700 px-2 py-2 text-xs font-bold sm:px-3 sm:py-3 sm:text-sm" onClick={lobby}>
+            <button
+              type="button"
+              className="rounded-md bg-slate-700 px-2 py-2 text-xs font-bold sm:px-3 sm:py-3 sm:text-sm"
+              onClick={() => setConfirmAction('lobby')}
+            >
               Volver al lobby
             </button>
-            <button type="button" className="rounded-md bg-slate-700 px-2 py-2 text-xs font-bold sm:px-3 sm:py-3 sm:text-sm" onClick={resetGame}>
+            <button
+              type="button"
+              className="rounded-md bg-slate-700 px-2 py-2 text-xs font-bold sm:px-3 sm:py-3 sm:text-sm"
+              onClick={() => setConfirmAction('reset')}
+            >
               Resetear partida
             </button>
           </div>
@@ -147,20 +161,28 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
         </section>
       </div>
 
-      {session.game.status === 'lobby' && (
-        <QuestionEditor
-          questions={session.questions as Question[]}
-          theme={session.game.theme}
-          includeÑ={session.game.includeÑ}
-          onChange={updateQuestions}
-        />
-      )}
-
       <GameResultModal
         players={session.players}
         open={session.game.status === 'finished'}
-        onReset={resetGame}
+        onReset={resetAndRestart}
         onLobby={lobby}
+      />
+      <ConfirmDialog
+        open={confirmAction === 'lobby'}
+        title="Volver al lobby?"
+        description="La partida se pausa y el host vuelve a la sala de espera con los mismos jugadores."
+        confirmLabel="Volver"
+        onCancel={() => setConfirmAction(undefined)}
+        onConfirm={confirm}
+      />
+      <ConfirmDialog
+        open={confirmAction === 'reset'}
+        title="Resetear partida?"
+        description="Se reinician puntos, letras y tiempos, y la partida arranca de nuevo desde el primer jugador."
+        confirmLabel="Resetear"
+        tone="danger"
+        onCancel={() => setConfirmAction(undefined)}
+        onConfirm={confirm}
       />
     </div>
   );
