@@ -293,9 +293,7 @@ const seeds: LibrarySeed[] = rawSeeds.map(([letter, answer, clue, mode, accepted
 
 const leadFor = (seed: LibrarySeed, variant: number) => {
   const prefix = seed.mode === 'contains' ? `Contiene ${seed.letter}` : `Con ${seed.letter}`;
-  return variant === 1
-    ? `${prefix}: ${seed.clue}`
-    : `${prefix}: Respuesta de cultura general argentina. ${seed.clue}`;
+  return variant === 1 ? `${prefix}: ${seed.clue}` : `${prefix}: ${seed.clue}`;
 };
 
 export const argentinaGeneralLibrary: Question[] = seeds.flatMap((seed, index) =>

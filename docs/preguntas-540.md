@@ -1,0 +1,1654 @@
+# Lista de 540 preguntas - Cultura general argentina
+
+Total: 540 preguntas
+
+- **A | Variante 1 | startsWith**
+  - Pregunta: Con A: Presidente argentino que asumio en 1983 con el regreso de la democracia.
+  - Respuesta: Alfonsin
+- **A | Variante 2 | startsWith**
+  - Pregunta: Con A: Presidente argentino que asumio en 1983 con el regreso de la democracia.
+  - Respuesta: Alfonsin
+- **A | Variante 1 | startsWith**
+  - Pregunta: Con A: Comida argentina muy asociada a la parrilla y a las reuniones familiares.
+  - Respuesta: Asado
+- **A | Variante 2 | startsWith**
+  - Pregunta: Con A: Comida argentina muy asociada a la parrilla y a las reuniones familiares.
+  - Respuesta: Asado
+- **A | Variante 1 | startsWith**
+  - Pregunta: Con A: Cerro mendocino que es el mas alto de America.
+  - Respuesta: Aconcagua
+- **A | Variante 2 | startsWith**
+  - Pregunta: Con A: Cerro mendocino que es el mas alto de America.
+  - Respuesta: Aconcagua
+- **A | Variante 1 | startsWith**
+  - Pregunta: Con A: Cantautor y guitarrista central del folklore argentino.
+  - Respuesta: Atahualpa Yupanqui
+- **A | Variante 2 | startsWith**
+  - Pregunta: Con A: Cantautor y guitarrista central del folklore argentino.
+  - Respuesta: Atahualpa Yupanqui
+- **A | Variante 1 | startsWith**
+  - Pregunta: Con A: Moneda argentina que circulo antes del peso actual.
+  - Respuesta: Austral
+- **A | Variante 2 | startsWith**
+  - Pregunta: Con A: Moneda argentina que circulo antes del peso actual.
+  - Respuesta: Austral
+- **A | Variante 1 | startsWith**
+  - Pregunta: Con A: Avenida porteña famosa por teatros, librerias y pizzerias.
+  - Respuesta: Avenida Corrientes
+- **A | Variante 2 | startsWith**
+  - Pregunta: Con A: Avenida porteña famosa por teatros, librerias y pizzerias.
+  - Respuesta: Avenida Corrientes
+- **A | Variante 1 | startsWith**
+  - Pregunta: Con A: Linea aerea de bandera de la Argentina.
+  - Respuesta: Aerolineas Argentinas
+- **A | Variante 2 | startsWith**
+  - Pregunta: Con A: Linea aerea de bandera de la Argentina.
+  - Respuesta: Aerolineas Argentinas
+- **A | Variante 1 | startsWith**
+  - Pregunta: Con A: Golosina tradicional rellena, muchas veces con dulce de leche.
+  - Respuesta: Alfajor
+- **A | Variante 2 | startsWith**
+  - Pregunta: Con A: Golosina tradicional rellena, muchas veces con dulce de leche.
+  - Respuesta: Alfajor
+- **A | Variante 1 | startsWith**
+  - Pregunta: Con A: Sigla de la entidad que organiza el futbol argentino.
+  - Respuesta: AFA
+- **A | Variante 2 | startsWith**
+  - Pregunta: Con A: Sigla de la entidad que organiza el futbol argentino.
+  - Respuesta: AFA
+- **A | Variante 1 | startsWith**
+  - Pregunta: Con A: Bandoneonista y director de orquesta conocido como Pichuco.
+  - Respuesta: Anibal Troilo
+- **A | Variante 2 | startsWith**
+  - Pregunta: Con A: Bandoneonista y director de orquesta conocido como Pichuco.
+  - Respuesta: Anibal Troilo
+- **B | Variante 1 | startsWith**
+  - Pregunta: Con B: Club de futbol del barrio porteño de La Boca.
+  - Respuesta: Boca Juniors
+- **B | Variante 2 | startsWith**
+  - Pregunta: Con B: Club de futbol del barrio porteño de La Boca.
+  - Respuesta: Boca Juniors
+- **B | Variante 1 | startsWith**
+  - Pregunta: Con B: Ciudad rionegrina famosa por lagos, montañas y chocolate.
+  - Respuesta: Bariloche
+- **B | Variante 2 | startsWith**
+  - Pregunta: Con B: Ciudad rionegrina famosa por lagos, montañas y chocolate.
+  - Respuesta: Bariloche
+- **B | Variante 1 | startsWith**
+  - Pregunta: Con B: Apellido del creador de la bandera argentina.
+  - Respuesta: Belgrano
+- **B | Variante 2 | startsWith**
+  - Pregunta: Con B: Apellido del creador de la bandera argentina.
+  - Respuesta: Belgrano
+- **B | Variante 1 | startsWith**
+  - Pregunta: Con B: Instrumento muy asociado al sonido del tango.
+  - Respuesta: Bandoneon
+- **B | Variante 2 | startsWith**
+  - Pregunta: Con B: Instrumento muy asociado al sonido del tango.
+  - Respuesta: Bandoneon
+- **B | Variante 1 | startsWith**
+  - Pregunta: Con B: Capital de la Argentina.
+  - Respuesta: Buenos Aires
+- **B | Variante 2 | startsWith**
+  - Pregunta: Con B: Capital de la Argentina.
+  - Respuesta: Buenos Aires
+- **B | Variante 1 | startsWith**
+  - Pregunta: Con B: Corte clasico de carne servido en parrillas argentinas.
+  - Respuesta: Bife de chorizo
+- **B | Variante 2 | startsWith**
+  - Pregunta: Con B: Corte clasico de carne servido en parrillas argentinas.
+  - Respuesta: Bife de chorizo
+- **B | Variante 1 | startsWith**
+  - Pregunta: Con B: Celebracion de los 200 años de la Revolucion de Mayo.
+  - Respuesta: Bicentenario
+- **B | Variante 2 | startsWith**
+  - Pregunta: Con B: Celebracion de los 200 años de la Revolucion de Mayo.
+  - Respuesta: Bicentenario
+- **B | Variante 1 | startsWith**
+  - Pregunta: Con B: Apellido de Jorge Luis, autor de Ficciones y El Aleph.
+  - Respuesta: Borges
+- **B | Variante 2 | startsWith**
+  - Pregunta: Con B: Apellido de Jorge Luis, autor de Ficciones y El Aleph.
+  - Respuesta: Borges
+- **B | Variante 1 | startsWith**
+  - Pregunta: Con B: Estadio de Boca Juniors.
+  - Respuesta: Bombonera
+- **B | Variante 2 | startsWith**
+  - Pregunta: Con B: Estadio de Boca Juniors.
+  - Respuesta: Bombonera
+- **B | Variante 1 | startsWith**
+  - Pregunta: Con B: Instituto de Bariloche reconocido por fisica e ingenieria.
+  - Respuesta: Balseiro
+- **B | Variante 2 | startsWith**
+  - Pregunta: Con B: Instituto de Bariloche reconocido por fisica e ingenieria.
+  - Respuesta: Balseiro
+- **C | Variante 1 | startsWith**
+  - Pregunta: Con C: Provincia argentina conocida por sus sierras y por el cuarteto.
+  - Respuesta: Cordoba
+- **C | Variante 2 | startsWith**
+  - Pregunta: Con C: Provincia argentina conocida por sus sierras y por el cuarteto.
+  - Respuesta: Cordoba
+- **C | Variante 1 | startsWith**
+  - Pregunta: Con C: Edificio donde sesiona el Poder Legislativo nacional.
+  - Respuesta: Congreso
+- **C | Variante 2 | startsWith**
+  - Pregunta: Con C: Edificio donde sesiona el Poder Legislativo nacional.
+  - Respuesta: Congreso
+- **C | Variante 1 | startsWith**
+  - Pregunta: Con C: Edificio historico vinculado a la Revolucion de Mayo.
+  - Respuesta: Cabildo
+- **C | Variante 2 | startsWith**
+  - Pregunta: Con C: Edificio historico vinculado a la Revolucion de Mayo.
+  - Respuesta: Cabildo
+- **C | Variante 1 | startsWith**
+  - Pregunta: Con C: Postre popular hecho con galletitas de chocolate y dulce de leche.
+  - Respuesta: Chocotorta
+- **C | Variante 2 | startsWith**
+  - Pregunta: Con C: Postre popular hecho con galletitas de chocolate y dulce de leche.
+  - Respuesta: Chocotorta
+- **C | Variante 1 | startsWith**
+  - Pregunta: Con C: Gran atractivo natural compartido por Argentina y Brasil.
+  - Respuesta: Cataratas del Iguazu
+- **C | Variante 2 | startsWith**
+  - Pregunta: Con C: Gran atractivo natural compartido por Argentina y Brasil.
+  - Respuesta: Cataratas del Iguazu
+- **C | Variante 1 | startsWith**
+  - Pregunta: Con C: Musico argentino de Sui Generis, Seru Giran y carrera solista.
+  - Respuesta: Charly Garcia
+- **C | Variante 2 | startsWith**
+  - Pregunta: Con C: Musico argentino de Sui Generis, Seru Giran y carrera solista.
+  - Respuesta: Charly Garcia
+- **C | Variante 1 | startsWith**
+  - Pregunta: Con C: Teatro porteño considerado uno de los grandes teatros liricos del mundo.
+  - Respuesta: Colon
+- **C | Variante 2 | startsWith**
+  - Pregunta: Con C: Teatro porteño considerado uno de los grandes teatros liricos del mundo.
+  - Respuesta: Colon
+- **C | Variante 1 | startsWith**
+  - Pregunta: Con C: Ciudad cordobesa famosa por su festival de folklore.
+  - Respuesta: Cosquin
+- **C | Variante 2 | startsWith**
+  - Pregunta: Con C: Ciudad cordobesa famosa por su festival de folklore.
+  - Respuesta: Cosquin
+- **C | Variante 1 | startsWith**
+  - Pregunta: Con C: Region argentina asociada a Mendoza, San Juan y San Luis.
+  - Respuesta: Cuyo
+- **C | Variante 2 | startsWith**
+  - Pregunta: Con C: Region argentina asociada a Mendoza, San Juan y San Luis.
+  - Respuesta: Cuyo
+- **C | Variante 1 | startsWith**
+  - Pregunta: Con C: Calle-museo colorida del barrio de La Boca.
+  - Respuesta: Caminito
+- **C | Variante 2 | startsWith**
+  - Pregunta: Con C: Calle-museo colorida del barrio de La Boca.
+  - Respuesta: Caminito
+- **D | Variante 1 | startsWith**
+  - Pregunta: Con D: Producto dulce usado en alfajores, tortas y panqueques.
+  - Respuesta: Dulce de leche
+- **D | Variante 2 | startsWith**
+  - Pregunta: Con D: Producto dulce usado en alfajores, tortas y panqueques.
+  - Respuesta: Dulce de leche
+- **D | Variante 1 | startsWith**
+  - Pregunta: Con D: Futbolista argentino campeon del mundo en 1986.
+  - Respuesta: Diego Maradona
+- **D | Variante 2 | startsWith**
+  - Pregunta: Con D: Futbolista argentino campeon del mundo en 1986.
+  - Respuesta: Diego Maradona
+- **D | Variante 1 | startsWith**
+  - Pregunta: Con D: Embalse cordobes cercano a Villa Carlos Paz.
+  - Respuesta: Dique San Roque
+- **D | Variante 2 | startsWith**
+  - Pregunta: Con D: Embalse cordobes cercano a Villa Carlos Paz.
+  - Respuesta: Dique San Roque
+- **D | Variante 1 | startsWith**
+  - Pregunta: Con D: Presidente argentino que renuncio en diciembre de 2001.
+  - Respuesta: De la Rua
+- **D | Variante 2 | startsWith**
+  - Pregunta: Con D: Presidente argentino que renuncio en diciembre de 2001.
+  - Respuesta: De la Rua
+- **D | Variante 1 | startsWith**
+  - Pregunta: Con D: Apellido de un instituto clave de la vanguardia cultural argentina.
+  - Respuesta: Di Tella
+- **D | Variante 2 | startsWith**
+  - Pregunta: Con D: Apellido de un instituto clave de la vanguardia cultural argentina.
+  - Respuesta: Di Tella
+- **D | Variante 1 | startsWith**
+  - Pregunta: Con D: Novela gauchesca escrita por Ricardo Guiraldes.
+  - Respuesta: Don Segundo Sombra
+- **D | Variante 2 | startsWith**
+  - Pregunta: Con D: Novela gauchesca escrita por Ricardo Guiraldes.
+  - Respuesta: Don Segundo Sombra
+- **D | Variante 1 | startsWith**
+  - Pregunta: Con D: Ciudad entrerriana cercana al Parque Nacional Pre-Delta.
+  - Respuesta: Diamante
+- **D | Variante 2 | startsWith**
+  - Pregunta: Con D: Ciudad entrerriana cercana al Parque Nacional Pre-Delta.
+  - Respuesta: Diamante
+- **D | Variante 1 | startsWith**
+  - Pregunta: Con D: Grupo argentino muy popular de cumbia villera.
+  - Respuesta: Damas Gratis
+- **D | Variante 2 | startsWith**
+  - Pregunta: Con D: Grupo argentino muy popular de cumbia villera.
+  - Respuesta: Damas Gratis
+- **D | Variante 1 | startsWith**
+  - Pregunta: Con D: Zona de islas y rios cercana a Tigre.
+  - Respuesta: Delta del Parana
+- **D | Variante 2 | startsWith**
+  - Pregunta: Con D: Zona de islas y rios cercana a Tigre.
+  - Respuesta: Delta del Parana
+- **D | Variante 1 | startsWith**
+  - Pregunta: Con D: Arquero argentino campeon del mundo en Qatar 2022.
+  - Respuesta: Dibu Martinez
+- **D | Variante 2 | startsWith**
+  - Pregunta: Con D: Arquero argentino campeon del mundo en Qatar 2022.
+  - Respuesta: Dibu Martinez
+- **E | Variante 1 | startsWith**
+  - Pregunta: Con E: Comida rellena muy comun en todas las provincias argentinas.
+  - Respuesta: Empanada
+- **E | Variante 2 | startsWith**
+  - Pregunta: Con E: Comida rellena muy comun en todas las provincias argentinas.
+  - Respuesta: Empanada
+- **E | Variante 1 | startsWith**
+  - Pregunta: Con E: Nombre popular de Eva Duarte de Peron.
+  - Respuesta: Evita
+- **E | Variante 2 | startsWith**
+  - Pregunta: Con E: Nombre popular de Eva Duarte de Peron.
+  - Respuesta: Evita
+- **E | Variante 1 | startsWith**
+  - Pregunta: Con E: Club de La Plata multiple campeon de la Copa Libertadores.
+  - Respuesta: Estudiantes
+- **E | Variante 2 | startsWith**
+  - Pregunta: Con E: Club de La Plata multiple campeon de la Copa Libertadores.
+  - Respuesta: Estudiantes
+- **E | Variante 1 | startsWith**
+  - Pregunta: Con E: Localidad bonaerense donde esta el principal aeropuerto internacional.
+  - Respuesta: Ezeiza
+- **E | Variante 2 | startsWith**
+  - Pregunta: Con E: Localidad bonaerense donde esta el principal aeropuerto internacional.
+  - Respuesta: Ezeiza
+- **E | Variante 1 | startsWith**
+  - Pregunta: Con E: Provincia de la Mesopotamia argentina.
+  - Respuesta: Entre Rios
+- **E | Variante 2 | startsWith**
+  - Pregunta: Con E: Provincia de la Mesopotamia argentina.
+  - Respuesta: Entre Rios
+- **E | Variante 1 | startsWith**
+  - Pregunta: Con E: Simbolo patrio celeste y blanco usado en fechas nacionales.
+  - Respuesta: Escarapela
+- **E | Variante 2 | startsWith**
+  - Pregunta: Con E: Simbolo patrio celeste y blanco usado en fechas nacionales.
+  - Respuesta: Escarapela
+- **E | Variante 1 | startsWith**
+  - Pregunta: Con E: Libreria porteña instalada en un antiguo teatro.
+  - Respuesta: El Ateneo
+- **E | Variante 2 | startsWith**
+  - Pregunta: Con E: Libreria porteña instalada en un antiguo teatro.
+  - Respuesta: El Ateneo
+- **E | Variante 1 | startsWith**
+  - Pregunta: Con E: Campo tradicional argentino dedicado a actividades rurales.
+  - Respuesta: Estancia
+- **E | Variante 2 | startsWith**
+  - Pregunta: Con E: Campo tradicional argentino dedicado a actividades rurales.
+  - Respuesta: Estancia
+- **E | Variante 1 | startsWith**
+  - Pregunta: Con E: Ciudad santacruceña cercana al glaciar Perito Moreno.
+  - Respuesta: El Calafate
+- **E | Variante 2 | startsWith**
+  - Pregunta: Con E: Ciudad santacruceña cercana al glaciar Perito Moreno.
+  - Respuesta: El Calafate
+- **E | Variante 1 | startsWith**
+  - Pregunta: Con E: Gran humedal de la provincia de Corrientes.
+  - Respuesta: Esteros del Ibera
+- **E | Variante 2 | startsWith**
+  - Pregunta: Con E: Gran humedal de la provincia de Corrientes.
+  - Respuesta: Esteros del Ibera
+- **F | Variante 1 | startsWith**
+  - Pregunta: Con F: Genero musical asociado a zambas, chacareras y gatos.
+  - Respuesta: Folklore
+- **F | Variante 2 | startsWith**
+  - Pregunta: Con F: Genero musical asociado a zambas, chacareras y gatos.
+  - Respuesta: Folklore
+- **F | Variante 1 | startsWith**
+  - Pregunta: Con F: Cardiologo argentino reconocido por el bypass coronario.
+  - Respuesta: Favaloro
+- **F | Variante 2 | startsWith**
+  - Pregunta: Con F: Cardiologo argentino reconocido por el bypass coronario.
+  - Respuesta: Favaloro
+- **F | Variante 1 | startsWith**
+  - Pregunta: Con F: Club porteño del barrio de Caballito.
+  - Respuesta: Ferro
+- **F | Variante 2 | startsWith**
+  - Pregunta: Con F: Club porteño del barrio de Caballito.
+  - Respuesta: Ferro
+- **F | Variante 1 | startsWith**
+  - Pregunta: Con F: Musico rosarino autor de El amor despues del amor.
+  - Respuesta: Fito Paez
+- **F | Variante 2 | startsWith**
+  - Pregunta: Con F: Musico rosarino autor de El amor despues del amor.
+  - Respuesta: Fito Paez
+- **F | Variante 1 | startsWith**
+  - Pregunta: Con F: Feria porteña vinculada a tradiciones criollas.
+  - Respuesta: Feria de Mataderos
+- **F | Variante 2 | startsWith**
+  - Pregunta: Con F: Feria porteña vinculada a tradiciones criollas.
+  - Respuesta: Feria de Mataderos
+- **F | Variante 1 | startsWith**
+  - Pregunta: Con F: Bebida muy popular en Cordoba, mezclada con gaseosa cola.
+  - Respuesta: Fernet
+- **F | Variante 2 | startsWith**
+  - Pregunta: Con F: Bebida muy popular en Cordoba, mezclada con gaseosa cola.
+  - Respuesta: Fernet
+- **F | Variante 1 | startsWith**
+  - Pregunta: Con F: Estilo decorativo porteño de colores vivos y letras ornamentadas.
+  - Respuesta: Fileteado
+- **F | Variante 2 | startsWith**
+  - Pregunta: Con F: Estilo decorativo porteño de colores vivos y letras ornamentadas.
+  - Respuesta: Fileteado
+- **F | Variante 1 | startsWith**
+  - Pregunta: Con F: Buque museo ubicado en Puerto Madero.
+  - Respuesta: Fragata Sarmiento
+- **F | Variante 2 | startsWith**
+  - Pregunta: Con F: Buque museo ubicado en Puerto Madero.
+  - Respuesta: Fragata Sarmiento
+- **F | Variante 1 | startsWith**
+  - Pregunta: Con F: Provincia argentina del noreste.
+  - Respuesta: Formosa
+- **F | Variante 2 | startsWith**
+  - Pregunta: Con F: Provincia argentina del noreste.
+  - Respuesta: Formosa
+- **F | Variante 1 | startsWith**
+  - Pregunta: Con F: Nombre papal elegido por Jorge Bergoglio.
+  - Respuesta: Francisco
+- **F | Variante 2 | startsWith**
+  - Pregunta: Con F: Nombre papal elegido por Jorge Bergoglio.
+  - Respuesta: Francisco
+- **G | Variante 1 | startsWith**
+  - Pregunta: Con G: Apellido de Carlos, figura maxima del tango cancion.
+  - Respuesta: Gardel
+- **G | Variante 2 | startsWith**
+  - Pregunta: Con G: Apellido de Carlos, figura maxima del tango cancion.
+  - Respuesta: Gardel
+- **G | Variante 1 | startsWith**
+  - Pregunta: Con G: Personaje rural emblematico de la cultura argentina.
+  - Respuesta: Gaucho
+- **G | Variante 2 | startsWith**
+  - Pregunta: Con G: Personaje rural emblematico de la cultura argentina.
+  - Respuesta: Gaucho
+- **G | Variante 1 | startsWith**
+  - Pregunta: Con G: Lengua y pueblo originario con fuerte presencia en el litoral.
+  - Respuesta: Guarani
+- **G | Variante 2 | startsWith**
+  - Pregunta: Con G: Lengua y pueblo originario con fuerte presencia en el litoral.
+  - Respuesta: Guarani
+- **G | Variante 1 | startsWith**
+  - Pregunta: Con G: Ciudad entrerriana famosa por su carnaval.
+  - Respuesta: Gualeguaychu
+- **G | Variante 2 | startsWith**
+  - Pregunta: Con G: Ciudad entrerriana famosa por su carnaval.
+  - Respuesta: Gualeguaychu
+- **G | Variante 1 | startsWith**
+  - Pregunta: Con G: Cantante argentina muy querida de la cumbia.
+  - Respuesta: Gilda
+- **G | Variante 2 | startsWith**
+  - Pregunta: Con G: Cantante argentina muy querida de la cumbia.
+  - Respuesta: Gilda
+- **G | Variante 1 | startsWith**
+  - Pregunta: Con G: Plato caliente comun en los inviernos argentinos.
+  - Respuesta: Guiso de lentejas
+- **G | Variante 2 | startsWith**
+  - Pregunta: Con G: Plato caliente comun en los inviernos argentinos.
+  - Respuesta: Guiso de lentejas
+- **G | Variante 1 | startsWith**
+  - Pregunta: Con G: Apellido de Roberto, cantor de tango conocido como el Polaco.
+  - Respuesta: Goyeneche
+- **G | Variante 2 | startsWith**
+  - Pregunta: Con G: Apellido de Roberto, cantor de tango conocido como el Polaco.
+  - Respuesta: Goyeneche
+- **G | Variante 1 | startsWith**
+  - Pregunta: Con G: Avenida que marca gran parte del limite de la Ciudad de Buenos Aires.
+  - Respuesta: General Paz
+- **G | Variante 2 | startsWith**
+  - Pregunta: Con G: Avenida que marca gran parte del limite de la Ciudad de Buenos Aires.
+  - Respuesta: General Paz
+- **G | Variante 1 | startsWith**
+  - Pregunta: Con G: Teatro porteño sobre la avenida Corrientes.
+  - Respuesta: Gran Rex
+- **G | Variante 2 | startsWith**
+  - Pregunta: Con G: Teatro porteño sobre la avenida Corrientes.
+  - Respuesta: Gran Rex
+- **G | Variante 1 | startsWith**
+  - Pregunta: Con G: Glaciar santacruceño famoso por sus rupturas.
+  - Respuesta: Glaciar Perito Moreno
+- **G | Variante 2 | startsWith**
+  - Pregunta: Con G: Glaciar santacruceño famoso por sus rupturas.
+  - Respuesta: Glaciar Perito Moreno
+- **H | Variante 1 | startsWith**
+  - Pregunta: Con H: Ciudad jujeña que da nombre a una quebrada Patrimonio de la Humanidad.
+  - Respuesta: Humahuaca
+- **H | Variante 2 | startsWith**
+  - Pregunta: Con H: Ciudad jujeña que da nombre a una quebrada Patrimonio de la Humanidad.
+  - Respuesta: Humahuaca
+- **H | Variante 1 | startsWith**
+  - Pregunta: Con H: Partido del oeste del Gran Buenos Aires.
+  - Respuesta: Hurlingham
+- **H | Variante 2 | startsWith**
+  - Pregunta: Con H: Partido del oeste del Gran Buenos Aires.
+  - Respuesta: Hurlingham
+- **H | Variante 1 | startsWith**
+  - Pregunta: Con H: Primer presidente elegido bajo la Ley Saenz Peña.
+  - Respuesta: Hipolito Yrigoyen
+- **H | Variante 2 | startsWith**
+  - Pregunta: Con H: Primer presidente elegido bajo la Ley Saenz Peña.
+  - Respuesta: Hipolito Yrigoyen
+- **H | Variante 1 | startsWith**
+  - Pregunta: Con H: Cancion patria argentina.
+  - Respuesta: Himno Nacional
+- **H | Variante 2 | startsWith**
+  - Pregunta: Con H: Cancion patria argentina.
+  - Respuesta: Himno Nacional
+- **H | Variante 1 | startsWith**
+  - Pregunta: Con H: Ave nacional argentina.
+  - Respuesta: Hornero
+- **H | Variante 2 | startsWith**
+  - Pregunta: Con H: Ave nacional argentina.
+  - Respuesta: Hornero
+- **H | Variante 1 | startsWith**
+  - Pregunta: Con H: Hospital nacional ubicado en el oeste bonaerense.
+  - Respuesta: Hospital Posadas
+- **H | Variante 2 | startsWith**
+  - Pregunta: Con H: Hospital nacional ubicado en el oeste bonaerense.
+  - Respuesta: Hospital Posadas
+- **H | Variante 1 | startsWith**
+  - Pregunta: Con H: Marca marplatense famosa por sus alfajores.
+  - Respuesta: Havanna
+- **H | Variante 2 | startsWith**
+  - Pregunta: Con H: Marca marplatense famosa por sus alfajores.
+  - Respuesta: Havanna
+- **H | Variante 1 | startsWith**
+  - Pregunta: Con H: Formato donde brillaron personajes como Mafalda y Patoruzu.
+  - Respuesta: Historieta
+- **H | Variante 2 | startsWith**
+  - Pregunta: Con H: Formato donde brillaron personajes como Mafalda y Patoruzu.
+  - Respuesta: Historieta
+- **H | Variante 1 | startsWith**
+  - Pregunta: Con H: Club de Parque Patricios apodado el Globo.
+  - Respuesta: Huracan
+- **H | Variante 2 | startsWith**
+  - Pregunta: Con H: Club de Parque Patricios apodado el Globo.
+  - Respuesta: Huracan
+- **H | Variante 1 | startsWith**
+  - Pregunta: Con H: Locutor y conductor historico de la radio argentina.
+  - Respuesta: Hector Larrea
+- **H | Variante 2 | startsWith**
+  - Pregunta: Con H: Locutor y conductor historico de la radio argentina.
+  - Respuesta: Hector Larrea
+- **I | Variante 1 | startsWith**
+  - Pregunta: Con I: Rio y cataratas ubicadas en Misiones.
+  - Respuesta: Iguazu
+- **I | Variante 2 | startsWith**
+  - Pregunta: Con I: Rio y cataratas ubicadas en Misiones.
+  - Respuesta: Iguazu
+- **I | Variante 1 | startsWith**
+  - Pregunta: Con I: Club de Avellaneda conocido como Rey de Copas.
+  - Respuesta: Independiente
+- **I | Variante 2 | startsWith**
+  - Pregunta: Con I: Club de Avellaneda conocido como Rey de Copas.
+  - Respuesta: Independiente
+- **I | Variante 1 | startsWith**
+  - Pregunta: Con I: Instituto nacional vinculado al cine argentino.
+  - Respuesta: INCAA
+- **I | Variante 2 | startsWith**
+  - Pregunta: Con I: Instituto nacional vinculado al cine argentino.
+  - Respuesta: INCAA
+- **I | Variante 1 | startsWith**
+  - Pregunta: Con I: Parque sanjuanino conocido como Valle de la Luna.
+  - Respuesta: Ischigualasto
+- **I | Variante 2 | startsWith**
+  - Pregunta: Con I: Parque sanjuanino conocido como Valle de la Luna.
+  - Respuesta: Ischigualasto
+- **I | Variante 1 | startsWith**
+  - Pregunta: Con I: Club cordobes donde se formaron varios futbolistas conocidos.
+  - Respuesta: Instituto
+- **I | Variante 2 | startsWith**
+  - Pregunta: Con I: Club cordobes donde se formaron varios futbolistas conocidos.
+  - Respuesta: Instituto
+- **I | Variante 1 | startsWith**
+  - Pregunta: Con I: Esteros correntinos de gran biodiversidad.
+  - Respuesta: Ibera
+- **I | Variante 2 | startsWith**
+  - Pregunta: Con I: Esteros correntinos de gran biodiversidad.
+  - Respuesta: Ibera
+- **I | Variante 1 | startsWith**
+  - Pregunta: Con I: Presidente argentino medico de profesion.
+  - Respuesta: Illia
+- **I | Variante 2 | startsWith**
+  - Pregunta: Con I: Presidente argentino medico de profesion.
+  - Respuesta: Illia
+- **I | Variante 1 | startsWith**
+  - Pregunta: Con I: Proceso clave en la formacion social argentina de fines del siglo XIX.
+  - Respuesta: Inmigracion
+- **I | Variante 2 | startsWith**
+  - Pregunta: Con I: Proceso clave en la formacion social argentina de fines del siglo XIX.
+  - Respuesta: Inmigracion
+- **I | Variante 1 | startsWith**
+  - Pregunta: Con I: Empresa argentina reconocida por tecnologia nuclear y satelital.
+  - Respuesta: INVAP
+- **I | Variante 2 | startsWith**
+  - Pregunta: Con I: Empresa argentina reconocida por tecnologia nuclear y satelital.
+  - Respuesta: INVAP
+- **I | Variante 1 | startsWith**
+  - Pregunta: Con I: Pueblo salteño de montaña.
+  - Respuesta: Iruya
+- **I | Variante 2 | startsWith**
+  - Pregunta: Con I: Pueblo salteño de montaña.
+  - Respuesta: Iruya
+- **J | Variante 1 | startsWith**
+  - Pregunta: Con J: Provincia del noroeste argentino.
+  - Respuesta: Jujuy
+- **J | Variante 2 | startsWith**
+  - Pregunta: Con J: Provincia del noroeste argentino.
+  - Respuesta: Jujuy
+- **J | Variante 1 | startsWith**
+  - Pregunta: Con J: Libertador nacido en Yapeyu.
+  - Respuesta: Jose de San Martin
+- **J | Variante 2 | startsWith**
+  - Pregunta: Con J: Libertador nacido en Yapeyu.
+  - Respuesta: Jose de San Martin
+- **J | Variante 1 | startsWith**
+  - Pregunta: Con J: Quintuple campeon mundial de Formula 1.
+  - Respuesta: Juan Manuel Fangio
+- **J | Variante 2 | startsWith**
+  - Pregunta: Con J: Quintuple campeon mundial de Formula 1.
+  - Respuesta: Juan Manuel Fangio
+- **J | Variante 1 | startsWith**
+  - Pregunta: Con J: Heroina de las guerras de independencia.
+  - Respuesta: Juana Azurduy
+- **J | Variante 2 | startsWith**
+  - Pregunta: Con J: Heroina de las guerras de independencia.
+  - Respuesta: Juana Azurduy
+- **J | Variante 1 | startsWith**
+  - Pregunta: Con J: Pionero de la aviacion argentina.
+  - Respuesta: Jorge Newbery
+- **J | Variante 2 | startsWith**
+  - Pregunta: Con J: Pionero de la aviacion argentina.
+  - Respuesta: Jorge Newbery
+- **J | Variante 1 | startsWith**
+  - Pregunta: Con J: Autor argentino de Rayuela.
+  - Respuesta: Julio Cortazar
+- **J | Variante 2 | startsWith**
+  - Pregunta: Con J: Autor argentino de Rayuela.
+  - Respuesta: Julio Cortazar
+- **J | Variante 1 | startsWith**
+  - Pregunta: Con J: Autor del Martin Fierro.
+  - Respuesta: Jose Hernandez
+- **J | Variante 2 | startsWith**
+  - Pregunta: Con J: Autor del Martin Fierro.
+  - Respuesta: Jose Hernandez
+- **J | Variante 1 | startsWith**
+  - Pregunta: Con J: Medico y politico fundador del Partido Socialista argentino.
+  - Respuesta: Juan B Justo
+- **J | Variante 2 | startsWith**
+  - Pregunta: Con J: Medico y politico fundador del Partido Socialista argentino.
+  - Respuesta: Juan B Justo
+- **J | Variante 1 | startsWith**
+  - Pregunta: Con J: Presidente argentino electo en 2023.
+  - Respuesta: Javier Milei
+- **J | Variante 2 | startsWith**
+  - Pregunta: Con J: Presidente argentino electo en 2023.
+  - Respuesta: Javier Milei
+- **J | Variante 1 | startsWith**
+  - Pregunta: Con J: Periodista argentino de television, radio y grafica.
+  - Respuesta: Jorge Lanata
+- **J | Variante 2 | startsWith**
+  - Pregunta: Con J: Periodista argentino de television, radio y grafica.
+  - Respuesta: Jorge Lanata
+- **K | Variante 1 | startsWith**
+  - Pregunta: Con K: Apellido de Nestor, presidente argentino entre 2003 y 2007.
+  - Respuesta: Kirchner
+- **K | Variante 2 | startsWith**
+  - Pregunta: Con K: Apellido de Nestor, presidente argentino entre 2003 y 2007.
+  - Respuesta: Kirchner
+- **K | Variante 1 | startsWith**
+  - Pregunta: Con K: Goleador argentino del Mundial 1978.
+  - Respuesta: Kempes
+- **K | Variante 2 | startsWith**
+  - Pregunta: Con K: Goleador argentino del Mundial 1978.
+  - Respuesta: Kempes
+- **K | Variante 1 | startsWith**
+  - Pregunta: Con K: Edificio historico de Retiro, en Buenos Aires.
+  - Respuesta: Kavanagh
+- **K | Variante 2 | startsWith**
+  - Pregunta: Con K: Edificio historico de Retiro, en Buenos Aires.
+  - Respuesta: Kavanagh
+- **K | Variante 1 | startsWith**
+  - Pregunta: Con K: Punto desde donde se miden rutas nacionales en Buenos Aires.
+  - Respuesta: Kilometro cero
+- **K | Variante 2 | startsWith**
+  - Pregunta: Con K: Punto desde donde se miden rutas nacionales en Buenos Aires.
+  - Respuesta: Kilometro cero
+- **K | Variante 1 | startsWith**
+  - Pregunta: Con K: Comercio de cercania muy comun en ciudades argentinas.
+  - Respuesta: Kiosco
+- **K | Variante 2 | startsWith**
+  - Pregunta: Con K: Comercio de cercania muy comun en ciudades argentinas.
+  - Respuesta: Kiosco
+- **K | Variante 1 | startsWith**
+  - Pregunta: Con K: Fiesta popular de juegos y puestos, comun en clubes y escuelas.
+  - Respuesta: Kermesse
+- **K | Variante 2 | startsWith**
+  - Pregunta: Con K: Fiesta popular de juegos y puestos, comun en clubes y escuelas.
+  - Respuesta: Kermesse
+- **K | Variante 1 | startsWith**
+  - Pregunta: Con K: Apodo de Cristian Gonzalez, futbolista rosarino.
+  - Respuesta: Kily Gonzalez
+- **K | Variante 2 | startsWith**
+  - Pregunta: Con K: Apodo de Cristian Gonzalez, futbolista rosarino.
+  - Respuesta: Kily Gonzalez
+- **K | Variante 1 | startsWith**
+  - Pregunta: Con K: Pueblo originario del noroeste argentino.
+  - Respuesta: Kolla
+- **K | Variante 2 | startsWith**
+  - Pregunta: Con K: Pueblo originario del noroeste argentino.
+  - Respuesta: Kolla
+- **K | Variante 1 | startsWith**
+  - Pregunta: Con K: Apellido de Axel, gobernador bonaerense desde 2019.
+  - Respuesta: Kicillof
+- **K | Variante 2 | startsWith**
+  - Pregunta: Con K: Apellido de Axel, gobernador bonaerense desde 2019.
+  - Respuesta: Kicillof
+- **K | Variante 1 | startsWith**
+  - Pregunta: Con K: Musico nacido en Alaska y criado en Argentina.
+  - Respuesta: Kevin Johansen
+- **K | Variante 2 | startsWith**
+  - Pregunta: Con K: Musico nacido en Alaska y criado en Argentina.
+  - Respuesta: Kevin Johansen
+- **L | Variante 1 | startsWith**
+  - Pregunta: Con L: Capitan argentino campeon del mundo en 2022.
+  - Respuesta: Lionel Messi
+- **L | Variante 2 | startsWith**
+  - Pregunta: Con L: Capitan argentino campeon del mundo en 2022.
+  - Respuesta: Lionel Messi
+- **L | Variante 1 | startsWith**
+  - Pregunta: Con L: Capital de la provincia de Buenos Aires.
+  - Respuesta: La Plata
+- **L | Variante 2 | startsWith**
+  - Pregunta: Con L: Capital de la provincia de Buenos Aires.
+  - Respuesta: La Plata
+- **L | Variante 1 | startsWith**
+  - Pregunta: Con L: Region argentina vinculada a rios, chamame y yerba mate.
+  - Respuesta: Litoral
+- **L | Variante 2 | startsWith**
+  - Pregunta: Con L: Region argentina vinculada a rios, chamame y yerba mate.
+  - Respuesta: Litoral
+- **L | Variante 1 | startsWith**
+  - Pregunta: Con L: Guiso tradicional asociado a fechas patrias.
+  - Respuesta: Locro
+- **L | Variante 2 | startsWith**
+  - Pregunta: Con L: Guiso tradicional asociado a fechas patrias.
+  - Respuesta: Locro
+- **L | Variante 1 | startsWith**
+  - Pregunta: Con L: Estadio cubierto historico de Buenos Aires.
+  - Respuesta: Luna Park
+- **L | Variante 2 | startsWith**
+  - Pregunta: Con L: Estadio cubierto historico de Buenos Aires.
+  - Respuesta: Luna Park
+- **L | Variante 1 | startsWith**
+  - Pregunta: Con L: Grupo argentino de humor musical.
+  - Respuesta: Les Luthiers
+- **L | Variante 2 | startsWith**
+  - Pregunta: Con L: Grupo argentino de humor musical.
+  - Respuesta: Les Luthiers
+- **L | Variante 1 | startsWith**
+  - Pregunta: Con L: Partido y club del sur del Gran Buenos Aires.
+  - Respuesta: Lanus
+- **L | Variante 2 | startsWith**
+  - Pregunta: Con L: Partido y club del sur del Gran Buenos Aires.
+  - Respuesta: Lanus
+- **L | Variante 1 | startsWith**
+  - Pregunta: Con L: Ciudad bonaerense famosa por su basilica.
+  - Respuesta: Lujan
+- **L | Variante 2 | startsWith**
+  - Pregunta: Con L: Ciudad bonaerense famosa por su basilica.
+  - Respuesta: Lujan
+- **L | Variante 1 | startsWith**
+  - Pregunta: Con L: Titulo historico asociado a San Martin.
+  - Respuesta: Libertador
+- **L | Variante 2 | startsWith**
+  - Pregunta: Con L: Titulo historico asociado a San Martin.
+  - Respuesta: Libertador
+- **L | Variante 1 | startsWith**
+  - Pregunta: Con L: Calle porteña y apellido de un militar argentino.
+  - Respuesta: Lavalle
+- **L | Variante 2 | startsWith**
+  - Pregunta: Con L: Calle porteña y apellido de un militar argentino.
+  - Respuesta: Lavalle
+- **M | Variante 1 | startsWith**
+  - Pregunta: Con M: Infusion rioplatense preparada con yerba.
+  - Respuesta: Mate
+- **M | Variante 2 | startsWith**
+  - Pregunta: Con M: Infusion rioplatense preparada con yerba.
+  - Respuesta: Mate
+- **M | Variante 1 | startsWith**
+  - Pregunta: Con M: Personaje de Quino.
+  - Respuesta: Mafalda
+- **M | Variante 2 | startsWith**
+  - Pregunta: Con M: Personaje de Quino.
+  - Respuesta: Mafalda
+- **M | Variante 1 | startsWith**
+  - Pregunta: Con M: Islas del Atlantico Sur reclamadas por Argentina.
+  - Respuesta: Malvinas
+- **M | Variante 2 | startsWith**
+  - Pregunta: Con M: Islas del Atlantico Sur reclamadas por Argentina.
+  - Respuesta: Malvinas
+- **M | Variante 1 | startsWith**
+  - Pregunta: Con M: Provincia argentina famosa por sus vinos.
+  - Respuesta: Mendoza
+- **M | Variante 2 | startsWith**
+  - Pregunta: Con M: Provincia argentina famosa por sus vinos.
+  - Respuesta: Mendoza
+- **M | Variante 1 | startsWith**
+  - Pregunta: Con M: Cantante tucumana conocida como La Negra.
+  - Respuesta: Mercedes Sosa
+- **M | Variante 2 | startsWith**
+  - Pregunta: Con M: Cantante tucumana conocida como La Negra.
+  - Respuesta: Mercedes Sosa
+- **M | Variante 1 | startsWith**
+  - Pregunta: Con M: Ciudad balnearia bonaerense.
+  - Respuesta: Mar del Plata
+- **M | Variante 2 | startsWith**
+  - Pregunta: Con M: Ciudad balnearia bonaerense.
+  - Respuesta: Mar del Plata
+- **M | Variante 1 | startsWith**
+  - Pregunta: Con M: Plato popular de carne empanada.
+  - Respuesta: Milanesa
+- **M | Variante 2 | startsWith**
+  - Pregunta: Con M: Plato popular de carne empanada.
+  - Respuesta: Milanesa
+- **M | Variante 1 | startsWith**
+  - Pregunta: Con M: Actriz y conductora argentina.
+  - Respuesta: Moria Casan
+- **M | Variante 2 | startsWith**
+  - Pregunta: Con M: Actriz y conductora argentina.
+  - Respuesta: Moria Casan
+- **M | Variante 1 | startsWith**
+  - Pregunta: Con M: Poema gauchesco de Jose Hernandez.
+  - Respuesta: Martin Fierro
+- **M | Variante 2 | startsWith**
+  - Pregunta: Con M: Poema gauchesco de Jose Hernandez.
+  - Respuesta: Martin Fierro
+- **M | Variante 1 | startsWith**
+  - Pregunta: Con M: Estadio de River Plate y de la seleccion argentina.
+  - Respuesta: Monumental
+- **M | Variante 2 | startsWith**
+  - Pregunta: Con M: Estadio de River Plate y de la seleccion argentina.
+  - Respuesta: Monumental
+- **N | Variante 1 | startsWith**
+  - Pregunta: Con N: Provincia patagonica argentina.
+  - Respuesta: Neuquen
+- **N | Variante 2 | startsWith**
+  - Pregunta: Con N: Provincia patagonica argentina.
+  - Respuesta: Neuquen
+- **N | Variante 1 | startsWith**
+  - Pregunta: Con N: Lago y parque nacional de la Patagonia.
+  - Respuesta: Nahuel Huapi
+- **N | Variante 2 | startsWith**
+  - Pregunta: Con N: Lago y parque nacional de la Patagonia.
+  - Respuesta: Nahuel Huapi
+- **N | Variante 1 | startsWith**
+  - Pregunta: Con N: Presidente argentino nacido en Santa Cruz.
+  - Respuesta: Nestor Kirchner
+- **N | Variante 2 | startsWith**
+  - Pregunta: Con N: Presidente argentino nacido en Santa Cruz.
+  - Respuesta: Nestor Kirchner
+- **N | Variante 1 | startsWith**
+  - Pregunta: Con N: Avenida porteña donde se encuentra el Obelisco.
+  - Respuesta: Nueve de Julio
+- **N | Variante 2 | startsWith**
+  - Pregunta: Con N: Avenida porteña donde se encuentra el Obelisco.
+  - Respuesta: Nueve de Julio
+- **N | Variante 1 | startsWith**
+  - Pregunta: Con N: Musico de Sui Generis.
+  - Respuesta: Nito Mestre
+- **N | Variante 2 | startsWith**
+  - Pregunta: Con N: Musico de Sui Generis.
+  - Respuesta: Nito Mestre
+- **N | Variante 1 | startsWith**
+  - Pregunta: Con N: Pasta que en Argentina suele comerse los dias 29.
+  - Respuesta: Noquis
+  - Aceptadas: Noquis, Ñoquis
+- **N | Variante 2 | startsWith**
+  - Pregunta: Con N: Pasta que en Argentina suele comerse los dias 29.
+  - Respuesta: Noquis
+  - Aceptadas: Noquis, Ñoquis
+- **N | Variante 1 | startsWith**
+  - Pregunta: Con N: Region integrada por provincias del norte argentino.
+  - Respuesta: Norte Grande
+- **N | Variante 2 | startsWith**
+  - Pregunta: Con N: Region integrada por provincias del norte argentino.
+  - Respuesta: Norte Grande
+- **N | Variante 1 | startsWith**
+  - Pregunta: Con N: Diario argentino fundado por Bartolome Mitre.
+  - Respuesta: Nacion
+  - Aceptadas: La Nacion, Nacion
+- **N | Variante 2 | startsWith**
+  - Pregunta: Con N: Diario argentino fundado por Bartolome Mitre.
+  - Respuesta: Nacion
+  - Aceptadas: La Nacion, Nacion
+- **N | Variante 1 | startsWith**
+  - Pregunta: Con N: Club rosarino donde se formo Lionel Messi.
+  - Respuesta: Newells
+  - Aceptadas: Newell's, Newells
+- **N | Variante 2 | startsWith**
+  - Pregunta: Con N: Club rosarino donde se formo Lionel Messi.
+  - Respuesta: Newells
+  - Aceptadas: Newell's, Newells
+- **N | Variante 1 | startsWith**
+  - Pregunta: Con N: Ciudad balnearia del sudeste bonaerense.
+  - Respuesta: Necochea
+- **N | Variante 2 | startsWith**
+  - Pregunta: Con N: Ciudad balnearia del sudeste bonaerense.
+  - Respuesta: Necochea
+- **Ñ | Variante 1 | startsWith**
+  - Pregunta: Con Ñ: Pasta que en Argentina suele comerse el dia 29.
+  - Respuesta: Ñoquis
+  - Aceptadas: Noquis, Ñoquis
+- **Ñ | Variante 2 | startsWith**
+  - Pregunta: Con Ñ: Pasta que en Argentina suele comerse el dia 29.
+  - Respuesta: Ñoquis
+  - Aceptadas: Noquis, Ñoquis
+- **Ñ | Variante 1 | startsWith**
+  - Pregunta: Con Ñ: Ave corredora parecida al avestruz que habita zonas de Argentina.
+  - Respuesta: Ñandu
+  - Aceptadas: Ñandu, Nandu
+- **Ñ | Variante 2 | startsWith**
+  - Pregunta: Con Ñ: Ave corredora parecida al avestruz que habita zonas de Argentina.
+  - Respuesta: Ñandu
+  - Aceptadas: Ñandu, Nandu
+- **Ñ | Variante 1 | startsWith**
+  - Pregunta: Con Ñ: Arbol nativo presente en zonas del litoral argentino.
+  - Respuesta: Ñandubay
+  - Aceptadas: Ñandubay, Nandubay
+- **Ñ | Variante 2 | startsWith**
+  - Pregunta: Con Ñ: Arbol nativo presente en zonas del litoral argentino.
+  - Respuesta: Ñandubay
+  - Aceptadas: Ñandubay, Nandubay
+- **Ñ | Variante 1 | startsWith**
+  - Pregunta: Con Ñ: Localidad rionegrina de la Linea Sur.
+  - Respuesta: Ñorquinco
+  - Aceptadas: Ñorquinco, Norquinco
+- **Ñ | Variante 2 | startsWith**
+  - Pregunta: Con Ñ: Localidad rionegrina de la Linea Sur.
+  - Respuesta: Ñorquinco
+  - Aceptadas: Ñorquinco, Norquinco
+- **Ñ | Variante 1 | startsWith**
+  - Pregunta: Con Ñ: Apodo popular para una persona de nariz chata.
+  - Respuesta: Ñata
+  - Aceptadas: Ñata, Nata
+- **Ñ | Variante 2 | startsWith**
+  - Pregunta: Con Ñ: Apodo popular para una persona de nariz chata.
+  - Respuesta: Ñata
+  - Aceptadas: Ñata, Nata
+- **Ñ | Variante 1 | startsWith**
+  - Pregunta: Con Ñ: Buho grande presente en varias regiones de Sudamerica.
+  - Respuesta: Ñacurutú
+  - Aceptadas: Ñacurutu, Ñacurutú, Nacurutu
+- **Ñ | Variante 2 | startsWith**
+  - Pregunta: Con Ñ: Buho grande presente en varias regiones de Sudamerica.
+  - Respuesta: Ñacurutú
+  - Aceptadas: Ñacurutu, Ñacurutú, Nacurutu
+- **Ñ | Variante 1 | startsWith**
+  - Pregunta: Con Ñ: Personaje popular de relatos y humor criollo.
+  - Respuesta: Ña Serapia
+  - Aceptadas: Ña Serapia, Na Serapia
+- **Ñ | Variante 2 | startsWith**
+  - Pregunta: Con Ñ: Personaje popular de relatos y humor criollo.
+  - Respuesta: Ña Serapia
+  - Aceptadas: Ña Serapia, Na Serapia
+- **Ñ | Variante 1 | startsWith**
+  - Pregunta: Con Ñ: Encaje tradicional guarani conocido en el litoral.
+  - Respuesta: Ñanduti
+  - Aceptadas: Ñanduti, Nanduti
+- **Ñ | Variante 2 | startsWith**
+  - Pregunta: Con Ñ: Encaje tradicional guarani conocido en el litoral.
+  - Respuesta: Ñanduti
+  - Aceptadas: Ñanduti, Nanduti
+- **Ñ | Variante 1 | startsWith**
+  - Pregunta: Con Ñ: Comida o reunion popular alrededor de ñoquis.
+  - Respuesta: Ñoquiada
+  - Aceptadas: Ñoquiada, Noquiada
+- **Ñ | Variante 2 | startsWith**
+  - Pregunta: Con Ñ: Comida o reunion popular alrededor de ñoquis.
+  - Respuesta: Ñoquiada
+  - Aceptadas: Ñoquiada, Noquiada
+- **Ñ | Variante 1 | startsWith**
+  - Pregunta: Con Ñ: Expresion guarani usada en nombres de lugares del litoral.
+  - Respuesta: Ñu Pora
+  - Aceptadas: Ñu Pora, Nu Pora
+- **Ñ | Variante 2 | startsWith**
+  - Pregunta: Con Ñ: Expresion guarani usada en nombres de lugares del litoral.
+  - Respuesta: Ñu Pora
+  - Aceptadas: Ñu Pora, Nu Pora
+- **O | Variante 1 | startsWith**
+  - Pregunta: Con O: Monumento ubicado sobre la avenida 9 de Julio.
+  - Respuesta: Obelisco
+- **O | Variante 2 | startsWith**
+  - Pregunta: Con O: Monumento ubicado sobre la avenida 9 de Julio.
+  - Respuesta: Obelisco
+- **O | Variante 1 | startsWith**
+  - Pregunta: Con O: Localidad donde esta la residencia presidencial argentina.
+  - Respuesta: Olivos
+- **O | Variante 2 | startsWith**
+  - Pregunta: Con O: Localidad donde esta la residencia presidencial argentina.
+  - Respuesta: Olivos
+- **O | Variante 1 | startsWith**
+  - Pregunta: Con O: Arbol asociado a la llanura pampeana.
+  - Respuesta: Ombu
+- **O | Variante 2 | startsWith**
+  - Pregunta: Con O: Arbol asociado a la llanura pampeana.
+  - Respuesta: Ombu
+- **O | Variante 1 | startsWith**
+  - Pregunta: Con O: Pianista y director de orquesta de tango.
+  - Respuesta: Osvaldo Pugliese
+- **O | Variante 2 | startsWith**
+  - Pregunta: Con O: Pianista y director de orquesta de tango.
+  - Respuesta: Osvaldo Pugliese
+- **O | Variante 1 | startsWith**
+  - Pregunta: Con O: Defensor campeon mundial con Argentina en 1986.
+  - Respuesta: Oscar Ruggeri
+- **O | Variante 2 | startsWith**
+  - Pregunta: Con O: Defensor campeon mundial con Argentina en 1986.
+  - Respuesta: Oscar Ruggeri
+- **O | Variante 1 | startsWith**
+  - Pregunta: Con O: Ciudad misionera.
+  - Respuesta: Obera
+- **O | Variante 2 | startsWith**
+  - Pregunta: Con O: Ciudad misionera.
+  - Respuesta: Obera
+- **O | Variante 1 | startsWith**
+  - Pregunta: Con O: Ciudad del norte salteño.
+  - Respuesta: Oran
+  - Aceptadas: Oran, Orán
+- **O | Variante 2 | startsWith**
+  - Pregunta: Con O: Ciudad del norte salteño.
+  - Respuesta: Oran
+  - Aceptadas: Oran, Orán
+- **O | Variante 1 | startsWith**
+  - Pregunta: Con O: Barrio y estacion ferroviaria de Buenos Aires.
+  - Respuesta: Once
+- **O | Variante 2 | startsWith**
+  - Pregunta: Con O: Barrio y estacion ferroviaria de Buenos Aires.
+  - Respuesta: Once
+- **O | Variante 1 | startsWith**
+  - Pregunta: Con O: Formacion musical clasica del tango.
+  - Respuesta: Orquesta Tipica
+- **O | Variante 2 | startsWith**
+  - Pregunta: Con O: Formacion musical clasica del tango.
+  - Respuesta: Orquesta Tipica
+- **O | Variante 1 | startsWith**
+  - Pregunta: Con O: Zona del Gran Buenos Aires donde estan Moron, Merlo e Ituzaingo.
+  - Respuesta: Oeste
+- **O | Variante 2 | startsWith**
+  - Pregunta: Con O: Zona del Gran Buenos Aires donde estan Moron, Merlo e Ituzaingo.
+  - Respuesta: Oeste
+- **P | Variante 1 | startsWith**
+  - Pregunta: Con P: Region austral compartida por Argentina y Chile.
+  - Respuesta: Patagonia
+- **P | Variante 2 | startsWith**
+  - Pregunta: Con P: Region austral compartida por Argentina y Chile.
+  - Respuesta: Patagonia
+- **P | Variante 1 | startsWith**
+  - Pregunta: Con P: Llanura central clave para la produccion agropecuaria.
+  - Respuesta: Pampa
+- **P | Variante 2 | startsWith**
+  - Pregunta: Con P: Llanura central clave para la produccion agropecuaria.
+  - Respuesta: Pampa
+- **P | Variante 1 | startsWith**
+  - Pregunta: Con P: Apellido de Juan Domingo, tres veces presidente argentino.
+  - Respuesta: Peron
+- **P | Variante 2 | startsWith**
+  - Pregunta: Con P: Apellido de Juan Domingo, tres veces presidente argentino.
+  - Respuesta: Peron
+- **P | Variante 1 | startsWith**
+  - Pregunta: Con P: Barrio porteño grande, conocido por parques y vida nocturna.
+  - Respuesta: Palermo
+- **P | Variante 2 | startsWith**
+  - Pregunta: Con P: Barrio porteño grande, conocido por parques y vida nocturna.
+  - Respuesta: Palermo
+- **P | Variante 1 | startsWith**
+  - Pregunta: Con P: Rio y ciudad capital de Entre Rios.
+  - Respuesta: Parana
+- **P | Variante 2 | startsWith**
+  - Pregunta: Con P: Rio y ciudad capital de Entre Rios.
+  - Respuesta: Parana
+- **P | Variante 1 | startsWith**
+  - Pregunta: Con P: Deporte nacional argentino practicado a caballo.
+  - Respuesta: Pato
+- **P | Variante 2 | startsWith**
+  - Pregunta: Con P: Deporte nacional argentino practicado a caballo.
+  - Respuesta: Pato
+- **P | Variante 1 | startsWith**
+  - Pregunta: Con P: Personaje clasico de la historieta argentina.
+  - Respuesta: Patoruzu
+- **P | Variante 2 | startsWith**
+  - Pregunta: Con P: Personaje clasico de la historieta argentina.
+  - Respuesta: Patoruzu
+- **P | Variante 1 | startsWith**
+  - Pregunta: Con P: Banda de Spinetta que edito Artaud.
+  - Respuesta: Pescado Rabioso
+- **P | Variante 2 | startsWith**
+  - Pregunta: Con P: Banda de Spinetta que edito Artaud.
+  - Respuesta: Pescado Rabioso
+- **P | Variante 1 | startsWith**
+  - Pregunta: Con P: Barrio moderno de Buenos Aires junto al rio.
+  - Respuesta: Puerto Madero
+- **P | Variante 2 | startsWith**
+  - Pregunta: Con P: Barrio moderno de Buenos Aires junto al rio.
+  - Respuesta: Puerto Madero
+- **P | Variante 1 | startsWith**
+  - Pregunta: Con P: Queso asado muy comun en parrillas argentinas.
+  - Respuesta: Provoleta
+- **P | Variante 2 | startsWith**
+  - Pregunta: Con P: Queso asado muy comun en parrillas argentinas.
+  - Respuesta: Provoleta
+- **Q | Variante 1 | startsWith**
+  - Pregunta: Con Q: Ciudad bonaerense y marca historica de cerveza argentina.
+  - Respuesta: Quilmes
+- **Q | Variante 2 | startsWith**
+  - Pregunta: Con Q: Ciudad bonaerense y marca historica de cerveza argentina.
+  - Respuesta: Quilmes
+- **Q | Variante 1 | startsWith**
+  - Pregunta: Con Q: Valle jujeño declarado Patrimonio de la Humanidad.
+  - Respuesta: Quebrada de Humahuaca
+- **Q | Variante 2 | startsWith**
+  - Pregunta: Con Q: Valle jujeño declarado Patrimonio de la Humanidad.
+  - Respuesta: Quebrada de Humahuaca
+- **Q | Variante 1 | startsWith**
+  - Pregunta: Con Q: Dibujante mendocino creador de Mafalda.
+  - Respuesta: Quino
+- **Q | Variante 2 | startsWith**
+  - Pregunta: Con Q: Dibujante mendocino creador de Mafalda.
+  - Respuesta: Quino
+- **Q | Variante 1 | startsWith**
+  - Pregunta: Con Q: Postre argentino tambien llamado vigilante.
+  - Respuesta: Queso y dulce
+- **Q | Variante 2 | startsWith**
+  - Pregunta: Con Q: Postre argentino tambien llamado vigilante.
+  - Respuesta: Queso y dulce
+- **Q | Variante 1 | startsWith**
+  - Pregunta: Con Q: Pintor argentino ligado al barrio de La Boca.
+  - Respuesta: Quinquela Martin
+- **Q | Variante 2 | startsWith**
+  - Pregunta: Con Q: Pintor argentino ligado al barrio de La Boca.
+  - Respuesta: Quinquela Martin
+- **Q | Variante 1 | startsWith**
+  - Pregunta: Con Q: Predio historico de entrenamiento de Huracan.
+  - Respuesta: Quemita
+- **Q | Variante 2 | startsWith**
+  - Pregunta: Con Q: Predio historico de entrenamiento de Huracan.
+  - Respuesta: Quemita
+- **Q | Variante 1 | startsWith**
+  - Pregunta: Con Q: Residencia presidencial argentina.
+  - Respuesta: Quinta de Olivos
+- **Q | Variante 2 | startsWith**
+  - Pregunta: Con Q: Residencia presidencial argentina.
+  - Respuesta: Quinta de Olivos
+- **Q | Variante 1 | startsWith**
+  - Pregunta: Con Q: Mundial ganado por la seleccion argentina.
+  - Respuesta: Qatar 2022
+- **Q | Variante 2 | startsWith**
+  - Pregunta: Con Q: Mundial ganado por la seleccion argentina.
+  - Respuesta: Qatar 2022
+- **Q | Variante 1 | startsWith**
+  - Pregunta: Con Q: Festival argentino de musica masiva.
+  - Respuesta: Quilmes Rock
+- **Q | Variante 2 | startsWith**
+  - Pregunta: Con Q: Festival argentino de musica masiva.
+  - Respuesta: Quilmes Rock
+- **Q | Variante 1 | startsWith**
+  - Pregunta: Con Q: Apellido del caudillo riojano Facundo.
+  - Respuesta: Quiroga
+- **Q | Variante 2 | startsWith**
+  - Pregunta: Con Q: Apellido del caudillo riojano Facundo.
+  - Respuesta: Quiroga
+- **R | Variante 1 | startsWith**
+  - Pregunta: Con R: Club de futbol del barrio de Nuñez.
+  - Respuesta: River Plate
+- **R | Variante 2 | startsWith**
+  - Pregunta: Con R: Club de futbol del barrio de Nuñez.
+  - Respuesta: River Plate
+- **R | Variante 1 | startsWith**
+  - Pregunta: Con R: Ciudad santafesina donde nacieron Messi y el Monumento a la Bandera.
+  - Respuesta: Rosario
+- **R | Variante 2 | startsWith**
+  - Pregunta: Con R: Ciudad santafesina donde nacieron Messi y el Monumento a la Bandera.
+  - Respuesta: Rosario
+- **R | Variante 1 | startsWith**
+  - Pregunta: Con R: Apellido de Juan Manuel, gobernador bonaerense del siglo XIX.
+  - Respuesta: Rosas
+- **R | Variante 2 | startsWith**
+  - Pregunta: Con R: Apellido de Juan Manuel, gobernador bonaerense del siglo XIX.
+  - Respuesta: Rosas
+- **R | Variante 1 | startsWith**
+  - Pregunta: Con R: Barrio porteño famoso por su cementerio historico.
+  - Respuesta: Recoleta
+- **R | Variante 2 | startsWith**
+  - Pregunta: Con R: Barrio porteño famoso por su cementerio historico.
+  - Respuesta: Recoleta
+- **R | Variante 1 | startsWith**
+  - Pregunta: Con R: Nombre popular del tramo inferior del rio Matanza.
+  - Respuesta: Riachuelo
+- **R | Variante 2 | startsWith**
+  - Pregunta: Con R: Nombre popular del tramo inferior del rio Matanza.
+  - Respuesta: Riachuelo
+- **R | Variante 1 | startsWith**
+  - Pregunta: Con R: Apellido del primer presidente argentino.
+  - Respuesta: Rivadavia
+- **R | Variante 2 | startsWith**
+  - Pregunta: Con R: Apellido del primer presidente argentino.
+  - Respuesta: Rivadavia
+- **R | Variante 1 | startsWith**
+  - Pregunta: Con R: Enganche historico de Boca Juniors.
+  - Respuesta: Riquelme
+- **R | Variante 2 | startsWith**
+  - Pregunta: Con R: Enganche historico de Boca Juniors.
+  - Respuesta: Riquelme
+- **R | Variante 1 | startsWith**
+  - Pregunta: Con R: Cantautor argentino de folklore.
+  - Respuesta: Raly Barrionuevo
+- **R | Variante 2 | startsWith**
+  - Pregunta: Con R: Cantautor argentino de folklore.
+  - Respuesta: Raly Barrionuevo
+- **R | Variante 1 | startsWith**
+  - Pregunta: Con R: Ruta nacional que recorre el oeste argentino de norte a sur.
+  - Respuesta: Ruta 40
+- **R | Variante 2 | startsWith**
+  - Pregunta: Con R: Ruta nacional que recorre el oeste argentino de norte a sur.
+  - Respuesta: Ruta 40
+- **R | Variante 1 | startsWith**
+  - Pregunta: Con R: Capital de la provincia del Chaco.
+  - Respuesta: Resistencia
+- **R | Variante 2 | startsWith**
+  - Pregunta: Con R: Capital de la provincia del Chaco.
+  - Respuesta: Resistencia
+- **S | Variante 1 | startsWith**
+  - Pregunta: Con S: Libertador argentino nacido en Yapeyu.
+  - Respuesta: San Martin
+- **S | Variante 2 | startsWith**
+  - Pregunta: Con S: Libertador argentino nacido en Yapeyu.
+  - Respuesta: San Martin
+- **S | Variante 1 | startsWith**
+  - Pregunta: Con S: Presidente argentino asociado a la educacion publica.
+  - Respuesta: Sarmiento
+- **S | Variante 2 | startsWith**
+  - Pregunta: Con S: Presidente argentino asociado a la educacion publica.
+  - Respuesta: Sarmiento
+- **S | Variante 1 | startsWith**
+  - Pregunta: Con S: Provincia norteña conocida como La Linda.
+  - Respuesta: Salta
+- **S | Variante 2 | startsWith**
+  - Pregunta: Con S: Provincia norteña conocida como La Linda.
+  - Respuesta: Salta
+- **S | Variante 1 | startsWith**
+  - Pregunta: Con S: Trio de rock liderado por Gustavo Cerati.
+  - Respuesta: Soda Stereo
+- **S | Variante 2 | startsWith**
+  - Pregunta: Con S: Trio de rock liderado por Gustavo Cerati.
+  - Respuesta: Soda Stereo
+- **S | Variante 1 | startsWith**
+  - Pregunta: Con S: Nombre popular del metro de Buenos Aires.
+  - Respuesta: Subte
+- **S | Variante 2 | startsWith**
+  - Pregunta: Con S: Nombre popular del metro de Buenos Aires.
+  - Respuesta: Subte
+- **S | Variante 1 | startsWith**
+  - Pregunta: Con S: Barrio porteño famoso por ferias y tango.
+  - Respuesta: San Telmo
+- **S | Variante 2 | startsWith**
+  - Pregunta: Con S: Barrio porteño famoso por ferias y tango.
+  - Respuesta: San Telmo
+- **S | Variante 1 | startsWith**
+  - Pregunta: Con S: Pasta rellena muy comun en bodegones argentinos.
+  - Respuesta: Sorrentinos
+- **S | Variante 2 | startsWith**
+  - Pregunta: Con S: Pasta rellena muy comun en bodegones argentinos.
+  - Respuesta: Sorrentinos
+- **S | Variante 1 | startsWith**
+  - Pregunta: Con S: Cooperativa lactea argentina.
+  - Respuesta: Sancor
+- **S | Variante 2 | startsWith**
+  - Pregunta: Con S: Cooperativa lactea argentina.
+  - Respuesta: Sancor
+- **S | Variante 1 | startsWith**
+  - Pregunta: Con S: Zona turistica clasica del centro del pais.
+  - Respuesta: Sierras de Cordoba
+- **S | Variante 2 | startsWith**
+  - Pregunta: Con S: Zona turistica clasica del centro del pais.
+  - Respuesta: Sierras de Cordoba
+- **S | Variante 1 | startsWith**
+  - Pregunta: Con S: Ruta escenica entre San Martin de los Andes y Villa La Angostura.
+  - Respuesta: Siete Lagos
+- **S | Variante 2 | startsWith**
+  - Pregunta: Con S: Ruta escenica entre San Martin de los Andes y Villa La Angostura.
+  - Respuesta: Siete Lagos
+- **T | Variante 1 | startsWith**
+  - Pregunta: Con T: Genero musical y baile rioplatense.
+  - Respuesta: Tango
+- **T | Variante 2 | startsWith**
+  - Pregunta: Con T: Genero musical y baile rioplatense.
+  - Respuesta: Tango
+- **T | Variante 1 | startsWith**
+  - Pregunta: Con T: Provincia donde se declaro la independencia argentina.
+  - Respuesta: Tucuman
+- **T | Variante 2 | startsWith**
+  - Pregunta: Con T: Provincia donde se declaro la independencia argentina.
+  - Respuesta: Tucuman
+- **T | Variante 1 | startsWith**
+  - Pregunta: Con T: Teatro lirico emblematico de Buenos Aires.
+  - Respuesta: Teatro Colon
+- **T | Variante 2 | startsWith**
+  - Pregunta: Con T: Teatro lirico emblematico de Buenos Aires.
+  - Respuesta: Teatro Colon
+- **T | Variante 1 | startsWith**
+  - Pregunta: Con T: Juego de cartas muy popular en Argentina.
+  - Respuesta: Truco
+- **T | Variante 2 | startsWith**
+  - Pregunta: Con T: Juego de cartas muy popular en Argentina.
+  - Respuesta: Truco
+- **T | Variante 1 | startsWith**
+  - Pregunta: Con T: Actriz y cantante de tango argentina.
+  - Respuesta: Tita Merello
+- **T | Variante 2 | startsWith**
+  - Pregunta: Con T: Actriz y cantante de tango argentina.
+  - Respuesta: Tita Merello
+- **T | Variante 1 | startsWith**
+  - Pregunta: Con T: Atractivo turistico ferroviario de Salta.
+  - Respuesta: Tren a las Nubes
+- **T | Variante 2 | startsWith**
+  - Pregunta: Con T: Atractivo turistico ferroviario de Salta.
+  - Respuesta: Tren a las Nubes
+- **T | Variante 1 | startsWith**
+  - Pregunta: Con T: Provincia mas austral de Argentina.
+  - Respuesta: Tierra del Fuego
+- **T | Variante 2 | startsWith**
+  - Pregunta: Con T: Provincia mas austral de Argentina.
+  - Respuesta: Tierra del Fuego
+- **T | Variante 1 | startsWith**
+  - Pregunta: Con T: Ciudad bonaerense de acceso al Delta.
+  - Respuesta: Tigre
+- **T | Variante 2 | startsWith**
+  - Pregunta: Con T: Ciudad bonaerense de acceso al Delta.
+  - Respuesta: Tigre
+- **T | Variante 1 | startsWith**
+  - Pregunta: Con T: Parque nacional riojano de paredones rojizos.
+  - Respuesta: Talampaya
+- **T | Variante 2 | startsWith**
+  - Pregunta: Con T: Parque nacional riojano de paredones rojizos.
+  - Respuesta: Talampaya
+- **T | Variante 1 | startsWith**
+  - Pregunta: Con T: Sandwich caliente frecuente en bares argentinos.
+  - Respuesta: Tostado
+- **T | Variante 2 | startsWith**
+  - Pregunta: Con T: Sandwich caliente frecuente en bares argentinos.
+  - Respuesta: Tostado
+- **U | Variante 1 | startsWith**
+  - Pregunta: Con U: Ciudad fueguina promocionada como la mas austral del mundo.
+  - Respuesta: Ushuaia
+- **U | Variante 2 | startsWith**
+  - Pregunta: Con U: Ciudad fueguina promocionada como la mas austral del mundo.
+  - Respuesta: Ushuaia
+- **U | Variante 1 | startsWith**
+  - Pregunta: Con U: Sigla de la Universidad de Buenos Aires.
+  - Respuesta: UBA
+- **U | Variante 2 | startsWith**
+  - Pregunta: Con U: Sigla de la Universidad de Buenos Aires.
+  - Respuesta: UBA
+- **U | Variante 1 | startsWith**
+  - Pregunta: Con U: Cerro cordobes asociado al turismo serrano.
+  - Respuesta: Uritorco
+- **U | Variante 2 | startsWith**
+  - Pregunta: Con U: Cerro cordobes asociado al turismo serrano.
+  - Respuesta: Uritorco
+- **U | Variante 1 | startsWith**
+  - Pregunta: Con U: Partido politico fundado tras la Revolucion del Parque.
+  - Respuesta: Union Civica Radical
+- **U | Variante 2 | startsWith**
+  - Pregunta: Con U: Partido politico fundado tras la Revolucion del Parque.
+  - Respuesta: Union Civica Radical
+- **U | Variante 1 | startsWith**
+  - Pregunta: Con U: Centro comercial grande ubicado en Martinez.
+  - Respuesta: Unicenter
+- **U | Variante 2 | startsWith**
+  - Pregunta: Con U: Centro comercial grande ubicado en Martinez.
+  - Respuesta: Unicenter
+- **U | Variante 1 | startsWith**
+  - Pregunta: Con U: Universidad privada argentina.
+  - Respuesta: UADE
+- **U | Variante 2 | startsWith**
+  - Pregunta: Con U: Universidad privada argentina.
+  - Respuesta: UADE
+- **U | Variante 1 | startsWith**
+  - Pregunta: Con U: Universidad argentina fundada en el periodo colonial.
+  - Respuesta: Universidad de Cordoba
+- **U | Variante 2 | startsWith**
+  - Pregunta: Con U: Universidad argentina fundada en el periodo colonial.
+  - Respuesta: Universidad de Cordoba
+- **U | Variante 1 | startsWith**
+  - Pregunta: Con U: Cantante cordobes de cuarteto.
+  - Respuesta: Ulises Bueno
+- **U | Variante 2 | startsWith**
+  - Pregunta: Con U: Cantante cordobes de cuarteto.
+  - Respuesta: Ulises Bueno
+- **U | Variante 1 | startsWith**
+  - Pregunta: Con U: Dique y zona turistica de San Juan.
+  - Respuesta: Ullum
+- **U | Variante 2 | startsWith**
+  - Pregunta: Con U: Dique y zona turistica de San Juan.
+  - Respuesta: Ullum
+- **U | Variante 1 | startsWith**
+  - Pregunta: Con U: Local partidario asociado al peronismo.
+  - Respuesta: Unidad Basica
+- **U | Variante 2 | startsWith**
+  - Pregunta: Con U: Local partidario asociado al peronismo.
+  - Respuesta: Unidad Basica
+- **V | Variante 1 | startsWith**
+  - Pregunta: Con V: Producto emblema de Mendoza y otras provincias argentinas.
+  - Respuesta: Vino
+- **V | Variante 2 | startsWith**
+  - Pregunta: Con V: Producto emblema de Mendoza y otras provincias argentinas.
+  - Respuesta: Vino
+- **V | Variante 1 | startsWith**
+  - Pregunta: Con V: Club porteño del barrio de Liniers.
+  - Respuesta: Velez
+- **V | Variante 2 | startsWith**
+  - Pregunta: Con V: Club porteño del barrio de Liniers.
+  - Respuesta: Velez
+- **V | Variante 1 | startsWith**
+  - Pregunta: Con V: Ciudad balnearia de la costa bonaerense.
+  - Respuesta: Villa Gesell
+- **V | Variante 2 | startsWith**
+  - Pregunta: Con V: Ciudad balnearia de la costa bonaerense.
+  - Respuesta: Villa Gesell
+- **V | Variante 1 | startsWith**
+  - Pregunta: Con V: Capital de Rio Negro.
+  - Respuesta: Viedma
+- **V | Variante 2 | startsWith**
+  - Pregunta: Con V: Capital de Rio Negro.
+  - Respuesta: Viedma
+- **V | Variante 1 | startsWith**
+  - Pregunta: Con V: Entidad colonial creada en 1776.
+  - Respuesta: Virreinato del Rio de la Plata
+- **V | Variante 2 | startsWith**
+  - Pregunta: Con V: Entidad colonial creada en 1776.
+  - Respuesta: Virreinato del Rio de la Plata
+- **V | Variante 1 | startsWith**
+  - Pregunta: Con V: Cantautor argentino de musica popular.
+  - Respuesta: Victor Heredia
+- **V | Variante 2 | startsWith**
+  - Pregunta: Con V: Cantautor argentino de musica popular.
+  - Respuesta: Victor Heredia
+- **V | Variante 1 | startsWith**
+  - Pregunta: Con V: Ciudad turistica cordobesa.
+  - Respuesta: Villa Carlos Paz
+- **V | Variante 2 | startsWith**
+  - Pregunta: Con V: Ciudad turistica cordobesa.
+  - Respuesta: Villa Carlos Paz
+- **V | Variante 1 | startsWith**
+  - Pregunta: Con V: Formacion de hidrocarburos no convencionales en Neuquen.
+  - Respuesta: Vaca Muerta
+- **V | Variante 2 | startsWith**
+  - Pregunta: Con V: Formacion de hidrocarburos no convencionales en Neuquen.
+  - Respuesta: Vaca Muerta
+- **V | Variante 1 | startsWith**
+  - Pregunta: Con V: Fiesta mendocina vinculada a la cosecha de la uva.
+  - Respuesta: Vendimia
+- **V | Variante 2 | startsWith**
+  - Pregunta: Con V: Fiesta mendocina vinculada a la cosecha de la uva.
+  - Respuesta: Vendimia
+- **V | Variante 1 | startsWith**
+  - Pregunta: Con V: Partido del norte del Gran Buenos Aires.
+  - Respuesta: Vicente Lopez
+- **V | Variante 2 | startsWith**
+  - Pregunta: Con V: Partido del norte del Gran Buenos Aires.
+  - Respuesta: Vicente Lopez
+- **W | Variante 1 | startsWith**
+  - Pregunta: Con W: Rapero argentino surgido de competencias de freestyle.
+  - Respuesta: Wos
+- **W | Variante 2 | startsWith**
+  - Pregunta: Con W: Rapero argentino surgido de competencias de freestyle.
+  - Respuesta: Wos
+- **W | Variante 1 | startsWith**
+  - Pregunta: Con W: Localidad misionera conocida por sus minas de piedras semipreciosas.
+  - Respuesta: Wanda
+- **W | Variante 2 | startsWith**
+  - Pregunta: Con W: Localidad misionera conocida por sus minas de piedras semipreciosas.
+  - Respuesta: Wanda
+- **W | Variante 1 | startsWith**
+  - Pregunta: Con W: Sitio arqueologico cercano a El Calafate.
+  - Respuesta: Walichu
+- **W | Variante 2 | startsWith**
+  - Pregunta: Con W: Sitio arqueologico cercano a El Calafate.
+  - Respuesta: Walichu
+- **W | Variante 1 | startsWith**
+  - Pregunta: Con W: Pelicula argentina dirigida por Enrique Piñeyro.
+  - Respuesta: Whisky Romeo Zulu
+- **W | Variante 2 | startsWith**
+  - Pregunta: Con W: Pelicula argentina dirigida por Enrique Piñeyro.
+  - Respuesta: Whisky Romeo Zulu
+- **W | Variante 1 | startsWith**
+  - Pregunta: Con W: Defensor argentino apodado el Muro.
+  - Respuesta: Walter Samuel
+- **W | Variante 2 | startsWith**
+  - Pregunta: Con W: Defensor argentino apodado el Muro.
+  - Respuesta: Walter Samuel
+- **W | Variante 1 | startsWith**
+  - Pregunta: Con W: Pueblo originario del Gran Chaco argentino.
+  - Respuesta: Wichi
+- **W | Variante 2 | startsWith**
+  - Pregunta: Con W: Pueblo originario del Gran Chaco argentino.
+  - Respuesta: Wichi
+- **W | Variante 1 | startsWith**
+  - Pregunta: Con W: Saxofonista y cantante argentino de funk y soul.
+  - Respuesta: Willy Crook
+- **W | Variante 2 | startsWith**
+  - Pregunta: Con W: Saxofonista y cantante argentino de funk y soul.
+  - Respuesta: Willy Crook
+- **W | Variante 1 | startsWith**
+  - Pregunta: Con W: Marino irlandes considerado padre de la Armada Argentina.
+  - Respuesta: William Brown
+- **W | Variante 2 | startsWith**
+  - Pregunta: Con W: Marino irlandes considerado padre de la Armada Argentina.
+  - Respuesta: William Brown
+- **W | Variante 1 | startsWith**
+  - Pregunta: Con W: Dirigente politico argentino de nombre Eduardo.
+  - Respuesta: Wado de Pedro
+- **W | Variante 2 | startsWith**
+  - Pregunta: Con W: Dirigente politico argentino de nombre Eduardo.
+  - Respuesta: Wado de Pedro
+- **W | Variante 1 | startsWith**
+  - Pregunta: Con W: Militar argentino del siglo XIX.
+  - Respuesta: Wenceslao Paunero
+- **W | Variante 2 | startsWith**
+  - Pregunta: Con W: Militar argentino del siglo XIX.
+  - Respuesta: Wenceslao Paunero
+- **X | Variante 1 | contains**
+  - Pregunta: Contiene X: Argentina que se convirtio en reina consorte de los Paises Bajos.
+  - Respuesta: Maxima Zorreguieta
+- **X | Variante 2 | contains**
+  - Pregunta: Contiene X: Argentina que se convirtio en reina consorte de los Paises Bajos.
+  - Respuesta: Maxima Zorreguieta
+- **X | Variante 1 | contains**
+  - Pregunta: Contiene X: Retirada ordenada por Belgrano en 1812.
+  - Respuesta: Exodo Jujeño
+  - Aceptadas: Exodo Jujeño, Exodo Jujeno
+- **X | Variante 2 | contains**
+  - Pregunta: Contiene X: Retirada ordenada por Belgrano en 1812.
+  - Respuesta: Exodo Jujeño
+  - Aceptadas: Exodo Jujeño, Exodo Jujeno
+- **X | Variante 1 | contains**
+  - Pregunta: Contiene X: Futbolista argentino campeon del mundo en 2022.
+  - Respuesta: Exequiel Palacios
+- **X | Variante 2 | contains**
+  - Pregunta: Contiene X: Futbolista argentino campeon del mundo en 2022.
+  - Respuesta: Exequiel Palacios
+- **X | Variante 1 | contains**
+  - Pregunta: Contiene X: Deporte con figuras argentinas como Monzon, Locche y Narvaez.
+  - Respuesta: Boxeo
+- **X | Variante 2 | contains**
+  - Pregunta: Contiene X: Deporte con figuras argentinas como Monzon, Locche y Narvaez.
+  - Respuesta: Boxeo
+- **X | Variante 1 | contains**
+  - Pregunta: Contiene X: Club de futbol del barrio porteño de Belgrano.
+  - Respuesta: Excursionistas
+- **X | Variante 2 | contains**
+  - Pregunta: Contiene X: Club de futbol del barrio porteño de Belgrano.
+  - Respuesta: Excursionistas
+- **X | Variante 1 | contains**
+  - Pregunta: Contiene X: Servicio de autos de alquiler muy visible en Buenos Aires.
+  - Respuesta: Taxi
+- **X | Variante 2 | contains**
+  - Pregunta: Contiene X: Servicio de autos de alquiler muy visible en Buenos Aires.
+  - Respuesta: Taxi
+- **X | Variante 1 | contains**
+  - Pregunta: Contiene X: Espacio de memoria ubicado en la Ciudad de Buenos Aires.
+  - Respuesta: Ex ESMA
+- **X | Variante 2 | contains**
+  - Pregunta: Contiene X: Espacio de memoria ubicado en la Ciudad de Buenos Aires.
+  - Respuesta: Ex ESMA
+- **X | Variante 1 | contains**
+  - Pregunta: Contiene X: Situacion vivida por muchos argentinos durante la ultima dictadura.
+  - Respuesta: Exilio
+- **X | Variante 2 | contains**
+  - Pregunta: Contiene X: Situacion vivida por muchos argentinos durante la ultima dictadura.
+  - Respuesta: Exilio
+- **X | Variante 1 | contains**
+  - Pregunta: Contiene X: Actividad clave para productos como soja, carne y vino.
+  - Respuesta: Exportacion
+- **X | Variante 2 | contains**
+  - Pregunta: Contiene X: Actividad clave para productos como soja, carne y vino.
+  - Respuesta: Exportacion
+- **X | Variante 1 | contains**
+  - Pregunta: Contiene X: Nombre asociado al ferrocarril que une Once con el oeste bonaerense.
+  - Respuesta: Expreso Sarmiento
+- **X | Variante 2 | contains**
+  - Pregunta: Contiene X: Nombre asociado al ferrocarril que une Once con el oeste bonaerense.
+  - Respuesta: Expreso Sarmiento
+- **Y | Variante 1 | startsWith**
+  - Pregunta: Con Y: Empresa argentina de energia fundada en 1922.
+  - Respuesta: YPF
+- **Y | Variante 2 | startsWith**
+  - Pregunta: Con Y: Empresa argentina de energia fundada en 1922.
+  - Respuesta: YPF
+- **Y | Variante 1 | startsWith**
+  - Pregunta: Con Y: Producto usado para preparar mate.
+  - Respuesta: Yerba mate
+- **Y | Variante 2 | startsWith**
+  - Pregunta: Con Y: Producto usado para preparar mate.
+  - Respuesta: Yerba mate
+- **Y | Variante 1 | startsWith**
+  - Pregunta: Con Y: Apellido de Hipolito, presidente radical argentino.
+  - Respuesta: Yrigoyen
+- **Y | Variante 2 | startsWith**
+  - Pregunta: Con Y: Apellido de Hipolito, presidente radical argentino.
+  - Respuesta: Yrigoyen
+- **Y | Variante 1 | startsWith**
+  - Pregunta: Con Y: Felino nativo protegido en Argentina.
+  - Respuesta: Yaguarete
+- **Y | Variante 2 | startsWith**
+  - Pregunta: Con Y: Felino nativo protegido en Argentina.
+  - Respuesta: Yaguarete
+- **Y | Variante 1 | startsWith**
+  - Pregunta: Con Y: Apellido artistico de Atahualpa, referente del folklore.
+  - Respuesta: Yupanqui
+- **Y | Variante 2 | startsWith**
+  - Pregunta: Con Y: Apellido artistico de Atahualpa, referente del folklore.
+  - Respuesta: Yupanqui
+- **Y | Variante 1 | startsWith**
+  - Pregunta: Con Y: Localidad correntina donde nacio San Martin.
+  - Respuesta: Yapeyu
+- **Y | Variante 2 | startsWith**
+  - Pregunta: Con Y: Localidad correntina donde nacio San Martin.
+  - Respuesta: Yapeyu
+- **Y | Variante 1 | startsWith**
+  - Pregunta: Con Y: Represa hidrolectrica sobre el rio Parana.
+  - Respuesta: Yacyreta
+- **Y | Variante 2 | startsWith**
+  - Pregunta: Con Y: Represa hidrolectrica sobre el rio Parana.
+  - Respuesta: Yacyreta
+- **Y | Variante 1 | startsWith**
+  - Pregunta: Con Y: Localidad historica del norte jujeño.
+  - Respuesta: Yavi
+- **Y | Variante 2 | startsWith**
+  - Pregunta: Con Y: Localidad historica del norte jujeño.
+  - Respuesta: Yavi
+- **Y | Variante 1 | startsWith**
+  - Pregunta: Con Y: Nombre popular para hierbas silvestres o medicinales.
+  - Respuesta: Yuyo
+- **Y | Variante 2 | startsWith**
+  - Pregunta: Con Y: Nombre popular para hierbas silvestres o medicinales.
+  - Respuesta: Yuyo
+- **Y | Variante 1 | startsWith**
+  - Pregunta: Con Y: Reptil presente en humedales del noreste argentino.
+  - Respuesta: Yacare
+- **Y | Variante 2 | startsWith**
+  - Pregunta: Con Y: Reptil presente en humedales del noreste argentino.
+  - Respuesta: Yacare
+- **Z | Variante 1 | startsWith**
+  - Pregunta: Con Z: Danza y genero musical del folklore argentino.
+  - Respuesta: Zamba
+- **Z | Variante 2 | startsWith**
+  - Pregunta: Con Z: Danza y genero musical del folklore argentino.
+  - Respuesta: Zamba
+- **Z | Variante 1 | startsWith**
+  - Pregunta: Con Z: Futbolista argentino historico del Inter.
+  - Respuesta: Zanetti
+- **Z | Variante 2 | startsWith**
+  - Pregunta: Con Z: Futbolista argentino historico del Inter.
+  - Respuesta: Zanetti
+- **Z | Variante 1 | startsWith**
+  - Pregunta: Con Z: Ciudad neuquina.
+  - Respuesta: Zapala
+- **Z | Variante 2 | startsWith**
+  - Pregunta: Con Z: Ciudad neuquina.
+  - Respuesta: Zapala
+- **Z | Variante 1 | startsWith**
+  - Pregunta: Con Z: Viento seco y calido caracteristico de Cuyo.
+  - Respuesta: Zonda
+- **Z | Variante 2 | startsWith**
+  - Pregunta: Con Z: Viento seco y calido caracteristico de Cuyo.
+  - Respuesta: Zonda
+- **Z | Variante 1 | startsWith**
+  - Pregunta: Con Z: Cantautor uruguayo muy escuchado en el Rio de la Plata.
+  - Respuesta: Zitarrosa
+- **Z | Variante 2 | startsWith**
+  - Pregunta: Con Z: Cantautor uruguayo muy escuchado en el Rio de la Plata.
+  - Respuesta: Zitarrosa
+- **Z | Variante 1 | startsWith**
+  - Pregunta: Con Z: Apellido de Jose Matias, militar de la independencia.
+  - Respuesta: Zapiola
+- **Z | Variante 2 | startsWith**
+  - Pregunta: Con Z: Apellido de Jose Matias, militar de la independencia.
+  - Respuesta: Zapiola
+- **Z | Variante 1 | startsWith**
+  - Pregunta: Con Z: Apodo de Carlos Gardel.
+  - Respuesta: Zorzal Criollo
+- **Z | Variante 2 | startsWith**
+  - Pregunta: Con Z: Apodo de Carlos Gardel.
+  - Respuesta: Zorzal Criollo
+- **Z | Variante 1 | startsWith**
+  - Pregunta: Con Z: Ciudad bonaerense junto al Parana.
+  - Respuesta: Zarate
+- **Z | Variante 2 | startsWith**
+  - Pregunta: Con Z: Ciudad bonaerense junto al Parana.
+  - Respuesta: Zarate
+- **Z | Variante 1 | startsWith**
+  - Pregunta: Con Z: Cancion folklorica muy difundida en Argentina.
+  - Respuesta: Zamba de mi esperanza
+- **Z | Variante 2 | startsWith**
+  - Pregunta: Con Z: Cancion folklorica muy difundida en Argentina.
+  - Respuesta: Zamba de mi esperanza
+- **Z | Variante 1 | startsWith**
+  - Pregunta: Con Z: Banda de Miguel Mateos en los años ochenta.
+  - Respuesta: Zas
+- **Z | Variante 2 | startsWith**
+  - Pregunta: Con Z: Banda de Miguel Mateos en los años ochenta.
+  - Respuesta: Zas
