@@ -10,6 +10,7 @@ interface GameStore {
   currentRole?: 'host' | 'player';
   currentPlayerId?: string;
   error?: string;
+  mutationVersion: number;
   loadSession: (gameId?: string) => Promise<void>;
   createGame: (input: CreateGameInput) => Promise<GameSession>;
   joinGame: (code: string, name: string) => Promise<GameSession>;
@@ -48,10 +49,13 @@ const rememberSession = (role: 'host' | 'player', gameId: string, playerId?: str
 
 export const useGameStore = create<GameStore>((set, get) => ({
   clientId: getClientId(),
+  mutationVersion: 0,
 
   async loadSession(gameId) {
+    const version = get().mutationVersion;
     const id = gameId ?? sessionStorage.getItem('el-rosco:gameId') ?? localStorage.getItem('el-rosco:lastGameId');
     const session = id ? await gameService.getGame(id) : undefined;
+    if (version !== get().mutationVersion) return;
     set({
       session,
       currentRole: (sessionStorage.getItem('el-rosco:role') as 'host' | 'player' | null) ?? undefined,
@@ -77,27 +81,45 @@ export const useGameStore = create<GameStore>((set, get) => ({
   async addSimulatedPlayer(name) {
     const id = get().session?.game.id;
     if (!id) return;
+    set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
     set({ session: await gameService.addSimulatedPlayer(id, name), error: undefined });
+    set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
   },
 
   async startGame() {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.startGame(id), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.startGame(id), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async pauseGame() {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.pauseGame(id), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.pauseGame(id), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async resumeGame() {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.resumeGame(id), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.resumeGame(id), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async finishGame() {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.finishGame(id), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.finishGame(id), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async deleteGame() {
@@ -113,43 +135,73 @@ export const useGameStore = create<GameStore>((set, get) => ({
 
   async resetGame() {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.resetGame(id), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.resetGame(id), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async backToLobby() {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.backToLobby(id), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.backToLobby(id), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async switchTurn() {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.switchTurn(id), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.switchTurn(id), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async applyAnswer(action) {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.applyAnswer(id, action), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.applyAnswer(id, action), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async undoLastAction() {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.undoLastAction(id), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.undoLastAction(id), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async setLetterStatus(playerId, letter, status) {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.setLetterStatus(id, playerId, letter, status), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.setLetterStatus(id, playerId, letter, status), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async updateQuestions(questions) {
     const id = get().session?.game.id;
-    if (id) set({ session: await gameService.updateQuestions(id, questions), error: undefined });
+    if (id) {
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      set({ session: await gameService.updateQuestions(id, questions), error: undefined });
+      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+    }
   },
 
   async tick() {
     const id = get().session?.game.id;
     if (!id) return;
+    const version = get().mutationVersion;
     const session = await gameService.tick(id);
+    if (version !== get().mutationVersion) return;
     if (session) set({ session });
   },
 

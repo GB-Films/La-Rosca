@@ -65,6 +65,8 @@
 - En la vista del host durante la partida, el editor de preguntas queda oculto; el jugador activo se muestra grande y los demas jugadores quedan compactos en un rail lateral/en fila horizontal en mobile.
 - Los warnings del editor de preguntas en crear partida solo deben mostrarse despues de apretar "Crear partida"; si siguen existiendo, bloquean la creacion.
 - El centro del rosco activo muestra la letra actual grande y el tiempo restante. La seccion de jugadores en espera no muestra roscos, solo resumen compacto.
+- El store usa `mutationVersion` para que polling/timer/realtime no pisen con estado viejo una accion del host recien tocada.
+- En desktop, el scoreboard del jugador activo va en una sola fila: jugador, timer y metricas.
 - El color de letras/respuestas correctas debe diferenciarse claramente del amarillo de "Pasa": usar verde esmeralda oscuro con texto blanco.
 - Se agrego aviso para cuando GitHub Pages corre sin Supabase.
 - El boton copiar link tiene fallback para navegadores moviles.

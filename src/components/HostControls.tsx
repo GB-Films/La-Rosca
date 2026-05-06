@@ -13,7 +13,7 @@ interface HostControlsProps {
 }
 
 const buttonBase =
-  'inline-flex min-h-10 min-w-0 items-center justify-center gap-1 rounded-md px-2 py-2 text-xs font-bold leading-tight transition sm:min-h-12 sm:gap-1.5 sm:px-2.5 sm:py-3 sm:text-sm';
+  'inline-flex min-h-10 min-w-0 touch-manipulation items-center justify-center gap-1 rounded-md px-2 py-2 text-xs font-bold leading-tight transition active:scale-[0.98] sm:min-h-11 sm:gap-1.5 sm:px-2.5 sm:py-2.5 sm:text-sm';
 
 export const HostControls = ({
   paused,
@@ -35,10 +35,12 @@ export const HostControls = ({
         <X className="h-4 w-4 sm:h-5 sm:w-5" /> Incorrecta
       </button>
       <button type="button" className={`${buttonBase} col-span-2 bg-amber-400 text-amber-950 sm:col-span-1`} onClick={onPass}>
-        <SkipForward className="h-4 w-4 sm:h-5 sm:w-5" /> Pasa
+        <SkipForward className="h-4 w-4 sm:h-5 sm:w-5" />
+        <span className="sm:hidden">Pasa</span>
+        <span className="hidden sm:inline">Pasapalabra</span>
       </button>
     </div>
-    <div className="mt-2 grid grid-cols-2 gap-1.5 sm:mt-3 sm:gap-2 lg:grid-cols-5">
+    <div className="mt-2 grid grid-cols-4 gap-1.5 sm:mt-3 sm:gap-2">
       {paused ? (
         <button type="button" className={`${buttonBase} bg-blue-500 text-blue-950`} onClick={onResume}>
           <TimerReset className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Reanudar
@@ -54,7 +56,7 @@ export const HostControls = ({
       <button type="button" className={`${buttonBase} bg-slate-700 text-slate-100`} onClick={onUndo}>
         <RotateCcw className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Deshacer
       </button>
-      <button type="button" className={`${buttonBase} bg-slate-800 text-slate-100 lg:col-span-2`} onClick={onFinish}>
+      <button type="button" className={`${buttonBase} bg-slate-800 text-slate-100`} onClick={onFinish}>
         <Square className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Terminar
       </button>
     </div>
