@@ -1,10 +1,12 @@
 # Como editar preguntas comodamente
 
-El archivo mas comodo para revisar pistas es:
+El archivo mas comodo para revisar pistas en Excel es:
 
-`docs/preguntas-editables.tsv`
+`docs/preguntas-editables.csv`
 
-Es un archivo de texto con columnas separadas por tabulaciones. Tambien se puede abrir en Excel, Google Sheets o cualquier editor de texto.
+Es un archivo CSV con columnas separadas por punto y coma (`;`), pensado para que Excel en español lo abra en columnas automaticamente.
+
+Tambien queda disponible `docs/preguntas-editables.tsv` como respaldo tecnico para Codex.
 
 ## Columnas
 
@@ -39,4 +41,4 @@ Preferir pistas con un dato distintivo:
 
 ## Como lo pasamos a la app
 
-Cuando termines de editar `docs/preguntas-editables.tsv`, avisale a Codex. Codex puede leer ese archivo, convertir los cambios a los archivos fuente de la app y despues hacer build, commit y push.
+Cuando termines de editar `docs/preguntas-editables.csv`, avisale a Codex. Codex puede leer ese archivo, convertir los cambios a los archivos fuente de la app y despues hacer build, commit y push.

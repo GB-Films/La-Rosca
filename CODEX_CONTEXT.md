@@ -41,7 +41,8 @@
 - Para agregar, borrar o corregir preguntas fuente, editar principalmente:
   - `src/data/argentinaGeneralLibrary.ts` para cultura general argentina.
   - `src/data/sampleQuestions.ts` para cine, musica, historia, futbol y las semillas que usa `categoryLibraries.ts`.
-- Para revision humana comoda, usar `docs/preguntas-editables.tsv`; el usuario puede editar ese archivo y Codex luego pasa los cambios a los archivos fuente.
+- Para revision humana comoda en Excel, usar `docs/preguntas-editables.csv`; el usuario puede editar ese archivo y Codex luego pasa los cambios a los archivos fuente.
+- `docs/preguntas-editables.tsv` queda como respaldo tecnico, pero el archivo recomendado para el usuario es el CSV separado por punto y coma.
 - El TSV editable debe tener una categoria principal unica: `Preguntas de cultura general`, con subcategorias como `Cultura general argentina`, `Cine Argentino`, `Futbol Argentino` y `Musica Nacional`.
 - La guia de edicion esta en `docs/EDITAR_PREGUNTAS.md`.
 - No usar la frase "Respuesta de cultura general argentina" dentro de los prompts.
