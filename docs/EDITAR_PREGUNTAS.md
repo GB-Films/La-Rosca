@@ -4,17 +4,21 @@ El archivo mas comodo para revisar pistas es:
 
 `docs/preguntas-editables.tsv`
 
+Si Excel lo tiene abierto y Codex no puede reemplazarlo, Codex puede generar una version nueva como:
+
+`docs/preguntas-editables-nuevo.tsv`
+
 Es un archivo de texto con columnas separadas por tabulaciones. Tambien se puede abrir en Excel, Google Sheets o cualquier editor de texto.
 
 ## Columnas
 
-- `source`: de donde sale la pregunta.
-- `theme`: categoria.
-- `playerSlot`: `1`, `2` o vacio si es una pregunta general.
+- `categoria`: categoria principal. Debe ser `Preguntas de cultura general`.
+- `subcategoria`: grupo interno, por ejemplo `Cultura general argentina`, `Cine Argentino`, `Futbol Argentino` o `Musica Nacional`.
 - `letter`: letra del rosco.
 - `mode`: `startsWith` o `contains`.
 - `answer`: respuesta correcta.
-- `clue`: pista sin el prefijo "Con A:".
+- `difficulty`: por ahora debe quedar en `normal`.
+- `description`: pista sin el prefijo "Con A:".
 - `acceptedAnswers`: respuestas alternativas separadas por coma.
 
 ## Como corregir
@@ -22,10 +26,10 @@ Es un archivo de texto con columnas separadas por tabulaciones. Tambien se puede
 Edita principalmente las columnas:
 
 - `answer`
-- `clue`
+- `description`
 - `acceptedAnswers`
 
-No cambies `source`, `theme`, `playerSlot`, `letter` ni `mode` salvo que quieras mover una pregunta de categoria, jugador, letra o tipo.
+No cambies `categoria`, `subcategoria`, `letter`, `mode` ni `difficulty` salvo que quieras mover una pregunta de categoria, letra, tipo o dificultad.
 
 ## Criterio de calidad para pistas
 
