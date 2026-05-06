@@ -69,7 +69,7 @@ export interface CreateGameInput {
   theme: string;
   timerSeconds: number;
   includeÑ: boolean;
-  questionMode: 'pack' | 'manual' | 'example';
+  questionMode: 'pack' | 'manual';
   questions: Question[];
   showQuestionToPlayers: boolean;
 }

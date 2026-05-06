@@ -1,15 +1,34 @@
 import { argentinaGeneralLibrary } from '../data/argentinaGeneralLibrary';
+import { expandedCategoryLibraries } from '../data/categoryLibraries';
 import { getLetters, sampleQuestions } from '../data/sampleQuestions';
 import type { Question } from '../types/question';
 import { createId } from '../utils/codeGenerator';
 
 const ARGENTINA_GENERAL_THEME = 'cultura-general-argentina';
+const CUSTOM_PRESETS_KEY = 'la-rosca:custom-question-presets';
+const EXPANDED_THEMES = new Set(['cine-argentino', 'historia-argentina', 'musica-nacional']);
 
 const pickRandom = <T>(items: T[]) => items[Math.floor(Math.random() * items.length)];
+
+export type CustomQuestionPreset = {
+  id: string;
+  name: string;
+  questions: Question[];
+  createdAt: string;
+};
+
+const readCustomPresets = (): CustomQuestionPreset[] => {
+  try {
+    return JSON.parse(localStorage.getItem(CUSTOM_PRESETS_KEY) ?? '[]') as CustomQuestionPreset[];
+  } catch {
+    return [];
+  }
+};
 
 export const questionService = {
   getPack(theme: string) {
     if (theme === ARGENTINA_GENERAL_THEME) return argentinaGeneralLibrary;
+    if (EXPANDED_THEMES.has(theme)) return expandedCategoryLibraries.filter((question) => question.theme === theme);
     return sampleQuestions.filter((question) => question.theme === theme);
   },
 
@@ -86,5 +105,28 @@ export const questionService = {
       ...question,
       id: `${prefix}-${question.id}`,
     }));
+  },
+
+  createBlankEditablePack(theme: string, includeÑ: boolean) {
+    return getLetters(includeÑ).flatMap((letter) => [
+      this.createEmpty(theme, letter, 1),
+      this.createEmpty(theme, letter, 2),
+    ]);
+  },
+
+  getCustomPresets() {
+    return readCustomPresets();
+  },
+
+  saveCustomPreset(name: string, questions: Question[]) {
+    const preset: CustomQuestionPreset = {
+      id: createId('preset'),
+      name: name.trim() || `Preset ${new Date().toLocaleDateString('es-AR')}`,
+      questions,
+      createdAt: new Date().toISOString(),
+    };
+    const presets = [preset, ...readCustomPresets()].slice(0, 20);
+    localStorage.setItem(CUSTOM_PRESETS_KEY, JSON.stringify(presets));
+    return presets;
   },
 };

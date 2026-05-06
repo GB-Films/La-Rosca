@@ -37,9 +37,15 @@
 
 - `src/data/sampleQuestions.ts` contiene packs base por categoria y jugador.
 - `src/data/argentinaGeneralLibrary.ts` genera 540 preguntas de cultura general argentina.
+- `src/data/categoryLibraries.ts` expande cine argentino, historia argentina y musica nacional a 540 preguntas cada una.
+- Para agregar, borrar o corregir preguntas fuente, editar principalmente:
+  - `src/data/argentinaGeneralLibrary.ts` para cultura general argentina.
+  - `src/data/sampleQuestions.ts` para cine, musica, historia, futbol y las semillas que usa `categoryLibraries.ts`.
 - No usar la frase "Respuesta de cultura general argentina" dentro de los prompts.
 - Mantener preguntas distintas por jugador cuando corresponda.
 - Validar que `startsWith` empiece con la letra y `contains` contenga la letra.
+- En crear partida, "Usar pack existente" muestra una seleccion aleatoria y un boton para randomizar otra seleccion.
+- "Personalizado editable" permite editar, borrar, agregar y guardar presets en localStorage del navegador.
 
 ## Supabase
 
