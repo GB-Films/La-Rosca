@@ -73,6 +73,19 @@ const shouldFinish = (session: GameSession) =>
   session.players.length >= 2 &&
   session.players.every((player) => player.remainingSeconds <= 0 || isPlayerDone(session, player.id));
 
+const resetRound = (session: GameSession, status: GameSession['game']['status']) => {
+  session.game.status = status;
+  session.game.activePlayerId = undefined;
+  session.game.activeLetter = undefined;
+  session.players = session.players.map((player) => ({
+    ...player,
+    score: 0,
+    remainingSeconds: session.game.timerSeconds,
+  }));
+  session.letters = session.players.flatMap((player) => createLetterStates(player, session));
+  session.actionLog = [];
+};
+
 const assignNextTurn = (
   session: GameSession,
   preferredPlayerId?: string,
@@ -201,7 +214,7 @@ export const gameService = {
     const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     if (session.players.length < 2) throw new Error('Necesitas al menos 2 jugadores para iniciar.');
-    session.game.status = 'playing';
+    resetRound(session, 'playing');
     const firstPlayer = [...session.players].sort((a, b) => a.slot - b.slot)[0];
     assignNextTurn(session, firstPlayer.id);
     return sessionRepository.save(session);
@@ -224,7 +237,7 @@ export const gameService = {
   async backToLobby(gameId: string) {
     const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
-    session.game.status = 'lobby';
+    resetRound(session, 'lobby');
     return sessionRepository.save(session);
   },
 
@@ -242,16 +255,9 @@ export const gameService = {
   async resetGame(gameId: string) {
     const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
-    session.game.status = 'lobby';
-    session.game.activePlayerId = undefined;
-    session.game.activeLetter = undefined;
-    session.players = session.players.map((player) => ({
-      ...player,
-      score: 0,
-      remainingSeconds: session.game.timerSeconds,
-    }));
-    session.letters = session.players.flatMap((player) => createLetterStates(player, session));
-    session.actionLog = [];
+    resetRound(session, session.players.length >= 2 ? 'playing' : 'lobby');
+    const firstPlayer = [...session.players].sort((a, b) => a.slot - b.slot)[0];
+    if (session.game.status === 'playing' && firstPlayer) assignNextTurn(session, firstPlayer.id);
     return sessionRepository.save(session);
   },
 

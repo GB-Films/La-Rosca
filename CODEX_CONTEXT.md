@@ -69,6 +69,8 @@
 - En desktop, el scoreboard del jugador activo va en una sola fila: jugador, timer y metricas.
 - La vista del host no debe importar ni renderizar `QuestionEditor`; la edicion queda para crear partida/lobby, no para juego andando.
 - No hay boton "Terminar" en controles del host. "Volver al lobby" y "Resetear partida" usan `ConfirmDialog`; reset reinicia y vuelve a arrancar la partida.
+- `startGame`, `backToLobby` y `resetGame` deben limpiar puntos, letras, actionLog, turno activo y timers con `resetRound`. `backToLobby` queda en lobby; `resetGame` queda jugando si hay al menos 2 jugadores.
+- En el lobby, simular jugador debe llamar `addSimulatedPlayer()` sin nombre fijo, para que el servicio use `Jugador {slot}`.
 - El color de letras/respuestas correctas debe diferenciarse claramente del amarillo de "Pasa": usar verde esmeralda oscuro con texto blanco.
 - Se agrego aviso para cuando GitHub Pages corre sin Supabase.
 - El boton copiar link tiene fallback para navegadores moviles.

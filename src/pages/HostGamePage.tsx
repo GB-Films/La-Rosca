@@ -21,7 +21,6 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
   const switchTurn = useGameStore((state) => state.switchTurn);
   const undoLastAction = useGameStore((state) => state.undoLastAction);
   const resetGame = useGameStore((state) => state.resetGame);
-  const startGame = useGameStore((state) => state.startGame);
   const backToLobby = useGameStore((state) => state.backToLobby);
   const setLetterStatus = useGameStore((state) => state.setLetterStatus);
   const [confirmAction, setConfirmAction] = useState<'lobby' | 'reset' | undefined>();
@@ -51,7 +50,6 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
 
   const resetAndRestart = async () => {
     await resetGame();
-    await startGame();
   };
 
   const confirm = async () => {
@@ -170,7 +168,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
       <ConfirmDialog
         open={confirmAction === 'lobby'}
         title="Volver al lobby?"
-        description="La partida se pausa y el host vuelve a la sala de espera con los mismos jugadores."
+        description="Se reinician puntos, letras y tiempos, y el host vuelve a la sala de espera con los mismos jugadores."
         confirmLabel="Volver"
         onCancel={() => setConfirmAction(undefined)}
         onConfirm={confirm}
@@ -178,7 +176,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
       <ConfirmDialog
         open={confirmAction === 'reset'}
         title="Resetear partida?"
-        description="Se reinician puntos, letras y tiempos, y la partida arranca de nuevo desde el primer jugador."
+        description="Se reinician puntos, letras y tiempos a sus valores iniciales, y la partida arranca de nuevo desde el primer jugador."
         confirmLabel="Resetear"
         tone="danger"
         onCancel={() => setConfirmAction(undefined)}

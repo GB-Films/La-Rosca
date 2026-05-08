@@ -112,7 +112,7 @@ export const LobbyPage = ({ gameId }: LobbyPageProps) => {
           <button
             type="button"
             className="rounded-lg bg-slate-700 px-4 py-2.5 text-sm font-bold sm:py-3 sm:text-base"
-            onClick={() => addSimulatedPlayer('Jugador 1')}
+            onClick={() => addSimulatedPlayer()}
             disabled={session.players.length >= maxPlayers}
           >
             Simular jugador
