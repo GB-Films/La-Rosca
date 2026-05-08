@@ -36,7 +36,7 @@
 ## Preguntas
 
 - `src/data/sampleQuestions.ts` contiene packs base por categoria y jugador.
-- `src/data/argentinaGeneralLibrary.ts` contiene 270 respuestas base de cultura general argentina y la app las puede asignar a hasta 10 jugadores sin repetir respuesta por letra.
+- `src/data/argentinaGeneralLibrary.ts` contiene 540 respuestas base de cultura general argentina: 20 por letra, y la app las puede asignar a hasta 10 jugadores sin repetir respuesta por letra.
 - `src/data/categoryLibraries.ts` contiene 270 preguntas por subcategoria para cine argentino, futbol argentino y musica nacional.
 - Para agregar, borrar o corregir preguntas fuente, editar principalmente:
   - `src/data/argentinaGeneralLibrary.ts` para cultura general argentina.
