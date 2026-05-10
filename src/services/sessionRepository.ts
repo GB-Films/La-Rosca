@@ -10,6 +10,24 @@ type GameSessionRow = {
   payload: GameSession;
 };
 
+const getRevision = (session?: GameSession) => session?.revision ?? 0;
+const getActionCount = (session?: GameSession) => session?.actionLog.length ?? 0;
+
+const isStaleSave = (current: GameSession | undefined, incoming: GameSession) => {
+  if (!current) return false;
+  const currentActions = getActionCount(current);
+  const incomingActions = getActionCount(incoming);
+  if (incomingActions < currentActions) return true;
+  if (incomingActions === currentActions && getRevision(incoming) < getRevision(current)) return true;
+  return false;
+};
+
+const withNextRevision = (session: GameSession, current?: GameSession): GameSession => ({
+  ...session,
+  revision: Math.max(getRevision(current), getRevision(session)) + 1,
+  updatedAt: new Date().toISOString(),
+});
+
 const requestSharedGames = (method: 'GET' | 'PUT', body?: string) => {
   if (typeof XMLHttpRequest === 'undefined') return undefined;
   try {
@@ -85,26 +103,38 @@ export const sessionRepository = {
 
   async save(session: GameSession) {
     if (isSupabaseConfigured && supabase) {
+      const { data: existing, error: existingError } = await supabase
+        .from('game_sessions')
+        .select('payload')
+        .eq('id', session.game.id)
+        .maybeSingle();
+      if (existingError) throw existingError;
+      const current = (existing as Pick<GameSessionRow, 'payload'> | null)?.payload;
+      if (isStaleSave(current, session)) return current ?? session;
+      const nextSession = withNextRevision(session, current);
       const { error } = await supabase.from('game_sessions').upsert({
-        id: session.game.id,
-        code: session.game.code,
-        payload: session,
-        updated_at: new Date().toISOString(),
+        id: nextSession.game.id,
+        code: nextSession.game.code,
+        payload: nextSession,
+        updated_at: nextSession.updatedAt,
       });
       if (error) throw error;
       window.dispatchEvent(new CustomEvent('el-rosco:games-changed'));
-      return session;
+      return nextSession;
     }
 
     const games = readLocal();
     const index = games.findIndex((game) => game.game.id === session.game.id);
+    const current = index >= 0 ? games[index] : undefined;
+    if (isStaleSave(current, session)) return current ?? session;
+    const nextSession = withNextRevision(session, current);
     if (index >= 0) {
-      games[index] = session;
+      games[index] = nextSession;
     } else {
-      games.push(session);
+      games.push(nextSession);
     }
     writeLocal(games);
-    return session;
+    return nextSession;
   },
 
   async delete(id: string) {

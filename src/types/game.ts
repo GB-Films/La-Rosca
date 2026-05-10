@@ -63,6 +63,8 @@ export interface GameSession {
   letters: LetterState[];
   questions: Question[];
   actionLog: ActionLog[];
+  revision?: number;
+  updatedAt?: string;
 }
 
 export interface CreateGameInput {

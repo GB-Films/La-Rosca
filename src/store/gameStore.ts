@@ -57,6 +57,10 @@ const shouldAcceptSession = (current: GameSession | undefined, incoming: GameSes
   const incomingActions = incoming.actionLog.length;
   if (incomingActions < currentActions) return false;
 
+  const currentRevision = current.revision ?? 0;
+  const incomingRevision = incoming.revision ?? 0;
+  if (incomingActions === currentActions && incomingRevision < currentRevision) return false;
+
   if (incomingActions === currentActions) {
     const currentLastAction = current.actionLog.at(-1)?.id;
     const incomingLastAction = incoming.actionLog.at(-1)?.id;
