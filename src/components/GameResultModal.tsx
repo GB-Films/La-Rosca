@@ -17,18 +17,17 @@ export const GameResultModal = ({ players, open, onReset, onLobby }: GameResultM
   return (
     <div className="fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-black/75 p-3 backdrop-blur-sm sm:p-4">
       <section className="result-modal relative w-full max-w-2xl overflow-hidden rounded-2xl border border-blue-300/45 p-4 shadow-2xl sm:p-6">
-        <div className="result-modal__grid" />
         <div className="relative z-10">
           <p className="result-kicker text-[0.68rem] font-black uppercase tracking-[0.24em] text-blue-200 sm:text-xs">
             Resultado final
           </p>
 
           {winner ? (
-            <div className="winner-card mt-3 rounded-2xl border border-amber-200/45 p-4 sm:mt-4 sm:p-5">
+            <div className="winner-card mt-3 rounded-2xl border border-amber-200/45 p-4 sm:mt-3 sm:p-5">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.22em] text-amber-100/90">Ganador</p>
-                  <h2 className="winner-name mt-1 text-4xl font-black leading-none text-white sm:text-6xl">
+                  <h2 className="winner-name mt-0.5 text-4xl font-black leading-none text-white sm:text-6xl">
                     {winner.name}
                   </h2>
                 </div>
