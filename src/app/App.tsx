@@ -51,7 +51,7 @@ export const App = () => {
     if (!('gameId' in route)) return undefined;
     return localRealtimeAdapter.subscribeToGame(route.gameId, (updatedSession) => {
       if (updatedSession) {
-        if (!useGameStore.getState().pendingAction) useGameStore.setState({ session: updatedSession });
+        useGameStore.getState().acceptRemoteSession(updatedSession);
       } else {
         void loadSession(route.gameId);
       }

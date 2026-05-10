@@ -12,6 +12,7 @@ interface GameStore {
   error?: string;
   mutationVersion: number;
   pendingAction?: 'correct' | 'wrong' | 'pass' | 'pause' | 'resume' | 'switch' | 'undo' | 'manual' | 'reset' | 'lobby';
+  acceptRemoteSession: (session?: GameSession) => void;
   loadSession: (gameId?: string) => Promise<void>;
   createGame: (input: CreateGameInput) => Promise<GameSession>;
   joinGame: (code: string, name: string) => Promise<GameSession>;
@@ -48,6 +49,23 @@ const rememberSession = (role: 'host' | 'player', gameId: string, playerId?: str
   localStorage.setItem('el-rosco:lastGameId', gameId);
 };
 
+const shouldAcceptSession = (current: GameSession | undefined, incoming: GameSession | undefined) => {
+  if (!incoming) return true;
+  if (!current || current.game.id !== incoming.game.id) return true;
+
+  const currentActions = current.actionLog.length;
+  const incomingActions = incoming.actionLog.length;
+  if (incomingActions < currentActions) return false;
+
+  if (incomingActions === currentActions) {
+    const currentLastAction = current.actionLog.at(-1)?.id;
+    const incomingLastAction = incoming.actionLog.at(-1)?.id;
+    if (currentLastAction && incomingLastAction && currentLastAction !== incomingLastAction) return false;
+  }
+
+  return true;
+};
+
 export const useGameStore = create<GameStore>((set, get) => ({
   clientId: getClientId(),
   mutationVersion: 0,
@@ -57,6 +75,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
     const id = gameId ?? sessionStorage.getItem('el-rosco:gameId') ?? localStorage.getItem('el-rosco:lastGameId');
     const session = id ? await gameService.getGame(id) : undefined;
     if (version !== get().mutationVersion || get().pendingAction) return;
+    if (!shouldAcceptSession(get().session, session)) return;
     set({
       session,
       currentRole: (sessionStorage.getItem('el-rosco:role') as 'host' | 'player' | null) ?? undefined,
@@ -191,6 +210,12 @@ export const useGameStore = create<GameStore>((set, get) => ({
         }));
       }
     }
+  },
+
+  acceptRemoteSession(session) {
+    if (get().pendingAction) return;
+    if (!shouldAcceptSession(get().session, session)) return;
+    set({ session });
   },
 
   async undoLastAction() {
