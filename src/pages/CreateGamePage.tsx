@@ -1,4 +1,4 @@
-import { RefreshCw, Save } from 'lucide-react';
+import { Minus, Plus, RefreshCw, Save } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { navigate } from '../app/router';
 import { QuestionEditor } from '../components/QuestionEditor';
@@ -14,14 +14,14 @@ export const CreateGamePage = () => {
   const [theme, setTheme] = useState('cultura-general-argentina');
   const [timerSeconds, setTimerSeconds] = useState(300);
   const [maxPlayers, setMaxPlayers] = useState(2);
-  const [includeÑ, setIncludeÑ] = useState(false);
+  const [includeÑ, setIncludeÑ] = useState(true);
   const [questionMode, setQuestionMode] = useState<'pack' | 'manual'>('pack');
-  const [showQuestionToPlayers, setShowQuestionToPlayers] = useState(true);
+  const [showQuestionToPlayers, setShowQuestionToPlayers] = useState(false);
   const [questions, setQuestions] = useState<Question[]>(() =>
-    questionService.createBlankEditablePack('personalizada', false),
+    questionService.createBlankEditablePack('personalizada', true),
   );
   const [packQuestions, setPackQuestions] = useState<Question[]>(() =>
-    questionService.createGamePack('cultura-general-argentina', false, 'preview', 2),
+    questionService.createGamePack('cultura-general-argentina', true, 'preview', 2),
   );
   const [presetName, setPresetName] = useState('Mi categoria');
   const [customPresets, setCustomPresets] = useState(() => questionService.getCustomPresets());
@@ -32,6 +32,10 @@ export const CreateGamePage = () => {
 
   const randomizePack = () => {
     setPackQuestions(questionService.createGamePack(theme, includeÑ, `preview-${Date.now()}`, maxPlayers));
+  };
+
+  const changeMaxPlayers = (next: number) => {
+    setMaxPlayers(Math.min(10, Math.max(2, next)));
   };
 
   useEffect(() => {
@@ -110,17 +114,47 @@ export const CreateGamePage = () => {
               className="rounded-md border border-line bg-ink px-3 py-2.5 sm:py-3"
             />
           </label>
-          <label className="grid gap-2">
+          <div className="grid gap-2">
             <span className="text-sm font-semibold text-slate-200">Cantidad maxima de jugadores</span>
-            <input
-              type="number"
-              min={2}
-              max={10}
-              value={maxPlayers}
-              onChange={(event) => setMaxPlayers(Math.min(10, Math.max(2, Number(event.target.value))))}
-              className="rounded-md border border-line bg-ink px-3 py-2.5 sm:py-3"
-            />
-          </label>
+            <div className="player-count-control rounded-xl border border-line bg-ink p-2.5 sm:p-3">
+              <div className="flex items-center justify-between gap-2">
+                <button
+                  type="button"
+                  className="player-count-button"
+                  onClick={() => changeMaxPlayers(maxPlayers - 1)}
+                  disabled={maxPlayers <= 2}
+                  aria-label="Restar jugador"
+                >
+                  <Minus size={18} />
+                </button>
+                <div className="min-w-0 text-center">
+                  <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-blue-200">Jugadores</p>
+                  <p className="text-4xl font-black leading-none text-white">{maxPlayers}</p>
+                </div>
+                <button
+                  type="button"
+                  className="player-count-button"
+                  onClick={() => changeMaxPlayers(maxPlayers + 1)}
+                  disabled={maxPlayers >= 10}
+                  aria-label="Sumar jugador"
+                >
+                  <Plus size={18} />
+                </button>
+              </div>
+              <div className="mt-3 grid grid-cols-5 gap-1.5">
+                {Array.from({ length: 9 }, (_, index) => index + 2).map((count) => (
+                  <button
+                    key={count}
+                    type="button"
+                    className={`player-count-chip ${maxPlayers === count ? 'active' : ''}`}
+                    onClick={() => changeMaxPlayers(count)}
+                  >
+                    {count}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
           <label className="flex items-center justify-between gap-3 rounded-md border border-line bg-ink p-2.5 sm:p-3">
             <span>Incluir Ñ</span>
             <input type="checkbox" checked={includeÑ} onChange={(event) => setIncludeÑ(event.target.checked)} />

@@ -287,6 +287,40 @@ textarea::placeholder {
   background: rgba(255, 255, 255, 0.07);
 }
 
+.player-count-control {
+  background:
+    linear-gradient(135deg, rgba(14, 116, 144, 0.18), rgba(255, 255, 255, 0.04)),
+    rgba(3, 18, 36, 0.86);
+}
+
+.player-count-button {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #0e7490, #0369a1);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.player-count-chip {
+  min-height: 2.15rem;
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  border-radius: 0.65rem;
+  background: rgba(255, 255, 255, 0.07);
+  color: #d6ebff;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.player-count-chip.active {
+  border-color: rgba(253, 224, 71, 0.75);
+  background: linear-gradient(135deg, #fde047, #facc15);
+  color: #061526;
+}
+
 .host-question-card {
   min-height: 15rem;
   display: grid;
