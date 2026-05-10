@@ -98,7 +98,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
           </section>
         )}
 
-        <div className="host-control-stack sticky top-1 z-30 order-1 grid content-start gap-2 rounded-lg border border-line bg-ink/95 p-2 shadow-2xl sm:gap-3 xl:order-2 xl:top-4 xl:p-0">
+        <div className="host-control-stack sticky top-1 z-30 order-1 grid content-start gap-1.5 rounded-lg border border-line bg-ink/95 p-2 shadow-2xl sm:gap-3 xl:order-2 xl:top-4 xl:p-0">
           <QuestionCard question={activeQuestion} showAnswer letter={session.game.activeLetter} />
           <HostControls
             paused={session.game.status === 'paused'}
@@ -112,7 +112,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
             onSwitch={switchTurn}
             onUndo={undoLastAction}
           />
-          <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
+          <div className="host-secondary-actions grid grid-cols-2 gap-1.5 sm:gap-2">
             <button
               type="button"
               className="rounded-md bg-slate-700 px-2 py-2 text-xs font-bold sm:px-3 sm:py-3 sm:text-sm"

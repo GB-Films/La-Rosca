@@ -14,7 +14,7 @@ interface HostControlsProps {
 }
 
 const buttonBase =
-  'inline-flex min-h-10 min-w-0 touch-manipulation items-center justify-center gap-1 rounded-md px-2 py-2 text-xs font-bold leading-tight transition active:scale-[0.98] sm:min-h-11 sm:gap-1.5 sm:px-2.5 sm:py-2.5 sm:text-sm';
+  'inline-flex min-h-9 min-w-0 touch-manipulation items-center justify-center gap-1 rounded-md px-2 py-2 text-xs font-bold leading-tight transition active:scale-[0.98] sm:min-h-11 sm:gap-1.5 sm:px-2.5 sm:py-2.5 sm:text-sm';
 
 export const HostControls = ({
   paused,
@@ -28,21 +28,20 @@ export const HostControls = ({
   onSwitch,
   onUndo,
 }: HostControlsProps) => (
-  <section className="rounded-lg border border-line bg-panel p-2.5 sm:p-4">
-    <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 sm:gap-2">
+  <section className="host-controls rounded-lg border border-line bg-panel p-2 sm:p-4">
+    <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
       <button type="button" disabled={busy} className={`${buttonBase} host-answer-button bg-emerald-600 text-white`} onClick={onCorrect}>
         <Check className="h-5 w-5 sm:h-5 sm:w-5" /> {pendingAction === 'correct' ? 'Aplicando' : 'Correcta'}
       </button>
       <button type="button" disabled={busy} className={`${buttonBase} host-answer-button bg-red-500 text-red-950`} onClick={onWrong}>
         <X className="h-5 w-5 sm:h-5 sm:w-5" /> {pendingAction === 'wrong' ? 'Aplicando' : 'Incorrecta'}
       </button>
-      <button type="button" disabled={busy} className={`${buttonBase} host-answer-button col-span-2 bg-amber-400 text-amber-950 sm:col-span-1`} onClick={onPass}>
+      <button type="button" disabled={busy} className={`${buttonBase} host-answer-button bg-amber-400 text-amber-950`} onClick={onPass}>
         <SkipForward className="h-4 w-4 sm:h-5 sm:w-5" />
-        <span className="sm:hidden">{pendingAction === 'pass' ? 'Aplicando' : 'Pasa'}</span>
-        <span className="hidden sm:inline">{pendingAction === 'pass' ? 'Aplicando' : 'Pasapalabra'}</span>
+        <span>{pendingAction === 'pass' ? 'Aplicando' : 'Pasa'}</span>
       </button>
     </div>
-    <div className="mt-2 grid grid-cols-3 gap-1.5 sm:mt-3 sm:gap-2">
+    <div className="mt-1.5 grid grid-cols-3 gap-1.5 sm:mt-3 sm:gap-2">
       {paused ? (
         <button type="button" disabled={busy} className={`${buttonBase} bg-blue-500 text-blue-950`} onClick={onResume}>
           <TimerReset className="h-4 w-4 sm:h-[18px] sm:w-[18px]" /> Reanudar
