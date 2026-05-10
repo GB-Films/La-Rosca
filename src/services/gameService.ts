@@ -386,12 +386,24 @@ export const gameService = {
   async tick(gameId: string) {
     const session = await this.getGame(gameId);
     if (!session || session.game.status !== 'playing' || !session.game.activePlayerId) return session;
+    const activePlayerId = session.game.activePlayerId;
+    const activeLetter = session.game.activeLetter;
+    const actionLogLength = session.actionLog.length;
+    const status = session.game.status;
     const player = session.players.find((item) => item.id === session.game.activePlayerId);
     if (!player) return session;
     player.remainingSeconds = Math.max(0, player.remainingSeconds - 1);
     if (player.remainingSeconds <= 0) {
       assignNextTurn(session, player.id, session.game.activeLetter);
     }
+    const latest = await this.getGame(gameId);
+    const turnChanged =
+      latest &&
+      (latest.game.status !== status ||
+        latest.game.activePlayerId !== activePlayerId ||
+        latest.game.activeLetter !== activeLetter ||
+        latest.actionLog.length !== actionLogLength);
+    if (turnChanged) return latest;
     return sessionRepository.save(session);
   },
 };
