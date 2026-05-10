@@ -51,6 +51,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
 
   const resetAndRestart = async () => {
     await resetGame();
+    navigate(`/host/${session.game.id}`);
   };
 
   const confirm = async () => {

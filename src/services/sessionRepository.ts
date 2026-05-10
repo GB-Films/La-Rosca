@@ -15,6 +15,12 @@ const getActionCount = (session?: GameSession) => session?.actionLog.length ?? 0
 
 const isStaleSave = (current: GameSession | undefined, incoming: GameSession) => {
   if (!current) return false;
+  const isRoundReset =
+    incoming.actionLog.length === 0 &&
+    (incoming.game.status === 'lobby' || incoming.game.status === 'playing') &&
+    current.game.status === 'finished';
+  if (isRoundReset) return false;
+
   const currentActions = getActionCount(current);
   const incomingActions = getActionCount(incoming);
   if (incomingActions < currentActions) return true;
