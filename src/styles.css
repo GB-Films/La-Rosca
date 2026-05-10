@@ -257,6 +257,30 @@ textarea::placeholder {
   min-height: 3.25rem;
 }
 
+.host-question-card {
+  height: 15.25rem;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  overflow: hidden;
+}
+
+.host-question-text {
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.host-answer-box {
+  flex: none;
+}
+
+@media (min-width: 640px) {
+  .host-question-card {
+    height: 17.25rem;
+  }
+}
+
 @media (max-width: 639px) {
   .host-page {
     gap: 0.65rem;
@@ -279,7 +303,7 @@ textarea::placeholder {
   .host-control-stack {
     position: sticky;
     top: 0.35rem;
-    max-height: 72vh;
+    max-height: 76vh;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
