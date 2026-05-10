@@ -109,6 +109,49 @@ const assignNextTurn = (
   }
 };
 
+export const applyAnswerToSession = (session: GameSession, gameId: string, action: 'correct' | 'wrong' | 'pass') => {
+  const playerId = session.game.activePlayerId;
+  const letter = session.game.activeLetter;
+  if (!playerId || !letter) throw new Error('No hay turno activo.');
+
+  const player = session.players.find((item) => item.id === playerId);
+  const letterState = session.letters.find((item) => item.playerId === playerId && item.letter === letter);
+  if (!player || !letterState) throw new Error('No se encontro la letra activa.');
+
+  const previousState = { ...letterState };
+  const previousScore = player.score;
+  const previousActivePlayerId = session.game.activePlayerId;
+  const previousActiveLetter = session.game.activeLetter;
+
+  if (action === 'correct') {
+    letterState.status = 'correct';
+    player.score += 1;
+    assignNextTurn(session, player.id, letter);
+  } else {
+    letterState.status = action === 'wrong' ? 'wrong' : 'passed';
+    assignNextTurn(session, player.id, letter, false);
+  }
+
+  const log: ActionLog = {
+    id: createId('action'),
+    gameId,
+    playerId,
+    letter,
+    action,
+    previousState,
+    nextState: { ...letterState },
+    previousActivePlayerId,
+    previousActiveLetter,
+    previousScore,
+    nextActivePlayerId: session.game.activePlayerId,
+    nextActiveLetter: session.game.activeLetter,
+    nextScore: player.score,
+    timestamp: new Date().toISOString(),
+  };
+  session.actionLog.push(log);
+  return session;
+};
+
 export const gameService = {
   listGames: () => sessionRepository.list(),
 
@@ -271,46 +314,7 @@ export const gameService = {
   async applyAnswer(gameId: string, action: 'correct' | 'wrong' | 'pass') {
     const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
-    const playerId = session.game.activePlayerId;
-    const letter = session.game.activeLetter;
-    if (!playerId || !letter) throw new Error('No hay turno activo.');
-
-    const player = session.players.find((item) => item.id === playerId);
-    const letterState = session.letters.find((item) => item.playerId === playerId && item.letter === letter);
-    if (!player || !letterState) throw new Error('No se encontro la letra activa.');
-
-    const previousState = { ...letterState };
-    const previousScore = player.score;
-    const previousActivePlayerId = session.game.activePlayerId;
-    const previousActiveLetter = session.game.activeLetter;
-
-    if (action === 'correct') {
-      letterState.status = 'correct';
-      player.score += 1;
-      assignNextTurn(session, player.id, letter);
-    } else {
-      letterState.status = action === 'wrong' ? 'wrong' : 'passed';
-      assignNextTurn(session, player.id, letter, false);
-    }
-
-    const log: ActionLog = {
-      id: createId('action'),
-      gameId,
-      playerId,
-      letter,
-      action,
-      previousState,
-      nextState: { ...letterState },
-      previousActivePlayerId,
-      previousActiveLetter,
-      previousScore,
-      nextActivePlayerId: session.game.activePlayerId,
-      nextActiveLetter: session.game.activeLetter,
-      nextScore: player.score,
-      timestamp: new Date().toISOString(),
-    };
-    session.actionLog.push(log);
-    return sessionRepository.save(session);
+    return sessionRepository.save(applyAnswerToSession(session, gameId, action));
   },
 
   async undoLastAction(gameId: string) {

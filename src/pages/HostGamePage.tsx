@@ -23,6 +23,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
   const resetGame = useGameStore((state) => state.resetGame);
   const backToLobby = useGameStore((state) => state.backToLobby);
   const setLetterStatus = useGameStore((state) => state.setLetterStatus);
+  const pendingAction = useGameStore((state) => state.pendingAction);
   const [confirmAction, setConfirmAction] = useState<'lobby' | 'reset' | undefined>();
 
   const activeQuestion = useMemo(() => {
@@ -60,22 +61,22 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
   };
 
   return (
-    <div className="grid gap-3 sm:gap-6">
+    <div className="host-page grid gap-3 sm:gap-6">
       <section className="rounded-lg border border-line bg-panel p-3 sm:p-4">
         <div className="flex items-center justify-between gap-2">
           <div>
             <p className="text-[0.65rem] uppercase tracking-wide text-slate-400 sm:text-xs">Panel del host</p>
             <h2 className="text-xl font-black leading-tight sm:text-3xl">{session.game.title}</h2>
           </div>
-          <div className="rounded-md border border-blue-400 bg-blue-500/10 px-2 py-1 text-xs text-blue-100 sm:px-4 sm:py-2 sm:text-base">
+          <div className="host-turn-badge rounded-md border border-blue-400 bg-blue-500/10 px-2 py-1 text-xs text-blue-100 sm:px-4 sm:py-2 sm:text-base">
             Turno: <strong>{activePlayer?.name ?? '-'}</strong>
           </div>
         </div>
       </section>
 
-      <div className="grid gap-3 sm:gap-4 xl:grid-cols-[minmax(32rem,1fr)_minmax(19rem,24rem)_minmax(12rem,15rem)] xl:items-start">
+      <div className="host-game-grid grid gap-3 sm:gap-4 xl:grid-cols-[minmax(32rem,1fr)_minmax(19rem,24rem)_minmax(12rem,15rem)] xl:items-start">
         {focusPlayer && (
-          <section className="order-2 rounded-lg border border-blue-400 bg-panel p-2 sm:p-4 xl:order-1">
+          <section className="host-rosco-panel order-2 rounded-lg border border-blue-400 bg-panel p-2 sm:p-4 xl:order-1">
             <ScoreBoard player={focusPlayer} letters={focusLetters} active />
             <Rosco
               letters={focusLetters}
@@ -97,10 +98,12 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
           </section>
         )}
 
-        <div className="sticky top-1 z-30 order-1 grid content-start gap-2 rounded-lg border border-line bg-ink/95 p-2 shadow-2xl sm:gap-3 xl:order-2 xl:top-4 xl:p-0">
+        <div className="host-control-stack sticky top-1 z-30 order-1 grid content-start gap-2 rounded-lg border border-line bg-ink/95 p-2 shadow-2xl sm:gap-3 xl:order-2 xl:top-4 xl:p-0">
           <QuestionCard question={activeQuestion} showAnswer letter={session.game.activeLetter} />
           <HostControls
             paused={session.game.status === 'paused'}
+            busy={Boolean(pendingAction)}
+            pendingAction={pendingAction}
             onCorrect={() => applyAnswer('correct')}
             onWrong={() => applyAnswer('wrong')}
             onPass={() => applyAnswer('pass')}
@@ -127,7 +130,7 @@ export const HostGamePage = ({ gameId }: HostGamePageProps) => {
           </div>
         </div>
 
-        <section className="order-3 rounded-lg border border-amber-300/45 bg-amber-500/15 p-2 sm:p-3">
+        <section className="host-waiting-panel order-3 rounded-lg border border-amber-300/45 bg-amber-500/15 p-2 sm:p-3">
           <p className="text-[0.65rem] font-bold uppercase tracking-wide text-amber-100 sm:text-xs">En espera</p>
           <div className="mt-2 flex gap-2 overflow-x-auto pb-1 xl:grid xl:max-h-[calc(100vh-11rem)] xl:overflow-y-auto xl:pb-0">
             {sidePlayers.map((player) => {

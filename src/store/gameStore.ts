@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import type { CreateGameInput, GameSession, LetterStatus } from '../types/game';
 import type { Question } from '../types/question';
 import { createId } from '../utils/codeGenerator';
-import { gameService } from '../services/gameService';
+import { applyAnswerToSession, gameService } from '../services/gameService';
 
 interface GameStore {
   session?: GameSession;
@@ -11,6 +11,7 @@ interface GameStore {
   currentPlayerId?: string;
   error?: string;
   mutationVersion: number;
+  pendingAction?: 'correct' | 'wrong' | 'pass' | 'pause' | 'resume' | 'switch' | 'undo' | 'manual' | 'reset' | 'lobby';
   loadSession: (gameId?: string) => Promise<void>;
   createGame: (input: CreateGameInput) => Promise<GameSession>;
   joinGame: (code: string, name: string) => Promise<GameSession>;
@@ -55,7 +56,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
     const version = get().mutationVersion;
     const id = gameId ?? sessionStorage.getItem('el-rosco:gameId') ?? localStorage.getItem('el-rosco:lastGameId');
     const session = id ? await gameService.getGame(id) : undefined;
-    if (version !== get().mutationVersion) return;
+    if (version !== get().mutationVersion || get().pendingAction) return;
     set({
       session,
       currentRole: (sessionStorage.getItem('el-rosco:role') as 'host' | 'player' | null) ?? undefined,
@@ -163,9 +164,32 @@ export const useGameStore = create<GameStore>((set, get) => ({
   async applyAnswer(action) {
     const id = get().session?.game.id;
     if (id) {
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-      set({ session: await gameService.applyAnswer(id, action), error: undefined });
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      const previous = get().session;
+      if (!previous || get().pendingAction) return;
+      const optimistic = structuredClone(previous) as GameSession;
+      try {
+        applyAnswerToSession(optimistic, id, action);
+        set((state) => ({
+          mutationVersion: state.mutationVersion + 1,
+          pendingAction: action,
+          session: optimistic,
+          error: undefined,
+        }));
+        const saved = await gameService.applyAnswer(id, action);
+        set((state) => ({
+          mutationVersion: state.mutationVersion + 1,
+          pendingAction: undefined,
+          session: saved,
+          error: undefined,
+        }));
+      } catch (error) {
+        set((state) => ({
+          mutationVersion: state.mutationVersion + 1,
+          pendingAction: undefined,
+          session: previous,
+          error: error instanceof Error ? error.message : 'No se pudo aplicar la respuesta.',
+        }));
+      }
     }
   },
 
@@ -201,7 +225,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
     if (!id) return;
     const version = get().mutationVersion;
     const session = await gameService.tick(id);
-    if (version !== get().mutationVersion) return;
+    if (version !== get().mutationVersion || get().pendingAction) return;
     if (session) set({ session });
   },
 

@@ -252,3 +252,59 @@ textarea::placeholder {
   right: 20%;
   bottom: 24%;
 }
+
+.host-answer-button {
+  min-height: 3.25rem;
+}
+
+@media (max-width: 639px) {
+  .host-page {
+    gap: 0.65rem;
+  }
+
+  .host-page h2 {
+    overflow-wrap: anywhere;
+  }
+
+  .host-turn-badge {
+    max-width: 42vw;
+    text-align: right;
+  }
+
+  .host-game-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .host-control-stack {
+    position: sticky;
+    top: 0.35rem;
+    max-height: 72vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .host-rosco-panel {
+    padding: 0.65rem;
+  }
+
+  .host-rosco-panel .text-6xl {
+    font-size: 3rem;
+  }
+
+  .host-waiting-panel {
+    max-height: 12rem;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 420px) {
+  .host-control-stack {
+    max-height: 78vh;
+  }
+
+  .host-answer-button {
+    min-height: 3.65rem;
+    font-size: 0.82rem;
+  }
+}
