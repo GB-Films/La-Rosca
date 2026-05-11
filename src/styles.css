@@ -287,6 +287,13 @@ textarea::placeholder {
   background: rgba(255, 255, 255, 0.07);
 }
 
+.player-final-card {
+  background:
+    radial-gradient(circle at 20% 12%, rgba(253, 224, 71, 0.2), transparent 15rem),
+    radial-gradient(circle at 88% 18%, rgba(52, 211, 153, 0.14), transparent 16rem),
+    linear-gradient(145deg, rgba(8, 36, 72, 0.98), rgba(3, 18, 36, 0.98));
+}
+
 .player-count-control {
   background:
     linear-gradient(135deg, rgba(14, 116, 144, 0.18), rgba(255, 255, 255, 0.04)),
