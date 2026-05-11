@@ -9,6 +9,7 @@ import type {
   PlayerSlot,
 } from '../types/game';
 import type { Question } from '../types/question';
+import { internationalCinemaLibrary } from '../data/internationalCinemaLibrary';
 import { generateCode, createId } from '../utils/codeGenerator';
 import { sessionRepository } from './sessionRepository';
 import { isHostedWithoutSupabase } from './supabaseClient';
@@ -32,6 +33,36 @@ const getQuestionForLetter = (questions: Question[], theme: string, letter: stri
   ) ??
   questions.find((question) => question.theme === theme && question.letter === letter && !question.playerSlot) ??
   questions.find((question) => question.letter === letter);
+
+const currentCinemaQuestions = new Map(internationalCinemaLibrary.map((question) => [question.id, question]));
+
+const getBaseQuestionId = (question: Question) => {
+  const match = question.id.match(/cine-internacional-(?:[a-zñ?]|enye)-\d{2}/i)?.[0];
+  if (!match) return undefined;
+  if (question.letter === 'Ñ') {
+    const number = match.match(/\d{2}$/)?.[0];
+    return number ? `cine-internacional-enye-${number}` : undefined;
+  }
+  return match.replace('cine-internacional-?-', 'cine-internacional-n-');
+};
+
+const refreshBuiltInQuestionText = (session?: GameSession) => {
+  if (!session || session.game.theme !== 'cine-internacional') return session;
+
+  return {
+    ...session,
+    questions: session.questions.map((question) => {
+      const current = currentCinemaQuestions.get(getBaseQuestionId(question) ?? '');
+      if (!current) return question;
+      return {
+        ...current,
+        id: question.id,
+        playerSlot: question.playerSlot,
+        theme: question.theme,
+      };
+    }),
+  };
+};
 
 const createLetterStates = (player: Player, session: GameSession): LetterState[] =>
   getLetters(session.game.includeÑ).map((letter) => ({
@@ -156,11 +187,11 @@ export const gameService = {
   listGames: () => sessionRepository.list(),
 
   getGame(id: string) {
-    return sessionRepository.get(id);
+    return sessionRepository.get(id).then(refreshBuiltInQuestionText);
   },
 
   getGameByCode(code: string) {
-    return sessionRepository.getByCode(code);
+    return sessionRepository.getByCode(code).then(refreshBuiltInQuestionText);
   },
 
   async createGame(input: CreateGameInput, hostId: string) {
@@ -315,6 +346,10 @@ export const gameService = {
     const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     return sessionRepository.save(applyAnswerToSession(session, gameId, action));
+  },
+
+  async saveAnsweredSession(session: GameSession) {
+    return sessionRepository.save(session);
   },
 
   async undoLastAction(gameId: string) {

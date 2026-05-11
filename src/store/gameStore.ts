@@ -198,11 +198,11 @@ export const useGameStore = create<GameStore>((set, get) => ({
           session: optimistic,
           error: undefined,
         }));
-        const saved = await gameService.applyAnswer(id, action);
+        const saved = await gameService.saveAnsweredSession(optimistic);
         set((state) => ({
           mutationVersion: state.mutationVersion + 1,
           pendingAction: undefined,
-          session: saved,
+          session: shouldAcceptSession(optimistic, saved) ? saved : optimistic,
           error: undefined,
         }));
       } catch (error) {
