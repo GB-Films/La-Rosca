@@ -1,10 +1,12 @@
 import { argentinaGeneralLibrary } from '../data/argentinaGeneralLibrary';
 import { expandedCategoryLibraries } from '../data/categoryLibraries';
+import { internationalCinemaLibrary } from '../data/internationalCinemaLibrary';
 import { getLetters, sampleQuestions } from '../data/sampleQuestions';
 import type { Question } from '../types/question';
 import { createId } from '../utils/codeGenerator';
 
 const ARGENTINA_GENERAL_THEME = 'cultura-general-argentina';
+const INTERNATIONAL_CINEMA_THEME = 'cine-internacional';
 const CUSTOM_PRESETS_KEY = 'la-rosca:custom-question-presets';
 const EXPANDED_THEMES = new Set(['cine-argentino', 'futbol-argentino', 'historia-argentina', 'musica-nacional']);
 
@@ -28,6 +30,7 @@ const readCustomPresets = (): CustomQuestionPreset[] => {
 export const questionService = {
   getPack(theme: string) {
     if (theme === ARGENTINA_GENERAL_THEME) return argentinaGeneralLibrary;
+    if (theme === INTERNATIONAL_CINEMA_THEME) return internationalCinemaLibrary;
     if (EXPANDED_THEMES.has(theme)) return expandedCategoryLibraries.filter((question) => question.theme === theme);
     return sampleQuestions.filter((question) => question.theme === theme);
   },
