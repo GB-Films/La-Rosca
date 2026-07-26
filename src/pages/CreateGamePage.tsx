@@ -27,6 +27,8 @@ export const CreateGamePage = () => {
   const [customPresets, setCustomPresets] = useState(() => questionService.getCustomPresets());
   const [presetMessage, setPresetMessage] = useState('');
   const [showValidation, setShowValidation] = useState(false);
+  const [createError, setCreateError] = useState('');
+  const [isCreating, setIsCreating] = useState(false);
   const warnings = useMemo(() => validateQuestions(questions), [questions]);
   const packWarnings = useMemo(() => validateQuestions(packQuestions), [packQuestions]);
 
@@ -66,26 +68,41 @@ export const CreateGamePage = () => {
   };
 
   const create = async () => {
+    if (isCreating) return;
+    setCreateError('');
     const currentWarnings = questionMode === 'manual' ? warnings : packWarnings;
     if (currentWarnings.length > 0) {
       setShowValidation(true);
+      setCreateError(
+        questionMode === 'manual'
+          ? 'Hay preguntas personalizadas con errores. Corregilas para crear la partida.'
+          : 'La seleccion del pack tiene preguntas con errores. Toca Randomizar o revisa el pack.',
+      );
       return;
     }
-    const selectedQuestions =
-      questionMode === 'manual'
-        ? questions
-        : packQuestions.map((question) => ({ ...question, id: `game-${question.id}` }));
-    const session = await createGame({
-      title,
-      theme,
-      timerSeconds,
-      maxPlayers,
-      includeÑ,
-      questionMode,
-      questions: selectedQuestions,
-      showQuestionToPlayers,
-    });
-    navigate(`/lobby/${session.game.id}`);
+
+    try {
+      setIsCreating(true);
+      const selectedQuestions =
+        questionMode === 'manual'
+          ? questions
+          : packQuestions.map((question) => ({ ...question, id: `game-${question.id}` }));
+      const session = await createGame({
+        title,
+        theme,
+        timerSeconds,
+        maxPlayers,
+        includeÑ,
+        questionMode,
+        questions: selectedQuestions,
+        showQuestionToPlayers,
+      });
+      navigate(`/lobby/${session.game.id}`);
+    } catch (error) {
+      setCreateError(error instanceof Error ? error.message : 'No se pudo crear la partida.');
+    } finally {
+      setIsCreating(false);
+    }
   };
 
   return (
@@ -187,9 +204,15 @@ export const CreateGamePage = () => {
             type="button"
             className="rounded-md bg-amber-400 px-5 py-3 text-base font-black text-amber-950 sm:py-4 sm:text-lg"
             onClick={create}
+            disabled={isCreating}
           >
-          Crear partida
+            {isCreating ? 'Creando...' : 'Crear partida'}
           </button>
+          {createError && (
+            <p className="rounded-md border border-red-300/40 bg-red-500/15 p-3 text-sm font-semibold text-red-100">
+              {createError}
+            </p>
+          )}
         </div>
       </section>
       {questionMode === 'pack' ? (
