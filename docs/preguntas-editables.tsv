@@ -1,10 +1,10 @@
-﻿categoria	subcategoria	letter	mode	answer	difficulty	description	acceptedAnswers
+categoria	subcategoria	letter	mode	answer	difficulty	description	acceptedAnswers
 Preguntas de cultura general	Cultura general argentina	A	startsWith	Alfonsin	normal	Presidente argentino que asumio en 1983 con el regreso de la democracia.	
 Preguntas de cultura general	Cultura general argentina	A	startsWith	Asado	normal	Comida argentina muy asociada a la parrilla y a las reuniones familiares.	
 Preguntas de cultura general	Cultura general argentina	A	startsWith	Aconcagua	normal	Cerro mendocino que es el mas alto de America.	
 Preguntas de cultura general	Cultura general argentina	A	startsWith	Atahualpa Yupanqui	normal	Cantautor y guitarrista central del folklore argentino.	
 Preguntas de cultura general	Cultura general argentina	A	startsWith	Austral	normal	Moneda argentina que circulo antes del peso actual.	
-Preguntas de cultura general	Cultura general argentina	A	startsWith	Avenida Corrientes	normal	Avenida porteña famosa por teatros, librerias y pizzerias.	
+Preguntas de cultura general	Cultura general argentina	C	startsWith	Corrientes	normal	Avenida porteña famosa por teatros, librerias y pizzerias.	
 Preguntas de cultura general	Cultura general argentina	A	startsWith	Aerolineas Argentinas	normal	Linea aerea de bandera de la Argentina.	
 Preguntas de cultura general	Cultura general argentina	A	startsWith	Alfajor	normal	Golosina tradicional rellena, muchas veces con dulce de leche.	
 Preguntas de cultura general	Cultura general argentina	A	startsWith	AFA	normal	Sigla de la entidad que organiza el futbol argentino.	
@@ -18,7 +18,7 @@ Preguntas de cultura general	Cultura general argentina	B	startsWith	Bife de chor
 Preguntas de cultura general	Cultura general argentina	B	startsWith	Bandana	normal	Grupo pop femenino en los 2000, surgido de un reality argentino.	
 Preguntas de cultura general	Cultura general argentina	B	startsWith	Borges	normal	Apellido de Jorge Luis, autor de Ficciones y El Aleph.	
 Preguntas de cultura general	Cultura general argentina	B	startsWith	Bombonera	normal	Estadio de Boca Juniors.	
-Preguntas de cultura general	Cultura general argentina	B	startsWith	Babasonicos	normal	"Banda argentina de rock/pop alternativo nacida en los 90, liderado por Adrián ""Dárgelos"" Rodríguez"	
+Preguntas de cultura general	Cultura general argentina	B	startsWith	Babasonicos	normal	Banda argentina de rock/pop alternativo nacida en los 90, liderado por Adrián "Dárgelos" Rodríguez	
 Preguntas de cultura general	Cultura general argentina	C	startsWith	Cordoba	normal	Provincia argentina conocida por sus sierras y por el cuarteto.	
 Preguntas de cultura general	Cultura general argentina	C	startsWith	Congreso	normal	Edificio donde sesiona el Poder Legislativo nacional.	
 Preguntas de cultura general	Cultura general argentina	C	startsWith	Cabildo	normal	Edificio historico vinculado a la Revolucion de Mayo.	
@@ -365,7 +365,6 @@ Preguntas de cultura general	Cultura general argentina	J	startsWith	Jovenes Pord
 Preguntas de cultura general	Cultura general argentina	J	startsWith	Javier Calamaro	normal	Cantante argentino, hermano de Andrés Calamaro.	
 Preguntas de cultura general	Cultura general argentina	J	startsWith	Jijiji	normal	Canción icónica de Patricio Rey y sus Redonditos de Ricota.	
 Preguntas de cultura general	Cultura general argentina	J	startsWith	Jugo de tomates frío	normal	Canción de Manal, clásico del rock argentino.	
-Preguntas de cultura general	Cultura general argentina	J	startsWith	Jujuy	normal	Provincia del noroeste argentino.	
 Preguntas de cultura general	Cultura general argentina	J	startsWith	Jardin Japones	normal	Jardin porteño ubicado en Palermo.	
 Preguntas de cultura general	Cultura general argentina	J	startsWith	Jose C Paz	normal	Partido del noroeste del Gran Buenos Aires.	
 Preguntas de cultura general	Cultura general argentina	J	startsWith	Juicio a las juntas	normal	Proceso sin precedentes a nivel internacional donde se juzgó a las máximas autoridades del gobierno de facto de 1976.	
@@ -649,7 +648,7 @@ Preguntas de cultura general	Cine Argentino	K	contains	Attack of the killer hog	
 Preguntas de cultura general	Cine Argentino	K	contains	Awka Liwen	normal	2010 film.	
 Preguntas de cultura general	Cine Argentino	K	contains	Back to the Siam	normal	película de 2013 dirigida por Gonzalo Roldán.	
 Preguntas de cultura general	Cine Argentino	K	contains	Black is Beltza II: Ainhoa	normal	2022 animated film directed by Fermin Muguruza.	
-Preguntas de cultura general	Cine Argentino	L	startsWith	"La ""V"" enfrenta a la Blitzkrieg"	normal	película de 1941.	
+Preguntas de cultura general	Cine Argentino	L	startsWith	La "V" enfrenta a la Blitzkrieg	normal	película de 1941.	
 Preguntas de cultura general	Cine Argentino	L	startsWith	La afinadora de árboles	normal	película de 2019 dirigida por Natalia Smirnoff.	
 Preguntas de cultura general	Cine Argentino	L	startsWith	La amada inmóvil	normal	película de 1945 dirigida por Luis Bayón Herrera.	
 Preguntas de cultura general	Cine Argentino	L	startsWith	La amiga	normal	película, coproducción argentina-alemana.	
@@ -1190,7 +1189,7 @@ Preguntas de cultura general	Musica Nacional	K	contains	Alejandro Paker	normal	a
 Preguntas de cultura general	Musica Nacional	K	contains	Alejandro Sokol	normal	músico argentino.	
 Preguntas de cultura general	Musica Nacional	K	contains	Alejo Isakk	normal	cantante y rapero argentino.	
 Preguntas de cultura general	Musica Nacional	L	startsWith	L-Gante	normal	cantante argentino.	
-Preguntas de cultura general	Musica Nacional	L	startsWith	"La ""Bruja"" Salguero"	normal	cantante argentina.	
+Preguntas de cultura general	Musica Nacional	L	startsWith	La "Bruja" Salguero	normal	cantante argentina.	
 Preguntas de cultura general	Musica Nacional	L	startsWith	La 25	normal	grupo musical de Argentina.	
 Preguntas de cultura general	Musica Nacional	L	startsWith	La Barra	normal	agrupación musical de cuarteto formada en Córdoba, Argentina.	
 Preguntas de cultura general	Musica Nacional	L	startsWith	La Barra de Chocolate	normal	Banda de rock argentina.	

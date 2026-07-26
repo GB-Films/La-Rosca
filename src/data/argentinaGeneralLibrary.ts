@@ -16,7 +16,7 @@ const rawSeeds: Array<[string, string, string, QuestionMode, string[]?]> = [
   ["A", "Aconcagua", "Cerro mendocino que es el mas alto de America.", "startsWith"],
   ["A", "Atahualpa Yupanqui", "Cantautor y guitarrista central del folklore argentino.", "startsWith"],
   ["A", "Austral", "Moneda argentina que circulo antes del peso actual.", "startsWith"],
-  ["A", "Avenida Corrientes", "Avenida porteña famosa por teatros, librerias y pizzerias.", "startsWith"],
+  ["C", "Corrientes", "Avenida porteña famosa por teatros, librerias y pizzerias.", "startsWith"],
   ["A", "Aerolineas Argentinas", "Linea aerea de bandera de la Argentina.", "startsWith"],
   ["A", "Alfajor", "Golosina tradicional rellena, muchas veces con dulce de leche.", "startsWith"],
   ["A", "AFA", "Sigla de la entidad que organiza el futbol argentino.", "startsWith"],

@@ -1,10 +1,10 @@
-﻿categoria;subcategoria;letter;mode;answer;difficulty;description;acceptedAnswers
+categoria;subcategoria;letter;mode;answer;difficulty;description;acceptedAnswers
 Preguntas de cultura general;Cultura general argentina;A;startsWith;Alfonsin;normal;Presidente argentino que asumio en 1983 con el regreso de la democracia.;
 Preguntas de cultura general;Cultura general argentina;A;startsWith;Asado;normal;Comida argentina muy asociada a la parrilla y a las reuniones familiares.;
 Preguntas de cultura general;Cultura general argentina;A;startsWith;Aconcagua;normal;Cerro mendocino que es el mas alto de America.;
 Preguntas de cultura general;Cultura general argentina;A;startsWith;Atahualpa Yupanqui;normal;Cantautor y guitarrista central del folklore argentino.;
 Preguntas de cultura general;Cultura general argentina;A;startsWith;Austral;normal;Moneda argentina que circulo antes del peso actual.;
-Preguntas de cultura general;Cultura general argentina;A;startsWith;Avenida Corrientes;normal;Avenida porteña famosa por teatros, librerias y pizzerias.;
+Preguntas de cultura general;Cultura general argentina;C;startsWith;Corrientes;normal;Avenida porteña famosa por teatros, librerias y pizzerias.;
 Preguntas de cultura general;Cultura general argentina;A;startsWith;Aerolineas Argentinas;normal;Linea aerea de bandera de la Argentina.;
 Preguntas de cultura general;Cultura general argentina;A;startsWith;Alfajor;normal;Golosina tradicional rellena, muchas veces con dulce de leche.;
 Preguntas de cultura general;Cultura general argentina;A;startsWith;AFA;normal;Sigla de la entidad que organiza el futbol argentino.;
@@ -365,7 +365,6 @@ Preguntas de cultura general;Cultura general argentina;J;startsWith;Jovenes Pord
 Preguntas de cultura general;Cultura general argentina;J;startsWith;Javier Calamaro;normal;Cantante argentino, hermano de Andrés Calamaro.;
 Preguntas de cultura general;Cultura general argentina;J;startsWith;Jijiji;normal;Canción icónica de Patricio Rey y sus Redonditos de Ricota.;
 Preguntas de cultura general;Cultura general argentina;J;startsWith;Jugo de tomates frío;normal;Canción de Manal, clásico del rock argentino.;
-Preguntas de cultura general;Cultura general argentina;J;startsWith;Jujuy;normal;Provincia del noroeste argentino.;
 Preguntas de cultura general;Cultura general argentina;J;startsWith;Jardin Japones;normal;Jardin porteño ubicado en Palermo.;
 Preguntas de cultura general;Cultura general argentina;J;startsWith;Jose C Paz;normal;Partido del noroeste del Gran Buenos Aires.;
 Preguntas de cultura general;Cultura general argentina;J;startsWith;Juicio a las juntas;normal;Proceso sin precedentes a nivel internacional donde se juzgó a las máximas autoridades del gobierno de facto de 1976.;
