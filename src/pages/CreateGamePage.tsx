@@ -6,6 +6,7 @@ import { ThemeSelector } from '../components/ThemeSelector';
 import { questionService } from '../services/questionService';
 import { useGameStore } from '../store/gameStore';
 import type { Question } from '../types/question';
+import { getErrorMessage } from '../utils/errorMessage';
 import { validateQuestions } from '../utils/questionValidation';
 
 export const CreateGamePage = () => {
@@ -99,7 +100,8 @@ export const CreateGamePage = () => {
       });
       navigate(`/lobby/${session.game.id}`);
     } catch (error) {
-      setCreateError(error instanceof Error ? error.message : 'No se pudo crear la partida.');
+      console.error('No se pudo crear la partida.', error);
+      setCreateError(getErrorMessage(error, 'No se pudo crear la partida.'));
     } finally {
       setIsCreating(false);
     }

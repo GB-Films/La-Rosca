@@ -1,4 +1,5 @@
 import type { GameSession } from '../types/game';
+import { getErrorMessage } from '../utils/errorMessage';
 import { isSupabaseConfigured, supabase } from './supabaseClient';
 
 const STORAGE_KEY = 'el-rosco:games';
@@ -9,6 +10,8 @@ type GameSessionRow = {
   code: string;
   payload: GameSession;
 };
+
+const supabaseError = (action: string, error: unknown) => new Error(`Supabase ${action}: ${getErrorMessage(error)}`);
 
 const getRevision = (session?: GameSession) => session?.revision ?? 0;
 const getActionCount = (session?: GameSession) => session?.actionLog.length ?? 0;
@@ -77,7 +80,7 @@ export const sessionRepository = {
         .from('game_sessions')
         .select('payload')
         .order('updated_at', { ascending: false });
-      if (error) throw error;
+      if (error) throw supabaseError('list', error);
       const sessions = (data ?? []).map((row) => (row as Pick<GameSessionRow, 'payload'>).payload);
       localStorage.setItem(STORAGE_KEY, JSON.stringify(sessions));
       return sessions;
@@ -88,7 +91,7 @@ export const sessionRepository = {
   async get(id: string) {
     if (isSupabaseConfigured && supabase) {
       const { data, error } = await supabase.from('game_sessions').select('payload').eq('id', id).maybeSingle();
-      if (error) throw error;
+      if (error) throw supabaseError('get', error);
       return (data as Pick<GameSessionRow, 'payload'> | null)?.payload;
     }
     return readLocal().find((session) => session.game.id === id);
@@ -101,7 +104,7 @@ export const sessionRepository = {
         .select('payload')
         .eq('code', code.toUpperCase())
         .maybeSingle();
-      if (error) throw error;
+      if (error) throw supabaseError('getByCode', error);
       return (data as Pick<GameSessionRow, 'payload'> | null)?.payload;
     }
     return readLocal().find((session) => session.game.code.toUpperCase() === code.toUpperCase());
@@ -114,7 +117,7 @@ export const sessionRepository = {
         .select('payload')
         .eq('id', session.game.id)
         .maybeSingle();
-      if (existingError) throw existingError;
+      if (existingError) throw supabaseError('readBeforeSave', existingError);
       const current = (existing as Pick<GameSessionRow, 'payload'> | null)?.payload;
       if (isStaleSave(current, session)) return current ?? session;
       const nextSession = withNextRevision(session, current);
@@ -124,7 +127,7 @@ export const sessionRepository = {
         payload: nextSession,
         updated_at: nextSession.updatedAt,
       });
-      if (error) throw error;
+      if (error) throw supabaseError('save', error);
       window.dispatchEvent(new CustomEvent('el-rosco:games-changed'));
       return nextSession;
     }
@@ -146,7 +149,7 @@ export const sessionRepository = {
   async delete(id: string) {
     if (isSupabaseConfigured && supabase) {
       const { error } = await supabase.from('game_sessions').delete().eq('id', id);
-      if (error) throw error;
+      if (error) throw supabaseError('delete', error);
       window.dispatchEvent(new CustomEvent('el-rosco:games-changed'));
       return;
     }
