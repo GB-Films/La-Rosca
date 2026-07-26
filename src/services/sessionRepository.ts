@@ -146,6 +146,27 @@ export const sessionRepository = {
     return nextSession;
   },
 
+  async create(session: GameSession) {
+    if (isSupabaseConfigured && supabase) {
+      const nextSession = withNextRevision(session);
+      const { error } = await supabase.from('game_sessions').insert({
+        id: nextSession.game.id,
+        code: nextSession.game.code,
+        payload: nextSession,
+        updated_at: nextSession.updatedAt,
+      });
+      if (error) throw supabaseError('create', error);
+      window.dispatchEvent(new CustomEvent('el-rosco:games-changed'));
+      return nextSession;
+    }
+
+    return this.save(session);
+  },
+
+  isCodeCollision(error: unknown) {
+    return error instanceof Error && error.message.includes('23505');
+  },
+
   async delete(id: string) {
     if (isSupabaseConfigured && supabase) {
       const { error } = await supabase.from('game_sessions').delete().eq('id', id);

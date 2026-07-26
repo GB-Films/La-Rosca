@@ -195,31 +195,42 @@ export const gameService = {
   },
 
   async createGame(input: CreateGameInput, hostId: string) {
-    const existingCodes = new Set((await sessionRepository.list()).map((session) => session.game.code));
+    const existingCodes = sessionRepository.isRemoteEnabled
+      ? new Set<string>()
+      : new Set((await sessionRepository.list()).map((session) => session.game.code));
     let code = generateCode();
     while (existingCodes.has(code)) code = generateCode();
 
-    const session: GameSession = {
-      game: {
-        id: createId('game'),
-        code,
-        title: input.title.trim() || 'La Rosca',
-        theme: input.theme,
-        status: 'lobby',
-        hostId,
-        timerSeconds: input.timerSeconds,
-        maxPlayers: input.maxPlayers,
-        includeÑ: input.includeÑ,
-        showQuestionToPlayers: input.showQuestionToPlayers,
-        createdAt: new Date().toISOString(),
-      },
-      players: [],
-      letters: [],
-      questions: input.questions,
-      actionLog: [],
-    };
+    for (let attempts = 0; attempts < 5; attempts += 1) {
+      const session: GameSession = {
+        game: {
+          id: createId('game'),
+          code,
+          title: input.title.trim() || 'La Rosca',
+          theme: input.theme,
+          status: 'lobby',
+          hostId,
+          timerSeconds: input.timerSeconds,
+          maxPlayers: input.maxPlayers,
+          includeÑ: input.includeÑ,
+          showQuestionToPlayers: input.showQuestionToPlayers,
+          createdAt: new Date().toISOString(),
+        },
+        players: [],
+        letters: [],
+        questions: input.questions,
+        actionLog: [],
+      };
 
-    return sessionRepository.save(session);
+      try {
+        return await sessionRepository.create(session);
+      } catch (error) {
+        if (!sessionRepository.isCodeCollision(error) || attempts === 4) throw error;
+        code = generateCode();
+      }
+    }
+
+    throw new Error('No se pudo generar un codigo de partida.');
   },
 
   async joinGame(code: string, name: string, clientId: string) {
