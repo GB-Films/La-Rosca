@@ -36,7 +36,7 @@
 ## Preguntas
 
 - `src/data/sampleQuestions.ts` contiene packs base por categoria y jugador.
-- `src/data/argentinaGeneralLibrary.ts` contiene 540 respuestas base de cultura general argentina: 20 por letra, y la app las puede asignar a hasta 10 jugadores sin repetir respuesta por letra.
+- `src/data/argentinaGeneralLibrary.ts` contiene 675 respuestas base de cultura general argentina: se agregaron 5 preguntas mas por letra, con foco en capitales provinciales, localidades y referencias argentinas; la app las puede asignar a hasta 10 jugadores sin repetir respuesta por letra.
 - `src/data/categoryLibraries.ts` contiene 270 preguntas por subcategoria para cine argentino, futbol argentino y musica nacional.
 - Para agregar, borrar o corregir preguntas fuente, editar principalmente:
   - `src/data/argentinaGeneralLibrary.ts` para cultura general argentina.
@@ -75,3 +75,4 @@
 - Se agrego aviso para cuando GitHub Pages corre sin Supabase.
 - El boton copiar link tiene fallback para navegadores moviles.
 - Si una partida fue creada antes de Supabase, no aparece en otros celulares; hay que crear una partida nueva.
+- Ultima actualizacion de preguntas: cultura general argentina quedo validada con 675 preguntas, sin duplicados exactos por letra y con `docs/preguntas-editables.csv` / `.tsv` regenerados.
