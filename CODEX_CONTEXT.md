@@ -25,7 +25,9 @@
 - El host crea partida, comparte link, controla respuestas y tiempos.
 - Los jugadores entran desde su celular con el link/codigo y no ven respuestas correctas.
 - Para jugar desde dispositivos distintos usando el link de GitHub Pages, Supabase debe estar configurado.
-- Supabase ya fue configurado en GitHub Pages y la tabla `game_sessions` responde.
+- Supabase esta configurado en GitHub Pages con el proyecto
+  `lnicggukjglrhkvxzktg`. El 26/07/2026 se reactivo despues de estar pausado y
+  se verifico la creacion de una partida publica desde la app.
 
 ## Estetica actual
 
@@ -62,6 +64,10 @@
 
 ## Notas recientes
 
+- El error `Supabase create: TypeError: Failed to fetch` del 26/07/2026 se debio
+  a que el proyecto Supabase estaba pausado. Mientras mostraba `Coming up...`
+  la URL no resolvia; una vez activo, la app creo correctamente la partida
+  publica `TFA73V` y navego al lobby.
 - En la vista del host durante la partida, el editor de preguntas queda oculto; el jugador activo se muestra grande y los demas jugadores quedan compactos en un rail lateral/en fila horizontal en mobile.
 - Los warnings del editor de preguntas en crear partida solo deben mostrarse despues de apretar "Crear partida"; si siguen existiendo, bloquean la creacion.
 - El centro del rosco activo muestra la letra actual grande y el tiempo restante. La seccion de jugadores en espera no muestra roscos, solo resumen compacto.
