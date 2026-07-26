@@ -609,11 +609,11 @@ Preguntas de cultura general	Cultura general argentina	N	startsWith	Nogoya	norma
 Preguntas de cultura general	Cultura general argentina	N	startsWith	Nueva Pompeya	normal	Barrio porte?o asociado al tango y al sur de la ciudad.	
 Preguntas de cultura general	Cultura general argentina	N	startsWith	Nicolas Levalle	normal	Localidad bonaerense del partido de Villarino.	
 Preguntas de cultura general	Cultura general argentina	N	startsWith	Narciso Laprida	normal	Politico sanjuanino que presidio el Congreso de Tucuman en 1816.	
-Preguntas de cultura general	Cultura general argentina	?	contains	Ca?adon Leon	normal	Contiene ?: Paraje y nombre usado en la Patagonia asociado a ca?adones santacruce?os.	
-Preguntas de cultura general	Cultura general argentina	?	contains	La Ca?ada de Cordoba	normal	Contiene ?: Arroyo canalizado que atraviesa el centro de la ciudad de Cordoba.	
-Preguntas de cultura general	Cultura general argentina	?	contains	Pe?aflor	normal	Contiene ?: Apellido y nombre presente en instituciones y bodegas argentinas.	
-Preguntas de cultura general	Cultura general argentina	?	contains	Los Antiguos ca?adones	normal	Contiene ?: Referencia a formaciones de ca?adon en la zona noroeste de Santa Cruz.	
-Preguntas de cultura general	Cultura general argentina	?	contains	Compa?ia de Jesus	normal	Contiene ?: Orden religiosa vinculada a estancias jesuiticas y misiones en territorio argentino.	Compa?ia de Jesus, Compa??a de Jes?s
+Preguntas de cultura general	Cultura general argentina	Ñ	contains	Cañadon Leon	normal	Paraje y nombre usado en la Patagonia asociado a cañadones santacruceños.	
+Preguntas de cultura general	Cultura general argentina	Ñ	contains	La Cañada de Cordoba	normal	Arroyo canalizado que atraviesa el centro de la ciudad de Cordoba.	
+Preguntas de cultura general	Cultura general argentina	Ñ	contains	Peñaflor	normal	Apellido y nombre presente en instituciones y bodegas argentinas.	
+Preguntas de cultura general	Cultura general argentina	Ñ	contains	Los Antiguos cañadones	normal	Referencia a formaciones de cañadon en la zona noroeste de Santa Cruz.	
+Preguntas de cultura general	Cultura general argentina	Ñ	contains	Añelo	normal	Localidad neuquina cercana a Vaca Muerta y al desarrollo hidrocarburifero de la cuenca neuquina.	
 Preguntas de cultura general	Cultura general argentina	O	startsWith	Otamendi	normal	Localidad bonaerense del partido de Campana, cercana a una reserva natural nacional.	
 Preguntas de cultura general	Cultura general argentina	O	startsWith	Oncativo	normal	Localidad cordobesa del departamento Rio Segundo, ubicada sobre un corredor agricola central.	
 Preguntas de cultura general	Cultura general argentina	O	startsWith	Ojo de Mar	normal	Atractivo natural salte?o cercano a Tolar Grande.	
