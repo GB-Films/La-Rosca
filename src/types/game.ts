@@ -15,6 +15,7 @@ export interface Game {
   hostId: string;
   activePlayerId?: string;
   activeLetter?: string;
+  timerRunningSince?: string;
   timerSeconds: number;
   maxPlayers: number;
   includeÑ: boolean;

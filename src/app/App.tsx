@@ -42,7 +42,7 @@ export const App = () => {
 
   useEffect(() => {
     if (!('gameId' in route)) return undefined;
-    const id = window.setInterval(() => void loadSession(route.gameId), 1200);
+    const id = window.setInterval(() => void loadSession(route.gameId), 5000);
     return () => window.clearInterval(id);
   }, [loadSession, route]);
 
@@ -66,7 +66,7 @@ export const App = () => {
       const elapsedSeconds = Math.floor((now - previousTick) / 1000);
       if (elapsedSeconds < 1) return;
       previousTick += elapsedSeconds * 1000;
-      void tick(persist, elapsedSeconds);
+      void tick(persist);
     }, 250);
     return () => window.clearInterval(id);
   }, [route.name, session?.game.status, tick]);

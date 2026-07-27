@@ -1,7 +1,7 @@
 import { build } from 'esbuild';
 
 const entry = `
-  import { applyAnswerToSession, tickSessionInMemory } from './src/services/gameService.ts';
+  import { advanceTimerToNow, applyAnswerToSession, tickSessionInMemory } from './src/services/gameService.ts';
 
   const players = [
     { id: 'p1', gameId: 'game', name: 'Uno', role: 'player', slot: 1, score: 0, remainingSeconds: 10, connected: true },
@@ -69,6 +69,21 @@ const entry = `
     session.game.activePlayerId !== 'p2'
   ) {
     throw new Error('El cronometro no transfirio correctamente el tiempo transcurrido al siguiente jugador.');
+  }
+
+  const anchorTime = Date.parse('2026-01-01T00:00:00.000Z');
+  session.game.status = 'playing';
+  session.game.activePlayerId = 'p2';
+  session.game.activeLetter = 'C';
+  session.game.timerRunningSince = new Date(anchorTime).toISOString();
+  session.players[1].remainingSeconds = 10;
+  const timerChangedTurn = advanceTimerToNow(session, anchorTime + 2500);
+  if (
+    timerChangedTurn ||
+    session.players[1].remainingSeconds !== 8 ||
+    session.game.timerRunningSince !== '2026-01-01T00:00:02.000Z'
+  ) {
+    throw new Error('El cronometro anclado no respeto el tiempo real transcurrido.');
   }
 `;
 

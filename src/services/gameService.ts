@@ -117,6 +117,7 @@ const resetRound = (session: GameSession, status: GameSession['game']['status'])
   session.game.status = status;
   session.game.activePlayerId = undefined;
   session.game.activeLetter = undefined;
+  session.game.timerRunningSince = undefined;
   session.players = session.players.map((player) => ({
     ...player,
     score: 0,
@@ -148,7 +149,15 @@ const assignNextTurn = (
   session.game.activeLetter = nextLetter;
   if (shouldFinish(session) || !nextPlayer || !nextLetter) {
     session.game.status = 'finished';
+    session.game.timerRunningSince = undefined;
   }
+};
+
+const restartTimerAnchor = (session: GameSession, now = Date.now()) => {
+  session.game.timerRunningSince =
+    session.game.status === 'playing' && session.game.activePlayerId
+      ? new Date(now).toISOString()
+      : undefined;
 };
 
 export const applyAnswerToSession = (session: GameSession, gameId: string, action: 'correct' | 'wrong' | 'pass') => {
@@ -173,6 +182,7 @@ export const applyAnswerToSession = (session: GameSession, gameId: string, actio
     letterState.status = action === 'wrong' ? 'wrong' : 'passed';
     assignNextTurn(session, player.id, letter, false);
   }
+  restartTimerAnchor(session);
 
   const log: ActionLog = {
     id: createId('action'),
@@ -209,6 +219,39 @@ export const tickSessionInMemory = (session: GameSession, elapsedSeconds = 1) =>
     }
   }
   return session;
+};
+
+export const advanceTimerToNow = (session: GameSession, now = Date.now()) => {
+  const previousStatus = session.game.status;
+  const previousPlayerId = session.game.activePlayerId;
+  const previousLetter = session.game.activeLetter;
+
+  if (session.game.status !== 'playing' || !session.game.activePlayerId) {
+    session.game.timerRunningSince = undefined;
+    return false;
+  }
+
+  const runningSince = Date.parse(session.game.timerRunningSince ?? '');
+  if (!Number.isFinite(runningSince) || runningSince > now) {
+    restartTimerAnchor(session, now);
+    return false;
+  }
+
+  const elapsedSeconds = Math.floor((now - runningSince) / 1000);
+  if (elapsedSeconds < 1) return false;
+
+  tickSessionInMemory(session, elapsedSeconds);
+  if (session.game.status === 'playing' && session.game.activePlayerId) {
+    session.game.timerRunningSince = new Date(runningSince + elapsedSeconds * 1000).toISOString();
+  } else {
+    session.game.timerRunningSince = undefined;
+  }
+
+  return (
+    session.game.status !== previousStatus ||
+    session.game.activePlayerId !== previousPlayerId ||
+    session.game.activeLetter !== previousLetter
+  );
 };
 
 export const gameService = {
@@ -330,6 +373,7 @@ export const gameService = {
     resetRound(session, 'playing');
     const firstPlayer = [...session.players].sort((a, b) => a.slot - b.slot)[0];
     assignNextTurn(session, firstPlayer.id);
+    restartTimerAnchor(session);
     return sessionRepository.save(session);
   },
 
@@ -337,14 +381,21 @@ export const gameService = {
     const session =
       currentSession?.game.id === gameId ? structuredClone(currentSession) : await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
-    if (session.game.status === 'playing') session.game.status = 'paused';
+    if (session.game.status === 'playing') {
+      advanceTimerToNow(session);
+      session.game.status = 'paused';
+      session.game.timerRunningSince = undefined;
+    }
     return sessionRepository.save(session);
   },
 
   async resumeGame(gameId: string) {
     const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
-    if (session.game.status === 'paused') session.game.status = 'playing';
+    if (session.game.status === 'paused') {
+      session.game.status = 'playing';
+      restartTimerAnchor(session);
+    }
     return sessionRepository.save(session);
   },
 
@@ -359,6 +410,7 @@ export const gameService = {
     const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     session.game.status = 'finished';
+    session.game.timerRunningSince = undefined;
     return sessionRepository.save(session);
   },
 
@@ -372,6 +424,7 @@ export const gameService = {
     resetRound(session, session.players.length >= 2 ? 'playing' : 'lobby');
     const firstPlayer = [...session.players].sort((a, b) => a.slot - b.slot)[0];
     if (session.game.status === 'playing' && firstPlayer) assignNextTurn(session, firstPlayer.id);
+    restartTimerAnchor(session);
     return sessionRepository.save(session);
   },
 
@@ -379,13 +432,16 @@ export const gameService = {
     const session =
       currentSession?.game.id === gameId ? structuredClone(currentSession) : await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
+    advanceTimerToNow(session);
     assignNextTurn(session, session.game.activePlayerId, session.game.activeLetter, false);
+    restartTimerAnchor(session);
     return sessionRepository.save(session);
   },
 
   async applyAnswer(gameId: string, action: 'correct' | 'wrong' | 'pass') {
     const session = await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
+    advanceTimerToNow(session);
     return sessionRepository.save(applyAnswerToSession(session, gameId, action));
   },
 
@@ -401,6 +457,7 @@ export const gameService = {
     const session =
       currentSession?.game.id === gameId ? structuredClone(currentSession) : await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
+    advanceTimerToNow(session);
     const last = [...session.actionLog].reverse().find((log) => log.action !== 'undo');
     if (!last || !last.previousState) throw new Error('No hay acciones para deshacer.');
 
@@ -416,6 +473,7 @@ export const gameService = {
     session.game.activePlayerId = last.previousActivePlayerId;
     session.game.activeLetter = last.previousActiveLetter;
     if (session.game.status === 'finished') session.game.status = 'playing';
+    restartTimerAnchor(session);
 
     session.actionLog.push({
       id: createId('undo'),
@@ -440,6 +498,7 @@ export const gameService = {
     const session =
       currentSession?.game.id === gameId ? structuredClone(currentSession) : await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
+    advanceTimerToNow(session);
     const state = session.letters.find((item) => item.playerId === playerId && item.letter === letter);
     const player = session.players.find((item) => item.id === playerId);
     if (!state || !player) throw new Error('No se encontro la letra.');
@@ -478,7 +537,8 @@ export const gameService = {
     const activeLetter = session.game.activeLetter;
     const actionLogLength = session.actionLog.length;
     const status = session.game.status;
-    tickSessionInMemory(session);
+    const timerChangedTurn = advanceTimerToNow(session);
+    if (!timerChangedTurn) return session;
     const latest = await this.getGame(gameId);
     const turnChanged =
       latest &&
