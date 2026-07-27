@@ -15,7 +15,6 @@ export const App = () => {
   const loadSession = useGameStore((state) => state.loadSession);
   const tick = useGameStore((state) => state.tick);
   const session = useGameStore((state) => state.session);
-  const pendingAction = useGameStore((state) => state.pendingAction);
 
   useEffect(() => {
     const onHash = () => setRoute(parseRoute());
@@ -59,10 +58,10 @@ export const App = () => {
   }, [loadSession, route]);
 
   useEffect(() => {
-    if (session?.game.status !== 'playing' || route.name !== 'host' || pendingAction) return undefined;
+    if (session?.game.status !== 'playing' || route.name !== 'host') return undefined;
     const id = window.setInterval(() => void tick(), 1000);
     return () => window.clearInterval(id);
-  }, [pendingAction, route.name, session?.game.status, tick]);
+  }, [route.name, session?.game.status, tick]);
 
   let page = <HomePage />;
   if (route.name === 'create') page = <CreateGamePage />;

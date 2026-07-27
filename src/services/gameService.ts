@@ -95,6 +95,15 @@ const getNextPlayablePlayer = (session: GameSession, currentPlayerId?: string) =
   return ordered.find((player) => player.remainingSeconds > 0 && getNextLetter(session, player.id));
 };
 
+const getPlayerCursor = (session: GameSession, playerId: string) =>
+  [...session.actionLog]
+    .reverse()
+    .find(
+      (log) =>
+        log.playerId === playerId &&
+        (log.action === 'correct' || log.action === 'wrong' || log.action === 'pass'),
+    )?.letter;
+
 const isPlayerDone = (session: GameSession, playerId: string) =>
   !session.letters.some(
     (letter) => letter.playerId === playerId && (letter.status === 'pending' || letter.status === 'passed'),
@@ -129,8 +138,10 @@ const assignNextTurn = (
   const preferredLetter = preferSamePlayer && preferred ? getNextLetter(session, preferred.id, fromLetter) : undefined;
 
   const nextPlayer = preferredLetter ? preferred : getNextPlayablePlayer(session, preferredPlayerId);
+  const nextPlayerCursor =
+    nextPlayer?.id === preferredPlayerId ? fromLetter : nextPlayer ? getPlayerCursor(session, nextPlayer.id) : undefined;
   const nextLetter = nextPlayer
-    ? getNextLetter(session, nextPlayer.id, nextPlayer.id === preferredPlayerId ? fromLetter : undefined)
+    ? getNextLetter(session, nextPlayer.id, nextPlayerCursor)
     : undefined;
 
   session.game.activePlayerId = nextPlayer?.id;
@@ -180,6 +191,18 @@ export const applyAnswerToSession = (session: GameSession, gameId: string, actio
     timestamp: new Date().toISOString(),
   };
   session.actionLog.push(log);
+  return session;
+};
+
+export const tickSessionInMemory = (session: GameSession) => {
+  if (session.game.status !== 'playing' || !session.game.activePlayerId) return session;
+  const player = session.players.find((item) => item.id === session.game.activePlayerId);
+  if (!player) return session;
+
+  player.remainingSeconds = Math.max(0, player.remainingSeconds - 1);
+  if (player.remainingSeconds <= 0) {
+    assignNextTurn(session, player.id, session.game.activeLetter);
+  }
   return session;
 };
 
@@ -436,12 +459,7 @@ export const gameService = {
     const activeLetter = session.game.activeLetter;
     const actionLogLength = session.actionLog.length;
     const status = session.game.status;
-    const player = session.players.find((item) => item.id === session.game.activePlayerId);
-    if (!player) return session;
-    player.remainingSeconds = Math.max(0, player.remainingSeconds - 1);
-    if (player.remainingSeconds <= 0) {
-      assignNextTurn(session, player.id, session.game.activeLetter);
-    }
+    tickSessionInMemory(session);
     const latest = await this.getGame(gameId);
     const turnChanged =
       latest &&

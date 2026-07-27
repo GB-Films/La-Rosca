@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import type { CreateGameInput, GameSession, LetterStatus } from '../types/game';
 import type { Question } from '../types/question';
 import { createId } from '../utils/codeGenerator';
-import { applyAnswerToSession, gameService } from '../services/gameService';
+import { applyAnswerToSession, gameService, tickSessionInMemory } from '../services/gameService';
 
 interface GameStore {
   session?: GameSession;
@@ -68,6 +68,21 @@ const shouldAcceptSession = (current: GameSession | undefined, incoming: GameSes
   }
 
   return true;
+};
+
+const mergeLocalTimer = (saved: GameSession, live: GameSession | undefined) => {
+  if (!live || saved.game.id !== live.game.id) return saved;
+  if (saved.actionLog.at(-1)?.id !== live.actionLog.at(-1)?.id) return saved;
+
+  let changed = false;
+  const merged = structuredClone(saved) as GameSession;
+  merged.players = merged.players.map((player) => {
+    const livePlayer = live.players.find((item) => item.id === player.id);
+    if (!livePlayer || livePlayer.remainingSeconds >= player.remainingSeconds) return player;
+    changed = true;
+    return { ...player, remainingSeconds: livePlayer.remainingSeconds };
+  });
+  return changed ? merged : saved;
 };
 
 export const useGameStore = create<GameStore>((set, get) => ({
@@ -199,10 +214,13 @@ export const useGameStore = create<GameStore>((set, get) => ({
           error: undefined,
         }));
         const saved = await gameService.saveAnsweredSession(optimistic);
+        const merged = mergeLocalTimer(saved, get().session);
+        const synchronized =
+          merged === saved ? saved : await gameService.saveAnsweredSession(merged).catch(() => merged);
         set((state) => ({
           mutationVersion: state.mutationVersion + 1,
           pendingAction: undefined,
-          session: shouldAcceptSession(optimistic, saved) ? saved : optimistic,
+          session: shouldAcceptSession(optimistic, synchronized) ? synchronized : optimistic,
           error: undefined,
         }));
       } catch (error) {
@@ -252,6 +270,15 @@ export const useGameStore = create<GameStore>((set, get) => ({
   async tick() {
     const id = get().session?.game.id;
     if (!id) return;
+    if (get().pendingAction) {
+      set((state) => {
+        if (!state.session || state.session.game.status !== 'playing') return state;
+        const session = structuredClone(state.session) as GameSession;
+        tickSessionInMemory(session);
+        return { session };
+      });
+      return;
+    }
     const version = get().mutationVersion;
     const session = await gameService.tick(id);
     if (version !== get().mutationVersion || get().pendingAction) return;

@@ -64,6 +64,10 @@
 
 ## Notas recientes
 
+- La segunda vuelta conserva un cursor por jugador derivado del `actionLog`; las
+  letras pasadas avanzan en rotacion y no vuelven siempre a la primera. El timer
+  sigue descontando localmente mientras Supabase guarda una accion. La regresion
+  se verifica con `npm.cmd run test:game-flow`.
 - El error `Supabase create: TypeError: Failed to fetch` del 26/07/2026 se debio
   a que el proyecto Supabase estaba pausado. Mientras mostraba `Coming up...`
   la URL no resolvia; una vez activo, la app creo correctamente la partida
