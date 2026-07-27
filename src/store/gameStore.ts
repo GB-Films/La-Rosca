@@ -29,7 +29,7 @@ interface GameStore {
   undoLastAction: () => Promise<void>;
   setLetterStatus: (playerId: string, letter: string, status: LetterStatus) => Promise<void>;
   updateQuestions: (questions: Question[]) => Promise<void>;
-  tick: () => Promise<void>;
+  tick: (persist?: boolean, elapsedSeconds?: number) => Promise<void>;
   setError: (message?: string) => void;
 }
 
@@ -65,27 +65,116 @@ const shouldAcceptSession = (current: GameSession | undefined, incoming: GameSes
     const currentLastAction = current.actionLog.at(-1)?.id;
     const incomingLastAction = incoming.actionLog.at(-1)?.id;
     if (currentLastAction && incomingLastAction && currentLastAction !== incomingLastAction) return false;
+    const sameRevision = incomingRevision === currentRevision;
+    const localTimerAdvancedTurn =
+      current.game.status === 'playing' &&
+      incoming.game.status === 'playing' &&
+      (current.game.activePlayerId !== incoming.game.activePlayerId ||
+        current.game.activeLetter !== incoming.game.activeLetter);
+    if (sameRevision && localTimerAdvancedTurn) return false;
   }
 
   return true;
 };
 
+const isSameRunningTurn = (first: GameSession, second: GameSession) =>
+  first.game.status === 'playing' &&
+  second.game.status === 'playing' &&
+  first.game.activePlayerId === second.game.activePlayerId &&
+  first.game.activeLetter === second.game.activeLetter &&
+  first.actionLog.at(-1)?.id === second.actionLog.at(-1)?.id;
+
 const mergeLocalTimer = (saved: GameSession, live: GameSession | undefined) => {
   if (!live || saved.game.id !== live.game.id) return saved;
-  if (saved.actionLog.at(-1)?.id !== live.actionLog.at(-1)?.id) return saved;
+  if (!isSameRunningTurn(saved, live) || !saved.game.activePlayerId) return saved;
 
-  let changed = false;
+  const activePlayerId = saved.game.activePlayerId;
+  const livePlayer = live.players.find((player) => player.id === activePlayerId);
+  const savedPlayer = saved.players.find((player) => player.id === activePlayerId);
+  if (!livePlayer || !savedPlayer || livePlayer.remainingSeconds >= savedPlayer.remainingSeconds) return saved;
+
   const merged = structuredClone(saved) as GameSession;
-  merged.players = merged.players.map((player) => {
-    const livePlayer = live.players.find((item) => item.id === player.id);
-    if (!livePlayer || livePlayer.remainingSeconds >= player.remainingSeconds) return player;
-    changed = true;
-    return { ...player, remainingSeconds: livePlayer.remainingSeconds };
-  });
-  return changed ? merged : saved;
+  merged.players = merged.players.map((player) =>
+    player.id === activePlayerId ? { ...player, remainingSeconds: livePlayer.remainingSeconds } : player,
+  );
+  return merged;
 };
 
-export const useGameStore = create<GameStore>((set, get) => ({
+export const useGameStore = create<GameStore>((set, get) => {
+  let timerSyncTask: Promise<void> | undefined;
+  let queuedTimerGameId: string | undefined;
+
+  const queueTimerSync = (gameId: string) => {
+    queuedTimerGameId = gameId;
+    if (timerSyncTask) return;
+
+    timerSyncTask = (async () => {
+      while (queuedTimerGameId) {
+        const queuedGameId = queuedTimerGameId;
+        queuedTimerGameId = undefined;
+        const current = get().session;
+        if (
+          !current ||
+          current.game.id !== queuedGameId ||
+          (current.game.status !== 'playing' && current.game.status !== 'finished') ||
+          get().pendingAction
+        ) {
+          continue;
+        }
+
+        const snapshot = structuredClone(current) as GameSession;
+        try {
+          const saved = await gameService.saveTimedSession(snapshot);
+          set((state) => {
+            const live = state.session;
+            if (!live || live.game.id !== saved.game.id || !isSameRunningTurn(saved, live)) return state;
+            return {
+              session: {
+                ...live,
+                revision: Math.max(live.revision ?? 0, saved.revision ?? 0),
+                updatedAt: saved.updatedAt,
+              },
+              error: undefined,
+            };
+          });
+        } catch (error) {
+          set({ error: error instanceof Error ? error.message : 'No se pudo sincronizar el cronometro.' });
+        }
+      }
+    })().finally(() => {
+      timerSyncTask = undefined;
+    });
+  };
+
+  const waitForTimerSync = async () => {
+    if (timerSyncTask) await timerSyncTask;
+  };
+
+  const runSyncedMutation = async (
+    action: NonNullable<GameStore['pendingAction']>,
+    operation: () => Promise<GameSession>,
+  ) => {
+    if (get().pendingAction) return;
+    set((state) => ({ mutationVersion: state.mutationVersion + 1, pendingAction: action }));
+    try {
+      await waitForTimerSync();
+      const session = await operation();
+      set((state) => ({
+        mutationVersion: state.mutationVersion + 1,
+        pendingAction: undefined,
+        session,
+        error: undefined,
+      }));
+    } catch (error) {
+      set((state) => ({
+        mutationVersion: state.mutationVersion + 1,
+        pendingAction: undefined,
+        error: error instanceof Error ? error.message : 'No se pudo actualizar la partida.',
+      }));
+    }
+  };
+
+  return {
   clientId: getClientId(),
   mutationVersion: 0,
 
@@ -96,7 +185,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
     if (version !== get().mutationVersion || get().pendingAction) return;
     if (!shouldAcceptSession(get().session, session)) return;
     set({
-      session,
+      session: session ? mergeLocalTimer(session, get().session) : undefined,
       currentRole: (sessionStorage.getItem('el-rosco:role') as 'host' | 'player' | null) ?? undefined,
       currentPlayerId: sessionStorage.getItem('el-rosco:playerId') ?? undefined,
     });
@@ -136,11 +225,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
 
   async pauseGame() {
     const id = get().session?.game.id;
-    if (id) {
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-      set({ session: await gameService.pauseGame(id), error: undefined });
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-    }
+    if (id) await runSyncedMutation('pause', () => gameService.pauseGame(id, get().session));
   },
 
   async resumeGame() {
@@ -154,11 +239,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
 
   async finishGame() {
     const id = get().session?.game.id;
-    if (id) {
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-      set({ session: await gameService.finishGame(id), error: undefined });
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-    }
+    if (id) await runSyncedMutation('manual', () => gameService.finishGame(id));
   },
 
   async deleteGame() {
@@ -174,29 +255,17 @@ export const useGameStore = create<GameStore>((set, get) => ({
 
   async resetGame() {
     const id = get().session?.game.id;
-    if (id) {
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-      set({ session: await gameService.resetGame(id), error: undefined });
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-    }
+    if (id) await runSyncedMutation('reset', () => gameService.resetGame(id));
   },
 
   async backToLobby() {
     const id = get().session?.game.id;
-    if (id) {
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-      set({ session: await gameService.backToLobby(id), error: undefined });
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-    }
+    if (id) await runSyncedMutation('lobby', () => gameService.backToLobby(id));
   },
 
   async switchTurn() {
     const id = get().session?.game.id;
-    if (id) {
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-      set({ session: await gameService.switchTurn(id), error: undefined });
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-    }
+    if (id) await runSyncedMutation('switch', () => gameService.switchTurn(id, get().session));
   },
 
   async applyAnswer(action) {
@@ -213,6 +282,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
           session: optimistic,
           error: undefined,
         }));
+        await waitForTimerSync();
         const saved = await gameService.saveAnsweredSession(optimistic);
         const merged = mergeLocalTimer(saved, get().session);
         const synchronized =
@@ -237,24 +307,20 @@ export const useGameStore = create<GameStore>((set, get) => ({
   acceptRemoteSession(session) {
     if (get().pendingAction) return;
     if (!shouldAcceptSession(get().session, session)) return;
-    set({ session });
+    set({ session: session ? mergeLocalTimer(session, get().session) : undefined });
   },
 
   async undoLastAction() {
     const id = get().session?.game.id;
-    if (id) {
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-      set({ session: await gameService.undoLastAction(id), error: undefined });
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-    }
+    if (id) await runSyncedMutation('undo', () => gameService.undoLastAction(id, get().session));
   },
 
   async setLetterStatus(playerId, letter, status) {
     const id = get().session?.game.id;
     if (id) {
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
-      set({ session: await gameService.setLetterStatus(id, playerId, letter, status), error: undefined });
-      set((state) => ({ mutationVersion: state.mutationVersion + 1 }));
+      await runSyncedMutation('manual', () =>
+        gameService.setLetterStatus(id, playerId, letter, status, get().session),
+      );
     }
   },
 
@@ -267,25 +333,20 @@ export const useGameStore = create<GameStore>((set, get) => ({
     }
   },
 
-  async tick() {
+  async tick(persist = true, elapsedSeconds = 1) {
     const id = get().session?.game.id;
     if (!id) return;
-    if (get().pendingAction) {
-      set((state) => {
-        if (!state.session || state.session.game.status !== 'playing') return state;
-        const session = structuredClone(state.session) as GameSession;
-        tickSessionInMemory(session);
-        return { session };
-      });
-      return;
-    }
-    const version = get().mutationVersion;
-    const session = await gameService.tick(id);
-    if (version !== get().mutationVersion || get().pendingAction) return;
-    if (session) set({ session });
+    set((state) => {
+      if (!state.session || state.session.game.status !== 'playing') return state;
+      const session = structuredClone(state.session) as GameSession;
+      tickSessionInMemory(session, elapsedSeconds);
+      return { session };
+    });
+    if (persist && !get().pendingAction) queueTimerSync(id);
   },
 
   setError(message) {
     set({ error: message });
   },
-}));
+  };
+});

@@ -55,9 +55,20 @@ const entry = `
     throw new Error('El jugador 1 no continuo la rotacion de letras pasadas.');
   }
 
-  tickSessionInMemory(session);
-  if (session.players[0].remainingSeconds !== 9) {
-    throw new Error('El cronometro no desconto un segundo durante la segunda vuelta.');
+  tickSessionInMemory(session, 3);
+  if (session.players[0].remainingSeconds !== 7) {
+    throw new Error('El cronometro no desconto todo el tiempo transcurrido durante la segunda vuelta.');
+  }
+
+  session.players[0].remainingSeconds = 1;
+  session.players[1].remainingSeconds = 5;
+  tickSessionInMemory(session, 3);
+  if (
+    session.players[0].remainingSeconds !== 0 ||
+    session.players[1].remainingSeconds !== 3 ||
+    session.game.activePlayerId !== 'p2'
+  ) {
+    throw new Error('El cronometro no transfirio correctamente el tiempo transcurrido al siguiente jugador.');
   }
 `;
 

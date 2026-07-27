@@ -64,6 +64,10 @@
 
 ## Notas recientes
 
+- El timer corre localmente en host y jugadores usando tiempo real transcurrido;
+  Supabase se sincroniza en segundo plano con una sola escritura en vuelo. Las
+  actualizaciones remotas del mismo turno no pueden hacer retroceder el reloj.
+  La prueba en navegador verifico `0:10 -> 0:08 -> 0:06` sin errores.
 - La segunda vuelta conserva un cursor por jugador derivado del `actionLog`; las
   letras pasadas avanzan en rotacion y no vuelven siempre a la primera. El timer
   sigue descontando localmente mientras Supabase guarda una accion. La regresion

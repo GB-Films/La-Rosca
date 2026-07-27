@@ -58,8 +58,16 @@ export const App = () => {
   }, [loadSession, route]);
 
   useEffect(() => {
-    if (session?.game.status !== 'playing' || route.name !== 'host') return undefined;
-    const id = window.setInterval(() => void tick(), 1000);
+    if (session?.game.status !== 'playing' || (route.name !== 'host' && route.name !== 'player')) return undefined;
+    const persist = route.name === 'host';
+    let previousTick = performance.now();
+    const id = window.setInterval(() => {
+      const now = performance.now();
+      const elapsedSeconds = Math.floor((now - previousTick) / 1000);
+      if (elapsedSeconds < 1) return;
+      previousTick += elapsedSeconds * 1000;
+      void tick(persist, elapsedSeconds);
+    }, 250);
     return () => window.clearInterval(id);
   }, [route.name, session?.game.status, tick]);
 

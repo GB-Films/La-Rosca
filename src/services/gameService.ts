@@ -194,14 +194,19 @@ export const applyAnswerToSession = (session: GameSession, gameId: string, actio
   return session;
 };
 
-export const tickSessionInMemory = (session: GameSession) => {
-  if (session.game.status !== 'playing' || !session.game.activePlayerId) return session;
-  const player = session.players.find((item) => item.id === session.game.activePlayerId);
-  if (!player) return session;
+export const tickSessionInMemory = (session: GameSession, elapsedSeconds = 1) => {
+  let remainingElapsed = Math.max(0, Math.floor(elapsedSeconds));
 
-  player.remainingSeconds = Math.max(0, player.remainingSeconds - 1);
-  if (player.remainingSeconds <= 0) {
-    assignNextTurn(session, player.id, session.game.activeLetter);
+  while (remainingElapsed > 0 && session.game.status === 'playing' && session.game.activePlayerId) {
+    const player = session.players.find((item) => item.id === session.game.activePlayerId);
+    if (!player) break;
+
+    const spent = Math.min(remainingElapsed, player.remainingSeconds);
+    player.remainingSeconds = Math.max(0, player.remainingSeconds - spent);
+    remainingElapsed -= spent;
+    if (player.remainingSeconds <= 0) {
+      assignNextTurn(session, player.id, session.game.activeLetter);
+    }
   }
   return session;
 };
@@ -328,8 +333,9 @@ export const gameService = {
     return sessionRepository.save(session);
   },
 
-  async pauseGame(gameId: string) {
-    const session = await this.getGame(gameId);
+  async pauseGame(gameId: string, currentSession?: GameSession) {
+    const session =
+      currentSession?.game.id === gameId ? structuredClone(currentSession) : await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     if (session.game.status === 'playing') session.game.status = 'paused';
     return sessionRepository.save(session);
@@ -369,8 +375,9 @@ export const gameService = {
     return sessionRepository.save(session);
   },
 
-  async switchTurn(gameId: string) {
-    const session = await this.getGame(gameId);
+  async switchTurn(gameId: string, currentSession?: GameSession) {
+    const session =
+      currentSession?.game.id === gameId ? structuredClone(currentSession) : await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     assignNextTurn(session, session.game.activePlayerId, session.game.activeLetter, false);
     return sessionRepository.save(session);
@@ -386,8 +393,13 @@ export const gameService = {
     return sessionRepository.save(session);
   },
 
-  async undoLastAction(gameId: string) {
-    const session = await this.getGame(gameId);
+  async saveTimedSession(session: GameSession) {
+    return sessionRepository.save(session);
+  },
+
+  async undoLastAction(gameId: string, currentSession?: GameSession) {
+    const session =
+      currentSession?.game.id === gameId ? structuredClone(currentSession) : await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     const last = [...session.actionLog].reverse().find((log) => log.action !== 'undo');
     if (!last || !last.previousState) throw new Error('No hay acciones para deshacer.');
@@ -418,8 +430,15 @@ export const gameService = {
     return sessionRepository.save(session);
   },
 
-  async setLetterStatus(gameId: string, playerId: string, letter: string, status: LetterStatus) {
-    const session = await this.getGame(gameId);
+  async setLetterStatus(
+    gameId: string,
+    playerId: string,
+    letter: string,
+    status: LetterStatus,
+    currentSession?: GameSession,
+  ) {
+    const session =
+      currentSession?.game.id === gameId ? structuredClone(currentSession) : await this.getGame(gameId);
     if (!session) throw new Error('No encontramos la partida.');
     const state = session.letters.find((item) => item.playerId === playerId && item.letter === letter);
     const player = session.players.find((item) => item.id === playerId);
